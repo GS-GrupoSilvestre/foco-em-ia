@@ -1,0 +1,407 @@
+@import "tailwindcss";
+
+/* ======================================================
+   Dark mode via atributo data-theme no elemento <html>
+   ====================================================== */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* ======================================================
+   Design tokens — paleta de cores e variáveis base
+   ====================================================== */
+:root {
+  /* Cores de fundo */
+  --clr-bg: #F8FAFC;
+  --clr-surface: #FFFFFF;
+  --clr-surface-2: #F1F5F9;
+  --clr-surface-3: #E2E8F0;
+
+  /* Tipografia */
+  --clr-text: #0F172A;
+  --clr-text-2: #475569;
+  --clr-text-3: #94A3B8;
+  --clr-text-inv: #FFFFFF;
+
+  /* Bordas */
+  --clr-border: #E2E8F0;
+  --clr-border-2: #CBD5E1;
+
+  /* Cor principal — indigo/azul-violeta */
+  --clr-primary: #4F46E5;
+  --clr-primary-hover: #4338CA;
+  --clr-primary-light: #EEF2FF;
+  --clr-primary-medium: #818CF8;
+
+  /* Acento violeta */
+  --clr-accent: #7C3AED;
+
+  /* Links */
+  --clr-link: #4F46E5;
+  --clr-link-hover: #4338CA;
+
+  /* Gradiente principal */
+  --gradient-primary: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #2563EB 100%);
+  --gradient-subtle: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%);
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.08);
+
+  /* Raio de borda */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* Transições */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+}
+
+/* ======================================================
+   Modo escuro — atributo data-theme="dark"
+   ====================================================== */
+[data-theme="dark"] {
+  --clr-bg: #0F172A;
+  --clr-surface: #1E293B;
+  --clr-surface-2: #334155;
+  --clr-surface-3: #475569;
+
+  --clr-text: #F1F5F9;
+  --clr-text-2: #CBD5E1;
+  --clr-text-3: #64748B;
+  --clr-text-inv: #0F172A;
+
+  --clr-border: #334155;
+  --clr-border-2: #475569;
+
+  --clr-primary: #818CF8;
+  --clr-primary-hover: #6366F1;
+  --clr-primary-light: #1E1B4B;
+  --clr-primary-medium: #6366F1;
+
+  --clr-accent: #A78BFA;
+
+  --clr-link: #818CF8;
+  --clr-link-hover: #A5B4FC;
+
+  --gradient-primary: linear-gradient(135deg, #6366F1 0%, #A78BFA 50%, #3B82F6 100%);
+  --gradient-subtle: linear-gradient(135deg, #1E1B4B 0%, #2E1065 100%);
+
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+}
+
+/* ======================================================
+   Preferência do sistema — modo escuro automático
+   ====================================================== */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --clr-bg: #0F172A;
+    --clr-surface: #1E293B;
+    --clr-surface-2: #334155;
+    --clr-surface-3: #475569;
+
+    --clr-text: #F1F5F9;
+    --clr-text-2: #CBD5E1;
+    --clr-text-3: #64748B;
+    --clr-text-inv: #0F172A;
+
+    --clr-border: #334155;
+    --clr-border-2: #475569;
+
+    --clr-primary: #818CF8;
+    --clr-primary-hover: #6366F1;
+    --clr-primary-light: #1E1B4B;
+    --clr-primary-medium: #6366F1;
+
+    --clr-accent: #A78BFA;
+
+    --clr-link: #818CF8;
+    --clr-link-hover: #A5B4FC;
+
+    --gradient-primary: linear-gradient(135deg, #6366F1 0%, #A78BFA 50%, #3B82F6 100%);
+    --gradient-subtle: linear-gradient(135deg, #1E1B4B 0%, #2E1065 100%);
+
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  }
+}
+
+/* ======================================================
+   Reset e base
+   ====================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: var(--font-geist-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus visível para acessibilidade */
+:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip to content */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--clr-primary);
+  color: white;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ======================================================
+   Utilitários baseados em CSS custom properties
+   ====================================================== */
+@layer utilities {
+  .bg-surface {
+    background-color: var(--clr-surface);
+  }
+
+  .bg-surface-2 {
+    background-color: var(--clr-surface-2);
+  }
+
+  .bg-site {
+    background-color: var(--clr-bg);
+  }
+
+  .text-site {
+    color: var(--clr-text);
+  }
+
+  .text-site-2 {
+    color: var(--clr-text-2);
+  }
+
+  .text-site-3 {
+    color: var(--clr-text-3);
+  }
+
+  .text-primary-clr {
+    color: var(--clr-primary);
+  }
+
+  .border-site {
+    border-color: var(--clr-border);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  .shadow-card-custom {
+    box-shadow: var(--shadow-card);
+  }
+
+  .transition-base {
+    transition: all var(--transition-base);
+  }
+}
+
+/* ======================================================
+   Estilos do conteúdo dos artigos (prose)
+   ====================================================== */
+.article-prose {
+  color: var(--clr-text);
+  max-width: 70ch;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.article-prose h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--clr-text);
+  line-height: 1.3;
+  scroll-margin-top: 5rem;
+}
+
+.article-prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--clr-text);
+  line-height: 1.35;
+  scroll-margin-top: 5rem;
+}
+
+.article-prose h4 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--clr-text);
+}
+
+.article-prose p {
+  margin-bottom: 1.25rem;
+}
+
+.article-prose a {
+  color: var(--clr-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.article-prose a:hover {
+  color: var(--clr-link-hover);
+}
+
+.article-prose strong {
+  font-weight: 600;
+  color: var(--clr-text);
+}
+
+.article-prose em {
+  font-style: italic;
+}
+
+.article-prose ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.article-prose ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  list-style-type: decimal;
+}
+
+.article-prose li {
+  margin-bottom: 0.5rem;
+}
+
+.article-prose li + li {
+  margin-top: 0.25rem;
+}
+
+.article-prose blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--clr-primary);
+  background: var(--clr-primary-light);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-style: italic;
+  color: var(--clr-text-2);
+}
+
+.article-prose code {
+  font-family: 'Geist Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.875em;
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  padding: 0.125em 0.375em;
+  color: var(--clr-primary);
+}
+
+.article-prose pre {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.article-prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  color: var(--clr-text);
+}
+
+.article-prose hr {
+  margin: 2.5rem 0;
+  border: none;
+  border-top: 1px solid var(--clr-border);
+}
+
+.article-prose table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  overflow-x: auto;
+  display: block;
+}
+
+.article-prose th {
+  background: var(--clr-surface-2);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--clr-border);
+}
+
+.article-prose td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--clr-border);
+  vertical-align: top;
+}
+
+.article-prose tr:nth-child(even) td {
+  background: var(--clr-surface-2);
+}
+
+.article-prose img {
+  border-radius: var(--radius-lg);
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+}
+
+/* Heading anchor links */
+.article-prose .heading-anchor {
+  margin-left: 0.5rem;
+  opacity: 0;
+  color: var(--clr-text-3);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.article-prose h2:hover .heading-anchor,
+.article-prose h3:hover .heading-anchor {
+  opacity: 1;
+}
