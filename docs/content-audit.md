@@ -30,41 +30,41 @@
 
 ## Consolidações e redirects
 
-**URL principal:** `/artigos/chatgpt-vs-gemini`  
-**Intenção:** Comparar ChatGPT e Gemini para decidir qual usar.  
-**URLs consolidadas:** `/artigos/gemini-vs-chatgpt-comparacao`  
-**Motivo:** Mesmas perguntas e mesma intenção de busca com a ordem dos nomes invertida. A URL principal é a mais limpa, a mais antiga (já rastreada) e tinha fontes; o conteúdo útil do secundário foi incorporado.  
-**Redirect:** `/artigos/gemini-vs-chatgpt-comparacao` → `/artigos/chatgpt-vs-gemini` (permanente, 308)
+- **URL principal:** `/artigos/chatgpt-vs-gemini`
+- **Intenção:** Comparar ChatGPT e Gemini para decidir qual usar.
+- **URLs consolidadas:** `/artigos/gemini-vs-chatgpt-comparacao`
+- **Motivo:** Mesmas perguntas e mesma intenção de busca com a ordem dos nomes invertida. A URL principal é a mais limpa, a mais antiga (já rastreada) e tinha fontes; o conteúdo útil do secundário foi incorporado.
+- **Redirect:** `/artigos/gemini-vs-chatgpt-comparacao` → `/artigos/chatgpt-vs-gemini` (permanente, 308)
 
-**URL principal:** `/artigos/chatgpt-vs-gemini-vs-claude`  
-**Intenção:** Escolher entre as três principais IAs generalistas.  
-**URLs consolidadas:** `/artigos/claude-vs-chatgpt-vs-gemini`  
-**Motivo:** Mesma intenção (comparativo das três), só a ordem muda. Principal escolhido por ser o mais completo e começar pelo termo de maior busca (ChatGPT). O comparativo de duas ferramentas (acima) continua separado, porque responde a uma decisão diferente, e os dois se linkam.  
-**Redirect:** `/artigos/claude-vs-chatgpt-vs-gemini` → `/artigos/chatgpt-vs-gemini-vs-claude` (permanente, 308)
+- **URL principal:** `/artigos/chatgpt-vs-gemini-vs-claude`
+- **Intenção:** Escolher entre as três principais IAs generalistas.
+- **URLs consolidadas:** `/artigos/claude-vs-chatgpt-vs-gemini`
+- **Motivo:** Mesma intenção (comparativo das três), só a ordem muda. Principal escolhido por ser o mais completo e começar pelo termo de maior busca (ChatGPT). O comparativo de duas ferramentas (acima) continua separado, porque responde a uma decisão diferente, e os dois se linkam.
+- **Redirect:** `/artigos/claude-vs-chatgpt-vs-gemini` → `/artigos/chatgpt-vs-gemini-vs-claude` (permanente, 308)
 
-**URL principal:** `/artigos/melhores-ferramentas-ia-2026`  
-**Intenção:** Lista das melhores ferramentas de IA atuais, por necessidade.  
-**URLs consolidadas:** `/artigos/melhores-ferramentas-ia-2025`  
-**Motivo:** Dois rankings anuais com a mesma intenção. Mantido o slug 2026 (URL já publicada que corresponde à intenção atual) para preservar autoridade em vez de criar uma URL nova. Quando o ano mudar, recomenda-se migrar para um slug perene e apontar os dois redirects diretamente para ele, sem cadeia.  
-**Redirect:** `/artigos/melhores-ferramentas-ia-2025` → `/artigos/melhores-ferramentas-ia-2026` (permanente, 308)
+- **URL principal:** `/artigos/melhores-ferramentas-ia-2026`
+- **Intenção:** Lista das melhores ferramentas de IA atuais, por necessidade.
+- **URLs consolidadas:** `/artigos/melhores-ferramentas-ia-2025`
+- **Motivo:** Dois rankings anuais com a mesma intenção. Mantido o slug 2026 (URL já publicada que corresponde à intenção atual) para preservar autoridade em vez de criar uma URL nova. Quando o ano mudar, recomenda-se migrar para um slug perene e apontar os dois redirects diretamente para ele, sem cadeia.
+- **Redirect:** `/artigos/melhores-ferramentas-ia-2025` → `/artigos/melhores-ferramentas-ia-2026` (permanente, 308)
 
-**URL principal:** `/artigos/como-usar-gemini-google`  
-**Intenção:** Guia para começar a usar o Gemini.  
-**URLs consolidadas:** `/artigos/gemini-guia-completo-iniciantes`  
-**Motivo:** Dois guias de iniciante com a mesma estrutura (o que é, como acessar, planos, primeiros passos). Principal: slug mais limpo e com termo de busca (“como usar”), mais antigo e com fontes. Virou o pilar da categoria Gemini.  
-**Redirect:** `/artigos/gemini-guia-completo-iniciantes` → `/artigos/como-usar-gemini-google` (permanente, 308)
+- **URL principal:** `/artigos/como-usar-gemini-google`
+- **Intenção:** Guia para começar a usar o Gemini.
+- **URLs consolidadas:** `/artigos/gemini-guia-completo-iniciantes`
+- **Motivo:** Dois guias de iniciante com a mesma estrutura (o que é, como acessar, planos, primeiros passos). Principal: slug mais limpo e com termo de busca (“como usar”), mais antigo e com fontes. Virou o pilar da categoria Gemini.
+- **Redirect:** `/artigos/gemini-guia-completo-iniciantes` → `/artigos/como-usar-gemini-google` (permanente, 308)
 
-**URL principal:** `/artigos/o-que-e-claude-anthropic`  
-**Intenção:** Entender o que é o Claude e como começar a usar.  
-**URLs consolidadas:** `/artigos/claude-ai-guia-completo-2026`  
-**Motivo:** Os dois cobriam o que é, modelos, recursos e se vale a pena. Principal: slug sem ano, mais antigo, com fontes. O título passou a cobrir as duas intenções (“o que é e como usar”). Virou o pilar da categoria Claude.  
-**Redirect:** `/artigos/claude-ai-guia-completo-2026` → `/artigos/o-que-e-claude-anthropic` (permanente, 308)
+- **URL principal:** `/artigos/o-que-e-claude-anthropic`
+- **Intenção:** Entender o que é o Claude e como começar a usar.
+- **URLs consolidadas:** `/artigos/claude-ai-guia-completo-2026`
+- **Motivo:** Os dois cobriam o que é, modelos, recursos e se vale a pena. Principal: slug sem ano, mais antigo, com fontes. O título passou a cobrir as duas intenções (“o que é e como usar”). Virou o pilar da categoria Claude.
+- **Redirect:** `/artigos/claude-ai-guia-completo-2026` → `/artigos/o-que-e-claude-anthropic` (permanente, 308)
 
-**URL principal:** `/artigos/como-melhorar-seus-prompts`  
-**Intenção:** Aprender a escrever prompts melhores (prompt engineering para iniciantes).  
-**URLs consolidadas:** `/artigos/prompt-engineering-guia-iniciantes`  
-**Motivo:** Os dois ensinavam as mesmas técnicas de prompt. Principal: conteúdo mais completo (10 técnicas, modelo para copiar, antes/depois) e slug sem ano; título, description e keywords passaram a cobrir também “prompt engineering”.  
-**Redirect:** `/artigos/prompt-engineering-guia-iniciantes` → `/artigos/como-melhorar-seus-prompts` (permanente, 308)
+- **URL principal:** `/artigos/como-melhorar-seus-prompts`
+- **Intenção:** Aprender a escrever prompts melhores (prompt engineering para iniciantes).
+- **URLs consolidadas:** `/artigos/prompt-engineering-guia-iniciantes`
+- **Motivo:** Os dois ensinavam as mesmas técnicas de prompt. Principal: conteúdo mais completo (10 técnicas, modelo para copiar, antes/depois) e slug sem ano; título, description e keywords passaram a cobrir também “prompt engineering”.
+- **Redirect:** `/artigos/prompt-engineering-guia-iniciantes` → `/artigos/como-melhorar-seus-prompts` (permanente, 308)
 
 Todos os redirects estão em `next.config.ts` (`redirects()`, `permanent: true`), cada URL antiga aponta direto para a final (sem cadeias). Os arquivos MDX secundários foram excluídos, o que os remove automaticamente de sitemap, RSS, busca interna, categorias e relacionados. Nenhum link interno aponta para as URLs removidas (verificado por script).
 
