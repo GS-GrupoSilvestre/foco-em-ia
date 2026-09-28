@@ -24,6 +24,12 @@ export const categories: Category[] = [
     description: 'Guias, tutoriais e dicas para aproveitar o ChatGPT no trabalho e no cotidiano.',
     icon: '💬',
     color: '#10A37F',
+    pillars: [
+      'como-usar-chatgpt-guia-completo',
+      'chatgpt-o3-guia-completo',
+      'melhores-prompts-chatgpt',
+      'chatgpt-vs-gemini',
+    ],
   },
   {
     name: 'Gemini',
@@ -31,6 +37,11 @@ export const categories: Category[] = [
     description: 'Tudo sobre o Gemini, o assistente de IA do Google integrado ao ecossistema Google.',
     icon: '✨',
     color: '#4285F4',
+    pillars: [
+      'como-usar-gemini-google',
+      'gemini-advanced-vale-a-pena',
+      'chatgpt-vs-gemini',
+    ],
   },
   {
     name: 'Claude',
@@ -38,6 +49,11 @@ export const categories: Category[] = [
     description: 'Como usar o Claude da Anthropic para análise de textos, documentos e código.',
     icon: '🔮',
     color: '#7C3AED',
+    pillars: [
+      'o-que-e-claude-anthropic',
+      'claude-planos-precos-comparacao',
+      'chatgpt-vs-gemini-vs-claude',
+    ],
   },
   {
     name: 'Guias',
@@ -45,6 +61,12 @@ export const categories: Category[] = [
     description: 'Conteúdos completos para entender inteligência artificial do zero.',
     icon: '📖',
     color: '#0F172A',
+    pillars: [
+      'o-que-e-inteligencia-artificial',
+      'como-comecar-com-ia-do-zero',
+      'como-melhorar-seus-prompts',
+      'glossario-inteligencia-artificial',
+    ],
   },
   {
     name: 'Imagens',
@@ -52,6 +74,11 @@ export const categories: Category[] = [
     description: 'Crie imagens com IA: ferramentas, técnicas e exemplos práticos.',
     icon: '🎨',
     color: '#F59E0B',
+    pillars: [
+      'como-criar-imagens-com-ia',
+      'como-escrever-prompts-para-imagens',
+      'ia-imagens-gratis-vs-pago',
+    ],
   },
   {
     name: 'Vídeos',
@@ -59,6 +86,11 @@ export const categories: Category[] = [
     description: 'Ferramentas de IA para criar, editar e transformar vídeos.',
     icon: '🎬',
     color: '#EF4444',
+    pillars: [
+      'ia-para-shorts-reels-tiktok',
+      'veo-google-guia',
+      'ia-para-roteiro-de-video',
+    ],
   },
   {
     name: 'IA para Negócios',
@@ -66,6 +98,11 @@ export const categories: Category[] = [
     description: 'Como usar IA para crescer no e-commerce, marketing digital e produtividade.',
     icon: '💼',
     color: '#4F46E5',
+    pillars: [
+      'ia-para-negocios-guia',
+      'ia-para-pequenas-empresas',
+      'ia-para-ecommerce-vendas',
+    ],
   },
   {
     name: 'Ferramentas',
@@ -73,6 +110,11 @@ export const categories: Category[] = [
     description: 'Comparativos e análises das melhores ferramentas de IA disponíveis.',
     icon: '🛠️',
     color: '#059669',
+    pillars: [
+      'melhores-ferramentas-ia-2026',
+      'ferramentas-ia-gratuitas-2026',
+      'chatgpt-vs-gemini-vs-claude',
+    ],
   },
 ]
 

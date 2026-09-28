@@ -1,87 +1,234 @@
 ---
-title: "IA para roteiro de vídeo: estruture seu conteúdo em minutos"
-description: "Veja como usar inteligência artificial para criar roteiros de vídeo rapidamente, com estrutura, gancho inicial e chamada para ação bem definidos."
+title: "IA para roteiro de vídeo: prompts prontos, estrutura e exemplos"
+description: "Crie roteiros de vídeo com IA usando prompts prontos para briefing, ganchos, roteiro em duas colunas e revisão, com exemplo de loja virtual brasileira."
 slug: "ia-para-roteiro-de-video"
 category: "Vídeos"
-tags: ["roteiro de vídeo", "inteligência artificial", "criação de conteúdo", "produtividade"]
+tags: ["roteiro de vídeo", "inteligência artificial", "prompts", "youtube", "criação de conteúdo", "e-commerce"]
 publishedAt: "2026-06-08"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["ia para roteiro de vídeo", "criar roteiro com ia", "roteiro para youtube com ia", "estrutura de roteiro de vídeo"]
+keywords: ["ia para roteiro de vídeo", "criar roteiro com ia", "prompt para roteiro de vídeo", "roteiro para youtube com ia", "estrutura de roteiro de vídeo", "roteiro de vídeo de produto"]
+faq:
+  - question: "Qual IA é melhor para escrever roteiro de vídeo?"
+    answer: "Assistentes de uso geral como ChatGPT, Gemini e Claude fazem bem o trabalho de estruturar e redigir roteiros. A diferença no resultado vem mais do briefing que você entrega (público, objetivo, duração, informações verificadas) do que da ferramenta. Teste o mesmo prompt em duas delas e fique com a que soa mais próxima do seu jeito de falar."
+  - question: "Quantas palavras tem um roteiro de 1 minuto?"
+    answer: "Depende do seu ritmo de fala. Em vez de usar um número genérico, leia em voz alta um texto seu por exatamente 1 minuto e conte as palavras. Use esse número para pedir à IA roteiros com a duração certa."
+  - question: "A IA pode inventar informações no roteiro?"
+    answer: "Pode, e é o principal risco. Assistentes de IA completam lacunas com informações plausíveis, como medidas, benefícios, dados e datas. Por isso os prompts deste guia mandam usar somente as informações fornecidas e listar dúvidas no final. Revise todo dado antes de gravar."
+  - question: "Preciso avisar que o roteiro foi feito com IA?"
+    answer: "No YouTube, não. A política da plataforma sobre conteúdo alterado ou sintético dispensa o aviso para apoio à produção, como criar ou melhorar roteiro, estrutura, título e miniatura. O aviso é exigido quando o vídeo mostra conteúdo realista gerado ou alterado, como uma pessoa real dizendo algo que não disse."
+sources:
+  - name: "YouTube — Divulgação de conteúdo alterado ou sintético"
+    url: "https://support.google.com/youtube/answer/14328491?hl=en"
+  - name: "YouTube — Adicionar capítulos aos vídeos"
+    url: "https://support.google.com/youtube/answer/9884579?hl=en"
+related:
+  - "ia-para-shorts-reels-tiktok"
+  - "ia-para-editar-videos-youtube"
+  - "ia-video-marketing-anuncios"
+  - "como-melhorar-seus-prompts"
 ---
 
-Um dos maiores desafios de quem cria vídeos regularmente não é gravar ou editar, e sim decidir o que falar e em qual ordem. A inteligência artificial pode ajudar bastante nessa etapa, gerando estruturas de roteiro, sugerindo ganchos iniciais e organizando ideias soltas em um fluxo de conteúdo claro, tudo em poucos minutos.
+O roteiro é a etapa em que a IA mais economiza tempo e, ao mesmo tempo, a que mais pode estragar um vídeo: um assistente de IA escreve rápido, mas também inventa dados, promete o que o produto não faz e produz um texto que ninguém falaria em voz alta. Este guia mostra um fluxo em cinco prompts, do briefing ao roteiro revisado, com foco em vídeos de 3 a 15 minutos para YouTube, aulas e vídeos de produto, e um exemplo aplicado a uma loja virtual brasileira. Se você vai produzir vídeos verticais de até um minuto, o fluxo específico está no guia de [IA para Shorts, Reels e TikTok](/artigos/ia-para-shorts-reels-tiktok).
 
-## Por que usar IA para escrever roteiros de vídeo
+## A estrutura que funciona para vídeo longo
 
-Escrever um roteiro do zero exige tempo para organizar ideias, definir uma introdução chamativa e garantir que o conteúdo tenha começo, meio e fim. A inteligência artificial ajuda a:
+Quase todo roteiro de vídeo explicativo cabe em seis blocos. Conhecer a estrutura ajuda a pedir à IA exatamente o que falta, em vez de aceitar o primeiro texto que ela devolve.
 
-- Transformar uma ideia solta em uma estrutura organizada de roteiro
-- Sugerir diferentes ganchos iniciais para prender a atenção
-- Organizar os principais pontos em uma ordem lógica
-- Sugerir uma chamada para ação adequada ao objetivo do vídeo
-- Adaptar o mesmo conteúdo para diferentes formatos, como vídeo longo e cortes curtos
+| Bloco | Função | Duração de referência em vídeo de 8 min |
+|---|---|---|
+| Gancho | Nomear o problema ou a promessa do vídeo | 10 a 20 segundos |
+| Contexto | Dizer para quem é e o que a pessoa vai sair sabendo | 20 a 40 segundos |
+| Desenvolvimento | Os pontos principais, um bloco por ideia | a maior parte do vídeo |
+| Demonstração ou exemplo | Mostrar na prática, na tela ou com o objeto | junto de cada ponto |
+| Resumo | Retomar o que foi visto em poucas frases | 20 a 30 segundos |
+| Chamada para ação | Um único próximo passo | 10 a 15 segundos |
 
-## Estrutura básica de um bom roteiro de vídeo
+As durações são referência editorial, não regra. O que importa é o gancho cumprir o que o título promete e cada bloco do desenvolvimento ter uma ideia só. Se cada bloco virar um capítulo no YouTube, lembre as regras da plataforma para [capítulos na descrição](https://support.google.com/youtube/answer/9884579?hl=en): o primeiro começa em 00:00, são pelo menos três em ordem crescente e cada um tem no mínimo 10 segundos.
 
-Antes de usar a IA, vale entender a estrutura que a maioria dos roteiros de sucesso segue:
+## Antes do primeiro prompt: meça seu ritmo de fala
 
-1. Gancho inicial: os primeiros segundos que prendem a atenção do espectador
-2. Contexto: uma breve explicação do que será abordado no vídeo
-3. Desenvolvimento: os pontos principais do conteúdo, organizados em blocos
-4. Exemplos práticos: situações reais que ajudam a ilustrar cada ponto
-5. Conclusão: um resumo rápido do que foi apresentado
-6. Chamada para ação: o próximo passo que você quer que o espectador tome
+Roteiro com a duração errada é o problema mais comum. Em vez de usar uma média genérica de palavras por minuto, leia em voz alta um texto seu por exatamente 1 minuto, no ritmo em que você grava, e conte as palavras. Esse número (por exemplo, "130 palavras por minuto") entra nos prompts abaixo e deixa o roteiro muito mais próximo do tempo real.
 
-## Como pedir um roteiro para uma ferramenta de IA
+## O fluxo em cinco prompts
 
-Para obter um bom resultado, é importante fornecer um contexto claro no pedido feito à IA, incluindo:
+Os prompts funcionam em qualquer assistente de uso geral, como ChatGPT, Gemini ou Claude. Use-os na mesma conversa, na ordem, para a IA manter o contexto.
 
-- O tema principal do vídeo
-- O público-alvo do conteúdo
-- A duração aproximada desejada
-- O tom de voz, como descontraído, técnico ou inspirador
-- O objetivo final do vídeo, como educar, vender ou entreter
+### Prompt 1: briefing
 
-Quanto mais detalhes você fornecer, mais próximo do que você imagina será o roteiro gerado, evitando a necessidade de muitas revisões posteriores.
+O briefing é o que evita o roteiro genérico. Preencha tudo; o que você não souber, escreva "não sei".
 
-## Exemplo de fluxo de trabalho para criar um roteiro com IA
+```
+Vou escrever o roteiro de um vídeo. Guarde este briefing e use-o em todas as próximas respostas.
 
-1. Defina o tema e o objetivo do vídeo antes de pedir qualquer coisa à IA
-2. Peça uma lista de possíveis ganchos iniciais para o vídeo
-3. Escolha o gancho que mais combina com o seu estilo e peça o desenvolvimento completo do roteiro
-4. Revise a estrutura sugerida, ajustando a ordem dos pontos se necessário
-5. Peça sugestões de exemplos práticos para ilustrar os pontos mais técnicos
-6. Solicite algumas opções de chamada para ação alinhadas ao objetivo do vídeo
-7. Leia o roteiro em voz alta para verificar se soa natural antes de gravar
+Tema: [tema em uma frase]
+Formato: [vídeo horizontal para YouTube / aula / vídeo de produto]
+Público: [quem assiste, o que já sabe, qual a principal dúvida]
+Objetivo: [ensinar X / apresentar o produto Y / responder à dúvida Z]
+Duração-alvo: [ex.: 8 minutos]
+Meu ritmo de fala: [ex.: 130 palavras por minuto]
+Tom: [ex.: direto e didático, sem gírias em excesso]
+Informações verificadas que podem entrar no roteiro: [liste fatos, dados, características]
+O que NÃO pode entrar: [promessas, comparações com concorrentes, dados sem fonte]
+Chamada para ação desejada: [uma só]
 
-## Adaptando o roteiro para diferentes formatos
+Antes de continuar, me diga em até 5 itens o que está faltando ou ambíguo neste briefing.
+```
 
-Um mesmo tema pode se transformar em vídeos de formatos diferentes com pequenos ajustes no roteiro:
+### Prompt 2: ganchos
 
-- Vídeo longo: roteiro completo, com introdução, desenvolvimento detalhado e conclusão
-- Vídeo curto (Shorts, Reels, TikTok): apenas o gancho e um único ponto principal, direto ao assunto
-- Carrossel ou post de texto: os principais tópicos do roteiro resumidos em frases curtas
+```
+Com base no briefing, escreva 6 opções de gancho para os primeiros 15 segundos, em estilos diferentes:
+1. pergunta que nomeia a dor do público;
+2. erro comum;
+3. resultado que o vídeo entrega (sem exagerar);
+4. mini-história de uma situação real do público;
+5. contraste "o que a maioria faz x o que funciona";
+6. demonstração visual imediata.
+Para cada uma, indique o que aparece na tela. Não use números, dados ou promessas que não estejam no briefing.
+```
 
-A IA pode ajudar a adaptar automaticamente o mesmo conteúdo para esses diferentes formatos, economizando tempo na produção de conteúdo derivado.
+Escolha um gancho que o vídeo realmente cumpra. Gancho que promete mais do que o conteúdo entrega derruba a confiança do espectador e, em vídeo de produto, pode virar propaganda enganosa.
 
-## Erros comuns ao usar IA para roteiro
+### Prompt 3: esqueleto
 
-- Usar o roteiro gerado exatamente como veio, sem ajustar ao seu tom de voz pessoal
-- Pedir roteiros muito genéricos, sem contexto suficiente sobre o público e o objetivo
-- Ignorar a revisão de termos técnicos que a IA pode ter simplificado demais ou usado de forma incorreta
-- Não testar diferentes ganchos iniciais antes de escolher o roteiro final
-- Esquecer de incluir uma chamada para ação clara no final do vídeo
+```
+Use o gancho [número]. Monte o esqueleto do vídeo com os blocos: gancho, contexto, desenvolvimento (3 a 5 pontos), resumo e chamada para ação.
+Para cada bloco, entregue: título curto (servirá como capítulo), objetivo do bloco em uma frase e duração estimada.
+A soma das durações deve dar [duração-alvo].
+```
 
-## Dicas para deixar o roteiro mais natural na hora de gravar
+Revise o esqueleto antes de pedir o texto completo. É muito mais barato trocar a ordem de dois pontos aqui do que depois de o roteiro estar escrito.
 
-- Leia o roteiro em voz alta antes de gravar, ajustando frases que soarem estranhas faladas
-- Substitua palavras muito formais por termos que você realmente usa no dia a dia
-- Marque no roteiro os pontos onde pretende fazer pausas ou dar ênfase
-- Use tópicos e frases curtas em vez de parágrafos longos, facilitando a leitura durante a gravação
-- Deixe espaço para pequenos comentários espontâneos, que tornam o vídeo mais autêntico
+### Prompt 4: roteiro em duas colunas
 
-## Conclusão
+```
+Agora escreva o roteiro completo, em uma tabela com duas colunas:
+FALA | NA TELA
+Regras:
+- frases curtas, do jeito que se fala, não do jeito que se escreve;
+- no máximo [ritmo x duração] palavras no total;
+- use somente as informações verificadas do briefing;
+- quando precisar de um dado que não está no briefing, escreva [VERIFICAR: o que falta] em vez de inventar;
+- marque com (pausa) os pontos em que devo respirar ou mudar de câmera.
+No final, liste todos os itens [VERIFICAR].
+```
 
-Usar inteligência artificial para criar roteiros de vídeo acelera significativamente o processo de planejamento de conteúdo, especialmente para quem precisa publicar com frequência. O segredo está em fornecer bom contexto para a IA, revisar cuidadosamente o resultado gerado e sempre adaptar o texto ao seu próprio estilo de fala antes de gravar, garantindo que o vídeo final soe natural e autêntico.
+A coluna "na tela" é o que transforma o texto em plano de gravação: você sabe de antemão o que precisa filmar, capturar ou mostrar.
+
+### Prompt 5: revisão crítica
+
+Peça para a IA atacar o próprio roteiro antes de você gravar:
+
+```
+Revise o roteiro como um editor exigente. Aponte, em lista:
+1. frases difíceis de falar em voz alta;
+2. trechos repetidos ou que não acrescentam nada;
+3. qualquer afirmação que não esteja no briefing (possível informação inventada);
+4. promessas de resultado que o conteúdo não sustenta;
+5. pontos em que o espectador pode se perder.
+Não reescreva o roteiro inteiro; sugira só as mudanças.
+```
+
+Depois, leia em voz alta com cronômetro. Se passar do tempo, corte frases; não acelere a fala.
+
+## Exemplo prático: vídeo de produto para uma loja virtual
+
+> Demonstração editorial — Produto: strap de musculação. Características fornecidas: algodão; 50 cm; uso para puxadas; auxílio de pegada.
+
+Cenário hipotético: uma loja que vende acessórios de academia no próprio site, no Mercado Livre e na Amazon quer um vídeo horizontal de cerca de 3 minutos para o YouTube e para a página do produto, explicando o que é o strap e como usá-lo.
+
+**Informações originais (as únicas que podem entrar):** algodão; 50 cm; uso para puxadas; auxílio de pegada.
+
+**Prompt usado (versão condensada dos prompts 1 e 4):**
+
+```
+Escreva o roteiro de um vídeo horizontal de 3 minutos para YouTube e página de produto.
+Produto: strap de musculação.
+Informações fornecidas (use SOMENTE estas): algodão; 50 cm; uso para puxadas; auxílio de pegada.
+Público: quem treina musculação e nunca usou strap.
+Tom: professor de academia, direto.
+Meu ritmo: 130 palavras por minuto.
+Formato: tabela FALA | NA TELA.
+Regras:
+- não invente medidas, materiais, benefícios, certificações, garantia ou resultados;
+- não prometa ganho de força, de carga ou de massa muscular, nem prevenção de lesões;
+- quando faltar informação, escreva [VERIFICAR: ...];
+- chamada para ação: ver o produto no link da descrição.
+No final, liste os itens [VERIFICAR] e as perguntas que devo fazer ao fornecedor.
+```
+
+**Resultado estruturado esperado (trecho):**
+
+```
+BLOCO 1 — GANCHO (0:00–0:15)
+FALA: "Nas puxadas, a sua mão cansa antes das costas? Neste vídeo você vai ver o que é o strap e como ele entra no treino."
+NA TELA: close na mão soltando a barra; depois o strap sobre a bancada.
+
+BLOCO 2 — O QUE É (0:15–0:50)
+FALA: "O strap é uma tira que você passa no punho e enrola na barra. A função dele é auxiliar a pegada."
+NA TELA: strap na mão, em câmera lenta.
+FALA: "Este modelo é de algodão e tem 50 centímetros."
+NA TELA: strap esticado ao lado de uma fita métrica.
+
+BLOCO 3 — COMO COLOCAR (0:50–2:00)
+FALA: "[VERIFICAR: passo a passo de colocação recomendado pelo fornecedor]"
+NA TELA: demonstração real, em três ângulos.
+
+BLOCO 4 — EM QUAIS EXERCÍCIOS (2:00–2:40)
+FALA: "Ele é indicado para exercícios de puxada. [VERIFICAR: lista de exercícios que o fornecedor recomenda]"
+NA TELA: uma repetição de puxada com o strap.
+
+BLOCO 5 — CHAMADA (2:40–3:00)
+FALA: "O link do produto está na descrição."
+NA TELA: produto em cima da bancada, com o nome da loja.
+
+ITENS [VERIFICAR] E PERGUNTAS AO FORNECEDOR:
+- modo de colocação recomendado;
+- exercícios indicados;
+- largura da tira e tipo de costura;
+- vendido em par ou unidade;
+- instruções de lavagem.
+```
+
+Repare no que o roteiro não diz: nada de "aumenta sua carga", "evita lesões" ou "material premium". Essas informações não foram fornecidas, e o prompt proibiu inventá-las. Antes de gravar, o lojista precisa responder aos itens marcados; só então o bloco 3 e o bloco 4 ficam completos. As mesmas informações devem aparecer, sem contradição, na descrição do anúncio no marketplace. Para transformar o roteiro em anúncio pago, veja o guia de [IA para vídeos de marketing e anúncios](/artigos/ia-video-marketing-anuncios).
+
+## Adaptando o mesmo roteiro para outros formatos
+
+Um roteiro longo bem estruturado rende outros conteúdos:
+
+```
+Com base no roteiro final acima, crie:
+1. um roteiro de 30 segundos para vídeo vertical, usando só o bloco [número], com gancho nos 3 primeiros segundos;
+2. um carrossel de 6 telas com uma frase por tela;
+3. a descrição do vídeo para o YouTube com um resumo de 2 frases e a lista de capítulos a partir dos títulos dos blocos.
+Não acrescente nenhuma informação que não esteja no roteiro.
+```
+
+Na edição, os títulos dos blocos viram capítulos, e a coluna "na tela" vira a lista de cortes. O guia de [IA para editar vídeos do YouTube](/artigos/ia-para-editar-videos-youtube) mostra como gerar capítulos e legendas a partir do vídeo editado.
+
+## Quando você não quer aparecer
+
+Se o roteiro vai ser narrado por voz sintética ou por um avatar, escreva ainda mais curto e com pontuação clara, porque a entonação depende dela. Os guias de [ElevenLabs](/artigos/elevenlabs-voz-ia) e de [avatares de IA](/artigos/avatares-ia-videos-apresentador) tratam das regras de consentimento de voz e imagem, que valem antes de qualquer gravação.
+
+## Erros comuns
+
+- Pedir "um roteiro sobre X" sem briefing e aceitar o texto genérico que vem.
+- Deixar passar dados, medidas ou benefícios que a IA inventou para "completar" o texto.
+- Gravar sem ler em voz alta: texto bom de ler nem sempre é bom de falar.
+- Escolher o gancho mais chamativo, mesmo que o vídeo não cumpra a promessa.
+- Encher o roteiro de pontos e estourar o tempo; um vídeo com três ideias bem explicadas funciona melhor que um com oito corridas.
+- Esquecer a coluna "na tela" e descobrir na edição que faltam imagens.
+
+## Checklist antes de gravar
+
+- O briefing tem público, objetivo, duração e informações verificadas?
+- O gancho é cumprido pelo conteúdo do vídeo?
+- Todo dado do roteiro veio de você, e não da IA?
+- Todos os itens [VERIFICAR] foram resolvidos?
+- O total de palavras cabe no seu ritmo de fala?
+- Cada bloco tem uma ideia só e um título que pode virar capítulo?
+- Existe uma única chamada para ação?
+
+Um roteiro bom reduz o tempo de gravação e de edição. A IA acelera a escrita, mas quem garante que o vídeo diz a verdade e soa como você é quem grava. Para aprimorar qualquer um dos prompts acima, veja o guia sobre [como melhorar seus prompts](/artigos/como-melhorar-seus-prompts).

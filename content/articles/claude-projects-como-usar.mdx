@@ -1,80 +1,143 @@
 ---
-title: "Claude Projects: organize seu trabalho com IA"
-description: "Aprenda o que são os Projects do Claude, como criar um, organizar documentos e instruções, e usar esse recurso para ganhar produtividade no trabalho."
+title: "Claude Projects: como criar e usar para organizar seu trabalho"
+description: "Aprenda a criar um Project no Claude, adicionar arquivos e instruções, mover conversas e usar modelos de instruções para trabalho, loja virtual e estudo."
 slug: "claude-projects-como-usar"
 category: "Claude"
-tags: ["claude", "produtividade", "organizacao", "projects"]
+tags: ["claude", "projects", "produtividade", "organização"]
 publishedAt: "2026-03-05"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["claude projects", "organizar trabalho com ia", "produtividade claude", "como usar claude"]
+keywords: ["claude projects", "como criar projeto no claude", "instruções do projeto claude", "base de conhecimento claude", "claude projects gratuito"]
+faq:
+  - question: "O Claude Projects é gratuito?"
+    answer: "Sim. Os Projects estão disponíveis em todos os planos. No Free, é possível criar até cinco projetos. Nos planos pagos, não há esse limite e a base de conhecimento pode ser ampliada em até 10 vezes com RAG quando se aproxima do limite de contexto."
+  - question: "Qual o tamanho máximo de arquivo em um Project?"
+    answer: "Segundo a central de ajuda da Anthropic, arquivos enviados a Projects podem ter até 30 MB cada."
+  - question: "Posso compartilhar um Project com outras pessoas?"
+    answer: "O compartilhamento e a colaboração em Projects, com permissões de visualização ou edição, são exclusivos dos planos Team e Enterprise."
+sources:
+  - name: "Anthropic — What are projects?"
+    url: "https://support.claude.com/en/articles/9517075-what-are-projects"
+  - name: "Anthropic — How can I create and manage projects?"
+    url: "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+  - name: "Anthropic — Upload files to Claude"
+    url: "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+  - name: "Anthropic — Use Claude's chat search and memory to build on previous context"
+    url: "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+related:
+  - "claude-artifacts-recursos"
+  - "claude-para-analise-documentos"
+  - "o-que-e-claude-anthropic"
+  - "como-melhorar-seus-prompts"
 ---
 
-Se você já usa o Claude para tarefas do dia a dia, provavelmente notou um problema comum das ferramentas de IA em chat: cada conversa começa do zero, sem lembrar do contexto de conversas anteriores. É exatamente esse problema que o recurso Projects resolve. Neste artigo, vamos explicar o que são os Projects, para que servem e como configurá-los da melhor forma.
+Se você repete as mesmas explicações toda vez que abre uma conversa com o Claude ("minha loja vende isso", "escreva neste tom", "use esta tabela de preços"), o recurso Projects resolve o problema. Um Project reúne arquivos de referência, instruções fixas e as conversas sobre um mesmo tema, e tudo isso fica disponível em cada nova conversa daquele projeto. Este guia mostra como criar um projeto, o que colocar dentro dele e traz modelos de instruções prontos para copiar.
 
-## O que é o Claude Projects
+## O que é um Project no Claude
 
-Projects é um espaço de trabalho dentro do Claude que agrupa conversas, documentos de referência e instruções personalizadas em torno de um mesmo tema ou objetivo. Em vez de repetir informações a cada nova conversa, você cria um "projeto" — por exemplo, "Blog da empresa", "Contrato de fornecedores" ou "Estudo para concurso" — e todo o contexto relevante fica disponível para qualquer conversa daquele projeto.
+Projects são espaços de trabalho com histórico e base de conhecimento próprios. Segundo a [central de ajuda da Anthropic](https://support.claude.com/en/articles/9517075-what-are-projects), cada projeto tem dois elementos principais:
 
-Isso é particularmente útil para:
+- **Base de conhecimento do projeto:** documentos, textos, código ou outros arquivos que o Claude usa para entender o contexto de cada conversa do projeto.
+- **Instruções do projeto:** regras que ajustam as respostas, por exemplo "use tom formal" ou "responda como analista financeiro".
 
-- Times que trabalham com o mesmo cliente ou produto recorrentemente.
-- Profissionais que lidam com documentação extensa (contratos, manuais, bases de conhecimento).
-- Criadores de conteúdo que mantêm um guia de estilo e querem respostas consistentes.
-- Estudantes organizando o material de uma disciplina ou prova.
+Cada projeto também tem memória própria, separada das conversas fora dele. Isso evita que o contexto de um cliente se misture com o de outro.
 
-## Como criar um Project
+### Disponibilidade por plano
 
-Criar um projeto no Claude costuma seguir estes passos:
-
-1. Acesse a área de Projects na barra lateral do Claude.
-2. Clique em criar um novo projeto e dê um nome descritivo.
-3. Adicione uma descrição curta explicando o objetivo do projeto.
-4. Faça upload dos documentos de referência (PDFs, textos, planilhas) que o Claude deve considerar.
-5. Escreva instruções personalizadas, explicando como o Claude deve se comportar dentro daquele projeto (tom de voz, formato de resposta, regras específicas).
-6. Comece novas conversas dentro do projeto sempre que for tratar daquele assunto.
-
-## O que colocar dentro de um Project
-
-A qualidade dos resultados depende diretamente do que você adiciona ao projeto. Alguns exemplos de conteúdo útil:
-
-| Tipo de conteúdo | Exemplo de uso |
+| Plano | O que você tem |
 |---|---|
-| Documentos de referência | Manual da marca, políticas internas, contratos padrão |
-| Dados estruturados | Planilhas com preços, catálogos de produtos |
-| Instruções de estilo | Tom de voz, público-alvo, formato preferido de resposta |
-| Exemplos anteriores | Textos já aprovados que servem de modelo |
-| Glossário de termos | Vocabulário técnico específico do negócio |
+| Free | Até 5 projetos |
+| Pro e Max | Projetos sem esse limite e base de conhecimento ampliada com RAG (até 10 vezes mais capacidade quando se aproxima do limite de contexto) |
+| Team e Enterprise | Tudo acima, mais compartilhamento com colegas, com permissões de visualização ou edição |
 
-Quanto mais claro e organizado for esse material, melhores serão as respostas do Claude dentro daquele projeto.
+Cada arquivo enviado a um projeto pode ter até 30 MB, segundo a página sobre [envio de arquivos](https://support.claude.com/en/articles/8241126-upload-files-to-claude).
 
-## Exemplos práticos de uso
+## Como criar um Project: passo a passo
 
-**Marketing de conteúdo**: crie um projeto chamado "Blog", adicione o guia de estilo da marca e exemplos de artigos já publicados. A partir daí, toda vez que pedir um novo artigo, o Claude já vai escrever no tom certo, sem precisar reexplicar as regras.
+1. Na barra lateral do claude.ai, clique em **Projects** (ou acesse claude.ai/projects).
+2. Clique em **+ New Project**, no canto superior direito.
+3. Dê um nome e uma descrição. Esses dois campos servem para você se organizar: o Claude não tem acesso a eles.
+4. Para montar a base de conhecimento, clique no botão **+** e envie os arquivos ou cole textos de referência.
+5. Clique em **Set project instructions**, escreva como o Claude deve se comportar e salve.
+6. Comece uma conversa dentro do projeto. Toda nova conversa ali já parte dos arquivos e das instruções.
 
-**Atendimento e suporte**: monte um projeto com o manual de produtos e as perguntas frequentes da empresa. Assim, ao simular respostas de atendimento, o Claude usa informações reais e consistentes.
+Se a interface estiver em português, os nomes dos botões aparecem traduzidos.
 
-**Departamento jurídico ou financeiro**: reúna modelos de contrato e políticas internas em um projeto, o que agiliza revisões e reduz erros de padronização.
+**Para mover uma conversa que já existe:** clique na seta ao lado do nome da conversa, escolha **Add to project** e selecione o projeto de destino.
 
-**Estudos**: crie um projeto por disciplina, com anotações de aula e resumos, para pedir exercícios, explicações ou revisões alinhadas ao conteúdo estudado.
+**Para arquivar ou excluir:** dentro do projeto, clique nos três pontos no canto superior direito e escolha arquivar ou excluir. A exclusão pede confirmação.
 
-## Boas práticas ao usar Projects
+## O que colocar dentro de um projeto
 
-- **Um projeto por tema**, não um projeto único para tudo — isso evita misturar contextos que não têm relação.
-- **Revise periodicamente** os documentos anexados, removendo o que ficou desatualizado.
-- **Escreva instruções objetivas**, evitando textos longos demais nas configurações do projeto; prefira tópicos claros.
-- **Use nomes de conversa descritivos** dentro do projeto para facilitar encontrar discussões antigas depois.
-- **Combine com Artifacts** quando o resultado final for um documento, site ou peça visual, aproveitando os dois recursos juntos.
+| Tipo de conteúdo | Exemplo |
+|---|---|
+| Documentos de referência | Manual da marca, políticas internas, contrato padrão |
+| Dados estruturados | Planilha de produtos e preços, catálogo |
+| Exemplos aprovados | Três anúncios ou posts que funcionaram bem |
+| Glossário | Termos técnicos e nomes de produtos escritos do jeito certo |
+| Regras de negócio | Política de trocas, prazos de envio, o que nunca prometer |
 
-## Projects vs. conversas comuns
+Material curto e organizado funciona melhor do que dezenas de arquivos soltos. Se um documento ficou desatualizado, substitua-o: versões conflitantes do mesmo dado confundem as respostas.
 
-A diferença central é a persistência de contexto. Uma conversa comum é isolada e temporária; um projeto acumula conhecimento e mantém coerência entre diferentes sessões de trabalho. Se você faz perguntas pontuais e variadas, uma conversa comum já resolve. Mas se você trabalha continuamente em um mesmo tema, o Project economiza tempo e melhora a qualidade das respostas.
+## Modelos de instruções para copiar
 
-## Limitações a considerar
+### Exemplo prático: loja virtual em marketplaces
 
-Vale lembrar que todo projeto tem um limite de capacidade de contexto, ou seja, não é possível anexar uma quantidade infinita de documentos. Por isso, é importante ser seletivo: inclua apenas o que realmente é relevante e mantenha os arquivos organizados, evitando duplicidade de informações.
+Cenário hipotético: uma loja de acessórios de academia que vende no Mercado Livre e na Amazon. Na base de conhecimento, entram a planilha de produtos (com características fornecidas pelo fabricante), a política de trocas e três anúncios que já venderam bem.
 
-## Conclusão
+```text
+Você é o assistente de conteúdo da nossa loja de acessórios de academia.
+Público: pessoas que treinam musculação, do iniciante ao avançado.
+Tom: direto, técnico sem ser difícil, sem exageros.
 
-Os Projects transformam o Claude de um simples chat em um verdadeiro espaço de trabalho contínuo. Ao organizar documentos, instruções e conversas em torno de temas específicos, você ganha consistência, economiza tempo reescrevendo contexto e melhora significativamente a qualidade das respostas geradas pela IA. Se você ainda não experimentou esse recurso, vale começar com um projeto simples — como a organização de um único cliente ou tema de trabalho — e expandir o uso a partir dos resultados observados.
+Regras:
+1. Use somente as características que estão na planilha de produtos. Nunca invente
+   medidas, materiais, certificações, garantias ou resultados.
+2. Se faltar uma informação para o anúncio, diga o que falta e o que perguntar
+   ao fornecedor.
+3. Títulos para Mercado Livre: até 60 caracteres, começando pelo nome do produto.
+4. Respeite a política de trocas anexada ao responder dúvidas de clientes.
+5. Siga a estrutura dos anúncios de exemplo anexados.
+```
+
+Depois, dentro do projeto, um pedido simples como "crie o anúncio do strap de algodão da planilha" já sai no formato certo, sem repetir as regras.
+
+### Exemplo prático: blog ou redes sociais
+
+```text
+Você é editor do blog da empresa. Escreva em português do Brasil, com frases curtas
+e exemplos do dia a dia de pequenas empresas. Siga o guia de estilo anexado.
+Antes de escrever um texto longo, proponha um roteiro em tópicos e espere minha
+aprovação. Não cite números ou estudos sem indicar a fonte; se não tiver fonte,
+diga que o dado precisa ser verificado.
+```
+
+### Exemplo prático: estudos
+
+```text
+Você é meu tutor de Direito Constitucional. Use apenas o material anexado como
+base. Explique com exemplos simples, e ao final de cada explicação faça 2 perguntas
+para eu responder. Se eu errar, mostre onde está o erro com base no material.
+```
+
+Para escrever instruções melhores, veja nosso guia sobre [como melhorar seus prompts](/artigos/como-melhorar-seus-prompts).
+
+## Boas práticas
+
+- **Um projeto por tema ou cliente.** Um projeto "tudo" mistura contextos e piora as respostas.
+- **Instruções em tópicos curtos.** Regras claras e numeradas funcionam melhor do que parágrafos longos.
+- **Revise a base de conhecimento todo mês** e troque o que ficou velho, como tabelas de preço.
+- **Dê nomes descritivos às conversas** para encontrar discussões antigas depois.
+- **Combine com Artifacts** quando o resultado for um documento, um painel ou uma pequena ferramenta. Veja como em [Artifacts do Claude](/artigos/claude-artifacts-recursos).
+- **Para contratos e relatórios extensos**, o guia [Claude para análise de documentos](/artigos/claude-para-analise-documentos) traz prompts específicos.
+
+## Limitações
+
+- A base de conhecimento tem limite de capacidade. Nos planos pagos, o RAG amplia esse espaço, mas não é infinito.
+- No Free, o limite é de 5 projetos.
+- Compartilhar projetos com outras pessoas só é possível no Team e no Enterprise.
+- O Claude pode errar ao consultar os arquivos. Peça que ele cite o trecho ou o documento de onde tirou cada informação importante e confira.
+- Não coloque dados sensíveis de clientes num projeto de conta pessoal sem revisar as [configurações de privacidade do Claude](/artigos/claude-seguranca-privacidade-dados).
+
+Para uma visão geral dos recursos do assistente, volte ao guia [Claude: o que é e como usar](/artigos/o-que-e-claude-anthropic).

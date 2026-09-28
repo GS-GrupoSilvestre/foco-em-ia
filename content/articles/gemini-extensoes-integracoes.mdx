@@ -1,85 +1,150 @@
 ---
-title: "Extensões do Gemini: conecte a IA a outros apps do Google"
-description: "Entenda o que são as extensões do Gemini, quais apps do Google podem ser conectados e como usar essas integrações para ganhar produtividade."
+title: "Extensões do Gemini: como usar os Apps conectados com Gmail, Maps e mais"
+description: "As Extensões do Gemini agora se chamam Apps conectados. Veja quais apps funcionam no Brasil, como ativar, como chamar com @ e exemplos prontos de uso."
 slug: "gemini-extensoes-integracoes"
 category: "Gemini"
-tags: ["gemini", "extensoes", "integracoes", "google workspace"]
+tags: ["gemini", "extensões do gemini", "apps conectados", "integrações", "google workspace"]
 publishedAt: "2026-06-12"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["extensoes do gemini", "gemini integracoes", "conectar gemini a apps", "gemini google workspace"]
+keywords: ["extensões do gemini", "apps conectados gemini", "gemini connected apps", "conectar gemini ao gmail", "gemini integrações", "gemini whatsapp"]
+faq:
+  - question: "As Extensões do Gemini ainda existem?"
+    answer: "O recurso continua, mas com outro nome: na Central de Ajuda do Google ele aparece como Connected Apps (Apps conectados). É o que antes se chamava Extensões."
+  - question: "Como ativar os Apps conectados no Gemini?"
+    answer: "No app Gemini para Android, a Central de Ajuda indica: toque em Menu, na sua foto de perfil e em Apps conectados; encontre o app e ative-o, seguindo as instruções na tela."
+  - question: "Como pedir para o Gemini usar um app específico?"
+    answer: "Digite @ na caixa de mensagem e selecione o app que você quer que o Gemini use naquele pedido."
+  - question: "Todos os Apps conectados funcionam no Brasil?"
+    answer: "Não. Muitos apps de terceiros são restritos aos EUA ou ao inglês. A tabela oficial de disponibilidade mostra a região e o idioma de cada um."
+sources:
+  - name: "Google — Apps conectados no Gemini (Central de Ajuda)"
+    url: "https://support.google.com/gemini/answer/13695044?hl=en&co=GENIE.Platform%3DAndroid"
+  - name: "Google — Disponibilidade dos Apps conectados"
+    url: "https://support.google.com/gemini/table/17434654"
+  - name: "Google — Gemini: release notes do app"
+    url: "https://gemini.google/release-notes/"
+  - name: "Google — Planos do Gemini (Brasil)"
+    url: "https://gemini.google/br/subscriptions/?hl=pt-BR"
+related:
+  - "como-usar-gemini-google"
+  - "gemini-no-gmail-google-docs"
+  - "gemini-no-android-recursos"
+  - "ia-privacidade-seguranca"
 ---
 
-Além de responder perguntas e gerar textos, o Gemini pode se conectar a diversos aplicativos do Google por meio de extensões, permitindo que a IA execute ações reais, como consultar sua agenda, buscar um e-mail específico ou verificar informações no Google Maps. Essa capacidade de "agir" em outros serviços é o que diferencia um simples chatbot de um assistente verdadeiramente integrado à sua rotina digital.
+As antigas Extensões do Gemini continuam existindo, mas hoje o Google as chama de **Apps conectados** (Connected Apps, na Central de Ajuda em inglês). Elas permitem que o Gemini use outros aplicativos para responder e agir: resumir e-mails do Gmail, criar um evento na Agenda, consultar o Google Maps ou mandar uma mensagem pelo WhatsApp. Este guia mostra o que mudou, quais apps existem, como ativar e exemplos prontos para usar, com atenção ao que funciona no Brasil.
 
-Neste artigo, explicamos o que são as extensões do Gemini e como aproveitá-las.
+## De Extensões para Apps conectados: o que mudou
 
-## O que são as extensões do Gemini
+Em 2025, as release notes do Gemini ainda falavam em "extensions". Hoje, a [página de ajuda do Google](https://support.google.com/gemini/answer/13695044?hl=en&co=GENIE.Platform%3DAndroid) usa o nome Connected Apps e define o recurso assim: "Gemini Apps can connect to other apps to complete your request and give you more helpful responses". A ideia é a mesma de antes, mas a lista cresceu e passou a incluir apps do Android e de outras empresas.
 
-As extensões funcionam como pontes entre o Gemini e outros aplicativos e serviços. Quando ativadas, elas permitem que o assistente busque informações diretamente desses apps para responder suas perguntas com dados reais e atualizados, em vez de depender apenas do conhecimento geral do modelo.
+Se você achou um tutorial antigo que manda procurar "Extensões" nas configurações, procure por Apps conectados.
 
-Por exemplo, sem uma extensão ativa, o Gemini não teria como saber quais compromissos você tem agendados para amanhã. Com a extensão do Google Agenda ativada, ele pode consultar essa informação diretamente e responder com precisão.
+## Quais apps podem ser conectados
 
-## Principais extensões disponíveis
+Segundo a [tabela oficial de disponibilidade](https://support.google.com/gemini/table/17434654), os Apps conectados se dividem em três grupos:
 
-| Extensão | O que permite fazer |
+| Grupo | Exemplos |
 |---|---|
-| Google Agenda | Consultar e criar compromissos, verificar horários livres |
-| Gmail | Buscar e-mails específicos, resumir conversas |
-| Google Maps | Consultar rotas, distâncias e informações de locais |
-| Google Voos | Buscar informações sobre passagens e horários de voos |
-| Google Hotéis | Consultar opções de hospedagem |
-| YouTube | Buscar e resumir vídeos sobre um determinado assunto |
-| Google Drive | Localizar e consultar arquivos e documentos salvos |
+| Apps do Google | Gmail, Agenda, Drive, Docs e outros do Workspace; Google Fotos; YouTube Music; Google Home; Google Play; Gemini Notebook; Google Maps, Voos, Hotéis e YouTube |
+| Apps do Android | Telefone, Mensagens, WhatsApp, assistência do dispositivo, Find Hub e Spotify |
+| Apps de terceiros | Canva, Adobe, Wix, GitHub e outros |
 
-A disponibilidade de cada extensão pode variar conforme a região, o tipo de conta (pessoal ou de trabalho/educacional) e atualizações do próprio Google ao longo do tempo.
+O que alguns deles fazem, segundo a Central de Ajuda:
 
-## Como ativar as extensões
+- **Gmail**: resumir e-mails.
+- **Agenda**: criar eventos no Google Agenda ou em apps de terceiros.
+- **Maps, Voos, Hotéis e YouTube**: o Gemini usa informações públicas desses serviços.
+- **Telefone, Mensagens e WhatsApp**: fazer ligações e enviar mensagens pelos seus apps padrão ou pelo WhatsApp.
 
-1. Abra o aplicativo ou site do Gemini
-2. Acesse as configurações do assistente
-3. Procure pela seção de extensões ou aplicativos conectados
-4. Ative as extensões que deseja utilizar, concedendo as permissões necessárias
+### O que funciona no Brasil
 
-Depois de ativadas, basta fazer perguntas naturalmente, mencionando o que você precisa, e o Gemini identifica automaticamente quando deve recorrer a uma extensão para responder com mais precisão.
+A disponibilidade varia por app, região, idioma e idade. Muitos apps de terceiros aparecem como restritos aos EUA ou ao inglês. Um exemplo brasileiro na tabela é a **Localiza**, marcada como disponível só no Brasil, só em português e para maiores de 18 anos. Antes de contar com um app específico, confira a linha dele na tabela oficial.
 
-## Exemplos práticos de uso combinado
+O **Personal Intelligence**, recurso em beta lançado em janeiro de 2026 que conecta Gmail, Fotos, YouTube e Pesquisa para respostas mais pessoais, é só para assinantes Pro e Ultra nos EUA e vem desligado por padrão.
 
-### Planejando uma viagem
+## Como ativar os Apps conectados
 
-Você pode perguntar: "quais voos estão disponíveis para o Rio de Janeiro no próximo fim de semana e quais hotéis bem avaliados existem perto da praia". Com as extensões de voos, hotéis e mapas ativadas, o Gemini pode reunir essas informações em uma única resposta organizada.
+No app Gemini para Android, o caminho indicado pela Central de Ajuda é:
 
-### Organizando a semana de trabalho
+1. Toque em **Menu** e depois na sua **foto de perfil**.
+2. Toque em **Apps conectados**.
+3. Encontre o app que quer usar.
+4. Ative o app (ou desative, para desconectar) e siga as instruções na tela para dar as permissões.
 
-Uma pergunta como "verifique minha agenda desta semana e sugira um horário livre para uma reunião de uma hora com o time de marketing" combina a extensão do Google Agenda com a capacidade de raciocínio do próprio Gemini para sugerir o melhor horário disponível.
+No navegador e no iPhone o caminho pode ser diferente e os menus mudam com as atualizações; se não encontrar, procure por Apps conectados nas configurações do Gemini ou consulte a Central de Ajuda na versão da sua plataforma.
 
-### Encontrando informações em e-mails antigos
+### Como chamar um app no pedido
 
-Ao perguntar "encontre o e-mail da reserva do hotel que fiz mês passado", a extensão do Gmail permite que o Gemini localize a mensagem relevante sem que você precise pesquisar manualmente na caixa de entrada.
+Para indicar qual app o Gemini deve usar, digite **@** na caixa de mensagem e selecione o app. Usar o @ deixa explícito qual app você quer e evita que o Gemini responda só com conhecimento geral.
 
-## Diferença entre extensões e a integração dentro dos apps
+## Exemplos prontos de uso
 
-É importante não confundir dois conceitos parecidos:
+Os exemplos abaixo são sugestões de prompts. Onde aparece @ seguido do nome do app, digite @ e escolha o app na lista (o nome exibido pode variar). O resultado depende dos apps que você conectou e da disponibilidade de cada um na sua conta.
 
-- **Extensões**: permitem que o Gemini, dentro do próprio aplicativo de chat, busque informações em outros serviços do Google
-- **Integração direta nos apps**: é quando o próprio Gemini aparece dentro do Gmail, Docs ou Sheets como um painel auxiliar, como vimos em outros artigos desta série
+Exemplo de prompt para organizar a semana (Agenda):
 
-Ambas as formas se complementam: você pode usar o Gemini como um hub central com extensões ativadas, ou acioná-lo diretamente de dentro de cada aplicativo, conforme a situação exigir.
+```
+@Google Agenda Veja meus compromissos desta semana e sugira dois horários
+livres de 1 hora para uma reunião com o time de marketing, de preferência
+à tarde. Depois, crie o evento no primeiro horário com o título
+"Planejamento de campanha".
+```
 
-## Cuidados com privacidade nas extensões
+Exemplo de prompt para achar e resumir e-mails (Gmail):
 
-Como as extensões dão ao Gemini acesso a informações pessoais, como e-mails, compromissos e arquivos, vale seguir algumas boas práticas:
+```
+@Gmail Encontre os e-mails do último mês sobre a reserva do hotel em
+Florianópolis e resuma: datas, valor, política de cancelamento e o que
+ainda preciso confirmar.
+```
 
-- Ative apenas as extensões que você realmente pretende usar
-- Revise periodicamente quais permissões estão concedidas nas configurações da conta Google
-- Em contas de trabalho ou empresariais, verifique se há políticas específicas sobre o uso de extensões definidas pelo administrador do Google Workspace
-- Evite usar extensões conectadas a contas sensíveis em dispositivos compartilhados
+Exemplo de prompt para planejar uma viagem (Voos, Hotéis e Maps):
 
-## Quando vale a pena ativar as extensões
+```
+Quero ir de São Paulo para Recife no feriado de novembro. Use @Google Voos
+para mostrar opções de voo e @Google Hotéis para sugerir hotéis perto de
+Boa Viagem. No fim, monte uma tabela com as melhores combinações.
+```
 
-Se você já usa bastante os serviços do Google no dia a dia, como agenda, e-mail e mapas, ativar as extensões tende a economizar tempo, evitando a necessidade de alternar entre vários aplicativos para reunir uma informação simples. Já para quem usa o Gemini apenas para tarefas gerais, sem depender tanto do ecossistema Google, o ganho pode ser menor.
+Exemplo de prompt para um pequeno negócio (Gmail):
 
-## Conclusão
+```
+@Gmail Liste os e-mails do fornecedor de straps de musculação dos últimos
+30 dias e resuma prazos de entrega e pendências. Depois, rascunhe uma
+resposta cordial pedindo a nova tabela de preços. Não invente valores.
+```
 
-As extensões do Gemini ampliam bastante o que o assistente consegue fazer, transformando-o de um simples gerador de texto em uma ferramenta capaz de agir sobre informações reais e atualizadas de outros aplicativos. Testar cada extensão aos poucos, entendendo o que ela realmente adiciona à sua rotina, é o melhor caminho para descobrir quais delas valem a pena manter ativas permanentemente.
+Exemplo de prompt no celular (WhatsApp):
+
+```
+Mande uma mensagem no WhatsApp para a Ana avisando que vou chegar
+20 minutos atrasado na reunião.
+```
+
+## Apps conectados x Gemini dentro do Gmail e do Docs
+
+São duas coisas diferentes:
+
+- **Apps conectados**: você está no app do Gemini (chat) e ele busca informações ou executa ações em outros apps.
+- **Gemini dentro dos apps**: o painel lateral do Gemini aparece dentro do Gmail, Docs, Sheets e outros. Em contas pessoais, isso depende do plano: o Google AI Plus inclui Gmail e Vids; o AI Pro e o Ultra incluem Gmail, Docs, Vids e outros apps. Veja o passo a passo em [Gemini no Gmail e Google Docs](/artigos/gemini-no-gmail-google-docs).
+
+Os dois se complementam: use o chat com Apps conectados para cruzar informações de vários serviços e o painel lateral quando estiver trabalhando dentro de um documento ou e-mail.
+
+## Privacidade: o que saber antes de conectar
+
+A Central de Ajuda afirma que o Gemini não acessa suas informações pessoais nesses serviços sem sua permissão. Ainda assim, vale adotar alguns cuidados:
+
+- conecte só os apps que você realmente vai usar;
+- revise de tempos em tempos quais apps estão ativos e desconecte os que não usa;
+- em contas de trabalho, siga as regras definidas pelo administrador do Google Workspace;
+- evite deixar apps com dados sensíveis conectados em aparelhos compartilhados;
+- consulte o Privacy Hub do Gemini, indicado pelo Google, para entender como os dados são tratados.
+
+Para um panorama geral sobre o tema, veja [IA e privacidade: o que saber antes de usar](/artigos/ia-privacidade-seguranca).
+
+## Vale a pena ativar?
+
+Se sua rotina passa por Gmail, Agenda, Drive e Maps, sim: é o recurso que mais diferencia o Gemini de um chatbot genérico. Comece conectando um ou dois apps, teste os prompts acima com o @ e amplie aos poucos. No celular, os apps do Android (Telefone, Mensagens, WhatsApp, Spotify) fazem mais diferença; veja [os recursos do Gemini no Android](/artigos/gemini-no-android-recursos). Se você ainda está começando, o [guia completo do Gemini](/artigos/como-usar-gemini-google) explica o básico antes.

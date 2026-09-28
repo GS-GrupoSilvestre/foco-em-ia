@@ -88,15 +88,28 @@ export function getRelatedArticles(
   currentSlug: string,
   category: string,
   tags: string[],
-  limit = 3
+  limit = 3,
+  manual: string[] = []
 ): ArticleMeta[] {
   const allArticles = getAllArticles().filter((a) => a.slug !== currentSlug)
+  const bySlug = new Map(allArticles.map((a) => [a.slug, a]))
 
-  return allArticles
+  // 1) Relacionados escolhidos no frontmatter (`related`), na ordem definida.
+  //    Slugs inexistentes (ex.: artigo consolidado) são ignorados.
+  const picked: ArticleMeta[] = []
+  for (const slug of manual) {
+    const article = bySlug.get(slug)
+    if (article && !picked.includes(article)) picked.push(article)
+    if (picked.length >= limit) return picked
+  }
+
+  // 2) Completa com o cálculo automático (categoria + tags em comum).
+  const scored = allArticles
+    .filter((article) => !picked.includes(article))
     .map((article) => {
       let score = 0
       if (article.frontmatter.category === category) score += 3
-      const commonTags = article.frontmatter.tags.filter((tag) =>
+      const commonTags = (article.frontmatter.tags ?? []).filter((tag) =>
         tags.includes(tag)
       )
       score += commonTags.length
@@ -105,7 +118,16 @@ export function getRelatedArticles(
     .filter(({ score }) => score > 0)
     .sort((a, b) => b.score - a.score)
     .map(({ article }) => article)
-    .slice(0, limit)
+
+  return [...picked, ...scored].slice(0, limit)
+}
+
+/** Retorna os artigos a partir de uma lista de slugs, na mesma ordem, ignorando slugs inexistentes. */
+export function getArticlesBySlugs(slugs: string[]): ArticleMeta[] {
+  const bySlug = new Map(getAllArticles().map((a) => [a.slug, a]))
+  return slugs
+    .map((slug) => bySlug.get(slug))
+    .filter((a): a is ArticleMeta => a !== undefined)
 }
 
 export function searchArticles(query: string): ArticleMeta[] {

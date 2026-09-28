@@ -1,121 +1,147 @@
 ---
-title: "Stable Diffusion: como usar o gerador de imagens de código aberto"
-description: "Guia para iniciantes sobre o Stable Diffusion: o que é, como instalar ou usar online, modelos, prompts e dicas para gerar imagens com IA."
+title: "Stable Diffusion: como usar o gerador de imagens de pesos abertos"
+description: "Guia do Stable Diffusion 3.5 para iniciantes: modelos atuais, licença, como usar online ou no seu computador com ComfyUI, prompts e parâmetros explicados."
 slug: "stable-diffusion-guia-iniciantes"
 category: "Imagens"
-tags: ["stable-diffusion", "codigo-aberto", "geracao-de-imagens", "ia-local"]
+tags: ["stable-diffusion", "stable diffusion 3.5", "pesos-abertos", "geracao-de-imagens", "ia-local"]
 publishedAt: "2026-02-17"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["stable diffusion", "gerador de imagens gratis", "ia de codigo aberto", "como usar stable diffusion"]
+keywords: ["stable diffusion", "stable diffusion 3.5", "como usar stable diffusion", "stable diffusion licença comercial", "stable diffusion local", "gerador de imagens gratis"]
+faq:
+  - question: "Qual é a versão mais recente do Stable Diffusion?"
+    answer: "O Stable Diffusion 3.5, lançado em outubro de 2024 nas versões Large, Large Turbo e Medium. Até setembro de 2026, a Stability AI não anunciou um modelo de imagem mais novo; as novidades recentes da empresa foram em áudio e plataformas. O SDXL e o SDXL Turbo continuam disponíveis."
+  - question: "O Stable Diffusion é de graça?"
+    answer: "Os pesos podem ser baixados sem custo, e rodar no próprio computador não tem custo por imagem. A Community License é gratuita para uso não comercial e para uso comercial de pessoas ou empresas com receita anual abaixo de US$ 1 milhão. Serviços online, como a API e o Stable Assistant, têm cobrança própria; confira os preços no site da Stability AI."
+  - question: "Posso usar as imagens comercialmente?"
+    answer: "Com os modelos oficiais da Stability AI, sim, dentro da Community License: grátis abaixo de US$ 1 milhão de receita anual; acima disso, é preciso a Enterprise License. Modelos derivados feitos pela comunidade podem ter licenças próprias, então confira a licença de cada arquivo."
+  - question: "Preciso de placa de vídeo para rodar o Stable Diffusion?"
+    answer: "Para rodar localmente, sim, na prática. A Stability AI diz que o SD 3.5 Medium foi feito para rodar em hardware de consumidor e precisa de 9,9 GB de VRAM, sem contar os codificadores de texto. Sem GPU adequada, use o Stable Assistant ou um serviço em nuvem."
+sources:
+  - name: "Stability AI — Anúncio do Stable Diffusion 3.5"
+    url: "https://stability.ai/news-updates/introducing-stable-diffusion-3-5"
+  - name: "Stability AI — Modelos de imagem"
+    url: "https://stability.ai/stable-image"
+  - name: "Stability AI — Community License"
+    url: "https://stability.ai/license"
+  - name: "Stability AI — Notícias"
+    url: "https://stability.ai/news-updates"
+related:
+  - "flux-ai-guia"
+  - "ia-imagens-gratis-vs-pago"
+  - "como-escrever-prompts-para-imagens"
 ---
 
-Se você já ouviu falar que existe uma forma de gerar imagens com IA rodando no seu próprio computador, sem depender de uma empresa cobrando por crédito, provavelmente estava falando de Stable Diffusion. Ele é o modelo de geração de imagens de código aberto mais popular do mundo, e por isso virou a base de dezenas de aplicativos e interfaces diferentes.
+O Stable Diffusion é a família de modelos de geração de imagem da Stability AI com pesos abertos: você pode baixar o modelo, rodar no seu computador, ajustar com modelos derivados e integrar em seus próprios sistemas. Isso o tornou a base de muitos aplicativos e fluxos criativos. Este guia explica qual é o modelo atual, o que a licença permite, as formas reais de usar e como tirar bons resultados, com informações conferidas em setembro de 2026.
 
-Neste guia, vamos explicar o que é o Stable Diffusion, as formas de usá-lo (local ou online), como funcionam os modelos e checkpoints, e como escrever prompts eficientes.
+## Qual é o Stable Diffusion atual
 
-## O que é o Stable Diffusion
+O modelo de imagem mais recente é o **Stable Diffusion 3.5**, lançado em 22 de outubro de 2024 (a versão Medium saiu em 29 de outubro). Segundo o [anúncio da Stability AI](https://stability.ai/news-updates/introducing-stable-diffusion-3-5), são três variantes:
 
-Stable Diffusion é um modelo de inteligência artificial de geração de imagens lançado como código aberto, o que significa que qualquer pessoa pode baixar, modificar, treinar variações próprias e até rodar localmente, sem depender de uma nuvem paga. Essa abertura criou um ecossistema enorme: comunidades de desenvolvedores publicam modelos derivados (chamados de "checkpoints" ou "fine-tunes") especializados em estilos específicos, como anime, fotorrealismo, arte conceitual ou ilustração infantil.
+| Modelo | Tamanho | Para quem |
+|---|---|---|
+| SD 3.5 Large | 8,1 bilhões de parâmetros, até 1 megapixel | Maior qualidade e aderência ao prompt; exige mais hardware |
+| SD 3.5 Large Turbo | Versão destilada do Large | Gera em 4 passos, bem mais rápido |
+| SD 3.5 Medium | 2,5 bilhões de parâmetros, de 0,25 a 2 megapixels | Feito para rodar em hardware de consumidor (9,9 GB de VRAM, sem os codificadores de texto) |
 
-Diferente do DALL-E ou do Midjourney, que são serviços fechados controlados por uma empresa, o Stable Diffusion pode ser usado de formas bem diferentes, dependendo do seu nível técnico e do hardware disponível.
+O **SDXL** e o **SDXL Turbo** continuam disponíveis. Até o fim de agosto de 2026, a página de notícias da Stability não trazia nenhum modelo de imagem mais novo que o SD 3.5; os lançamentos recentes da empresa foram em áudio (Stable Audio 3.0) e plataformas (Brand Studio). Tutoriais que tratam o SD 1.5, o SDXL ou o SD 3 como "versão mais recente" estão desatualizados.
 
-## Formas de usar o Stable Diffusion
+## O que a licença permite
 
-### 1. Rodando localmente no seu computador
+Os modelos oficiais usam a **Stability AI Community License**. Segundo a [página de licença](https://stability.ai/license):
 
-Essa é a opção preferida por quem quer controle total e privacidade, já que as imagens não passam por servidores de terceiros. Para isso você geralmente precisa de:
+- **Uso não comercial:** gratuito.
+- **Uso comercial:** gratuito para pessoas e organizações com receita anual abaixo de US$ 1 milhão.
+- **Acima de US$ 1 milhão por ano:** é preciso contratar a Enterprise License.
 
-- Uma placa de vídeo (GPU) com memória suficiente, idealmente de fabricantes com boa compatibilidade com esse tipo de software.
-- Uma interface gráfica popular instalada no computador, que facilita ajustar parâmetros sem digitar comandos.
-- Um ou mais modelos (checkpoints) baixados de comunidades especializadas.
+A licença cobre, entre outros, a suíte Stable Diffusion 3.5 e o SDXL Turbo. O anúncio do SD 3.5 também diz que o usuário mantém a propriedade das imagens geradas.
 
-A vantagem é não pagar por geração e ter controle absoluto sobre configurações avançadas. A desvantagem é a curva de aprendizado inicial e a exigência de hardware razoável.
+Atenção aos **modelos derivados** (checkpoints e LoRAs publicados pela comunidade): cada um pode ter licença própria, às vezes mais restritiva. Confira antes de usar em projetos comerciais.
 
-### 2. Usando por serviços online
+## Formas de usar
 
-Existem plataformas que hospedam o Stable Diffusion na nuvem e cobram por crédito ou assinatura, sem que você precise instalar nada. É o caminho mais indicado para quem quer testar rapidamente sem mexer em configurações técnicas.
+### 1. Pela web, sem instalar nada: Stable Assistant
 
-### 3. Usando através de aplicativos que já embutem o modelo
+O **Stable Assistant** é a plataforma web da Stability AI, com acesso aos modelos e às ferramentas de edição da empresa. É o caminho para quem quer testar sem GPU. Os preços não aparecem na página de modelos; confira no próprio site.
 
-Muitos aplicativos de celular e sites de geração de imagem usam o Stable Diffusion "por baixo do capô", com uma interface simplificada, escondendo toda a complexidade técnica.
+### 2. No seu computador: pesos + interface gráfica
 
-## Modelos e checkpoints: por que isso importa
+Os pesos do SD 3.5 estão no Hugging Face e o código no GitHub. O anúncio cita o **ComfyUI**, uma interface gráfica baseada em nós, como uma das formas de uso. Fluxo sugerido:
 
-Uma das particularidades do Stable Diffusion é que o resultado muda bastante dependendo de qual "checkpoint" (versão treinada do modelo) você está usando. Alguns exemplos de categorias comuns:
+1. Confira sua placa de vídeo. Para o SD 3.5 Medium, a referência oficial é 9,9 GB de VRAM, sem contar os codificadores de texto.
+2. Instale o ComfyUI seguindo a documentação oficial do projeto.
+3. Baixe o modelo na página oficial da Stability AI no Hugging Face e leia a licença antes.
+4. Coloque os arquivos nas pastas indicadas pela documentação do ComfyUI.
+5. Abra um fluxo de texto para imagem, escreva o prompt e gere.
 
-- Modelos voltados a fotorrealismo.
-- Modelos especializados em estilo anime ou mangá.
-- Modelos para ilustração e arte conceitual.
-- Modelos ajustados para arquitetura e design de interiores.
+**Vantagens:** sem custo por imagem, privacidade (as imagens não saem do seu computador) e controle total. **Desvantagens:** curva de aprendizado e exigência de hardware.
 
-Além dos checkpoints, existem também os chamados "LoRAs", pequenos arquivos adicionais que ajustam o modelo para gerar um estilo, personagem ou objeto específico sem precisar treinar um modelo inteiro do zero.
+### 3. Por API e parceiros de nuvem
 
-## Como escrever prompts para o Stable Diffusion
+Desenvolvedores podem usar a **API da Stability AI** ou parceiros citados no anúncio, como Replicate, Fireworks AI e DeepInfra. Serve para integrar geração de imagem em sites, apps e automações, com cobrança por uso.
 
-O Stable Diffusion tende a responder melhor a prompts estruturados em palavras-chave separadas por vírgulas, diferente do estilo mais "conversacional" de ferramentas como o ChatGPT.
+### 4. Dentro de outros aplicativos
 
-Exemplo de prompt estruturado:
+Vários apps e sites usam modelos Stable Diffusion por trás da interface. Nesses casos, as regras de uso comercial são as do aplicativo, e não só as da Stability.
+
+## Checkpoints e LoRAs
+
+No ecossistema Stable Diffusion, o resultado depende muito do arquivo de modelo usado:
+
+- **Checkpoint:** o modelo completo. Além dos oficiais, a comunidade publica versões ajustadas para estilos específicos (fotorrealismo, anime, ilustração, arquitetura).
+- **LoRA:** um arquivo pequeno que ajusta o modelo para um estilo, personagem ou objeto sem treinar tudo de novo. A Stability destaca o SD 3.5 como pensado para esse tipo de personalização.
+
+Para uma empresa, um uso típico é treinar um LoRA com fotos próprias (por exemplo, do estilo visual da marca) para manter consistência entre peças. Confira sempre a licença do modelo base.
+
+## Como escrever prompts
+
+O SD 3.5 entende frases descritivas, mas muitas interfaces e modelos derivados ainda respondem bem a termos separados por vírgula. Teste os dois estilos.
+
+Descritivo:
 
 ```
-retrato de uma mulher idosa, rugas detalhadas, luz suave de janela, fotografia em preto e branco, alta definição, foco nos olhos
+Retrato em preto e branco de uma mulher idosa sorrindo, rugas bem definidas, luz suave vinda de uma janela à esquerda, foco nos olhos, fotografia de alta definição
 ```
 
-Exemplo com termos técnicos comuns:
+Por palavras-chave:
 
 ```
-paisagem de montanha ao amanhecer, névoa baixa, cores quentes, estilo pintura digital, composição ampla, muito detalhado
+paisagem de montanha ao amanhecer, névoa baixa, cores quentes, pintura digital, composição ampla, muito detalhado
 ```
 
-Também é comum usar um campo separado chamado "prompt negativo", onde você lista o que não quer ver na imagem, como:
+Muitas interfaces têm um campo de **prompt negativo**, para listar o que você não quer:
 
 ```
 mãos deformadas, texto borrado, baixa qualidade, marca d'água
 ```
 
-## Tabela: parâmetros importantes
+Veja mais técnicas em [como escrever prompts para imagens](/artigos/como-escrever-prompts-para-imagens).
 
-| Parâmetro | O que faz |
-|---|---|
-| Steps (passos) | Quantidade de refinamentos que o modelo faz; mais passos costuma dar mais detalhe, até certo ponto |
-| CFG scale | Controla o quanto a imagem segue fielmente o texto do prompt |
-| Seed | Número que define a "semente" aleatória; a mesma seed com o mesmo prompt tende a gerar resultado parecido |
-| Resolução | Tamanho da imagem gerada; resoluções maiores exigem mais poder de processamento |
+## Parâmetros que você vai encontrar
 
-## Vantagens e desvantagens
+| Parâmetro | O que faz | Dica para começar |
+|---|---|---|
+| Steps (passos) | Número de etapas de refinamento | Modelos Turbo usam poucos passos (o Large Turbo, 4); nos demais, siga o padrão da interface |
+| CFG scale | O quanto a imagem segue o texto | Valores muito altos tendem a deixar a imagem artificial; ajuste aos poucos |
+| Seed | Número da "semente" aleatória | Fixe a seed para comparar mudanças no prompt |
+| Resolução | Tamanho em pixels | Respeite a faixa do modelo (Medium: 0,25 a 2 megapixels) |
+| Sampler | Método de amostragem | Mantenha o padrão até entender o básico |
 
-**Vantagens:**
+Se algum termo técnico não ficou claro, consulte o [glossário de IA](/artigos/glossario-inteligencia-artificial).
 
-- Gratuito para rodar localmente (após o investimento em hardware).
-- Enorme variedade de modelos e estilos criados pela comunidade.
-- Controle técnico avançado sobre o processo de geração.
-- Privacidade, já que as imagens podem ser geradas sem enviar dados a servidores externos.
+## Stable Diffusion ou outra ferramenta?
 
-**Desvantagens:**
+- **Quer rodar localmente com licença comercial ampla:** compare com o FLUX.2 [klein] 4B, que tem licença Apache 2.0. Detalhes em [FLUX: modelos e como usar](/artigos/flux-ai-guia).
+- **Quer só criar imagens sem configurar nada:** ChatGPT Images ou Nano Banana no Gemini são mais simples.
+- **Quer estética de direção de arte pronta:** Midjourney.
+- **Precisa de volume com custo previsível e tem equipe técnica:** o Stable Diffusion local ou via API faz sentido.
 
-- Curva de aprendizado maior que ferramentas como DALL-E.
-- Exige hardware razoável para rodar localmente com boa velocidade.
-- Qualidade pode variar bastante dependendo do modelo escolhido.
+A comparação completa entre as ferramentas está no [guia de como criar imagens com IA](/artigos/como-criar-imagens-com-ia). Para decidir entre opções gratuitas e pagas, veja [geradores de imagem gratuitos vs pagos](/artigos/ia-imagens-gratis-vs-pago).
 
-## Casos de uso práticos
+## Erros comuns de iniciantes
 
-- Criadores de conteúdo que precisam gerar grandes volumes de imagens sem custo por unidade.
-- Estúdios de jogos que treinam modelos personalizados para gerar assets em um estilo específico.
-- Fotógrafos e designers que querem controle fino sobre composição e iluminação.
-- Entusiastas que querem experimentar sem depender de assinaturas.
-
-## Perguntas frequentes
-
-**Preciso saber programar para usar o Stable Diffusion?**
-Não necessariamente. Existem interfaces gráficas simples que escondem a parte técnica. Programar ajuda apenas se você quiser automatizar processos ou criar integrações próprias.
-
-**O Stable Diffusion é de graça?**
-O modelo em si é aberto e gratuito. Rodar localmente não tem custo por imagem gerada, mas exige hardware. Usar por serviços online geralmente envolve pagamento por crédito ou assinatura.
-
-**Posso usar imagens geradas comercialmente?**
-Depende da licença do checkpoint específico usado, já que alguns modelos derivados têm restrições próprias. Vale sempre checar a licença do modelo antes de usos comerciais.
-
-## Conclusão
-
-O Stable Diffusion é a escolha ideal para quem quer ir além do básico: controlar parâmetros técnicos, escolher entre milhares de modelos especializados e, se quiser, rodar tudo localmente sem depender de assinaturas. Exige um pouco mais de estudo no início, mas recompensa com liberdade criativa que outras ferramentas fechadas simplesmente não oferecem.
+- **Baixar um checkpoint sem ler a licença.** Derivados podem proibir uso comercial.
+- **Usar resolução fora da faixa do modelo.** O resultado costuma sair com repetições e distorções.
+- **Mudar vários parâmetros de uma vez.** Fixe a seed e altere um item por vez.
+- **Achar que é "de graça" sem custo nenhum.** Rodar localmente exige GPU e energia; serviços online cobram por uso.

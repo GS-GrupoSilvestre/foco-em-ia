@@ -1,98 +1,213 @@
 ---
-title: "Como usar IA para criar fotos de produtos para e-commerce"
-description: "Aprenda a usar IA para gerar e editar fotos de produtos para e-commerce, economizando tempo e custo com estúdio fotográfico tradicional."
+title: "Como usar IA para criar fotos de produto para e-commerce e marketplaces"
+description: "Passo a passo para usar IA em fotos de produto no Mercado Livre, na Amazon e na loja própria: fundo, cenário, prompts prontos e como não enganar o comprador."
 slug: "ia-imagens-para-ecommerce"
 category: "Imagens"
-tags: ["ecommerce", "fotos-de-produto", "ia-para-negocios", "marketing"]
+tags: ["ecommerce", "fotos-de-produto", "mercado-livre", "ia-para-negocios", "marketing"]
 publishedAt: "2026-07-14"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["fotos de produto com ia", "ia para ecommerce", "gerar foto de produto", "fundo de produto ia"]
+keywords: ["fotos de produto com ia", "ia para ecommerce", "foto de produto mercado livre ia", "trocar fundo de foto de produto", "prompt foto de produto"]
+faq:
+  - question: "Posso usar IA para gerar a foto do meu produto do zero?"
+    answer: "Para anúncio de produto real, não é recomendável. A IA pode alterar cor, formato, costura ou acessórios, e a imagem passa a mostrar algo diferente do que o cliente recebe. O caminho mais seguro é fotografar o produto real e usar IA no fundo, na luz e no formato."
+  - question: "O Mercado Livre aceita fundo criado digitalmente?"
+    answer: "Na página de requisitos de fotos para acessórios da Central de Vendedores, o Mercado Livre pede fundo claro criado digitalmente (branco, cinza ou creme em peças de moda) e proíbe logo, marca d'água, bordas, QR code, textos e dados de contato. As regras variam por categoria; confira a página da sua."
+  - question: "Imagem editada com IA pode dar problema com o Código de Defesa do Consumidor?"
+    answer: "Pode, se induzir o consumidor em erro. O CDC proíbe publicidade enganosa, inclusive por omissão (art. 37), e a informação suficientemente precisa veiculada no anúncio obriga o fornecedor (art. 30). A imagem não pode mostrar característica que o produto não tem."
+sources:
+  - name: "Planalto — Código de Defesa do Consumidor (Lei 8.078/1990)"
+    url: "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+  - name: "Mercado Livre — Requisitos de fotos para acessórios (Central de Vendedores)"
+    url: "https://vendedores.mercadolivre.com.br/nota/requisitos-de-fotos-para-vender-acessorios"
+  - name: "OpenAI — Images in ChatGPT"
+    url: "https://help.openai.com/en/articles/11084440-images-in-chatgpt"
+  - name: "Google — Gerar e editar imagens no app Gemini"
+    url: "https://support.google.com/gemini/answer/14286560?hl=en&co=GENIE.Platform%3DDesktop"
+  - name: "Adobe — Preenchimento generativo do Photoshop"
+    url: "https://www.adobe.com/br/products/photoshop/generative-fill.html"
+  - name: "Canva — Get started with Canva AI"
+    url: "https://www.canva.com/help/using-canva-ai/"
+related:
+  - "ia-para-ecommerce-vendas"
+  - "ia-edicao-fotos-photoshop"
+  - "como-escrever-prompts-para-imagens"
+  - "direitos-autorais-imagens-ia"
 ---
 
-Fotografar produtos para uma loja online sempre foi um dos maiores gargalos de quem vende pela internet: exige equipamento, iluminação adequada, um espaço próprio ou a contratação de um estúdio fotográfico profissional. Com a chegada de ferramentas de IA voltadas para imagens de produto, esse processo ficou muito mais acessível, permitindo que pequenos negócios criem fotos de qualidade sem grande investimento inicial.
+Foto de produto é o que o comprador olha antes de ler qualquer coisa, e é também um dos maiores custos de quem vende pela internet. A IA ajuda muito aqui, mas com uma regra que vem antes de qualquer truque: a imagem tem de mostrar exatamente o produto que será entregue. Este guia mostra onde a IA entra no processo, o que não fazer, prompts prontos e uma demonstração completa com um produto simples. Para o panorama das ferramentas, veja o [guia de como criar imagens com IA](/artigos/como-criar-imagens-com-ia).
 
-Neste artigo, vamos mostrar como usar IA em diferentes etapas da criação de fotos de produto, dos fundos personalizados às fotos totalmente geradas para catálogos.
+## A regra de ouro: fotografe o produto real, use IA no entorno
 
-## Por que usar IA nas fotos de produto do seu e-commerce
+O uso mais seguro e útil da IA em e-commerce é este:
 
-- **Redução de custos**: menos necessidade de estúdio, equipamento e cenário físico.
-- **Agilidade**: gerar variações de fundo e composição em minutos, em vez de organizar novas sessões de fotos.
-- **Consistência visual**: manter um padrão estético uniforme em todo o catálogo, mesmo com produtos fotografados em momentos diferentes.
-- **Testes de conversão**: criar rapidamente diferentes versões de imagem para testar qual gera mais cliques ou vendas.
+- **O produto é fotografado de verdade**, com luz boa e foco nítido.
+- **A IA trabalha no que está em volta**: remover o fundo, criar um fundo liso ou um cenário, ajustar luz e sombra, adaptar o formato para cada canal.
 
-## Principais formas de usar IA em fotos de produto
+Gerar o produto inteiro com IA é arriscado porque o modelo "completa" detalhes: muda o tom da cor, inventa costuras, fivelas, texturas ou logotipos, altera proporções. Em anúncio de produto real, isso vira problema.
 
-### 1. Troca e geração de fundo
+## Por que isso importa juridicamente
 
-Uma das aplicações mais populares é fotografar o produto real (com boa iluminação e nitidez) e depois usar IA para substituir o fundo por um cenário totalmente novo, gerado a partir de um prompt de texto. Isso permite, por exemplo, transformar uma simples foto de estúdio branco em uma cena de "sala de estar aconchegante" ou "mesa de café da manhã ao ar livre", sem precisar montar fisicamente esses cenários.
+O [Código de Defesa do Consumidor](https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm) proíbe publicidade enganosa, definida como qualquer informação ou comunicação publicitária "inteira ou parcialmente falsa, ou, por qualquer outro modo, mesmo por omissão, capaz de induzir em erro o consumidor" (art. 37, §1º). E a informação suficientemente precisa veiculada no anúncio obriga o fornecedor e integra o contrato (art. 30). Nas compras fora do estabelecimento, o consumidor ainda pode desistir em 7 dias (art. 49). Uma foto que mostra algo que o produto não tem é caminho direto para devolução, reclamação e reputação ruim no marketplace.
 
-Exemplo de prompt para geração de fundo:
+Nunca use IA para:
+
+- mudar a cor real ou deixá-la "mais bonita";
+- aumentar o produto ou alterar proporções;
+- adicionar acessórios, peças, embalagem ou itens que não acompanham a compra;
+- inserir selos, certificações ou textos de garantia que você não pode comprovar;
+- esconder defeitos, manchas ou marcas de uso em produtos seminovos.
+
+## Regras das plataformas
+
+**Mercado Livre**: na página de [requisitos de fotos para acessórios](https://vendedores.mercadolivre.com.br/nota/requisitos-de-fotos-para-vender-acessorios) da Central de Vendedores, o Mercado Livre pede fundo claro, criado digitalmente, e diz que, em peças de moda, aceita fundos branco, cinza e creme. A mesma página orienta a não adicionar elementos de contexto, dados de contato, logo, marcas d'água, bordas, códigos QR ou textos, e a foto de capa tem as exigências mais rígidas. As regras variam por categoria: procure na Central de Vendedores a página da categoria do seu produto antes de produzir as imagens.
+
+**Amazon**: a Amazon publica requisitos próprios de imagem na Central do Vendedor, com regras específicas para a imagem principal. Confira a versão vigente antes de subir as fotos.
+
+**Loja própria e redes sociais**: aqui você define o padrão, mas a regra do CDC vale igual. Cenários criados por IA funcionam bem em banners e posts, desde que o produto continue fiel.
+
+## Passo a passo
+
+1. **Fotografe o produto real.** Celular com câmera traseira, luz natural de janela ou duas luminárias difusas, fundo liso (cartolina branca ou cinza). Faça frente, verso, detalhe do material e o produto ao lado de uma referência de tamanho.
+2. **Remova ou limpe o fundo.** Canva, Photoshop e outros editores têm remoção automática de fundo. No Canva, o Removedor de Fundo está disponível também no plano gratuito, com uso mensal limitado.
+3. **Crie o fundo exigido pela plataforma.** Para marketplace, fundo liso claro na capa. Para loja e redes, você pode usar cenário.
+4. **Gere o cenário, se for o caso.** No Photoshop, o recurso Gerar plano de fundo cria o fundo ao redor do produto isolado. No ChatGPT e no Gemini, você envia a foto e descreve o fundo, deixando claro que o produto não pode mudar. No Gemini, editar imagens exige 18 anos ou mais.
+5. **Ajuste luz e sombra** para o produto não parecer recortado e colado.
+6. **Compare lado a lado com a foto original.** Cor, formato, costuras, logotipo do fabricante e acessórios precisam estar idênticos. Se algo mudou, descarte.
+7. **Adapte formatos** (quadrado para marketplace e feed, vertical para stories, horizontal para banner).
+
+Mais detalhes sobre cada recurso de edição estão no guia de [edição de fotos com IA no Photoshop e alternativas](/artigos/ia-edicao-fotos-photoshop).
+
+## Demonstração editorial: strap de musculação
+
+Esta é uma demonstração editorial com um produto simples. Não é resultado de um anúncio real.
+
+### Informações originais fornecidas
+
+- Produto: strap de musculação
+- Material: algodão
+- Comprimento: 50 cm
+- Uso: exercícios de puxada
+- Função: auxílio de pegada
+- Imagem disponível: foto real do produto feita com celular sobre mesa
+
+Repare no que **não** foi informado: largura, cor, tipo de costura, se tem acolchoamento, se é vendido em par ou unidade.
+
+### Prompt 1: capa com fundo limpo (edição da foto real)
+
+Use em uma ferramenta que aceite enviar a foto, como ChatGPT ou Gemini:
 
 ```
-Fundo de cena para foto de produto de perfume, mármore branco, luz suave lateral, elementos decorativos discretos, estilo minimalista de e-commerce premium
+Use a foto enviada como referência exata do produto. Mantenha o strap idêntico: mesma cor, mesma textura de tecido, mesmas costuras, mesma largura e mesma proporção. Troque apenas o fundo por branco liso e uniforme, com uma sombra suave abaixo do produto. Não adicione texto, logotipo, fivela, acolchoamento, etiqueta ou qualquer elemento que não esteja na foto original. Não altere o formato do produto. Formato quadrado.
 ```
 
-### 2. Modelos virtuais para roupas e acessórios
+### Prompt 2: imagem de uso para loja própria e redes
 
-Para lojas de moda, existem ferramentas que permitem visualizar como uma peça de roupa ficaria em diferentes tipos de corpo e tons de pele, usando modelos gerados por IA em vez de contratar modelos fotográficos para cada sessão. Isso é especialmente útil para testar rapidamente variações de cor e estampa de um mesmo produto.
+```
+Use a foto enviada como referência exata do produto e mantenha o strap idêntico em cor, textura, costuras e largura. Crie uma cena de academia com o strap enrolado no punho e na barra de um puxador, mostrando o uso em exercício de puxada. Luz natural, fotografia realista, fundo de academia desfocado, formato vertical 4:5. Não adicione texto, marcas, acessórios extras nem mude o produto.
+```
 
-### 3. Ajustes automáticos de qualidade
+Mesmo com essas instruções, a IA pode alterar o produto quando precisa "encaixá-lo" em uma mão ou em uma barra. Se o resultado divergir da foto real, fotografe o uso de verdade: é mais confiável.
 
-Recursos de IA também ajudam a corrigir automaticamente iluminação irregular, remover sombras indesejadas e aumentar a nitidez de fotos tiradas em condições não ideais, melhorando a qualidade final sem precisar refazer a sessão de fotos.
+### Prompt 3: plano de imagens e textos sem inventar
 
-### 4. Geração de variações de composição
+Use em um assistente de texto (ChatGPT, Gemini, Claude):
 
-Uma mesma foto de produto pode ser adaptada rapidamente para diferentes formatos e usos: quadrada para redes sociais, retangular para banners do site, vertical para stories, sem precisar fotografar o produto várias vezes em ângulos diferentes.
+```
+Você é redator de e-commerce. Com base APENAS nas informações abaixo, crie:
+1) um plano com 4 imagens para o anúncio (o que cada uma deve mostrar e se deve ser foto real ou fundo editado);
+2) um título de até 60 caracteres;
+3) 4 bullets;
+4) uma descrição curta.
 
-## Passo a passo prático
+Regras: não invente características, medidas, materiais, certificações, garantias, resultados ou promessas. Se faltar informação importante para o comprador, liste o que falta no final, em vez de supor.
 
-1. **Fotografe o produto real** com boa iluminação neutra e fundo simples (idealmente branco ou de cor sólida), garantindo que os detalhes reais do produto fiquem nítidos.
-2. **Remova o fundo original** usando uma ferramenta de remoção automática.
-3. **Gere um novo fundo** com IA, alinhado à identidade visual da sua loja, ou escolha entre fundos e cenários prontos oferecidos pela ferramenta.
-4. **Ajuste sombras e reflexos** para que o produto pareça naturalmente inserido na nova cena, evitando o efeito de "colagem" artificial.
-5. **Crie variações de formato** para cada canal de divulgação (site, redes sociais, marketplace).
-6. **Revise cuidadosamente** antes de publicar, prestando atenção a detalhes como cores do produto, que precisam continuar fiéis à realidade.
+Informações: strap de musculação; material algodão; comprimento 50 cm; uso para puxadas; auxílio de pegada.
+```
 
-## Tabela: quando gerar fundo com IA vs fotografar cenário real
+### Exemplo de resultado estruturado
 
-| Situação | Fundo gerado por IA | Cenário fotografado real |
+**Plano de imagens**
+
+1. Capa: produto sozinho em fundo branco (foto real, fundo editado).
+2. Detalhe do tecido de algodão em close (foto real).
+3. Produto esticado ao lado de uma fita métrica mostrando os 50 cm (foto real).
+4. Produto em uso na barra de um puxador (foto real ou cena editada, revisada contra a foto original).
+
+**Título**
+
+```
+Strap de Musculação em Algodão 50 cm para Puxadas
+```
+
+**Bullets**
+
+- Material: algodão.
+- Comprimento: 50 cm.
+- Indicado para exercícios de puxada.
+- Auxilia na pegada durante o treino.
+
+**Descrição**
+
+```
+Strap de musculação em algodão, com 50 cm de comprimento. Indicado para exercícios de puxada, ajuda na pegada durante o treino. Veja nas fotos o produto e a medida.
+```
+
+**Falta confirmar antes de publicar**
+
+- Largura do strap e tipo de costura ou reforço.
+- Cor ou cores disponíveis.
+- Se é vendido em par ou por unidade.
+- Instruções de lavagem.
+
+Peça essas informações ao fornecedor. Se a IA sugerir termos como "antiderrapante", "acolchoado", "suporta X kg" ou "reforçado", apague: nada disso foi informado.
+
+## Prompts prontos por tipo de produto
+
+Todos partem de uma foto real enviada à ferramenta.
+
+**Cosméticos (loja própria)**
+
+```
+Mantenha o frasco exatamente como na foto, com o mesmo rótulo, cor e tampa. Troque o fundo por uma superfície de mármore claro com luz suave vinda da esquerda e algumas folhas verdes desfocadas ao fundo. Não altere o texto do rótulo. Formato quadrado.
+```
+
+**Eletrônicos (banner)**
+
+```
+Mantenha o fone de ouvido idêntico ao da foto, com a mesma cor e o mesmo acabamento. Coloque-o sobre uma mesa escura com iluminação lateral fria e reflexo discreto na superfície. Deixe o lado direito livre para texto. Formato horizontal 16:9. Não adicione cabos, estojo ou acessórios que não estão na foto.
+```
+
+**Alimentos (redes sociais)**
+
+```
+Mantenha a embalagem exatamente como na foto, com o mesmo rótulo e as mesmas cores. Coloque-a sobre uma mesa de madeira rústica com luz natural quente da manhã. Ingredientes ao redor apenas como decoração de fundo, desfocados. Não mostre o produto aberto nem porções servidas. Formato vertical 4:5.
+```
+
+No exemplo de alimentos, a restrição final evita mostrar um conteúdo servido que pode não corresponder ao produto. Se usar ingredientes como decoração, não sugira que eles fazem parte do produto.
+
+## Modelos virtuais para moda
+
+Vestir uma peça em uma modelo gerada por IA economiza sessão de fotos, mas é onde a IA mais altera o produto: caimento, comprimento, transparência, estampa. Se usar, compare cada detalhe com a peça real, mantenha pelo menos uma foto real da peça no anúncio e informe medidas reais na descrição.
+
+## Quando fundo gerado por IA vale e quando não vale
+
+| Situação | Fundo ou cenário com IA | Foto real de cenário |
 |---|---|---|
-| Testar múltiplas ambientações rapidamente | Ideal | Inviável em escala |
-| Produto com muitos detalhes reflexivos (vidro, metal polido) | Requer mais ajuste fino | Mais previsível |
-| Orçamento limitado | Ideal | Mais caro |
-| Necessidade de fidelidade fotográfica extrema | Requer revisão cuidadosa | Mais confiável |
+| Testar várias ambientações para anúncios e redes | Vale | Caro em escala |
+| Capa de marketplace | Só fundo liso permitido pela categoria | Fundo liso fotografado também funciona |
+| Produto com vidro, metal polido ou transparência | Exige revisão cuidadosa de reflexos | Mais previsível |
+| Mostrar tamanho real | Não use IA para isso | Foto com referência de medida |
+| Orçamento muito curto | Vale, com a foto real do produto como base | Pode ser feito em casa com luz natural |
 
-## Cuidado essencial: fidelidade do produto
+## Checklist final
 
-O maior risco de usar IA em fotos de produto é gerar uma imagem que não represente fielmente o item vendido, seja na cor, no tamanho ou em detalhes de acabamento. Isso pode gerar devoluções, reclamações e problemas com órgãos de defesa do consumidor. Regras práticas:
+- A cor no anúncio é a cor do produto na mão do cliente?
+- Formato, costuras, logotipo e acessórios estão idênticos à foto original?
+- Nenhum item que não acompanha a compra aparece de forma que sugira estar incluso?
+- A capa segue a regra de fundo e de texto da categoria na plataforma?
+- Há pelo menos uma foto que mostre o tamanho real?
+- Os textos do anúncio só contêm informações fornecidas pelo fabricante ou verificadas por você?
 
-- **Nunca altere a cor real do produto** apenas para deixar a foto mais bonita.
-- **Mantenha proporções realistas**, evitando que a IA distorça o formato do item.
-- Use a geração de IA principalmente para o **fundo e ambientação**, mantendo o produto em si fotografado de forma real sempre que possível.
-- Para produtos totalmente gerados por IA (como mockups conceituais antes da produção física), deixe claro no anúncio que se trata de uma representação, evitando propaganda enganosa.
-
-## Exemplos de prompts por categoria de produto
-
-**Cosméticos:**
-
-```
-Foto de produto de skincare sobre superfície de mármore claro, gotas de água ao redor, luz suave e clean, estilo editorial de beleza
-```
-
-**Eletrônicos:**
-
-```
-Fundo tecnológico para foto de produto eletrônico, tons escuros com iluminação neon sutil, reflexo discreto na superfície, estilo moderno
-```
-
-**Alimentos e bebidas:**
-
-```
-Cenário rústico de mesa de madeira para foto de produto alimentício, ingredientes frescos ao redor, luz natural quente, estilo fotografia gastronômica
-```
-
-## Conclusão
-
-Usar IA para criar e editar fotos de produto é uma das aplicações mais práticas e com retorno mais rápido para quem vende online, permitindo economizar tempo e dinheiro sem abrir mão de um catálogo visualmente atraente. O ponto de atenção mais importante é sempre manter a fidelidade real do produto, usando a IA principalmente para ambientação, composição e variações de formato, garantindo que o cliente receba exatamente o que viu na foto.
+Para ir além das fotos (descrições, atendimento, precificação), veja o guia de [IA para e-commerce](/artigos/ia-para-ecommerce-vendas). Para escrever prompts de imagem melhores, confira [como escrever prompts para imagens](/artigos/como-escrever-prompts-para-imagens), e para dúvidas sobre uso de imagens de IA em anúncios, o artigo sobre [direitos autorais de imagens geradas por IA](/artigos/direitos-autorais-imagens-ia).

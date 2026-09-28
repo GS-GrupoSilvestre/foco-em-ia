@@ -1,155 +1,165 @@
 ---
 title: "A história da inteligência artificial: do passado ao presente"
-description: "Conheça a história da inteligência artificial, de Turing e da conferência de Dartmouth aos invernos da IA, ao deep learning e à era do ChatGPT."
+description: "Da pergunta de Turing em 1950 ao ChatGPT e aos modelos de 2026: a história da inteligência artificial com datas conferidas em fontes primárias e sem exagero."
 slug: "historia-inteligencia-artificial"
 category: "Guias"
-tags: ["história da IA", "Alan Turing", "deep learning", "IA generativa"]
+tags: ["história da IA", "Alan Turing", "Dartmouth", "deep learning", "Transformer", "IA generativa"]
 publishedAt: "2026-05-08"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["história da inteligência artificial", "origem da IA", "linha do tempo IA"]
+keywords: ["história da inteligência artificial", "origem da IA", "linha do tempo IA", "quem criou a inteligência artificial", "teste de Turing", "conferência de Dartmouth", "invernos da IA"]
+faq:
+  - question: "Quem criou a inteligência artificial?"
+    answer: "Não há um único criador. O termo aparece na proposta do projeto de verão de Dartmouth, assinada em 31 de agosto de 1955 por John McCarthy, Marvin Minsky, Nathaniel Rochester e Claude Shannon. Antes disso, Alan Turing já tinha publicado, em 1950, o artigo 'Computing Machinery and Intelligence', que perguntava se as máquinas podem pensar."
+  - question: "O que é o teste de Turing?"
+    answer: "É o 'jogo da imitação' descrito por Alan Turing em 1950: um interrogador conversa por escrito com uma máquina e com uma pessoa e tenta descobrir qual é qual. Turing propôs trocar a pergunta vaga 'as máquinas podem pensar?' por esse teste prático."
+  - question: "O que foram os invernos da IA?"
+    answer: "Foram períodos em que o entusiasmo e o financiamento para pesquisa em IA caíram depois de promessas não cumpridas. Costuma-se falar de um primeiro inverno nos anos 1970 e de um segundo no fim dos anos 1980, após o declínio dos sistemas especialistas."
+  - question: "Quando o ChatGPT foi lançado?"
+    answer: "A OpenAI anunciou o ChatGPT em 30 de novembro de 2022. Hoje o produto usa modelos bem mais novos: em setembro de 2026, o Chat roda a família GPT-5.6 e a geração GPT-6 aparece no ChatGPT Work e no Codex."
+sources:
+  - name: "Mind — A. M. Turing, Computing Machinery and Intelligence (1950)"
+    url: "https://academic.oup.com/mind/article/LIX/236/433/986238"
+  - name: "Stanford — A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (1955)"
+    url: "http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf"
+  - name: "IBM — Deep Blue"
+    url: "https://www.ibm.com/history/deep-blue"
+  - name: "Google DeepMind — AlphaGo"
+    url: "https://deepmind.google/research/breakthroughs/alphago/"
+  - name: "arXiv — Attention Is All You Need (2017)"
+    url: "https://arxiv.org/abs/1706.03762"
+  - name: "OpenAI — Introducing ChatGPT (2022)"
+    url: "https://openai.com/index/chatgpt/"
+related:
+  - "o-que-e-inteligencia-artificial"
+  - "glossario-inteligencia-artificial"
+  - "como-comecar-com-ia-do-zero"
+  - "etica-ia-guia-pratico"
 ---
 
-## A história da inteligência artificial: do passado ao presente
+Para muita gente, a inteligência artificial surgiu do nada no fim de 2022, com o ChatGPT. Mas a pergunta "as máquinas podem pensar?" foi publicada em 1950, e o termo "inteligência artificial" já estava em um documento de 1955. No meio do caminho houve promessas exageradas, dois "invernos", ideias abandonadas que voltaram décadas depois e alguns marcos que viraram manchete. Este guia percorre essa trajetória com datas conferidas nas fontes originais (artigos, propostas e páginas das próprias instituições) e termina no que existe de fato em setembro de 2026, sem previsões mirabolantes.
 
-Para muita gente, a inteligência artificial surgiu do nada no fim de 2022, quando o ChatGPT foi lançado. Mas a verdade é que a IA tem uma história de mais de 70 anos, cheia de promessas exageradas, decepções, reviravoltas e descobertas brilhantes.
-
-Entender essa trajetória ajuda a enxergar o momento atual com mais clareza: o que é realmente novo, o que é exagero e para onde a tecnologia pode ir.
-
----
+Se você está chegando agora ao assunto, vale ler antes [o que é inteligência artificial](/artigos/o-que-e-inteligencia-artificial) e deixar o [glossário de IA](/artigos/glossario-inteligencia-artificial) aberto para os termos técnicos.
 
 ## Antes dos computadores: o sonho de máquinas pensantes
 
-A ideia de criar seres artificiais inteligentes é antiga. Mitos gregos falavam de autômatos construídos por deuses, e ao longo dos séculos inventores criaram bonecos mecânicos que escreviam ou tocavam instrumentos.
+A ideia de criar seres artificiais é antiga: mitos gregos já falavam de autômatos, e ao longo dos séculos inventores construíram bonecos mecânicos que escreviam ou tocavam instrumentos.
 
-No século 19, a matemática britânica **Ada Lovelace** escreveu o que é considerado o primeiro algoritmo para uma máquina, a Máquina Analítica de Charles Babbage. Ela já especulava se máquinas poderiam, um dia, ir além de cálculos.
+O ponto de partida mais concreto está no século 19. Em 1843, **Ada Lovelace** publicou notas sobre a Máquina Analítica projetada por Charles Babbage. A última delas, a Nota G, traz uma tabela para calcular os números de Bernoulli, muitas vezes chamada de "primeiro programa de computador". Segundo o [blog da Biblioteca Bodleiana, da Universidade de Oxford](https://blogs.bodleian.ox.ac.uk/adalovelace/2018/07/26/ada-lovelace-and-the-analytical-engine/), Lovelace imaginou que a máquina poderia até compor música, se a harmonia pudesse ser expressa em regras. Mas também escreveu que a máquina "não tem pretensão de originar nada": só faz o que sabemos mandá-la fazer. Essa frase ficaria famosa um século depois.
 
----
+## Década de 1950: o nascimento do campo
 
-## Década de 1950: o nascimento oficial
+### Alan Turing e o jogo da imitação
 
-### Alan Turing e a pergunta fundamental
-Em 1950, o matemático britânico **Alan Turing** publicou o artigo "Computing Machinery and Intelligence", com a famosa pergunta: "as máquinas podem pensar?". Ele propôs o **Teste de Turing**: se uma pessoa conversando por texto não conseguisse distinguir uma máquina de um humano, a máquina poderia ser considerada inteligente.
+Em 1950, o matemático britânico **Alan Turing** publicou na revista *Mind* o artigo "Computing Machinery and Intelligence", que começa assim: "Proponho considerar a pergunta: 'as máquinas podem pensar?'". Como a pergunta é vaga, Turing a trocou por um teste prático, que chamou de **jogo da imitação** e que hoje conhecemos como **teste de Turing**: um interrogador conversa por escrito com uma pessoa e com uma máquina e tenta descobrir quem é quem.
 
-### A conferência de Dartmouth (1956)
-O termo **"inteligência artificial"** foi usado oficialmente em 1956, em um encontro de pesquisadores no Dartmouth College, nos Estados Unidos, organizado por John McCarthy, Marvin Minsky, Claude Shannon e Nathaniel Rochester. O otimismo era enorme: acreditava-se que em uma geração as máquinas teriam inteligência comparável à humana.
+Dois detalhes do artigo costumam ser esquecidos:
 
-### O Perceptron
-Em 1958, Frank Rosenblatt criou o **Perceptron**, uma das primeiras redes neurais artificiais, capaz de aprender a reconhecer padrões simples. Foi o embrião das redes neurais modernas.
+- Turing dedicou uma seção à "objeção de Lady Lovelace", justamente a ideia de que a máquina só faz o que foi mandada fazer.
+- Ele arriscou uma previsão: em cerca de 50 anos, computadores jogariam o jogo da imitação bem o suficiente para que um interrogador médio não tivesse mais de 70% de chance de acertar após cinco minutos de perguntas.
 
----
+### A proposta de Dartmouth (1955–1956)
+
+Em 31 de agosto de 1955, **John McCarthy** (Dartmouth College), **Marvin Minsky** (Harvard), **Nathaniel Rochester** (IBM) e **Claude Shannon** (Bell Labs) assinaram a [proposta do "Dartmouth Summer Research Project on Artificial Intelligence"](http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf). O documento propunha um estudo de dois meses, com dez pessoas, no verão de 1956. A página do [Dartmouth College](https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth) descreve o encontro como o nascimento desse campo de pesquisa.
+
+A ambição estava explícita: partir da conjectura de que todo aspecto do aprendizado ou da inteligência pode, em princípio, ser descrito com tanta precisão que uma máquina consiga simulá-lo. O fato de o plano caber em um verão diz muito sobre o otimismo da época.
+
+### O Perceptron (1958)
+
+Em julho de 1958, o psicólogo **Frank Rosenblatt** demonstrou o **Perceptron** em um computador IBM 704. Segundo a [Universidade Cornell](https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon), depois de 50 tentativas a máquina aprendeu sozinha a distinguir cartões marcados à esquerda de cartões marcados à direita. É um dos ancestrais diretos das redes neurais atuais, e a imprensa da época já o tratou com manchetes exageradas.
 
 ## Décadas de 1960 e 1970: primeiros sucessos e o primeiro inverno
 
-Nos anos 1960, surgiram programas que impressionavam:
+Em janeiro de 1966, **Joseph Weizenbaum**, do MIT, descreveu o **ELIZA** na revista *Communications of the ACM*. O programa respondia de forma parecida com um psicoterapeuta rogeriano, usando regras simples de reescrita de frases. Mesmo assim, Weizenbaum registrou no [artigo original](https://web.stanford.edu/class/cs124/p36-weizenabaum.pdf) que alguns usuários tiveram muita dificuldade para aceitar que o ELIZA não era humano. É o mesmo efeito que vemos hoje quando pessoas atribuem compreensão ou sentimentos a chatbots.
 
-- **ELIZA (1966)**: criado por Joseph Weizenbaum no MIT, simulava um psicoterapeuta. Era simples, mas muitas pessoas se sentiam realmente ouvidas — um fenômeno que se repete hoje com os chatbots.
-- Programas que jogavam damas, resolviam problemas de lógica e provavam teoremas matemáticos.
+A década também teve programas que jogavam damas, resolviam problemas de lógica e provavam teoremas. Só que as promessas eram maiores que os computadores da época. A tradução automática decepcionou, as limitações das redes neurais simples ficaram evidentes e o financiamento encolheu. Esse período de desânimo, nos anos 1970, ficou conhecido como o **primeiro inverno da IA**.
 
-Porém, as promessas eram grandes demais para os computadores da época. Traduções automáticas decepcionaram, e críticas às limitações das redes neurais simples esfriaram o entusiasmo. Os governos cortaram financiamentos, dando início ao chamado **primeiro "inverno da IA"**, nos anos 1970.
+## Década de 1980: sistemas especialistas, backpropagation e o segundo inverno
 
----
+A IA voltou nos anos 1980 com os **sistemas especialistas**: programas que reuniam regras escritas por especialistas humanos para tomar decisões em áreas como diagnóstico e configuração de equipamentos. Empresas investiram pesado, mas esses sistemas eram caros de manter, difíceis de atualizar e frágeis diante de situações novas. No fim da década, o mercado encolheu e veio o **segundo inverno da IA**.
 
-## Década de 1980: sistemas especialistas e o segundo inverno
+Enquanto isso, a pesquisa em redes neurais avançava. Em outubro de 1986, **David Rumelhart, Geoffrey Hinton e Ronald Williams** publicaram na *Nature* o artigo ["Learning representations by back-propagating errors"](https://www.nature.com/articles/323533a0), que popularizou a **backpropagation**: um método para ajustar os pesos de uma rede com camadas ocultas a partir do erro na saída. É a base do treinamento de praticamente todas as redes neurais modernas.
 
-A IA voltou com força nos anos 1980 por meio dos **sistemas especialistas**: programas que reuniam regras escritas por especialistas humanos para tomar decisões em áreas como diagnóstico médico e configuração de computadores.
+## Décadas de 1990 e 2000: a IA que ninguém via
 
-Empresas investiram pesado, mas esses sistemas eram caros de manter, difíceis de atualizar e frágeis diante de situações novas. No fim da década, o mercado colapsou, e veio o **segundo inverno da IA**.
+A IA saiu das manchetes, mas foi para os bastidores: filtros de spam, sistemas de recomendação e buscadores passaram a usar aprendizado de máquina. Alguns marcos voltaram a chamar atenção:
 
-Enquanto isso, pesquisadores como Geoffrey Hinton, David Rumelhart e Yann LeCun avançavam em redes neurais com o algoritmo de **backpropagation**, que se tornaria fundamental décadas depois.
+- **Maio de 1997:** o **Deep Blue**, da IBM, venceu Garry Kasparov por 3,5 a 2,5 em uma revanche de seis partidas em Nova York. Segundo a [IBM](https://www.ibm.com/history/deep-blue), foi o primeiro computador a derrotar um campeão mundial em exercício sob controle de tempo de torneio. Um ano antes, em 1996, Kasparov tinha vencido o primeiro confronto por 4 a 2.
+- **Fevereiro de 2011:** o **Watson**, também da IBM, venceu Ken Jennings e Brad Rutter, os dois maiores campeões da história do programa de TV *Jeopardy!*, segundo a [página histórica da IBM](https://www.ibm.com/history/watson-jeopardy).
+- **Outubro de 2011:** a Apple apresentou a **Siri** no iPhone 4S, ainda em beta e só em inglês, francês e alemão, de acordo com o [comunicado da empresa](https://www.apple.com/newsroom/2011/10/04Apple-Launches-iPhone-4S-iOS-5-iCloud/).
 
----
+Dois fatores preparavam o salto seguinte: a explosão de **dados** na internet e os **processadores gráficos (GPUs)**, que se mostraram ótimos para os cálculos das redes neurais.
 
-## Década de 1990 e 2000: a IA silenciosa
+## 2012: a virada do deep learning
 
-A IA deixou de ser manchete, mas passou a funcionar nos bastidores:
+Em 2012, uma rede neural convolucional profunda criada por **Alex Krizhevsky, Ilya Sutskever e Geoffrey Hinton**, da Universidade de Toronto, depois conhecida como **AlexNet**, venceu a competição de classificação de imagens ImageNet (ILSVRC). Nos [resultados oficiais](https://image-net.org/challenges/LSVRC/2012/results.html), a equipe SuperVision teve erro top-5 de cerca de 15,3%, contra cerca de 26,2% da equipe seguinte. A diferença mostrou que redes com muitas camadas, muitos dados e GPUs superavam as técnicas anteriores.
 
-- **1997:** o computador **Deep Blue**, da IBM, venceu o campeão mundial de xadrez Garry Kasparov.
-- Filtros de spam, sistemas de recomendação e mecanismos de busca começaram a usar aprendizado de máquina.
-- **2011:** o sistema **Watson**, da IBM, venceu campeões humanos no programa de TV americano Jeopardy!
-- Assistentes de voz como a Siri (2011) chegaram aos celulares.
+A partir daí, o **deep learning** se espalhou por reconhecimento de voz, tradução automática e visão computacional. Em **março de 2016**, em Seul, o **AlphaGo**, da DeepMind, venceu Lee Sedol por 4 a 1 no Go. A [DeepMind](https://deepmind.google/research/breakthroughs/alphago/) descreve Lee Sedol como vencedor de 18 títulos mundiais e considerado o maior jogador daquela década.
 
-Dois fatores preparavam o terreno para a revolução: a explosão de **dados** na internet e a chegada de **processadores gráficos (GPUs)** potentes e mais baratos.
+## 2017 a 2022: Transformers e modelos de linguagem
 
----
+Em junho de 2017, Ashish Vaswani e outros sete autores, em trabalho do Google, publicaram o artigo **"Attention Is All You Need"**, que apresentou a arquitetura **Transformer**. Ela usa um mecanismo de atenção no lugar das redes recorrentes, o que permitiu treinar modelos de linguagem muito maiores com mais eficiência. O "T" de GPT vem daí.
 
-## 2012: a revolução do deep learning
+- **Junho de 2018:** a OpenAI apresenta o [primeiro GPT](https://openai.com/index/language-unsupervised/), que combinava Transformer com pré-treinamento em grandes volumes de texto sem rótulos.
+- **Outubro de 2018:** pesquisadores do Google publicam o **BERT**.
+- **Fevereiro de 2019:** a OpenAI anuncia o **GPT-2**, capaz de gerar parágrafos coerentes.
+- **Maio de 2020:** o artigo do **GPT-3** descreve um modelo com 175 bilhões de parâmetros.
+- **Janeiro de 2021:** a OpenAI apresenta o [DALL·E](https://openai.com/index/dall-e/), que cria imagens a partir de descrições em texto. Na sequência, geradores como o Stable Diffusion (liberado ao público pela Stability AI) e o Midjourney popularizaram a criação de imagens por texto.
 
-Em 2012, uma rede neural profunda chamada **AlexNet**, desenvolvida na Universidade de Toronto, venceu com folga uma competição de reconhecimento de imagens (ImageNet). Era a prova de que redes neurais com muitas camadas, treinadas com muitos dados e GPUs, funcionavam muito melhor do que as técnicas anteriores.
+### 30 de novembro de 2022: o ChatGPT
 
-A partir daí, o **deep learning** tomou conta:
+Em 30 de novembro de 2022, a OpenAI anunciou o **ChatGPT**, um modelo que "interage de forma conversacional", capaz de responder a perguntas de acompanhamento, admitir erros e recusar pedidos inadequados, segundo o [anúncio oficial](https://openai.com/index/chatgpt/). A tecnologia por trás já existia havia alguns anos; a novidade foi colocar um modelo de linguagem em uma interface de conversa gratuita e simples. Foi aí que a IA saiu dos laboratórios e entrou na rotina de pessoas comuns. Se você ainda não usa, o [guia completo do ChatGPT](/artigos/como-usar-chatgpt-guia-completo) mostra o passo a passo.
 
-- Reconhecimento de voz ficou muito mais preciso
-- Tradução automática deu um salto de qualidade
-- Carros autônomos começaram a ser testados
+## De 2023 a 2026: a corrida da IA generativa
 
-Em **2016**, o **AlphaGo**, da DeepMind (Google), venceu o campeão Lee Sedol no Go, um jogo considerado muito mais complexo que o xadrez para computadores.
+Depois do ChatGPT, os lançamentos se aceleraram:
 
----
+- **Fevereiro de 2023:** a Meta divulga o **LLaMA**, inicialmente com licença não comercial e acesso para pesquisadores.
+- **Março de 2023:** a Anthropic abre o acesso ao **Claude** (veja [o que é o Claude](/artigos/o-que-e-claude-anthropic)).
+- **Fevereiro de 2024:** o Google rebatiza o chatbot Bard como **Gemini**.
+- A Microsoft integra o **Copilot** ao Windows e aos apps do Microsoft 365.
+- Chegam os modelos **multimodais** (texto, imagem, áudio e vídeo), os **modelos de raciocínio**, que processam o problema por mais tempo antes de responder, e os **agentes**, que executam tarefas em várias etapas.
 
-## 2017 a 2022: Transformers e a era dos modelos de linguagem
+### Onde estamos em setembro de 2026
 
-Em **2017**, pesquisadores do Google publicaram o artigo "Attention Is All You Need", apresentando a arquitetura **Transformer**. Ela permitiu treinar modelos de linguagem muito maiores e mais eficientes.
+Um retrato rápido, com base nas páginas oficiais das empresas consultadas em setembro de 2026:
 
-- **2018:** surgem o BERT (Google) e o primeiro GPT (OpenAI).
-- **2019 e 2020:** GPT-2 e GPT-3 mostram que modelos maiores escrevem textos impressionantemente fluentes.
-- **2021 e 2022:** geradores de imagem como DALL-E, Midjourney e Stable Diffusion popularizam a criação de imagens a partir de texto.
+- **ChatGPT:** o Chat usa a família **GPT-5.6** (Luna no plano gratuito; Sol nos pagos). A geração **GPT-6** (Astra, Sol e Luna) está no **ChatGPT Work**, um agente para tarefas longas lançado em julho de 2026, e no Codex, segundo a [central de ajuda da OpenAI](https://help.openai.com/en/articles/20001354-gpt-56-in-chatgpt).
+- **Claude:** a Anthropic lançou o **Claude Opus 5.5** em 22 de setembro de 2026. O **Sonnet 5** é o modelo padrão dos planos Free e Pro desde o lançamento, em junho de 2026.
+- **Gemini:** a linha atual é a 3.x (3.1 Pro, 3.8 Flash e outros), e o Google diz que um 3.5 Pro está "em breve".
+- **Produtos também morrem.** O app e o site do Sora, gerador de vídeo da OpenAI, foram descontinuados em 26 de abril de 2026, e a API em 24 de setembro de 2026. Vários modelos que foram manchete, como o GPT-4o e o o3, já saíram do ChatGPT.
+- **Regulação:** o AI Act da União Europeia entrou em vigor em 1º de agosto de 2024, com aplicação escalonada; uma alteração de 2026 adiou as regras de alto risco para dezembro de 2027 e agosto de 2028. No Brasil, o PL 2338/2023 foi aprovado no Senado em dezembro de 2024 e, em setembro de 2026, continuava em comissão especial na Câmara. Ou seja: ainda não é lei.
 
-### Novembro de 2022: o ChatGPT
-Em 30 de novembro de 2022, a OpenAI lançou o **ChatGPT**. Em poucas semanas, milhões de pessoas estavam conversando com uma IA pela primeira vez. Foi o momento em que a inteligência artificial saiu dos laboratórios e entrou definitivamente na vida das pessoas comuns — inclusive no Brasil, um dos países que mais adotaram a ferramenta.
-
----
-
-## 2023 até hoje: a corrida da IA generativa
-
-Depois do ChatGPT, a corrida acelerou:
-
-- Google lançou o Bard, depois rebatizado de **Gemini**
-- A Anthropic lançou o **Claude**
-- A Meta abriu modelos da família **Llama**
-- A Microsoft integrou o **Copilot** ao Windows e ao Office
-- Surgiram modelos **multimodais**, que entendem texto, imagem, áudio e vídeo
-- Chegaram os **modelos de raciocínio**, que "pensam" antes de responder
-- Ganharam força os **agentes de IA**, capazes de executar tarefas em várias etapas
-- Geradores de vídeo realistas passaram a criar cenas a partir de texto
-
-Ao mesmo tempo, cresceram os debates sobre regulação, direitos autorais, empregos, desinformação e segurança. A União Europeia aprovou sua lei de IA, e o Brasil discute seu próprio marco regulatório.
-
----
+Para comparar os assistentes atuais, veja [ChatGPT vs Gemini vs Claude](/artigos/chatgpt-vs-gemini-vs-claude).
 
 ## Linha do tempo resumida
 
 | Ano | Marco |
 |---|---|
-| 1843 | Ada Lovelace escreve o primeiro algoritmo |
-| 1950 | Alan Turing propõe o Teste de Turing |
-| 1956 | Conferência de Dartmouth cria o termo "inteligência artificial" |
-| 1958 | Perceptron, uma das primeiras redes neurais |
-| 1966 | ELIZA, primeiro chatbot famoso |
+| 1843 | Notas de Ada Lovelace sobre a Máquina Analítica, com a Nota G |
+| 1950 | Turing publica "Computing Machinery and Intelligence" e propõe o jogo da imitação |
+| 1955–1956 | Proposta e projeto de verão de Dartmouth sobre "inteligência artificial" |
+| 1958 | Rosenblatt demonstra o Perceptron |
+| 1966 | Weizenbaum descreve o ELIZA |
 | Anos 1970 | Primeiro inverno da IA |
-| Anos 1980 | Sistemas especialistas e segundo inverno |
-| 1997 | Deep Blue vence Kasparov no xadrez |
-| 2011 | Watson vence no Jeopardy! e Siri chega ao iPhone |
-| 2012 | AlexNet inicia a revolução do deep learning |
-| 2016 | AlphaGo vence o campeão mundial de Go |
-| 2017 | Arquitetura Transformer é apresentada |
-| 2022 | Lançamento do ChatGPT |
-| 2023 em diante | Corrida da IA generativa, modelos multimodais, raciocínio e agentes |
+| Anos 1980 | Sistemas especialistas; backpropagation (1986); segundo inverno no fim da década |
+| 1997 | Deep Blue vence Kasparov em uma partida de seis jogos |
+| 2011 | Watson vence no Jeopardy!; Siri chega ao iPhone 4S |
+| 2012 | AlexNet vence a competição ImageNet |
+| 2016 | AlphaGo vence Lee Sedol por 4 a 1 |
+| 2017 | Artigo "Attention Is All You Need" apresenta o Transformer |
+| 2018–2020 | GPT, BERT, GPT-2 e GPT-3 |
+| 2021 | DALL·E gera imagens a partir de texto |
+| 2022 | Lançamento do ChatGPT (30 de novembro) |
+| 2023–2026 | Claude, LLaMA, Gemini, modelos multimodais, de raciocínio e agentes; AI Act na UE |
 
----
+## O que a história ensina a quem usa IA hoje
 
-## Lições que a história da IA ensina
+1. **Desconfie de prazos.** A proposta de Dartmouth cabia em um verão; Turing falou em 50 anos. O exagero já provocou dois invernos. Quando alguém disser que a IA "vai substituir tudo em dois anos", lembre-se disso.
+2. **A sensação de que a máquina entende engana.** O ELIZA seguia regras simples e mesmo assim convenceu pessoas de que era humano. Com os chatbots atuais, muito mais fluentes, o cuidado precisa ser maior: eles ainda erram e inventam fatos com confiança.
+3. **Os avanços dependem de três pilares:** algoritmos (backpropagation, Transformer), dados e poder de computação (GPUs). Quando os três se alinham, o salto acontece.
+4. **Ideias antigas voltam.** O Perceptron é de 1958; a backpropagation, de 1986. As redes neurais passaram décadas desacreditadas antes de dominar o campo.
+5. **Nomes e produtos mudam rápido.** Bard virou Gemini; o Sora saiu de cena em 2026. Aprenda os conceitos, e não só o nome da ferramenta do momento.
 
-1. **O exagero é recorrente.** Promessas grandes demais já causaram dois "invernos". Vale manter o senso crítico com previsões muito otimistas.
-2. **Avanços dependem de três pilares:** algoritmos, dados e poder computacional.
-3. **Ideias antigas voltam.** As redes neurais foram desacreditadas por décadas antes de dominar o campo.
-4. **A tecnologia chega às pessoas aos poucos**, até que um produto simples, como o ChatGPT, torna tudo acessível.
-
----
-
-## Conclusão
-
-A história da inteligência artificial é feita de ciclos de euforia e desilusão, mas também de progresso constante. O que vivemos hoje é resultado de décadas de pesquisa de milhares de cientistas ao redor do mundo.
-
-Conhecer esse passado ajuda a usar a IA do presente com mais consciência — e a avaliar com equilíbrio as promessas sobre o futuro. Continue acompanhando o Foco em IA para entender os próximos capítulos dessa história.
+A ética também entra nessa lista. Vieses, deepfakes e privacidade viraram questões práticas de quem usa essas ferramentas no dia a dia, e o guia de [ética na IA para usuários](/artigos/etica-ia-guia-pratico) trata disso em detalhe.

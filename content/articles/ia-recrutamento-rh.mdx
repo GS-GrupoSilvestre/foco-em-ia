@@ -1,169 +1,243 @@
 ---
-title: "IA em recursos humanos: como usar no recrutamento e gestão de pessoas"
-description: "Veja como a inteligência artificial está transformando o RH de PMEs brasileiras, do recrutamento à retenção de talentos, com ferramentas práticas e acessíveis."
+title: "IA em recursos humanos: como usar no recrutamento e na gestão de pessoas"
+description: "Como usar IA no RH com segurança: vagas, triagem, entrevistas e onboarding, com prompts prontos, riscos de viés e o que a LGPD diz sobre decisões automatizadas."
 slug: "ia-recrutamento-rh"
 category: "IA para Negócios"
-tags: ["recursos humanos", "recrutamento", "IA para RH", "gestão de pessoas"]
+tags: ["recursos humanos", "recrutamento", "IA para RH", "gestão de pessoas", "LGPD", "viés algorítmico"]
 publishedAt: "2026-03-12"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["IA para RH", "recrutamento com IA", "inteligência artificial recursos humanos"]
+keywords: ["IA para RH", "recrutamento com IA", "inteligência artificial recursos humanos", "triagem de currículos com IA", "LGPD decisão automatizada"]
+faq:
+  - question: "Posso usar IA para triar currículos?"
+    answer: "Pode, com cuidado. Defina critérios objetivos ligados à vaga, use uma ferramenta com plano corporativo e contrato adequado, revise as recomendações antes de descartar alguém e teste periodicamente se a triagem não está desfavorecendo grupos. Currículos são dados pessoais protegidos pela LGPD."
+  - question: "A LGPD obriga que uma pessoa revise decisões tomadas por IA?"
+    answer: "Não expressamente. O art. 20 garante ao titular o direito de solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado, mas o parágrafo que exigia revisão por pessoa natural (§3º) foi vetado. Manter revisão humana em decisões sobre pessoas continua sendo a prática recomendada."
+  - question: "Recrutamento com IA é considerado de alto risco no Brasil?"
+    answer: "Ainda não por lei. O PL 2338/2023, aprovado pelo Senado em dezembro de 2024, classifica decisões de emprego e recrutamento como alto risco, mas o projeto segue em análise na Câmara. Na União Europeia, o AI Act também trata emprego como alto risco, com aplicação dessas regras prevista para 2 de dezembro de 2027."
+  - question: "Preciso pedir consentimento do candidato para usar IA?"
+    answer: "Nem sempre. A LGPD prevê várias bases legais além do consentimento (art. 7º), e dados sensíveis têm regras próprias (art. 11). O que vale sempre é informar com clareza quais dados são usados, para qual finalidade e se há automação no processo. Defina a base legal com o jurídico ou o encarregado de dados da empresa."
+sources:
+  - name: "Planalto — Lei Geral de Proteção de Dados (Lei 13.709/2018)"
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+  - name: "Agência Senado — Senado aprova regulamentação da inteligência artificial (10/12/2024)"
+    url: "https://www12.senado.leg.br/noticias/materias/2024/12/10/senado-aprova-regulamentacao-da-inteligencia-artificial-texto-vai-a-camara"
+  - name: "Câmara dos Deputados — Ficha de tramitação do PL 2338/2023"
+    url: "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262"
+  - name: "Comissão Europeia — AI Omnibus enters into force"
+    url: "https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force"
+  - name: "OpenAI — ChatGPT Business Pricing"
+    url: "https://openai.com/business/chatgpt-pricing/"
+  - name: "Gupy — Plataforma de RH com IA"
+    url: "https://www.gupy.io/"
+related:
+  - "ia-para-negocios-guia"
+  - "ia-privacidade-seguranca"
+  - "etica-ia-guia-pratico"
+  - "automacao-processos-ia"
 ---
 
-## IA em recursos humanos: como usar no recrutamento e gestão de pessoas
+O RH é uma das áreas em que a inteligência artificial mais economiza tempo e, ao mesmo tempo, uma das que exigem mais cuidado. Escrever uma vaga, montar um roteiro de entrevista ou preparar o material de integração são tarefas de baixo risco em que a IA ajuda muito. Já triar currículos, pontuar candidatos ou prever quem vai pedir demissão mexe com dados pessoais e com decisões que afetam a vida das pessoas. Este guia mostra como usar IA em cada etapa, com prompts prontos, e onde estão os limites de viés e de LGPD. Se a sua empresa ainda está definindo regras gerais de uso, comece pelo guia de [IA para negócios](/artigos/ia-para-negocios-guia).
 
-Contratar a pessoa errada custa caro. Especialistas estimam que o custo de uma contratação mal-sucedida pode chegar a 50% do salário anual do profissional — e, para PMEs com equipes enxutas, esse impacto é ainda maior.
+## Onde a IA ajuda no RH (e onde exige cuidado)
 
-A boa notícia é que a inteligência artificial está tornando o processo de recrutamento mais preciso e o RH mais estratégico, mesmo para empresas sem um departamento dedicado de pessoas.
+| Tarefa | Ganho com IA | Risco | Como usar |
+|---|---|---|---|
+| Descrição de vaga | Alto | Baixo | Livre, com revisão |
+| Roteiro de entrevista e critérios de avaliação | Alto | Baixo | Livre, com revisão |
+| Material de onboarding e FAQ interno | Alto | Baixo | Com base em documentos da empresa |
+| Rascunho de feedback | Médio | Médio | Sem dados sensíveis, gestor reescreve |
+| Triagem e ranqueamento de currículos | Alto | Alto | Ferramenta corporativa, critérios documentados, revisão humana |
+| Análise automática de entrevista em vídeo | Incerto | Alto | Evite avaliar aparência, voz ou expressões |
+| Previsão de turnover | Médio | Alto | Só com transparência e dados minimizados |
 
-Neste artigo, você vai entender como usar IA em cada etapa do ciclo de RH: da abertura da vaga à retenção dos melhores talentos.
+A regra que atravessa a tabela: **a IA pode sugerir, mas a decisão sobre uma pessoa tem sempre um responsável humano identificado**.
 
----
+## Recrutamento: do anúncio à entrevista
 
-## O problema do RH em PMEs
+### Descrição de vaga
 
-A maioria das pequenas e médias empresas brasileiras opera com RH enxuto — às vezes, uma única pessoa acumulando recrutamento, folha de pagamento, treinamento e compliance. Com esse volume de responsabilidades, tarefas estratégicas ficam em segundo plano.
+Uma vaga clara atrai candidatos mais alinhados e reduz currículos fora do perfil. A IA ajuda a organizar requisitos, separar o que é obrigatório do que é desejável e trocar termos que afastam candidatos sem necessidade ("ninja", "rockstar", adjetivos só no masculino).
 
-Resultado: contratações feitas às pressas, onboarding precário, altas taxas de turnover e dificuldade em construir cultura organizacional.
+Exemplo de prompt:
 
-A IA não resolve tudo, mas ajuda a liberar tempo da equipe de RH para o que realmente importa: as decisões e interações humanas que fazem a diferença na jornada de um colaborador.
+```
+Você é especialista em recrutamento. Escreva uma descrição de vaga
+para [CARGO] em uma empresa de [SETOR] com [N] funcionários em [CIDADE].
 
----
+Informações fornecidas:
+- Responsabilidades: [LISTA]
+- Requisitos obrigatórios: [LISTA]
+- Requisitos desejáveis: [LISTA]
+- Modelo de trabalho: [presencial/híbrido/remoto]
+- Benefícios: [LISTA]
 
-## IA no recrutamento: do anúncio à contratação
+Regras:
+- Use apenas as informações acima. Não invente benefícios, salário,
+  plano de carreira ou requisitos.
+- Separe claramente "obrigatório" e "desejável".
+- Use linguagem neutra em gênero e evite jargões como "ninja" ou "rockstar".
+- Não peça idade, estado civil, foto ou outros dados sem relação com a vaga.
+- No final, liste o que ficou faltando para a vaga ficar completa.
+```
 
-### Escrita de descrições de vagas
-
-Parece simples, mas escrever uma boa descrição de vaga é uma arte. Vagas mal escritas atraem candidatos desalinhados — ou afastam os melhores talentos.
-
-IA pode ajudar a:
-- Estruturar a descrição de forma clara e atrativa
-- Identificar e remover linguagem excludente (ex.: "ninja", "rockstar" afastam alguns perfis; termos masculinos afastam mulheres)
-- Adaptar o tom para o perfil buscado (mais formal para vagas sênior, mais dinâmico para vagas júnior)
-- Otimizar para os termos que candidatos buscam em plataformas como LinkedIn e Catho
-
-**Como fazer**: descreva a vaga para o ChatGPT ou Claude com os requisitos, responsabilidades e cultura da empresa. Peça uma versão otimizada e inclusiva. Compare com a sua versão original e use o melhor dos dois.
+O último item do prompt é o mais útil: a IA aponta lacunas (faixa salarial, jornada, requisitos vagos como "boa comunicação") que você completa antes de publicar.
 
 ### Triagem de currículos
 
-Esta é uma das tarefas que mais consome tempo do RH: ler dezenas ou centenas de currículos para identificar os mais aderentes.
+É a tarefa que mais consome tempo e a de maior risco. Há duas formas de usar IA aqui:
 
-Ferramentas com IA conseguem:
-- Analisar currículos e ranquear candidatos com base em critérios definidos
-- Identificar experiências e habilidades relevantes mesmo que descritas de formas diferentes
-- Sinalizar inconsistências ou lacunas no histórico
-- Filtrar candidatos por critérios objetivos (nível de educação, anos de experiência, habilidades técnicas)
+1. **Plataformas de recrutamento (ATS) com IA.** A brasileira Gupy, por exemplo, se apresenta como "plataforma completa de RH com IA" e anuncia triagem com agentes de IA em seu [site oficial](https://www.gupy.io/). Plataformas assim guardam os dados em um ambiente contratado pela empresa, o que facilita cumprir a LGPD. Antes de contratar, pergunte ao fornecedor quais critérios o sistema usa para ordenar candidatos, se é possível auditar o resultado e como o candidato pode pedir revisão.
+2. **Assistentes de uso geral (ChatGPT, Claude, Gemini).** Servem para comparar currículos com os requisitos da vaga, mas só em conta corporativa. A [página de planos empresariais da OpenAI](https://openai.com/business/chatgpt-pricing/), por exemplo, informa que o ChatGPT Business não treina modelos com dados da empresa por padrão. Nunca suba currículos em contas pessoais.
 
-**Ferramentas nacionais e internacionais**:
-- **Gupy**: plataforma brasileira líder em recrutamento com IA, muito usada por médias e grandes empresas, com recursos de triagem automatizada
-- **Kenoby (agora parte do Gupy)**: boa opção para PMEs
-- **Workable**: plataforma internacional com triagem por IA
-- **Greenhouse**: robusto, usado por empresas de tecnologia
+Um fluxo seguro para vagas com muitos candidatos:
 
-### Entrevistas com IA
+1. Antes de abrir a vaga, escreva de 4 a 6 critérios objetivos ligados à função (ex.: "experiência com emissão de nota fiscal", "CNH categoria B" para uma vaga de entregador).
+2. Retire dos arquivos, sempre que possível, foto, idade, estado civil e endereço completo. Esses dados não ajudam a avaliar a função e podem enviesar a análise.
+3. Peça à IA que avalie cada currículo **apenas** pelos critérios, com justificativa por critério, e não uma nota "geral".
+4. Uma pessoa revisa a lista, inclusive uma amostra dos candidatos que a IA colocou no fim.
+5. Guarde os critérios e as justificativas. Se um candidato pedir explicação, você tem o registro.
 
-Uma categoria que cresceu muito: entrevistas assíncronas com avaliação por IA. O candidato grava respostas a perguntas pré-definidas e a IA avalia critérios como:
-- Clareza de comunicação
-- Coerência das respostas
-- Presença e postura (em vídeo)
-- Palavras-chave relevantes para a vaga
+Exemplo de prompt para a etapa 3:
 
-**Importante**: essas ferramentas devem ser usadas como pré-filtro, não como decisão final. A entrevista humana continua sendo indispensável, especialmente para vagas de liderança.
+```
+Avalie o currículo abaixo em relação aos critérios da vaga de [CARGO].
 
-**Ferramentas**: HireVue, Vidyard for Recruiting, e recursos de algumas plataformas de ATS (Applicant Tracking System).
+Critérios:
+1. [CRITÉRIO 1]
+2. [CRITÉRIO 2]
+3. [CRITÉRIO 3]
+4. [CRITÉRIO 4]
 
-### Checagem de referências automatizada
+Para cada critério, responda "atende", "não atende" ou "não é possível
+avaliar pelo currículo", citando o trecho que justifica a resposta.
+Não considere nome, gênero, idade, foto, endereço, instituição de ensino
+ou lacunas de tempo no histórico. Não dê nota geral nem recomendação
+de contratação.
 
-Ligar para referências é uma etapa muitas vezes pulada por falta de tempo — mas é onde surgem informações valiosas. Plataformas como Checkster e SkillSurvey automatizam esse processo: enviam formulários digitais para os contatos indicados pelo candidato, coletam respostas e geram um relatório analítico.
+Currículo:
+[TEXTO DO CURRÍCULO]
+```
 
----
+Pedir "não é possível avaliar" evita que a IA preencha lacunas com suposições. Proibir a nota geral mantém a decisão com o recrutador.
 
-## IA na gestão e desenvolvimento de pessoas
+### Roteiro de entrevista e avaliação estruturada
 
-### Onboarding personalizado
+Entrevistas estruturadas (mesmas perguntas e mesma régua para todos os candidatos) tornam a comparação mais justa, e a IA é ótima para montá-las.
 
-Primeiros dias importam. Pesquisas mostram que colaboradores com um onboarding estruturado têm 58% mais chance de ficar na empresa por mais de três anos.
+```
+Crie um roteiro de entrevista estruturada para a vaga de [CARGO].
+Competências a avaliar: [LISTA].
+Para cada competência:
+- 2 perguntas comportamentais ("conte uma situação em que...");
+- o que seria uma resposta fraca, adequada e forte (escala de 1 a 3).
+Não inclua perguntas sobre vida pessoal, família, religião, saúde ou planos
+de ter filhos.
+```
 
-IA pode criar experiências de onboarding personalizadas:
-- Planos de onboarding adaptados ao perfil e cargo do novo colaborador
-- Chatbots que respondem dúvidas frequentes dos recém-chegados (onde fica o vale-alimentação, como funciona o ponto, como solicitar férias)
-- Materiais de treinamento em formato personalizado (vídeo, texto, quiz)
+### Entrevistas em vídeo com análise automática
 
-**Ferramenta gratuita**: use ChatGPT para criar um guia de onboarding personalizado. Descreva o cargo, a empresa e os primeiros 30 dias esperados. A IA gera um documento estruturado que você pode customizar.
+Há ferramentas que gravam respostas do candidato e aplicam IA para avaliá-las. Se a empresa usar algo assim, a análise deve se limitar ao **conteúdo** das respostas. Avaliar expressão facial, tom de voz, "postura" ou emoção é pouco confiável, tende a prejudicar pessoas com sotaque, deficiência ou nervosismo e, no texto do PL 2338/2023 aprovado pelo Senado, reconhecimento de emoções aparece na lista de sistemas de alto risco. Em qualquer caso, a gravação é pré-filtro, não decisão final, e o candidato precisa saber que haverá análise automatizada.
 
-### Avaliação de desempenho
+### Checagem de referências
 
-Avaliações de desempenho tradicionais são criticadas por serem subjetivas e enviesadas. IA ajuda de algumas formas:
+A IA pode resumir as respostas de formulários enviados às referências indicadas pelo candidato e destacar pontos em comum. Só colete referências que o próprio candidato indicou e com o conhecimento dele.
 
-- **Análise de dados de performance**: se você tem registros de metas e resultados, IA ajuda a consolidar e analisar padrões
-- **Feedback estruturado**: IA ajuda gestores a escrever feedbacks mais claros, construtivos e específicos
-- **Identificação de padrões de desempenho**: em equipes maiores, IA consegue identificar colaboradores de alto desempenho e aqueles em risco
+## IA na gestão de pessoas
 
-**Como fazer**: use seu sistema de RH com IA (se tiver) ou exporte os dados e analise com Claude ou ChatGPT. Descreva o contexto e peça análises e insights.
+### Onboarding
 
-### Predição de turnover
+Um plano de integração bem montado reduz dúvidas repetidas e deixa claro o que se espera nas primeiras semanas.
 
-Esta é uma das aplicações mais valiosas: identificar, antes que aconteça, quais colaboradores têm maior probabilidade de pedir demissão.
+```
+Crie um plano de onboarding de 30 dias para [CARGO] em [EMPRESA/SETOR].
+Contexto: [tamanho da equipe, ferramentas usadas, a quem o cargo reporta].
+Organize por semana, com: objetivos, quem apresenta cada assunto,
+treinamentos e uma conversa de acompanhamento ao fim de cada semana.
+Use apenas as informações fornecidas; marque como [A DEFINIR] o que faltar.
+```
 
-Sistemas de RH com IA analisam indicadores como:
-- Redução no engajamento (menos participação em reuniões, menos uso de ferramentas internas)
-- Padrão de ausências
-- Tempo na empresa vs. média de mercado
-- Resultados de pesquisas de clima
-- Movimentações de carreira recentes (falta de promoção, mudança de gestor)
+Para dúvidas frequentes (como pedir férias, como funciona o ponto, onde ficam os documentos), monte um documento com as políticas da empresa e use um projeto no ChatGPT ou no Claude instruído a responder **só com base nesse documento**. O passo a passo para montar esse tipo de assistente está em [IA no atendimento ao cliente](/artigos/ia-atendimento-cliente-chatbot), e a lógica vale para o público interno.
 
-Com essa informação, o RH pode agir preventivamente: conversa, reconhecimento, oportunidade de crescimento.
+### Feedback e avaliação de desempenho
 
-**Ferramentas**: Workday (para empresas maiores), Culture Amp, Lattice.
+A IA ajuda o gestor a transformar anotações soltas em um feedback claro, específico e construtivo. Três cuidados:
 
-### Treinamento e aprendizado
+- Envie fatos e comportamentos observados, não opiniões sobre a pessoa.
+- Não inclua informações de saúde, afastamentos, vida familiar ou outros dados sensíveis.
+- O texto final é do gestor. Feedback que "soa como IA" perde credibilidade com a equipe.
 
-IA está transformando o treinamento corporativo com plataformas de aprendizado adaptativo — que ajustam o conteúdo ao ritmo e às lacunas de cada colaborador.
+```
+Transforme as anotações abaixo em um feedback para uma conversa 1:1.
+Estrutura: o que foi bem (com exemplos), o que precisa melhorar (com
+exemplos), um combinado para os próximos 60 dias.
+Tom: direto e respeitoso. Não acrescente fatos que não estão nas anotações.
 
-Para PMEs, mesmo sem plataformas sofisticadas, é possível:
-- Usar ChatGPT para criar materiais de treinamento personalizados
-- Criar quizzes e avaliações automáticas
-- Desenvolver simulações de situações de trabalho (para vendas, atendimento, liderança)
+Anotações: [FATOS OBSERVADOS, sem nome completo]
+```
 
----
+### Previsão de turnover
 
-## Questões éticas e legais importantes
+Sistemas de RH podem cruzar indicadores (tempo sem promoção, resultado de pesquisas de clima, mudança de gestor) para apontar risco de saída. É útil, mas é também **definição de perfil profissional por tratamento automatizado**, exatamente o que o art. 20 da LGPD cobre. Na prática:
 
-### Viés algorítmico
+- Informe aos colaboradores que esse tipo de análise existe e para que serve.
+- Não use dados de saúde, como atestados e afastamentos médicos. São dados sensíveis (art. 5º, II) e não devem alimentar modelos de risco.
+- Use o resultado para abrir conversa (reconhecimento, plano de carreira), nunca para punir ou desligar alguém preventivamente.
 
-IA treinada em dados históricos pode perpetuar vieses existentes. Se sua empresa historicamente contratou mais homens para cargos de liderança, a IA pode aprender a privilegiar candidatos masculinos. Monitore ativamente os resultados e corrija quando necessário.
+### Treinamento
 
-### LGPD e privacidade
+Para PMEs sem plataforma de treinamento, a IA ajuda a transformar manuais internos em trilhas curtas, quizzes e simulações (um cliente difícil para a equipe de vendas, uma reclamação para o atendimento). Revise tudo antes de distribuir: a IA pode completar procedimentos com passos que não existem na sua empresa.
 
-O tratamento de dados de candidatos e colaboradores está sujeito à Lei Geral de Proteção de Dados. Ao usar ferramentas de IA no RH:
-- Obtenha consentimento explícito para uso dos dados
-- Informe quais dados são coletados e para qual finalidade
-- Garanta que as plataformas que você usa tenham adequação à LGPD
-- Mantenha registros do tratamento de dados
+## Viés algorítmico: como testar na prática
 
-### Transparência com candidatos
+Sistemas treinados com o histórico de contratações da empresa podem repetir os padrões desse histórico. Se, no passado, uma função foi ocupada quase só por homens, a ferramenta pode aprender a favorecer perfis parecidos. Para reduzir o risco:
 
-Se você usar IA na triagem ou em entrevistas, é boa prática informar os candidatos. Isso evita problemas reputacionais e respeita a autonomia das pessoas no processo.
+- **Teste com currículos fictícios pareados.** Crie dois currículos idênticos em experiência, mudando só um sinal (nome tipicamente feminino ou masculino, idade implícita pelo ano de formatura, bairro). Se a avaliação mudar, há um problema.
+- **Retire variáveis que funcionam como atalho** (proxy) para características protegidas: foto, endereço, ano de nascimento, nome da escola.
+- **Revise uma amostra dos rejeitados**, e não só dos aprovados.
+- **Documente critérios e mudanças.** A LGPD tem a não discriminação entre seus princípios (art. 6º) e permite que a autoridade audite aspectos discriminatórios de decisões automatizadas (art. 20, §2º).
 
----
+Para uma visão mais ampla do tema, veja o guia de [ética na IA](/artigos/etica-ia-guia-pratico).
 
-## Quanto custa implementar IA no RH de uma PME?
+## LGPD e decisões automatizadas no RH
 
-Os custos variam muito:
+*Este conteúdo é informativo e não substitui orientação jurídica.*
 
-- **Ferramentas gratuitas/acessíveis**: ChatGPT Plus (R$ 100/mês) para escrita de vagas, feedbacks e materiais de treinamento
-- **Plataformas de ATS com IA**: Gupy tem planos a partir de aproximadamente R$ 500/mês
-- **Plataformas de desenvolvimento**: Culture Amp e Lattice têm planos para equipes menores por volta de R$ 50-100 por colaborador/mês
+Dados de candidatos e colaboradores são dados pessoais, e a [Lei Geral de Proteção de Dados](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) se aplica a qualquer ferramenta de IA que os processe. Os pontos que mais importam no RH:
 
-O retorno, quando a tecnologia reduz uma única contratação equivocada, já paga muitos meses de investimento.
+- **Base legal (art. 7º).** O consentimento é só uma das bases possíveis; há também execução de contrato, cumprimento de obrigação legal e legítimo interesse, entre outras. Na relação de trabalho, a escolha da base adequada merece análise do jurídico ou do encarregado de dados (DPO).
+- **Dados sensíveis (art. 5º, II, e art. 11).** Saúde, biometria, origem racial ou étnica, religião, filiação sindical e vida sexual têm regras mais restritas. Informações sobre deficiência para vagas afirmativas, por exemplo, exigem cuidado redobrado e não devem ir para chats de IA de uso geral.
+- **Transparência e finalidade (art. 6º).** Informe no anúncio da vaga ou na política de privacidade que o processo usa ferramentas automatizadas e para quê.
+- **Decisões automatizadas (art. 20).** O titular tem direito de solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses, incluindo a definição de perfil profissional. A empresa deve informar, quando solicitada, os critérios e procedimentos usados (§1º), respeitados os segredos comercial e industrial.
+- **Revisão humana não é obrigação expressa.** O §3º do art. 20, que exigia que a revisão fosse feita por pessoa natural, foi **vetado**. Ou seja, a LGPD garante o direito de pedir revisão, mas não diz que ela precisa ser feita por um humano. Mesmo assim, em contratação, a revisão humana é a prática mais segura e a que o candidato espera.
+- **Sanções (art. 52).** A multa simples pode chegar a 2% do faturamento no Brasil, limitada a R$ 50 milhões por infração.
 
----
+A fiscalização é da ANPD, hoje chamada Agência Nacional de Proteção de Dados (Lei 15.352/2026). Para as regras de cada fornecedor sobre o que acontece com os dados que você envia, veja [IA e privacidade](/artigos/ia-privacidade-seguranca).
 
-## Conclusão: IA como aliada, não substituta do RH
+### E o marco legal da IA?
 
-A maior armadilha na adoção de IA no RH é achar que ela vai substituir o julgamento humano. Não vai — e não deve. Contratar é uma decisão com alto componente emocional, cultural e estratégico.
+O Brasil ainda não tem lei específica de IA. O PL 2338/2023 foi aprovado pelo Senado em 10 de dezembro de 2024 e, segundo a [Agência Senado](https://www12.senado.leg.br/noticias/materias/2024/12/10/senado-aprova-regulamentacao-da-inteligencia-artificial-texto-vai-a-camara), classifica decisões de emprego e recrutamento como **alto risco**, com direitos como explicação da decisão, contestação e revisão humana. Em setembro de 2026, o projeto segue em comissão especial na Câmara e o texto ainda pode mudar. Vale como sinal de para onde a regulação caminha, não como obrigação em vigor.
 
-O papel da IA é eliminar o trabalho repetitivo, tornar os processos mais consistentes e oferecer dados para decisões mais embasadas. O "feeling" do gestor para uma contratação, a conversa genuína na entrevista, o acompanhamento do colaborador no primeiro mês — isso continua sendo território humano.
+### Referência internacional: o AI Act europeu
 
-Use a IA para ser mais eficiente, e use o tempo ganho para ser mais humano.
+Para empresas que recrutam na União Europeia ou querem seguir padrões internacionais: o AI Act (Regulamento UE 2024/1689) entrou em vigor em 1º de agosto de 2024, com aplicação escalonada, e inclui sistemas usados em emprego entre os de alto risco. Com a alteração conhecida como AI Omnibus, em vigor desde 27 de julho de 2026, as regras para esses sistemas passam a valer a partir de **2 de dezembro de 2027**, segundo a [Comissão Europeia](https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force). Textos que falam em obrigações de alto risco já em agosto de 2026 estão desatualizados.
+
+## Quanto custa começar
+
+- **Tarefas de baixo risco** (vagas, roteiros, onboarding, treinamentos): os planos gratuitos ou individuais de ChatGPT, Claude ou Gemini dão conta, desde que sem dados de candidatos e colaboradores.
+- **Tarefas com dados pessoais**: use planos corporativos, como ChatGPT Business, Claude Team ou os assistentes incluídos no Google Workspace e no Microsoft 365, ou uma plataforma de recrutamento contratada.
+
+Preços e condições mudam com frequência; consulte as páginas oficiais dos fornecedores. Para comparar o custo com o tempo economizado, use o método de [cálculo de ROI de projetos de IA](/artigos/roi-inteligencia-artificial).
+
+## Quando não usar IA no RH
+
+- Para decidir sozinha quem é contratado, promovido ou desligado.
+- Para avaliar aparência, voz, expressões ou "perfil cultural" a partir de vídeo.
+- Com dados de saúde, afastamentos ou informações sensíveis em chats de uso geral.
+- Quando você não consegue explicar ao candidato quais critérios foram usados.
+- Em contas pessoais dos funcionários, fora das ferramentas aprovadas pela empresa.
+
+## Conclusão
+
+A IA libera o RH de tarefas repetitivas (escrever vagas, organizar entrevistas, preparar integrações) e ajuda a lidar com volume na triagem. O preço disso é responsabilidade: critérios documentados, dados minimizados, testes de viés e uma pessoa que responde pela decisão. Com essas regras, o tempo ganho vai para o que a IA não faz: conversar com candidatos e acompanhar quem acabou de chegar.

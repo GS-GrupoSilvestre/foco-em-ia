@@ -1,98 +1,196 @@
 ---
-title: "Gemini no Google Sheets: automatize planilhas com IA"
-description: "Aprenda a usar o Gemini dentro do Google Sheets para criar fórmulas, organizar dados, gerar gráficos e automatizar tarefas repetitivas em planilhas."
+title: "Gemini no Google Sheets: função AI, exemplos e prompts prontos"
+description: "Aprenda a usar o Gemini no Google Sheets: painel lateral, função AI e um exemplo completo de controle de pedidos de loja online, com prompts e fórmulas prontas."
 slug: "gemini-para-planilhas-sheets"
 category: "Gemini"
-tags: ["gemini", "google sheets", "planilhas", "produtividade"]
+tags: ["gemini", "google sheets", "planilhas", "produtividade", "e-commerce"]
 publishedAt: "2026-05-24"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["gemini google sheets", "ia em planilhas", "automatizar planilhas com ia", "gemini planilhas"]
+keywords: ["gemini google sheets", "função ai google sheets", "ia em planilhas", "automatizar planilhas com ia", "gemini planilhas", "controle de pedidos planilha"]
+faq:
+  - question: "O Gemini no Google Sheets é gratuito?"
+    answer: "Não na conta pessoal gratuita. A Central de Ajuda informa que o recurso exige um plano Google Workspace ou Google AI elegível. Nos planos pessoais, o Gemini no Sheets aparece no Google AI Pro e no Ultra (o AI Plus cita apenas Gmail e Vids). No Workspace, está nos planos Business Standard, Plus e Enterprise."
+  - question: "O que é a função AI do Google Sheets?"
+    answer: "É uma função de célula, escrita como =AI(\"prompt\", intervalo) ou =Gemini(), que gera texto, resume, categoriza ou analisa sentimento a partir das células indicadas. Ela responde só em texto, gera no máximo as primeiras 350 células selecionadas por vez e não pode ser colocada dentro de outras fórmulas, como SE."
+  - question: "O Gemini no Sheets funciona em português?"
+    answer: "Sim. A lista oficial de idiomas do Google Workspace com Gemini inclui português (Brasil) no painel lateral do Sheets e na função AI."
+  - question: "Posso usar o Gemini em um arquivo do Excel aberto no Google Sheets?"
+    answer: "Segundo a Central de Ajuda, o recurso funciona melhor com arquivos nativos do Google Sheets. Converta o arquivo em Arquivo, Salvar como Planilhas Google antes de usar."
+sources:
+  - name: "Google — Colaborar com o Gemini no Google Sheets (Central de Ajuda)"
+    url: "https://support.google.com/docs/answer/14356410?hl=en"
+  - name: "Google — Usar a função AI no Google Sheets (Central de Ajuda)"
+    url: "https://support.google.com/docs/answer/15877199?hl=en"
+  - name: "Google — Criar ou editar planilhas inteiras com o Gemini no Sheets (Central de Ajuda)"
+    url: "https://support.google.com/docs/answer/16959434?hl=en"
+  - name: "Google — Gemini 3.8 Flash e 3.8 Flash Cyber"
+    url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+  - name: "Google — Idiomas suportados no Google Workspace com Gemini"
+    url: "https://support.google.com/docs/answer/14925782?hl=en"
+  - name: "Google — Planos e preços do Google Workspace"
+    url: "https://workspace.google.com/intl/pt-BR/pricing"
+related:
+  - "ia-analise-dados-decisao"
+  - "ia-para-ecommerce-vendas"
+  - "gemini-no-gmail-google-docs"
+  - "ia-financas-empresariais"
 ---
 
-Trabalhar com planilhas pode ser demorado, especialmente quando envolve fórmulas complexas, organização de grandes volumes de dados ou criação de gráficos. O Gemini, integrado ao Google Sheets, ajuda a simplificar boa parte dessas tarefas, permitindo que você descreva o que precisa em linguagem natural, sem precisar decorar fórmulas ou comandos técnicos.
+O Gemini no Google Sheets deixa você pedir, em português, fórmulas, tabelas dinâmicas, gráficos e análises, e ainda tem uma função de célula (`=AI()`) que classifica e resume textos linha a linha. Para quem controla pedidos, estoque ou finanças em planilha, isso economiza muito tempo, desde que você saiba o que pedir e confira o resultado. Este guia mostra quem tem acesso, as três formas de usar e um exemplo completo de controle de pedidos de uma loja online, com prompts e fórmulas prontas. Se você está começando, veja também o [guia completo do Gemini](/artigos/como-usar-gemini-google).
 
-Neste artigo, mostramos como usar o Gemini para automatizar e agilizar o trabalho em planilhas.
+## Quem tem acesso ao Gemini no Sheets
 
-## Onde encontrar o Gemini no Google Sheets
+Segundo a [Central de Ajuda do Google](https://support.google.com/docs/answer/14356410?hl=en), o recurso exige "an eligible Google Workspace or Google AI plan":
 
-Ao abrir uma planilha no Google Sheets, o Gemini geralmente aparece como um ícone lateral ou um painel que pode ser aberto a qualquer momento. A partir dele, você pode digitar pedidos em português normal, sem precisar conhecer a sintaxe exata de fórmulas.
+- **Conta pessoal gratuita:** não inclui o Gemini dentro do Sheets.
+- **Google AI Plus:** a página de planos cita Gemini no Gmail e no Vids, não no Sheets.
+- **Google AI Pro e Ultra:** incluem Gemini no Gmail, Documentos e outros apps. Em setembro de 2026, o Google anunciou que o modelo Gemini 3.8 Flash chegou ao Gemini no Sheets para assinantes Pro e Ultra.
+- **Google Workspace:** Business Standard, Plus e Enterprise incluem o Gemini no Sheets; o Business Starter tem acesso limitado (Gmail e Vids).
 
-## Principais usos práticos
+O português (Brasil) é suportado no painel lateral e na função AI. A mesma lógica de planos vale para o Gmail e o Docs, que explicamos em [Gemini no Gmail e Google Docs](/artigos/gemini-no-gmail-google-docs).
 
-### 1. Criar fórmulas automaticamente
+## As três formas de usar o Gemini no Sheets
 
-Em vez de pesquisar como montar uma fórmula específica, você pode descrever o que precisa, por exemplo: "crie uma fórmula que some os valores da coluna B apenas quando a coluna A for igual a 'concluído'". O Gemini sugere a fórmula pronta para ser aplicada na célula.
+| Forma | Onde fica | Melhor para |
+|---|---|---|
+| Painel lateral | Botão do Gemini no canto superior direito | Fórmulas, tabelas, gráficos, tabela dinâmica, formatação condicional, análises |
+| Função AI | Dentro de uma célula: `=AI()` ou `=Gemini()` | Classificar, resumir ou gerar texto para cada linha |
+| Criar ou editar a planilha inteira | Painel de criação ao abrir o Sheets | Montar uma planilha do zero ou fazer uma análise completa |
 
-### 2. Organizar e limpar dados
+### Passo a passo: painel lateral
 
-Planilhas com dados desorganizados, duplicados ou com formatação inconsistente podem ser um problema. Você pode pedir ao Gemini para identificar duplicatas, sugerir uma padronização de formatação ou apontar inconsistências nos dados.
+1. Abra a planilha no Google Sheets pelo computador. Se for um arquivo do Excel, converta antes em Arquivo, Salvar como Planilhas Google.
+2. Clique no botão do Gemini no canto superior direito ("Ask Gemini", na interface em inglês).
+3. Escolha uma sugestão ou escreva o pedido e pressione Enter.
+4. Revise o que o Gemini propõe antes de inserir na planilha.
 
-### 3. Gerar resumos e análises
+Pela Central de Ajuda, o painel gera tabelas e fórmulas, faz análises, cria gráficos, resume arquivos do Drive e e-mails do Gmail e executa ações como formatação condicional, tabelas dinâmicas, listas suspensas, classificar e filtrar, localizar e substituir, formatos de número e ajustes em linhas e colunas.
 
-Ao selecionar uma tabela de dados, é possível pedir um resumo em texto do que aquela informação representa, como "resuma as principais tendências de vendas mostradas nesta tabela".
+### Passo a passo: função AI
 
-### 4. Criar gráficos com base em uma descrição
+1. Em uma célula vazia, digite `=AI("seu pedido", intervalo)`. O intervalo é opcional e indica quais células o Gemini deve considerar.
+2. Arraste a fórmula para as outras linhas, se precisar.
+3. Selecione as células com a função e clique em gerar e inserir ("Generate and insert").
+4. Para atualizar depois, use a opção de atualizar e inserir ("Refresh and insert").
 
-Em vez de configurar manualmente cada elemento de um gráfico, você pode pedir: "crie um gráfico de barras comparando as vendas por região" e o Gemini sugere a visualização mais adequada para os dados selecionados.
+Em planilhas com localidade Brasil, o separador de argumentos costuma ser ponto e vírgula: `=AI("seu pedido"; H2)`.
 
-### 5. Preencher dados a partir de padrões
+## Exemplo prático: controle de pedidos de uma loja online
 
-O Gemini pode identificar padrões em uma coluna e sugerir o preenchimento de células vazias com base neles, útil para categorizar informações ou completar dados repetitivos.
+Cenário hipotético: uma loja de acessórios de treino vende no Mercado Livre, na Amazon e no site próprio e registra os pedidos numa planilha. Os dados abaixo são fictícios.
 
-## Tabela: tarefas comuns e como pedir ao Gemini
+| A: Pedido | B: Data | C: Canal | D: Produto | E: Qtd | F: Valor (R$) | G: Status | H: Comentário do cliente |
+|---|---|---|---|---|---|---|---|
+| 1001 | 02/09/2026 | Mercado Livre | Strap de algodão | 2 | 79,80 | Entregue | Chegou rápido, gostei |
+| 1002 | 03/09/2026 | Amazon | Faixa elástica | 1 | 49,90 | Atrasado | Ainda não recebi |
+| 1003 | 03/09/2026 | Site | Strap de algodão | 1 | 39,90 | Enviado | — |
+| 1004 | 04/09/2026 | Mercado Livre | Faixa elástica | 3 | 149,70 | Devolvido | Veio no tamanho errado |
 
-| Tarefa | Exemplo de comando |
-|---|---|
-| Somar valores com condição | "Some os valores da coluna C quando a coluna A for 'aprovado'" |
-| Encontrar duplicatas | "Identifique linhas duplicadas nesta planilha" |
-| Criar categorias | "Classifique cada produto da coluna B em 'alto', 'médio' ou 'baixo' custo" |
-| Gerar gráfico | "Crie um gráfico de pizza com a distribuição de gastos por categoria" |
-| Resumir dados | "Explique em texto o que esta tabela de vendas mostra" |
+### 1. Criar a planilha do zero
 
-## Exemplo prático: controle financeiro pessoal
+Prompt para o painel de criação ou o painel lateral:
 
-Imagine uma planilha com suas despesas mensais, organizada por data, categoria e valor. Você pode pedir ao Gemini:
+```text
+Crie uma planilha de controle de pedidos de uma loja online com as
+colunas: Pedido, Data, Canal, Produto, Qtd, Valor (R$), Status e
+Comentário do cliente. Coloque lista suspensa em Canal (Mercado Livre,
+Amazon, Site) e em Status (Pago, Enviado, Entregue, Atrasado,
+Devolvido). Formate Valor como moeda em reais e congele a primeira linha.
+```
 
-- "Some o total gasto em cada categoria"
-- "Crie um gráfico mostrando a porcentagem de gastos por categoria"
-- "Aponte em quais meses os gastos com alimentação foram mais altos"
+### 2. Fórmulas para faturamento por canal
 
-Esse tipo de análise, que levaria bastante tempo para ser montada manualmente com fórmulas e gráficos, pode ser gerada em poucos minutos com a ajuda da IA.
+Prompt para o painel lateral:
 
-## Exemplo prático: organização de uma planilha de vendas
+```text
+Crie uma fórmula que some o Valor (coluna F) dos pedidos do canal
+Mercado Livre (coluna C) com status Entregue (coluna G). Depois crie
+outra que calcule o ticket médio de cada canal.
+```
 
-Para uma equipe comercial, uma planilha de controle de vendas pode se beneficiar de comandos como:
+Use as fórmulas abaixo como referência para conferir o que o Gemini sugerir (localidade Brasil):
 
-- "Calcule o total de vendas por vendedor"
-- "Destaque em vermelho os vendedores que não atingiram a meta"
-- "Crie um resumo executivo com os principais números do mês"
+```text
+=SOMASES(F2:F; C2:C; "Mercado Livre"; G2:G; "Entregue")
+=SOMASE(C2:C; "Amazon"; F2:F) / CONT.SE(C2:C; "Amazon")
+```
 
-## Boas práticas ao usar IA em planilhas
+Em planilhas com localidade em inglês, as mesmas fórmulas são `=SUMIFS(F2:F, C2:C, "Mercado Livre", G2:G, "Entregue")` e `=SUMIF(C2:C, "Amazon", F2:F) / COUNTIF(C2:C, "Amazon")`.
 
-### Confira sempre as fórmulas geradas
+### 3. Ações: destaques, tabela dinâmica e gráfico
 
-Antes de aplicar uma fórmula sugerida pelo Gemini em uma planilha importante, teste em uma célula separada ou em uma cópia da planilha, garantindo que o resultado está correto.
+```text
+Destaque em vermelho as linhas com status Atrasado.
+```
 
-### Seja específico sobre colunas e critérios
+```text
+Crie uma tabela dinâmica com a soma do Valor por Canal e por mês.
+```
 
-Quanto mais claro você for sobre quais colunas e condições devem ser usadas, mais precisa será a fórmula ou análise gerada.
+```text
+Crie um gráfico de colunas com o faturamento por canal.
+```
 
-### Combine IA com revisão manual
+Atenção: segundo a Central de Ajuda, gráficos gerados pelo Gemini não se atualizam sozinhos quando os dados mudam. Recrie o gráfico ou monte um gráfico comum do Sheets se a planilha for atualizada todo dia.
 
-Para planilhas usadas em decisões importantes, como relatórios financeiros, é recomendável revisar manualmente os resultados gerados pela IA antes de compartilhar ou tomar decisões com base neles.
+### 4. Função AI para ler os comentários dos clientes
 
-### Use para tarefas repetitivas
+Na coluna I, para classificar cada comentário:
 
-O maior ganho de produtividade costuma vir de tarefas repetitivas: categorização de dados, criação de fórmulas semelhantes em várias colunas, ou geração de múltiplos gráficos padronizados.
+```text
+=AI("Classifique o comentário do cliente em uma destas categorias: elogio, atraso na entrega, problema de tamanho, defeito, outro. Responda só com a categoria."; H2)
+```
 
-## Limitações a considerar
+Na coluna J, para sugerir uma resposta que você revisa antes de enviar:
 
-- Planilhas muito grandes podem exigir que você trabalhe por partes, já que a IA tem limites de quantidade de dados analisados de uma vez
-- Fórmulas muito específicas de nicho podem exigir ajustes manuais após a sugestão inicial
-- A qualidade da análise depende diretamente da organização e clareza dos dados já existentes na planilha
+```text
+=AI("Escreva uma sugestão de resposta curta e cordial para este comentário. Não prometa reembolso, troca, prazo ou brinde."; H2)
+```
 
-## Conclusão
+Depois, uma contagem simples mostra o que mais gera reclamação: `=CONT.SE(I2:I; "atraso na entrega")`.
 
-O Gemini transforma o Google Sheets em uma ferramenta ainda mais poderosa, reduzindo o tempo gasto em tarefas manuais como criação de fórmulas, organização de dados e geração de gráficos. Para quem trabalha com planilhas com frequência, aprender a descrever claramente o que precisa para a IA pode economizar horas de trabalho repetitivo ao longo do mês.
+### 5. Análise do mês
+
+```text
+Analise os pedidos de setembro e me mostre: faturamento por canal,
+produto mais vendido em quantidade, percentual de pedidos atrasados
+ou devolvidos e três pontos de atenção. Mostre as fórmulas que usou
+para cada número.
+```
+
+Pedir as fórmulas é o que permite conferir a análise. Para transformar esses números em decisões, veja o guia de [análise de dados com IA](/artigos/ia-analise-dados-decisao) e as estratégias de [IA para e-commerce](/artigos/ia-para-ecommerce-vendas).
+
+## Mais prompts prontos
+
+```text
+Identifique linhas duplicadas pela coluna Pedido e destaque em amarelo.
+```
+
+```text
+Padronize a coluna Produto: corrija variações de escrita do mesmo
+item e me mostre a lista de mudanças antes de aplicar.
+```
+
+```text
+Crie uma planilha de despesas mensais com colunas de data, categoria,
+valor e observações, e um resumo com o total por categoria.
+```
+
+```text
+Adicione uma coluna que calcule quantos dias se passaram desde a data
+do pedido e destaque os pedidos com status Enviado há mais de 7 dias.
+```
+
+## Boas práticas e limitações
+
+- **Teste em uma cópia:** aplique fórmulas e ações numa cópia da planilha antes de mexer na versão que a equipe usa.
+- **Diga nomes e letras de colunas:** "coluna F (Valor)" é mais preciso que "os valores".
+- **Função AI é para texto, não para conta:** segundo o Google, ela responde só em texto e não enxerga a planilha inteira nem outros arquivos do Drive. Para somar e contar, use fórmulas.
+- **Limite de 350 células:** a função AI gera apenas as primeiras 350 células selecionadas de cada vez e não pode ficar dentro de outras fórmulas, como `SE`.
+- **Histórico some:** a conversa do painel se perde ao recarregar a página ou fechar o arquivo.
+- **Dados pessoais:** evite colocar CPF, endereço completo ou telefone de clientes em prompts; o próprio Google recomenda não incluir informações confidenciais.
+- **Confira antes de decidir:** para relatórios financeiros, revise os números manualmente. Veja também [IA para finanças empresariais](/artigos/ia-financas-empresariais).
+
+Para escrever pedidos melhores dentro do Sheets e de outros apps do Google, confira nossas dicas de [prompts eficientes para o Gemini](/artigos/gemini-prompts-eficientes).

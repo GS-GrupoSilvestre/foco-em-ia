@@ -1,86 +1,134 @@
 ---
-title: "FLUX: conheça o gerador de imagens que rivaliza com o Midjourney"
-description: "Entenda o que é o FLUX, gerador de imagens por IA conhecido por fotorrealismo e detalhes, e veja como ele se compara a outras ferramentas."
+title: "FLUX: o que é, modelos atuais e como usar o gerador da Black Forest Labs"
+description: "Entenda o FLUX em 2026: diferenças entre FLUX.2 (klein, pro, max, flex, dev) e FLUX 3, licenças, como usar no Playground, na API ou localmente e quando escolher."
 slug: "flux-ai-guia"
 category: "Imagens"
-tags: ["flux", "geracao-de-imagens", "fotorrealismo", "comparativo"]
+tags: ["flux", "flux.2", "flux 3", "black forest labs", "geracao-de-imagens"]
 publishedAt: "2026-06-04"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["flux ia", "flux gerador de imagem", "flux vs midjourney", "melhor ia fotorrealista"]
+keywords: ["flux ia", "flux.2", "flux 3", "flux gerador de imagem", "flux licença comercial", "flux vs midjourney", "black forest labs"]
+faq:
+  - question: "Qual é o FLUX mais recente?"
+    answer: "Em setembro de 2026, a Black Forest Labs tem duas famílias em destaque: o FLUX.2, para imagem e edição (klein, pro, max, flex e dev), e o FLUX 3, anunciado em 23 de julho de 2026 como modelo multimodal treinado com imagem, vídeo e áudio. O FLUX 3 começou pelo vídeo com som; em setembro de 2026, a geração de imagem aparecia em acesso antecipado."
+  - question: "O FLUX é gratuito?"
+    answer: "Alguns modelos têm pesos abertos que podem ser baixados sem custo. O FLUX.2 [klein] 4B tem licença Apache 2.0, que permite uso comercial. O FLUX.2 [dev], o klein 9B e o FLUX.1 Kontext [dev] são gratuitos só para uso não comercial. Os modelos pro, max e flex são usados via Playground ou API, com pagamento por geração."
+  - question: "Posso usar o FLUX comercialmente?"
+    answer: "Depende do modelo e da forma de uso. Pela API e pelo Playground, você paga por geração. Com pesos abertos, só o FLUX.2 [klein] 4B (Apache 2.0) é livre para uso comercial; os demais pesos abertos exigem licença paga da BFL (Builder, Platform, Professional ou Enterprise) para uso comercial self-hosted."
+  - question: "O FLUX é melhor que o Midjourney?"
+    answer: "Não há vencedor absoluto. O Midjourney é uma plataforma fechada focada em estética, com assinatura. O FLUX é uma família de modelos com opções de pesos abertos, API por uso e integração em outras ferramentas, como o Adobe Firefly e o Photoshop. A escolha depende de controle técnico, licença e fluxo de trabalho."
+sources:
+  - name: "Black Forest Labs — Modelos FLUX disponíveis"
+    url: "https://help.bfl.ai/articles/7655484417-what-flux-models-are-available"
+  - name: "Black Forest Labs — Anúncio do FLUX 3"
+    url: "https://bfl.ai/blog/flux-3"
+  - name: "Black Forest Labs — Release notes"
+    url: "https://docs.bfl.ai/release-notes"
+  - name: "Black Forest Labs — Licenças comerciais"
+    url: "https://bfl.ai/licensing"
+  - name: "Black Forest Labs — Preços"
+    url: "https://bfl.ai/pricing"
+  - name: "Adobe — Adobe Firefly"
+    url: "https://www.adobe.com/br/products/firefly.html"
+related:
+  - "stable-diffusion-guia-iniciantes"
+  - "midjourney-guia-completo"
+  - "ia-imagens-gratis-vs-pago"
 ---
 
-Entre os geradores de imagem que ganharam destaque nos últimos tempos, o FLUX se tornou um nome recorrente nas comparações com o Midjourney, principalmente por entregar resultados fotorrealistas com um nível de detalhe impressionante, além de lidar melhor com anatomia humana, um ponto historicamente difícil para modelos de geração de imagem.
+FLUX é a família de modelos de geração de imagem (e, agora, de vídeo) da Black Forest Labs (BFL). Ela ficou conhecida por combinar modelos comerciais de alta qualidade com versões de pesos abertos que qualquer pessoa pode baixar. O nome "FLUX", porém, cobre hoje vários modelos com licenças e usos bem diferentes. Este guia explica qual escolher, como acessar e o que a licença permite, com informações oficiais conferidas em setembro de 2026.
 
-Neste guia, vamos explicar o que é o FLUX, quais são seus pontos fortes, como ele se compara a outras ferramentas populares e como você pode começar a usá-lo.
+## As famílias FLUX hoje
 
-## O que é o FLUX
+A BFL organiza os modelos em três famílias, segundo a [central de ajuda da empresa](https://help.bfl.ai/articles/7655484417-what-flux-models-are-available):
 
-FLUX é um modelo de geração de imagens por inteligência artificial conhecido por produzir resultados com alto nível de realismo, boa consistência de anatomia (mãos, rostos, proporções corporais) e capacidade de seguir instruções complexas de forma mais precisa que muitos modelos anteriores. Ele existe em diferentes versões, incluindo variantes mais leves e rápidas e variantes voltadas para máxima qualidade, permitindo escolher entre velocidade e nível de detalhe conforme a necessidade.
+- **FLUX 3:** modelo multimodal anunciado em 23 de julho de 2026, "treinado em conjunto com imagem, vídeo e áudio". Começou pelo vídeo com som sincronizado, em acesso antecipado; pelas notas de versão, gera clipes de até 20 segundos em Full HD. No anúncio, a BFL prometeu a geração de imagem para as semanas seguintes (a central de ajuda hoje a lista em acesso antecipado) e uma versão de pesos abertos, o "FLUX 3 Dev", para o futuro.
+- **FLUX.2:** a família principal de imagem e edição, com as versões klein, pro, max, flex e dev.
+- **FLUX.1:** geração anterior, que ainda inclui o FLUX.1 Kontext (edição) e o FLUX1.1 [pro].
 
-O modelo pode ser acessado por diferentes interfaces e serviços, já que, assim como o Stable Diffusion, tem componentes que circulam de forma mais aberta na comunidade de desenvolvedores, o que ajudou a espalhar seu uso rapidamente por diferentes plataformas.
+Artigos que apresentam o FLUX.1 [dev] ou [pro] como "o FLUX mais recente" estão desatualizados.
 
-## Por que o FLUX ganhou tanta atenção
+## Qual modelo FLUX.2 usar
 
-- **Anatomia mais consistente**: mãos com número correto de dedos, proporções corporais coerentes e rostos bem formados, problemas que historicamente atormentavam outros modelos.
-- **Fotorrealismo elevado**: texturas de pele, cabelo e materiais com aparência muito próxima de fotografias reais.
-- **Boa aderência ao prompt**: segue instruções complexas com mais fidelidade, incluindo cenas com múltiplos elementos e composições específicas.
-- **Velocidade competitiva**: em algumas versões otimizadas, gera imagens rapidamente sem grande perda de qualidade.
-
-## FLUX vs Midjourney vs outros modelos
-
-| Critério | FLUX | Midjourney | DALL-E |
+| Modelo | Para que serve | Como acessar | Licença |
 |---|---|---|---|
-| Fotorrealismo | Muito alto | Alto (estilo mais "artístico") | Bom |
-| Anatomia humana | Muito consistente | Melhorou bastante, ainda com falhas ocasionais | Boa |
-| Aderência ao prompt | Alta | Média/alta | Alta |
-| Facilidade de acesso | Varia conforme a plataforma | Interface própria dedicada | Integrado ao ChatGPT |
-| Flexibilidade técnica | Alta (várias versões e integrações) | Baixa (mais fechado) | Baixa/média |
+| FLUX.2 [klein] 4B | Modelo compacto que roda em GPU de consumidor | Pesos no Hugging Face | Apache 2.0 (uso comercial permitido) |
+| FLUX.2 [klein] 9B | Versão maior do klein | Pesos no Hugging Face | FLUX Non-Commercial |
+| FLUX.2 [dev] | Pesos abertos para rodar na sua infraestrutura | Pesos no Hugging Face | Gratuito só para uso não comercial |
+| FLUX.2 [pro] | Modelo comercial para uso em produção | Playground e API | Uso pago por geração |
+| FLUX.2 [max] | Versão topo de linha da família | Playground e API | Uso pago por geração |
+| FLUX.2 [flex] | Mais controle sobre parâmetros de geração, como passos e guidance | Playground e API | Uso pago por geração |
 
-Vale lembrar que "melhor" depende do objetivo: o Midjourney costuma ser preferido por quem busca uma estética mais artística e estilizada, enquanto o FLUX se destaca quando o objetivo é realismo fotográfico e precisão anatômica.
+Para **edição** de imagens existentes, a BFL mantém a linha FLUX.1 Kontext ([pro], [max] e [dev], este último com pesos abertos, só edição e não comercial).
 
-## Como começar a usar o FLUX
+## Como usar o FLUX: três caminhos
 
-Assim como acontece com o Stable Diffusion, existem diferentes formas de acessar o FLUX:
+### 1. Playground (sem instalar nada)
 
-1. **Por plataformas online** que hospedam o modelo e oferecem interface simplificada, cobrando por crédito ou assinatura.
-2. **Rodando localmente**, para quem tem hardware compatível e quer controle técnico total, sem depender de serviços de terceiros.
-3. **Através de aplicativos e ferramentas** que já integraram o FLUX como opção de modelo dentro de um conjunto maior de recursos de geração de imagem.
+O Playground da BFL (playground.bfl.ai) é o caminho mais direto para testar os modelos oficiais no navegador.
 
-Para iniciantes, o caminho mais simples é começar por uma plataforma online que já ofereça o FLUX pronto para uso, sem exigir configuração técnica.
+1. Acesse playground.bfl.ai e crie sua conta.
+2. Escolha o modelo. Para começar, um modelo comercial da família FLUX.2, como o [pro], é um ponto de partida razoável.
+3. Escreva o prompt, defina a proporção e gere.
+4. Gere algumas variações do mesmo prompt em mais de um modelo e compare custo e resultado antes de usar em volume.
 
-## Dicas de prompts para aproveitar o FLUX
+A BFL cobra por geração: "sem assinaturas, sem taxa por assento", segundo a [página de preços](https://bfl.ai/pricing). Os valores por imagem mudam por modelo; consulte a página antes de usar em volume.
 
-Como o modelo tem boa aderência a instruções detalhadas, vale a pena investir tempo escrevendo prompts descritivos:
+### 2. API (para integrar em sistemas)
+
+Desenvolvedores geram uma chave no dashboard da BFL (dashboard.bfl.ai) e chamam os modelos pela API. Faz sentido para lojas virtuais que precisam gerar variações de banners, apps e automações. Pelas [notas de versão](https://docs.bfl.ai/release-notes), o FLUX 3 ganhou saídas 2K e 4K via API em setembro de 2026.
+
+### 3. Localmente (pesos abertos)
+
+Quem tem GPU pode baixar os pesos do FLUX.2 [klein] ou [dev] no Hugging Face e rodar em interfaces locais, como já é comum com o [Stable Diffusion](/artigos/stable-diffusion-guia-iniciantes). Antes de baixar, confira a licença: só o klein 4B é Apache 2.0.
+
+### Também dentro de outras ferramentas
+
+O FLUX aparece integrado em produtos de terceiros. O app Adobe Firefly oferece o FLUX.2 [pro] entre os modelos de parceiros, e o Preenchimento generativo do Photoshop para desktop também dá acesso a ele. Veja mais em [edição de fotos com IA no Photoshop e alternativas](/artigos/ia-edicao-fotos-photoshop). Nesses casos, valem as regras e os créditos da plataforma que você está usando.
+
+## Licenças e uso comercial
+
+- **Via Playground ou API:** você paga por geração.
+- **Pesos abertos com uso comercial liberado:** só o FLUX.2 [klein] 4B (Apache 2.0).
+- **Pesos abertos não comerciais:** FLUX.2 [dev], FLUX.2 [klein] 9B e FLUX.1 Kontext [dev].
+- **Uso comercial self-hosted dos modelos não comerciais:** exige uma das [licenças pagas da BFL](https://bfl.ai/licensing) (Builder, até 10 mil imagens por mês; Platform e Professional, até 100 mil; e Enterprise). Os valores não aparecem na página.
+- **Dentro do Firefly ou do Photoshop:** a Adobe diz que seus próprios modelos Firefly são seguros para uso comercial, mas essa garantia não cobre os modelos de parceiros, como o FLUX.
+
+## Como escrever prompts para o FLUX
+
+Os modelos FLUX.2 entendem descrições longas em linguagem natural. Descreva a cena como se estivesse briefando um fotógrafo:
 
 ```
-Retrato fotorrealista de um chef de cozinha preparando um prato, ambiente de cozinha profissional, luz natural entrando pela janela, foco nítido nas mãos e nos ingredientes, estilo fotografia editorial
+Retrato fotorrealista de um chef preparando um prato em uma cozinha profissional, luz natural entrando por uma janela lateral, foco nítido nas mãos e nos ingredientes, fundo levemente desfocado, estilo fotografia editorial, formato 3:2
 ```
 
 ```
-Fotografia de still life com frutas frescas sobre uma mesa rústica de madeira, luz suave lateral, fundo desfocado, alta definição, estilo revista de gastronomia
+Still life de frutas frescas sobre uma mesa rústica de madeira, luz suave lateral, fundo escuro desfocado, estilo revista de gastronomia, formato 4:5
 ```
 
-Para retratos de pessoas, aproveitando o ponto forte de anatomia:
+Para peças com texto:
 
 ```
-Retrato em close-up de uma mulher sorrindo, iluminação natural suave, textura de pele realista, fundo neutro desfocado, fotografia profissional
+Cartaz minimalista com o título exato "Semana do Café" em letras grandes sem serifa no topo, ilustração de uma xícara no centro, fundo creme, sem nenhum outro texto
 ```
 
-## Quando escolher o FLUX em vez de outras ferramentas
+Revise sempre o texto gerado, principalmente acentos.
 
-- Quando o projeto exige **fotorrealismo** de alto nível, como imagens para campanhas publicitárias que precisam parecer fotografias reais.
-- Quando **mãos e anatomia** são elementos centrais da imagem, como em cenas com pessoas interagindo com objetos.
-- Quando você precisa de **flexibilidade técnica**, podendo escolher entre diferentes versões do modelo conforme velocidade e qualidade desejadas.
-- Quando busca uma alternativa com **boa relação entre qualidade e acessibilidade**, comparado a ferramentas mais fechadas.
+## Qual ferramenta faz mais sentido para cada situação?
 
-## Limitações a considerar
+- **Rodar localmente com uso comercial liberado:** FLUX.2 [klein] 4B.
+- **Pagar só pelo que gerar, sem assinatura:** FLUX via Playground ou API.
+- **Integrar geração de imagem num sistema:** API da BFL (ou a da Stability, para comparar).
+- **Estética de direção de arte com pouca configuração:** [Midjourney](/artigos/midjourney-guia-completo), com assinatura.
+- **Já trabalha na Adobe:** use o FLUX.2 [pro] dentro do Firefly ou do Photoshop, com os créditos da Adobe.
+- **Iniciante que quer só conversar com a IA:** ChatGPT Images ou Nano Banana no Gemini são mais simples.
 
-- A experiência de uso pode variar bastante dependendo de qual plataforma você escolhe para acessar o FLUX, já que não existe uma única interface oficial unificada como acontece com o Midjourney.
-- Versões mais pesadas do modelo, voltadas para máxima qualidade, podem exigir mais tempo de processamento ou hardware mais robusto quando rodadas localmente.
-- Como em qualquer gerador de imagem, ainda é possível obter resultados estranhos em cenas muito complexas ou pedidos ambíguos.
+A comparação geral está no [guia de como criar imagens com IA](/artigos/como-criar-imagens-com-ia).
 
-## Conclusão
+## Limitações
 
-O FLUX se firmou como uma opção séria para quem busca fotorrealismo e consistência anatômica em geração de imagens por IA, rivalizando diretamente com ferramentas mais estabelecidas como o Midjourney. Se o seu foco é criar imagens que pareçam fotografias reais, com boa representação de pessoas e cenas complexas, vale a pena testar o FLUX e comparar os resultados com as ferramentas que você já usa.
+- **Nomes confusos:** "FLUX" pode ser o klein local, o pro pela API ou o modelo dentro do Firefly. Resultados, preços e licenças mudam conforme o caminho.
+- **Licença exige atenção:** baixar um peso aberto não significa poder usá-lo comercialmente.
+- **FLUX 3 ainda em expansão:** em setembro de 2026, o foco do FLUX 3 era vídeo, e a central de ajuda da BFL listava a geração de imagem em acesso antecipado.
+- **Hardware:** modelos maiores rodando localmente exigem GPU mais robusta.

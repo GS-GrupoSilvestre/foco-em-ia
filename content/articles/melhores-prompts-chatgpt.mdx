@@ -1,6 +1,6 @@
 ---
-title: "50 Melhores Prompts para ChatGPT: Exemplos Prontos para Usar Agora"
-description: "Coletânea com os 50 melhores prompts para ChatGPT organizados por área: trabalho, criatividade, estudo, programação e negócios. Copie e use agora."
+title: "50 melhores prompts para ChatGPT: exemplos prontos para copiar e adaptar"
+description: "50 prompts para ChatGPT prontos para copiar e adaptar, com contexto e formato definidos: trabalho, vendas, estudo, código e negócios, com exemplos brasileiros."
 slug: "melhores-prompts-chatgpt"
 category: "ChatGPT"
 tags: ["prompts chatgpt", "prompt engineering", "chatgpt dicas", "exemplos de prompts"]
@@ -8,229 +8,591 @@ publishedAt: "2025-01-14"
 author: "Equipe Foco em IA"
 featured: false
 popular: true
-keywords: ["melhores prompts chatgpt", "prompts chatgpt português", "prompt engineering", "como escrever prompts", "exemplos prompts ia"]
+keywords: ["melhores prompts chatgpt", "prompts chatgpt português", "prompts prontos chatgpt", "exemplos de prompts", "prompt engineering", "como escrever prompts"]
 faq:
   - question: "O que é um bom prompt para o ChatGPT?"
-    answer: "Um bom prompt é claro, específico e fornece contexto suficiente. Inclua: o papel que você quer que o ChatGPT assuma, o que você precisa, o formato de resposta desejado e qualquer contexto relevante."
+    answer: "É um pedido que deixa claro o objetivo, o contexto (quem você é, para quem é o resultado), a tarefa, o formato da resposta e as restrições (tamanho, tom, o que evitar). Os prompts desta lista já trazem esses campos entre colchetes para você preencher."
+  - question: "Esses prompts funcionam no ChatGPT gratuito?"
+    answer: "Sim. O plano gratuito usa o GPT-5.6 Luna, com conversas de texto ilimitadas e o botão Think para perguntas mais difíceis, segundo a central de ajuda da OpenAI. Recursos como envio de arquivos têm limites menores no gratuito."
+  - question: "Posso usar os mesmos prompts no Gemini ou no Claude?"
+    answer: "Sim. Os prompts são texto comum e funcionam em qualquer assistente de IA. Pode ser preciso ajustar detalhes, como pedir explicitamente que a resposta venha em português."
   - question: "Como escrever prompts em português para o ChatGPT?"
-    answer: "Escreva naturalmente em português. O ChatGPT entende nuances do português brasileiro muito bem. Seja direto, forneça exemplos quando possível e especifique o nível de detalhe que você espera."
+    answer: "Escreva naturalmente em português, como se estivesse delegando a tarefa para uma pessoa. Diga o público, o objetivo e o formato, e dê um exemplo quando tiver um estilo específico em mente."
+  - question: "Onde guardo os prompts que mais uso?"
+    answer: "Você pode guardar informações permanentes nas Instruções personalizadas e organizar tarefas recorrentes em Projetos, que estão disponíveis inclusive no plano gratuito. Um documento simples com seus prompts favoritos também funciona."
 sources:
-  - name: "OpenAI Prompt Engineering Guide"
-    url: "https://platform.openai.com/docs/guides/prompt-engineering"
+  - name: "OpenAI — GPT-5.6 and GPT-6 Pro in ChatGPT"
+    url: "https://help.openai.com/en/articles/20001354-gpt-56-in-chatgpt"
+  - name: "OpenAI — Searching the web with ChatGPT"
+    url: "https://help.openai.com/en/articles/9237897-chatgpt-search"
+  - name: "OpenAI — ChatGPT Custom Instructions"
+    url: "https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions"
+  - name: "OpenAI — Projects in ChatGPT"
+    url: "https://help.openai.com/en/articles/10169521-projects-in-chatgpt"
+  - name: "OpenAI — Custom GPT retirement and migration FAQ"
+    url: "https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq"
+related:
+  - "como-melhorar-seus-prompts"
+  - "como-usar-chatgpt-guia-completo"
+  - "custom-instructions-chatgpt"
+  - "chatgpt-para-empreendedores"
 ---
 
-A diferença entre um usuário mediano e um usuário avançado do ChatGPT está quase inteiramente nos prompts. Um prompt bem estruturado pode transformar uma resposta genérica em algo realmente útil. Compilamos 50 prompts testados e organizados por área que você pode copiar, adaptar e usar agora mesmo.
+Um prompt bom não é um prompt "mágico": é um pedido que diz ao ChatGPT para quem é o resultado, qual o objetivo, que formato você quer e o que ele não deve fazer. Esta lista reúne 50 prompts organizados por área, já escritos com esses campos. Copie, troque o que está entre colchetes pelo seu caso e ajuste a resposta com um ou dois pedidos de refinamento.
 
 ## Como usar esta lista
 
-Copie o prompt diretamente ou adapte as partes entre colchetes `[assim]` para o seu contexto específico. Os prompts mais longos geralmente geram respostas melhores.
+1. Copie o prompt inteiro para o ChatGPT.
+2. Substitua tudo o que está entre `[colchetes]` pelas suas informações. Quanto mais concreto (nome do produto, público, cidade, prazo), melhor.
+3. Apague as linhas que não se aplicam ao seu caso.
+4. Leia a resposta e peça ajustes pontuais ("mais curto", "tom mais informal", "troque o exemplo por um do varejo").
+5. Confira números, nomes, leis e datas antes de usar. O ChatGPT pode errar com segurança.
 
----
+Para tarefas de análise (SWOT, precificação, decisões), vale usar um modo de raciocínio: no plano gratuito, o botão **Think**; nos planos pagos, um nível de raciocínio mais alto no seletor, como Medium ou High, conforme a [central de ajuda da OpenAI](https://help.openai.com/en/articles/20001354-gpt-56-in-chatgpt).
 
-## Trabalho e Produtividade
+### Exemplo prático: o mesmo pedido antes e depois
+
+Antes:
+
+```text
+Escreva uma legenda para o Instagram da minha loja.
+```
+
+Depois (usando o prompt 9 preenchido):
+
+```text
+Crie 3 variações de legenda para um post no Instagram.
+Foto: kit de marmitas fitness da semana, 5 opções, embalagem kraft.
+Negócio: cozinha de marmitas saudáveis em Curitiba, entrega por bairro.
+Público: pessoas de 25 a 40 anos que treinam e não têm tempo de cozinhar.
+Objetivo: gerar pedidos pelo WhatsApp até quinta-feira.
+Tom: leve e direto.
+Formato: primeira linha como gancho, até 80 palavras, chamada para ação no final, no máximo 5 hashtags.
+Não invente preços, promoções ou informações nutricionais.
+```
+
+A segunda versão já diz o que o post precisa alcançar e o que a IA não pode inventar.
+
+## Trabalho e produtividade
 
 **1. E-mail profissional**
-> "Escreva um e-mail profissional para [nome/cargo] sobre [assunto]. Tom: [formal/amigável/urgente]. Contexto: [situação]. Inclua um CTA claro no final. Máximo 150 palavras."
 
-**2. Reunião de feedback difícil**
-> "Preciso dar feedback negativo para [colega/funcionário] sobre [comportamento/problema]. Ele tende a se defender rapidamente. Escreva um roteiro para a conversa que seja direto mas empático, com exemplos concretos e focado em soluções."
+```text
+Escreva um e-mail para [nome e cargo do destinatário] sobre [assunto].
+Contexto: [o que aconteceu até aqui].
+Objetivo: [o que você quer que a pessoa faça depois de ler].
+Tom: [formal / cordial / urgente].
+Formato: assunto + corpo com no máximo 150 palavras + pedido claro no final.
+```
 
-**3. Resumo executivo**
-> "Resuma o seguinte documento em um resumo executivo de no máximo 300 palavras. Estruture em: situação atual, principais desafios, recomendações e próximos passos. [Cole o documento aqui]"
+**2. Roteiro para uma conversa de feedback difícil**
 
-**4. Análise SWOT rápida**
-> "Faça uma análise SWOT para [produto/empresa/ideia]. Contexto: [descrição]. Seja específico e prático, evite generalidades."
+```text
+Preciso dar um feedback para [cargo da pessoa] sobre [comportamento ou problema concreto].
+Exemplos do que aconteceu: [2 ou 3 situações com data].
+A pessoa costuma reagir [descreva].
+Monte um roteiro de conversa de 15 minutos: abertura, fatos, impacto, pergunta para ouvir a pessoa e combinados.
+Tom direto e respeitoso. Evite julgamentos de personalidade.
+```
+
+**3. Resumo executivo de um documento**
+
+```text
+Resuma o documento abaixo para [público: diretoria / cliente / equipe].
+Formato: no máximo 300 palavras, em 4 blocos: situação atual, principais problemas, recomendações e próximos passos.
+Use apenas o que está no documento. Se faltar informação, diga o que falta.
+
+DOCUMENTO:
+"""
+[cole o texto]
+"""
+```
+
+**4. Análise SWOT prática**
+
+```text
+Faça uma análise SWOT de [produto, empresa ou ideia].
+Contexto: [cidade, tamanho da empresa, público, concorrentes que você conhece].
+Para cada quadrante, liste até 4 itens específicos para este caso, sem frases genéricas.
+No final, sugira 3 ações para os próximos 90 dias.
+Marque como [HIPÓTESE] tudo o que você supôs sem eu ter informado.
+```
 
 **5. Pauta de reunião**
-> "Crie uma pauta para uma reunião de [duração] sobre [objetivo]. Participantes: [lista de cargos]. Inclua timings para cada tópico e perguntas norteadoras."
+
+```text
+Crie a pauta de uma reunião de [duração] com o objetivo de [decisão que precisa sair da reunião].
+Participantes: [cargos].
+Formato: tabela com tópico, responsável, tempo e pergunta que o tópico precisa responder.
+Reserve os 5 minutos finais para próximos passos.
+```
 
 **6. Relatório de status semanal**
-> "Transforme estes bullet points em um relatório de status semanal profissional para meu gestor: [lista de pontos]. Tom objetivo, destaque conquistas e riscos."
+
+```text
+Transforme as anotações abaixo em um status semanal para [gestor ou cliente].
+Formato: 3 seções (entregas da semana, riscos e bloqueios, próximos passos), em tópicos curtos.
+Tom objetivo. Não aumente resultados nem invente números.
+
+ANOTAÇÕES:
+[cole seus tópicos]
+```
 
 **7. Resposta a reclamação de cliente**
-> "Escreva uma resposta para a seguinte reclamação de cliente: [reclamação]. Tom empático, ofereça solução concreta, mantenha a empresa de forma positiva."
 
----
+```text
+Escreva uma resposta para a reclamação abaixo, que chegou por [WhatsApp / e-mail / Reclame Aqui].
+O que podemos oferecer: [troca, reembolso, novo prazo; seja específico].
+O que não podemos prometer: [ex.: frete grátis, prazo menor].
+Tom: empático e objetivo, até 120 palavras, sem jargão jurídico.
 
-## Marketing e Vendas
+RECLAMAÇÃO:
+"""
+[cole a mensagem do cliente]
+"""
+```
+
+## Marketing e vendas
 
 **8. Post para LinkedIn**
-> "Escreva um post para LinkedIn sobre [tema/conquista] no estilo de [storytelling pessoal/insight profissional/dica prática]. Tom autêntico, sem clichês corporativos. Entre 150-250 palavras. Inclua um gancho forte na primeira frase."
+
+```text
+Escreva um post para o LinkedIn sobre [tema ou conquista].
+Minha experiência real sobre isso: [2 ou 3 fatos que aconteceram].
+Estilo: [história pessoal / lição profissional / dica prática].
+Formato: primeira frase como gancho, parágrafos curtos, 150 a 250 palavras, termina com uma pergunta.
+Evite clichês corporativos e não invente histórias que eu não contei.
+```
 
 **9. Legenda para Instagram**
-> "Crie 3 variações de legenda para Instagram para uma foto de [descrição da foto]. Produto/serviço: [descrição]. Público: [descrição]. Inclua hashtags relevantes. Tom: [descontraído/inspiracional/informativo]."
 
-**10. E-mail de vendas cold**
-> "Escreva um e-mail de cold outreach para [cargo do prospect] de [tipo de empresa]. Nosso produto/serviço: [descrição]. Problema que resolvemos: [problema]. Máximo 100 palavras, foco em valor, não em features."
+```text
+Crie 3 variações de legenda para um post no Instagram.
+Foto: [descreva a imagem].
+Negócio: [o que você vende e onde].
+Público: [quem é].
+Objetivo: [vender, gerar mensagens no WhatsApp, levar ao site].
+Tom: [descontraído / inspiracional / informativo].
+Formato: gancho na primeira linha, até 80 palavras, chamada para ação, no máximo 5 hashtags.
+```
+
+**10. Primeiro contato comercial (prospecção)**
+
+```text
+Escreva uma mensagem de primeiro contato para [cargo] de [tipo de empresa], a ser enviada por [e-mail / LinkedIn].
+O que oferecemos: [serviço].
+Problema que resolvemos: [dor concreta].
+Prova que podemos citar: [cliente, número real ou nenhuma].
+Máximo de 90 palavras, foco no problema do cliente, uma pergunta simples no final.
+```
 
 **11. Proposta comercial**
-> "Crie o texto de uma proposta comercial para [cliente/empresa] sobre [produto/serviço]. Inclua: contexto do cliente, solução proposta, benefícios mensuráveis, investimento e próximos passos. Tom profissional e orientado a resultados."
 
-**12. Descrição de produto**
-> "Escreva uma descrição de produto para [nome do produto] com estas características: [lista]. Público-alvo: [perfil]. Destaque benefícios (não apenas features). Inclua versão curta (50 palavras) e longa (200 palavras)."
+```text
+Monte a estrutura e o texto de uma proposta comercial para [cliente] sobre [serviço].
+Informações: escopo [itens], prazo [datas], investimento [valor], condições de pagamento [Pix, boleto, parcelas].
+Seções: contexto do cliente, solução, entregáveis, cronograma, investimento, próximos passos.
+Use apenas os números que informei. Tom profissional e direto.
+```
 
-**13. Roteiro de vídeo para YouTube**
-> "Crie um roteiro de vídeo de [duração] sobre [tema]. Inclua: gancho de abertura, pontos principais com transições naturais, call-to-action no final. Tom: [educativo/entretenimento/tutorial]."
+**12. Descrição de produto para loja virtual ou marketplace**
 
----
+```text
+Escreva a descrição de [produto] para [Mercado Livre / Amazon / loja própria].
+Características confirmadas: [lista].
+Público: [quem compra].
+Formato: título com até [número] caracteres, 5 bullets de benefícios e uma descrição de até 150 palavras.
+Use somente as características informadas. Não acrescente medidas, materiais, garantias ou certificações.
+No final, liste as informações que faltam para um anúncio completo.
+```
 
-## Escrita e Criatividade
+**13. Roteiro de vídeo curto**
 
-**14. Revisão de texto**
-> "Revise o seguinte texto para [objetivo: clareza/fluidez/tom formal/persuasão]. Mantenha minha voz, mas melhore a estrutura e a gramática. Explique as principais mudanças feitas. [Cole o texto]"
+```text
+Crie um roteiro de vídeo de [30 / 60 / 90] segundos para [Reels / TikTok / Shorts] sobre [tema].
+Público: [quem é].
+Formato: tabela com tempo, fala e o que aparece na tela.
+Os 3 primeiros segundos precisam ter um gancho. Termine com uma chamada para ação.
+```
+
+## Escrita e criatividade
+
+**14. Revisão de texto mantendo sua voz**
+
+```text
+Revise o texto abaixo com foco em [clareza / gramática / concisão / persuasão].
+Mantenha meu tom e minhas expressões. Não acrescente informações.
+Formato: primeiro o texto revisado; depois, uma lista com as 5 mudanças mais importantes e o motivo.
+
+TEXTO:
+"""
+[cole o texto]
+"""
+```
 
 **15. Reescrever em outro tom**
-> "Reescreva o seguinte texto em tom [mais formal/mais casual/mais direto/mais persuasivo]: [texto original]"
+
+```text
+Reescreva o texto abaixo em tom [mais formal / mais casual / mais direto / mais persuasivo] para [público].
+Mantenha todas as informações e o tamanho aproximado.
+
+TEXTO:
+"""
+[cole o texto]
+"""
+```
 
 **16. Brainstorming de ideias**
-> "Gere 20 ideias de [tipo de conteúdo/produto/nome/campanha] para [objetivo]. Público: [descrição]. Inclua ideias conservadoras e algumas mais ousadas. Não filtre, liste tudo."
 
-**17. Headline para artigo**
-> "Crie 10 títulos alternativos para um artigo sobre [tema]. Inclua variações: pergunta, número, como/porquê, urgência. Público: [perfil]."
+```text
+Gere 20 ideias de [nomes / campanhas / pautas / produtos] para [objetivo].
+Público: [descrição].
+Divida em: 10 ideias seguras, 7 ousadas e 3 bem fora da caixa.
+Para cada uma, uma linha explicando por que pode funcionar.
+```
 
-**18. Storytelling pessoal**
-> "Ajude-me a contar esta história de forma envolvente para [contexto: apresentação/post/discurso]: [descreva a situação/experiência]. Estruture com: situação inicial, conflito/desafio, resolução, aprendizado."
+**17. Títulos alternativos**
 
----
+```text
+Crie 10 títulos para um artigo sobre [tema] voltado a [público].
+Varie os formatos: pergunta, número, "como", contraste e benefício direto.
+Máximo de 70 caracteres cada. Nada de promessas exageradas.
+```
 
-## Educação e Estudo
+**18. Storytelling a partir de uma experiência real**
 
-**19. Explique como para uma criança**
-> "Explique [conceito complexo] para uma criança de 10 anos. Use analogias do cotidiano, evite jargão técnico, e inclua um exemplo concreto."
+```text
+Ajude-me a contar esta história em [apresentação / post / discurso de 2 minutos]:
+[descreva o que aconteceu, com detalhes reais].
+Estrutura: situação inicial, desafio, virada, resultado e aprendizado.
+Não invente fatos. Onde faltar detalhe, faça uma pergunta em vez de preencher.
+```
 
-**20. Flashcards para estudo**
-> "Crie 15 flashcards (pergunta e resposta) para estudar [tema/disciplina]. Foco nos conceitos mais importantes e fáceis de esquecer. Formato: Pergunta: [P] | Resposta: [R]"
+## Educação e estudo
+
+**19. Explicação em camadas**
+
+```text
+Explique [conceito] em três níveis:
+1) em 3 frases para quem nunca ouviu falar;
+2) para um estudante do [ano ou curso];
+3) de forma técnica, com um exemplo.
+Use uma analogia do dia a dia brasileiro no nível 1.
+```
+
+**20. Flashcards**
+
+```text
+Crie 15 flashcards sobre [tema] a partir do material abaixo.
+Formato: tabela com as colunas Pergunta e Resposta (resposta com no máximo 2 frases).
+Priorize conceitos que costumam ser confundidos.
+
+MATERIAL:
+"""
+[cole o conteúdo]
+"""
+```
 
 **21. Plano de estudos**
-> "Crie um plano de estudos para aprender [tema] do zero em [período]. Sou [nível atual]. Tenho [horas por semana] disponíveis. Inclua recursos gratuitos e pagos, com sequência lógica de aprendizado."
+
+```text
+Crie um plano de estudos para aprender [tema] em [semanas].
+Meu nível: [iniciante / intermediário]. Tempo disponível: [horas por semana].
+Objetivo final: [prova, projeto, certificação, entrevista].
+Formato: tabela por semana com tema, atividade prática e como vou saber se aprendi.
+Não indique cursos ou livros específicos sem avisar que devo conferir se existem.
+```
 
 **22. Questões de revisão**
-> "Com base no seguinte conteúdo, crie 10 questões de múltipla escolha (com gabarito e explicação) para testar a compreensão: [cole o conteúdo]"
 
-**23. Mapa mental em texto**
-> "Crie um mapa mental em formato de tópicos e subtópicos sobre [tema]. Inclua os conceitos principais, relações entre eles e exemplos práticos."
+```text
+Com base no conteúdo abaixo, crie 10 questões de múltipla escolha com 4 alternativas.
+Não mostre o gabarito agora. Quando eu responder, corrija e explique cada erro.
 
----
+CONTEÚDO:
+"""
+[cole o conteúdo]
+"""
+```
 
-## Programação e Tecnologia
+**23. Mapa mental em tópicos**
+
+```text
+Organize [tema ou conteúdo colado] como um mapa mental em tópicos e subtópicos (até 3 níveis).
+Inclua um exemplo prático em cada ramo principal e indique relações entre ramos quando houver.
+```
+
+## Programação e tecnologia
 
 **24. Explicar código**
-> "Explique o seguinte código linha por linha, em português, para alguém com conhecimento básico de programação: [cole o código]"
 
-**25. Revisar e melhorar código**
-> "Revise este código em [linguagem] e: 1) identifique bugs, 2) sugira melhorias de performance, 3) melhore a legibilidade. Explique cada mudança sugerida: [cole o código]"
+```text
+Explique o código abaixo, bloco por bloco, para alguém com conhecimento básico de [linguagem].
+No final, diga o que o código faz em uma frase e aponte trechos que parecem arriscados.
+
+CÓDIGO:
+"""
+[cole o código]
+"""
+```
+
+**25. Revisar código**
+
+```text
+Revise este código em [linguagem e versão].
+Liste, em ordem de gravidade: bugs, problemas de segurança, desempenho e legibilidade.
+Para cada item, mostre o trecho original e a correção sugerida.
+Não mude o comportamento do código sem avisar.
+```
 
 **26. Converter entre linguagens**
-> "Converta este código de [linguagem A] para [linguagem B], mantendo a mesma lógica e adicionando comentários explicativos: [cole o código]"
 
-**27. Criar regex**
-> "Crie uma expressão regular que [descrição do padrão]. Explique o que cada parte faz e forneça 3 exemplos de strings que ela aceita e 3 que ela rejeita."
+```text
+Converta este código de [linguagem A] para [linguagem B], mantendo a mesma lógica.
+Use bibliotecas padrão sempre que possível e comente as diferenças importantes entre as linguagens.
+```
 
-**28. Documentação de código**
-> "Escreva a documentação completa para a seguinte função/API em formato [JSDoc/docstring Python/outro]: [cole o código]. Inclua descrição, parâmetros, retorno e exemplos de uso."
+**27. Expressão regular**
 
----
+```text
+Crie uma expressão regular que valide [padrão, ex.: CEP no formato 00000-000].
+Explique cada parte e dê 3 exemplos que passam e 3 que não passam.
+Indique para qual linguagem ou ferramenta a regex foi escrita.
+```
 
-## Negócios e Estratégia
+**28. Documentação de função**
 
-**29. Modelo de negócio Canvas**
-> "Preencha um Business Model Canvas para [ideia/empresa]. Seja específico e prático para cada bloco: proposta de valor, segmentos, canais, relacionamento, receitas, recursos, atividades, parcerias e custos."
+```text
+Escreva a documentação da função abaixo no formato [docstring Python / JSDoc / outro].
+Inclua descrição, parâmetros, retorno, erros possíveis e um exemplo de uso.
+```
+
+## Negócios e estratégia
+
+**29. Business Model Canvas**
+
+```text
+Preencha um Business Model Canvas para [ideia ou empresa].
+Contexto: [o que vende, para quem, onde, como cobra hoje].
+Para cada um dos 9 blocos, até 3 itens específicos.
+Marque como [HIPÓTESE] o que precisar ser validado com clientes.
+```
 
 **30. Análise de concorrentes**
-> "Analise os seguintes concorrentes de [minha empresa/produto]: [lista]. Para cada um, identifique: posicionamento, pontos fortes, pontos fracos e oportunidade para diferenciarmos."
+
+```text
+Compare os concorrentes abaixo com o meu negócio: [lista de nomes e sites].
+Meu negócio: [descrição].
+Formato: tabela com posicionamento, faixa de preço, pontos fortes, pontos fracos e oportunidade para mim.
+Pesquise na web e cite a fonte de cada informação. Se não encontrar, escreva "não encontrado".
+```
+
+A busca na web está disponível em todos os planos do ChatGPT, e as respostas podem trazer citações, segundo a [OpenAI](https://help.openai.com/en/articles/9237897-chatgpt-search). Mesmo assim, abra as fontes antes de tomar decisões.
 
 **31. Plano de lançamento**
-> "Crie um plano de lançamento de 30 dias para [produto/serviço]. Inclua ações de pré-lançamento, lançamento e pós-lançamento. Canais: [lista]. Recursos disponíveis: [descrição]."
+
+```text
+Crie um plano de lançamento de 30 dias para [produto ou serviço].
+Canais disponíveis: [Instagram, WhatsApp, e-mail, marketplace].
+Recursos: [orçamento, pessoas, horas por semana].
+Formato: tabela por semana (pré-lançamento, lançamento, pós-lançamento) com ação, canal e responsável.
+```
 
 **32. Precificação**
-> "Ajude-me a definir a estratégia de precificação para [produto/serviço]. Custo de produção: [valor]. Público-alvo: [perfil]. Concorrentes cobram: [valores]. Analise três abordagens e recomende uma."
 
----
+```text
+Ajude-me a definir o preço de [produto ou serviço].
+Custo por unidade: [valor]. Custos fixos mensais: [valor]. Volume esperado: [unidades por mês].
+Taxas de venda: [comissão do marketplace, taxa do cartão, impostos].
+Preço dos concorrentes: [valores].
+Calcule o preço mínimo e compare três estratégias. Mostre as contas passo a passo antes de recomendar.
+```
 
-## Recursos Humanos e Gestão
+## Recursos humanos e gestão
 
 **33. Descrição de vaga**
-> "Escreva uma descrição de vaga atraente para [cargo] na área de [área]. Inclua: sobre a empresa (use [descrição]), responsabilidades, requisitos essenciais e desejáveis, e o que oferecemos. Tom: [descrição da cultura da empresa]."
+
+```text
+Escreva o anúncio de vaga para [cargo] em [cidade ou remoto].
+Empresa: [o que faz, tamanho, cultura em 2 frases].
+Responsabilidades: [lista]. Requisitos obrigatórios: [lista]. Desejáveis: [lista].
+Benefícios e faixa salarial: [informe ou escreva "não divulgar"].
+Tom: [descreva]. Linguagem inclusiva e sem exigências desnecessárias.
+```
 
 **34. Perguntas de entrevista**
-> "Crie 15 perguntas de entrevista para o cargo de [cargo] que avaliem: [competências]. Inclua perguntas comportamentais (situação-ação-resultado), técnicas e de fit cultural. Adicione o que procurar nas respostas."
 
-**35. Feedback 360**
-> "Com base nos seguintes pontos de feedback recebidos sobre [pessoa/projeto], crie um relatório estruturado com: pontos fortes, áreas de desenvolvimento e sugestões de plano de ação: [liste os feedbacks]"
+```text
+Crie 12 perguntas de entrevista para [cargo], avaliando [competências].
+Misture perguntas comportamentais (situação, ação, resultado), técnicas e práticas.
+Para cada pergunta, diga o que observar em uma boa resposta e um sinal de alerta.
+```
 
----
+**35. Relatório de feedback**
 
-## Análise e Dados
+```text
+Organize os feedbacks abaixo sobre [pessoa ou projeto] em um relatório com: pontos fortes, pontos a desenvolver e um plano de ação de 60 dias.
+Não identifique quem deu cada feedback. Não acrescente críticas que não estão no texto.
+
+FEEDBACKS:
+[cole os comentários]
+```
+
+## Análise e dados
 
 **36. Interpretar dados**
-> "Analise os seguintes dados e me dê os 5 principais insights, tendências e recomendações acionáveis. Explique em linguagem não técnica: [cole os dados ou descreva-os]"
 
-**37. Criar relatório de dados**
-> "Transforme estes dados em um relatório executivo para [público]. Inclua: contexto, principais métricas, análise de tendências e recomendações. Evite jargão técnico: [cole os dados]"
+```text
+Analise os dados abaixo sobre [assunto].
+Formato: 5 principais achados, com o número que sustenta cada um, e 3 recomendações práticas.
+Explique em linguagem não técnica. Se algum cálculo depender de premissa, diga qual.
 
----
+DADOS:
+[cole a tabela ou envie a planilha]
+```
 
-## Vida Pessoal e Produtividade Pessoal
+**37. Relatório executivo a partir de dados**
 
-**38. Plano semanal**
-> "Crie um plano semanal para [objetivo pessoal/profissional] considerando: disponibilidade de [horas/dia], compromissos fixos em [dias/horários], e prioridade alta para [atividades]. Seja realista."
+```text
+Transforme estes dados em um relatório de uma página para [público].
+Seções: contexto, 3 métricas principais, o que mudou em relação ao período anterior, riscos e próximos passos.
+Não arredonde números de forma que mude a conclusão.
+```
+
+## Vida pessoal
+
+**38. Plano semanal realista**
+
+```text
+Monte meu plano da semana para [objetivo].
+Horários fixos: [trabalho, faculdade, filhos, deslocamento].
+Tenho [horas] livres por dia. Prioridades: [lista em ordem].
+Formato: tabela de segunda a domingo, com folgas. Seja realista e não preencha 100% do tempo.
+```
 
 **39. Tomada de decisão**
-> "Preciso decidir entre [opção A] e [opção B]. Contexto: [situação]. Fatores importantes para mim: [lista]. Faça uma análise estruturada dos prós e contras de cada opção e me ajude a pensar na decisão."
 
-**40. Plano de viagem**
-> "Crie um roteiro de viagem para [destino] de [duração]. Perfil: [viajante solo/casal/família com filhos]. Orçamento: [faixa]. Interesses: [lista]. Inclua dicas práticas e locais menos turísticos."
+```text
+Preciso decidir entre [opção A] e [opção B].
+Contexto: [situação]. O que mais importa para mim: [critérios em ordem].
+Faça uma tabela comparando as opções em cada critério, aponte os riscos de cada uma e me faça 3 perguntas que ainda posso responder antes de decidir.
+```
 
----
+**40. Roteiro de viagem**
 
-## Prompts Avançados (Meta-prompts)
+```text
+Crie um roteiro de [dias] em [destino] para [perfil: casal, família com crianças, viagem solo].
+Orçamento: [faixa]. Interesses: [lista]. Ritmo: [tranquilo / intenso].
+Formato: dia a dia com manhã, tarde e noite, agrupando atrações próximas.
+Avise que horários, preços e funcionamento precisam ser confirmados nos sites oficiais.
+```
 
-**41. Melhorar seu próprio prompt**
-> "Analise este prompt e sugira como melhorá-lo para obter respostas mais úteis e precisas do ChatGPT: [seu prompt original]"
+## Prompts avançados (meta-prompts)
 
-**42. Jogar o advogado do diabo**
-> "Vou apresentar uma ideia/argumento. Seu papel é refutá-la da forma mais convincente possível, apontando falhas, riscos e pontos cegos. Ideia: [sua ideia]"
+**41. Melhorar o próprio prompt**
+
+```text
+Vou colar um prompt que escrevi. Antes de executá-lo, avalie:
+o que está ambíguo, que contexto está faltando e que formato de resposta seria mais útil.
+Depois, reescreva o prompt melhorado e me faça até 3 perguntas para completá-lo.
+
+MEU PROMPT:
+[cole aqui]
+```
+
+**42. Advogado do diabo**
+
+```text
+Vou apresentar uma ideia. Seu papel é encontrar os pontos fracos: premissas frágeis, riscos, custos escondidos e o que um concorrente faria.
+Seja específico e termine com as 2 objeções mais sérias.
+
+IDEIA:
+[descreva]
+```
 
 **43. Entrevista socrática**
-> "Conduza uma entrevista socrática comigo sobre [tema/decisão]. Faça perguntas que me ajudem a pensar mais profundamente, uma pergunta por vez."
 
-**44. Perspectivas múltiplas**
-> "Analise [situação/ideia/texto] de três perspectivas diferentes: [perspectiva 1], [perspectiva 2] e [perspectiva 3]. Seja genuinamente representativo de cada visão."
+```text
+Quero pensar melhor sobre [tema ou decisão].
+Faça uma pergunta por vez, espere minha resposta e aprofunde a partir dela.
+Depois de 6 perguntas, resuma o que eu disse e o que ficou em aberto.
+```
 
-**45. Aprendizado via casos**
-> "Ensine-me [conceito] através de 3 casos práticos do mundo real, progressivos em complexidade. Para cada caso: situação, como o conceito se aplicou e resultado."
+**44. Múltiplas perspectivas**
 
----
+```text
+Analise [situação ou proposta] do ponto de vista de [perspectiva 1], [perspectiva 2] e [perspectiva 3].
+Para cada uma: principal preocupação, o que apoiaria e o que rejeitaria.
+Termine com os pontos em que as três concordam.
+```
 
-## Prompts para Criação de Conteúdo em Escala
+**45. Aprender com casos**
+
+```text
+Ensine [conceito] por meio de 3 casos práticos em ordem crescente de complexidade.
+Deixe claro que os casos são exemplos ilustrativos, não histórias reais.
+Para cada caso: situação, como o conceito se aplica e o erro mais comum.
+```
+
+## Criação de conteúdo em escala
 
 **46. Calendário editorial**
-> "Crie um calendário editorial de 30 dias para [canal: blog/Instagram/LinkedIn] sobre [tema]. Inclua: tipo de conteúdo, tema específico, formato e melhor dia/horário para publicar."
 
-**47. Thread para X/Twitter**
-> "Crie uma thread para o X (Twitter) sobre [tema] com 8-10 tweets. Primeiro tweet precisa ser um gancho forte. Cada tweet deve ser independente mas conectado ao anterior. Tom: [educativo/polêmico/inspiracional]."
+```text
+Crie um calendário de 30 dias para [Instagram / blog / LinkedIn] sobre [tema].
+Frequência: [posts por semana]. Público: [quem é].
+Formato: tabela com data, formato (carrossel, Reels, texto), tema e objetivo de cada post.
+Equilibre conteúdo educativo, prova social e oferta.
+```
 
-**48. Script de podcast**
-> "Escreva um script de podcast de [duração] sobre [tema]. Formato: [solo/entrevista/debate]. Inclua introdução com gancho, transições naturais entre blocos, e encerramento com call-to-action."
+**47. Sequência de posts para o X**
+
+```text
+Crie uma sequência de 8 posts para o X (antigo Twitter) sobre [tema].
+Post 1: gancho que desperte curiosidade. Posts 2 a 7: uma ideia por post. Post 8: resumo e chamada para ação.
+Cada post com até 270 caracteres. Tom: [educativo / opinativo].
+```
+
+**48. Roteiro de podcast**
+
+```text
+Escreva o roteiro de um episódio de [duração] sobre [tema], no formato [solo / entrevista].
+Inclua abertura com gancho, 3 blocos com transições, perguntas para o convidado (se houver) e encerramento.
+Marque onde entram vinhetas e patrocinadores.
+```
 
 **49. Newsletter**
-> "Escreva uma edição de newsletter sobre [tema] para [perfil de assinante]. Inclua: assunto do e-mail (5 opções), abertura pessoal, conteúdo principal com subtítulos, seção de dicas rápidas e encerramento. Tom: [amigável/especialista/inspiracional]."
 
-**50. FAQ completo**
-> "Crie um FAQ completo sobre [produto/serviço/tema] com 15 perguntas e respostas. Organize em categorias. Antecipe dúvidas reais de [perfil do público]. Tom claro e direto."
+```text
+Escreva uma edição de newsletter sobre [tema] para [perfil do assinante].
+Formato: 5 opções de assunto, abertura curta, conteúdo principal com subtítulos, 3 dicas rápidas e encerramento.
+Tom: [amigável / especialista]. Até 500 palavras. Não cite dados sem fonte.
+```
 
----
+**50. FAQ**
 
-## Como criar seus próprios prompts poderosos
+```text
+Crie um FAQ sobre [produto, serviço ou tema] com 12 perguntas e respostas, organizado em categorias.
+Use as informações abaixo como única fonte. Se uma dúvida comum não puder ser respondida com elas, liste-a à parte como "precisa de resposta da empresa".
 
-Agora que você tem uma base de exemplos, aqui está a estrutura que funciona para qualquer prompt:
+INFORMAÇÕES:
+[cole políticas, preços, prazos]
+```
 
-1. **Contexto**: Quem você é, qual é a situação
-2. **Papel**: O que você quer que o ChatGPT seja
-3. **Tarefa**: O que exatamente você quer que ele faça
-4. **Restrições**: Tamanho, tom, formato, o que evitar
-5. **Exemplo** (opcional): Como deve parecer o resultado ideal
+## Como salvar e reutilizar seus prompts
 
-Quanto mais específico você for, melhor será a resposta. Não tenha medo de prompts longos — o ChatGPT processa tudo.
+- **Instruções personalizadas**: guarde o que vale para todas as conversas (sua profissão, seu negócio, o tom que você prefere). Ficam em Settings, na área de personalização, com limite de 1.500 caracteres no Free e no Go e de 5.000 nos planos pagos, segundo a [OpenAI](https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions). Veja o passo a passo em [como configurar as instruções personalizadas](/artigos/custom-instructions-chatgpt).
+- **Projetos**: crie um projeto por tema recorrente (por exemplo, "Atendimento" ou "Posts da loja") com os arquivos e as instruções daquela tarefa. Estão disponíveis em todos os planos, inclusive no gratuito.
+- **Um documento seu**: uma lista simples com os prompts que funcionaram, já preenchidos com o contexto do seu negócio, continua sendo o jeito mais rápido.
 
-Experimente, itere e não desista na primeira resposta insatisfatória. Um prompt refinado em duas ou três interações quase sempre entrega um resultado excepcional.
+Um aviso: se você costumava salvar prompts em GPTs personalizados, a OpenAI anunciou a aposentadoria desse recurso. A criação de novos GPTs termina em 26 de outubro de 2026 e os GPTs personalizados saem em 11 de dezembro de 2026, com migração para plugins, segundo a [central de ajuda](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq).
+
+## Por que alguns prompts ainda dão respostas ruins
+
+- **Falta contexto**: o ChatGPT não sabe quem é seu cliente nem o que você já tentou.
+- **Pedidos demais de uma vez**: divida em etapas (primeiro a estrutura, depois o texto).
+- **Nenhum formato definido**: sem isso, a resposta vem longa e genérica.
+- **Nenhuma trava contra invenção**: inclua "use apenas as informações fornecidas" quando a precisão importa.
+- **Aceitar a primeira resposta**: um ou dois ajustes costumam resolver mais do que reescrever tudo.
+
+Se quiser entender a lógica por trás desses modelos e montar os seus, leia o guia [como escrever prompts melhores](/artigos/como-melhorar-seus-prompts). Para começar do zero no ChatGPT, veja o [guia completo de como usar o ChatGPT](/artigos/como-usar-chatgpt-guia-completo). E, se o seu foco é negócio, há prompts específicos em [ChatGPT para empreendedores](/artigos/chatgpt-para-empreendedores).

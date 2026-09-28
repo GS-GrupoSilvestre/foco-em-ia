@@ -1,87 +1,199 @@
 ---
-title: "Legendas automáticas com IA: como gerar rápido e sem erro"
-description: "Aprenda a gerar legendas automáticas com inteligência artificial de forma rápida, com boa precisão, e veja dicas para revisar e evitar erros comuns."
+title: "Legendas automáticas com IA: como gerar, revisar em português e publicar"
+description: "Passo a passo para gerar legendas automáticas com IA no YouTube, CapCut e Descript, revisar em português com prompt pronto e publicar com acessibilidade."
 slug: "legendas-automaticas-ia"
 category: "Vídeos"
-tags: ["legendas", "transcrição automática", "inteligência artificial", "acessibilidade"]
+tags: ["legendas", "transcrição automática", "inteligência artificial", "acessibilidade", "youtube", "capcut"]
 publishedAt: "2026-03-26"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["legendas automáticas ia", "gerar legenda com ia", "transcrição automática de vídeo", "legenda para vídeo"]
+keywords: ["legendas automáticas ia", "gerar legenda com ia", "legenda automática youtube", "transcrição automática de vídeo", "legenda em português", "arquivo srt"]
+faq:
+  - question: "O YouTube gera legenda automática em português?"
+    answer: "Sim. O português está na lista de idiomas das legendas automáticas do YouTube. A própria central de ajuda avisa que a qualidade varia com pronúncia, sotaque e ruído, e recomenda sempre revisar e editar os trechos mal transcritos no YouTube Studio."
+  - question: "Qual formato de arquivo de legenda devo usar?"
+    answer: "Para começar, o SubRip (.srt) é o mais simples: só exige o texto e a minutagem e pode ser editado em qualquer editor de texto. O YouTube aceita .srt, mas apenas na versão básica, sem estilos. Se você quer cor, fonte e animação, a legenda precisa ser embutida no vídeo pelo editor."
+  - question: "Legenda automática serve para acessibilidade?"
+    answer: "Serve como ponto de partida, não como versão final. Para pessoas surdas ou com deficiência auditiva, a legenda precisa estar sincronizada, correta e incluir informações sonoras importantes, como quem está falando e sons relevantes. Isso exige revisão humana."
+  - question: "Posso usar o ChatGPT ou outro assistente para corrigir a legenda?"
+    answer: "Pode, desde que você peça para corrigir só ortografia, acentos e termos do glossário, sem mudar minutagem nem reescrever a fala. Depois, confira o resultado assistindo ao vídeo: o assistente não ouve o áudio e pode 'corrigir' uma palavra que estava certa."
+sources:
+  - name: "YouTube — Usar legendas automáticas"
+    url: "https://support.google.com/youtube/answer/6373554?hl=en"
+  - name: "YouTube — Formatos de arquivo de legenda suportados"
+    url: "https://support.google.com/youtube/answer/2734698?hl=en"
+  - name: "CapCut — Gerador de legendas automáticas"
+    url: "https://www.capcut.com/tools/auto-caption-generator"
+  - name: "Descript — Idiomas de transcrição suportados"
+    url: "https://help.descript.com/hc/en-us/articles/10249408168845-Supported-transcription-languages"
+  - name: "W3C WAI — Captions/Subtitles"
+    url: "https://www.w3.org/WAI/media/av/captions/"
+related:
+  - "ia-para-editar-videos-youtube"
+  - "ia-para-shorts-reels-tiktok"
+  - "capcut-ia-recursos-edicao"
+  - "dublagem-ia-videos-idiomas"
 ---
 
-Legendas se tornaram praticamente obrigatórias em vídeos para redes sociais e YouTube, já que boa parte das pessoas assiste conteúdo com o som desligado. Gerar legendas manualmente, porém, é uma tarefa demorada. Com ferramentas de inteligência artificial, é possível transcrever e legendar um vídeo em poucos minutos, com boa precisão e várias opções de personalização.
+Gerar a legenda com IA leva poucos minutos. O que separa uma legenda útil de uma legenda constrangedora é o que acontece depois: a revisão. Ferramentas de transcrição automática erram nomes de marca, números, acentos e gírias, e em português isso aparece rápido. Este guia mostra como gerar legendas em três ferramentas com recursos confirmados (YouTube, CapCut e Descript), como revisar em português com um método e um prompt prontos, e o que uma legenda precisa ter para ser realmente acessível.
 
-## Por que as legendas são tão importantes
+## Legenda embutida ou arquivo de legenda?
 
-Adicionar legendas aos seus vídeos traz benefícios que vão muito além da acessibilidade:
+Antes de escolher a ferramenta, decida o formato de entrega, porque ele muda o fluxo:
 
-- Aumenta o tempo de retenção, já que o espectador entende o conteúdo mesmo sem áudio
-- Melhora a acessibilidade para pessoas com deficiência auditiva
-- Ajuda pessoas que assistem em ambientes públicos ou silenciosos
-- Contribui para o entendimento de sotaques e termos técnicos
-- Pode melhorar a indexação e o SEO do vídeo em algumas plataformas
+| | Legenda embutida (queimada no vídeo) | Arquivo de legenda (.srt e similares) |
+|---|---|---|
+| Onde aparece | Sempre, em qualquer plataforma | Só onde o arquivo foi enviado; o espectador pode ligar e desligar |
+| Estilo (cor, fonte, animação) | Livre, definido no editor | O YouTube aceita .srt e .sbv só na versão básica, sem estilo |
+| Correção depois de publicar | Exige exportar e subir o vídeo de novo | Basta editar o arquivo ou a legenda na plataforma |
+| Uso típico | Shorts, Reels, TikTok, anúncios | Vídeo longo no YouTube, aulas, vídeos institucionais |
 
-## Como funciona a geração automática de legendas por IA
+Segundo a [central de ajuda do YouTube](https://support.google.com/youtube/answer/2734698?hl=en), os formatos mais simples para começar são o SubRip (.srt) e o SubViewer (.sbv), que só exigem texto e minutagem e podem ser editados em qualquer editor de texto. É comum usar os dois formatos: legenda embutida no corte vertical e arquivo .srt no vídeo longo.
 
-O processo básico envolve duas etapas principais:
+## Passo a passo em três ferramentas
 
-1. Transcrição: a IA "ouve" o áudio do vídeo e converte a fala em texto
-2. Sincronização: o texto gerado é dividido em blocos e alinhado ao tempo exato da fala no vídeo
+### No YouTube (vídeo já publicado ou enviado)
 
-Ferramentas modernas de transcrição conseguem identificar pausas naturais na fala para dividir as legendas de forma mais legível, além de reconhecer pontuação básica automaticamente.
+O português está na lista de idiomas das [legendas automáticas do YouTube](https://support.google.com/youtube/answer/6373554?hl=en). A central de ajuda avisa que a qualidade varia por causa de pronúncia, sotaque, dialeto e ruído, e recomenda revisar sempre.
 
-## Passo a passo para gerar legendas automáticas
+1. Envie o vídeo com o idioma definido como português. As legendas automáticas aparecem depois do processamento, que pode demorar em vídeos longos.
+2. Entre no YouTube Studio e abra a seção de legendas no menu à esquerda (Subtitles, na versão em inglês da ajuda).
+3. Clique no vídeo e, na linha da legenda automática, abra o menu de opções para editar.
+4. Corrija os trechos errados diretamente no texto, acompanhando o vídeo.
+5. Publique a versão editada.
 
-1. Exporte o vídeo em boa qualidade de áudio, evitando ruídos excessivos
-2. Envie o arquivo para uma ferramenta de transcrição ou legendagem automática
-3. Escolha o idioma correto para melhorar a precisão da transcrição
-4. Aguarde o processamento, que costuma ser rápido mesmo para vídeos longos
-5. Revise o texto gerado, corrigindo nomes próprios, termos técnicos e gírias
-6. Ajuste o estilo visual da legenda, como fonte, cor e posição na tela
-7. Exporte o vídeo com a legenda embutida ou o arquivo de legenda separado
+Se você gerou e revisou a legenda em outra ferramenta, pode enviar o arquivo .srt no mesmo lugar, em vez de editar a automática.
 
-## Erros comuns na transcrição automática
+### No CapCut (legenda embutida para vídeo curto ou longo)
 
-Mesmo com boa tecnologia, alguns erros ainda são frequentes e merecem atenção na revisão:
+A página oficial do [gerador de legendas automáticas do CapCut](https://www.capcut.com/tools/auto-caption-generator) descreve o recurso como capaz de identificar o idioma do áudio, gerar legendas sincronizadas e traduzi-las. Ele existe na versão online, no desktop e no celular. A página não lista o português de forma explícita, então faça um teste curto antes de legendar um vídeo inteiro.
 
-- Nomes próprios e marcas específicas transcritos de forma incorreta
-- Termos técnicos ou gírias regionais mal interpretados
-- Sobreposição de falas quando duas pessoas falam ao mesmo tempo
-- Pontuação equivocada, que pode mudar o sentido de uma frase
-- Palavras estrangeiras misturadas ao português gerando confusão na transcrição
+1. Importe o vídeo no editor.
+2. Na aba de texto, escolha a opção de legendas automáticas (Text > Auto captions, nos nomes usados pela página oficial) e gere.
+3. Corrija o texto de cada bloco e ajuste fonte, cor, efeito e posição.
+4. Exporte o vídeo na resolução desejada.
 
-## Como revisar legendas geradas por IA de forma eficiente
+O guia de [recursos de IA do CapCut](/artigos/capcut-ia-recursos-edicao) mostra os demais recursos confirmados do app.
 
-- Assista ao vídeo com a legenda ativada, prestando atenção a cada corte de tela
-- Use a função de busca por palavra-chave para localizar termos técnicos recorrentes
-- Corrija primeiro os erros que mudam o sentido da frase, depois os detalhes menores
-- Padronize a forma de escrever nomes próprios e siglas usados no seu canal
-- Confira se o tempo de exibição de cada legenda é suficiente para leitura confortável
+### No Descript (vídeo longo, edição pela transcrição)
 
-## Boas práticas de estilo para legendas
+A [central de ajuda do Descript](https://help.descript.com/hc/en-us/articles/10249408168845-Supported-transcription-languages) lista o português do Brasil entre os idiomas de transcrição, mas avisa que detecção de palavras de preenchimento, importação e substituição de transcrição e glossário funcionam só em inglês.
 
-- Use no máximo duas linhas de texto por vez na tela
-- Prefira fontes com bom contraste em relação ao fundo do vídeo
-- Adicione uma leve sombra ou contorno no texto para manter a legibilidade sobre qualquer fundo
-- Mantenha um tempo mínimo de exibição para que a leitura não fique apressada
-- Para vídeos verticais, posicione a legenda de forma que não seja coberta por outros elementos da interface, como botões de curtir e comentar
+1. Nas configurações, defina o idioma de transcrição como português do Brasil antes de importar.
+2. Importe o vídeo e aguarde a transcrição.
+3. Corrija a transcrição no próprio texto: a legenda sai dela.
+4. Exporte a legenda como arquivo ou embutida no vídeo.
 
-## Formatos de arquivo de legenda mais usados
+Como o glossário não funciona em português, a padronização de nomes e termos fica com você (veja o método abaixo). O fluxo completo de edição de vídeo longo, incluindo a limpeza da gravação, está em [IA para editar vídeos do YouTube](/artigos/ia-para-editar-videos-youtube).
 
-Ao exportar legendas geradas por IA, você normalmente pode escolher entre:
+Uma observação: nem toda ferramenta de transcrição aceita português. O Otter.ai, por exemplo, transcreve só seis idiomas, e o português não está entre eles (detalhes no guia do [Otter.ai](/artigos/otter-ai-transcricao-reunioes)).
 
-- Arquivos de legenda separados, para importar em editores de vídeo
-- Legenda embutida diretamente no vídeo (queimada na imagem)
-- Formatos compatíveis com plataformas como YouTube, permitindo edição posterior direto na plataforma
+## Como revisar legendas em português
 
-Cada formato tem uma vantagem: arquivos separados facilitam edições futuras, enquanto a legenda embutida garante que ela sempre apareça, independentemente da plataforma de reprodução.
+Revisar lendo o texto inteiro, do começo ao fim, cansa e deixa passar erros. Um método em três passadas funciona melhor.
 
-## Legendas automáticas ajudam no SEO
+### Passada 1: busca por termos de risco
 
-Em algumas plataformas de vídeo, o texto da legenda pode ser usado para indexação de conteúdo, ajudando o vídeo a aparecer em buscas por termos mencionados na fala. Por isso, revisar a transcrição com atenção não é importante apenas para a experiência do espectador, mas também pode contribuir indiretamente para o desempenho do vídeo nos mecanismos de busca da própria plataforma.
+Antes de assistir, use a busca da ferramenta para localizar e padronizar:
 
-## Conclusão
+- **nomes de marca, produto e pessoas** (a IA costuma separar, juntar ou "aportuguesar" nomes);
+- **números, preços, medidas e datas** (confira se "15" não virou "50", e se a unidade está certa);
+- **termos em inglês** comuns no seu nicho;
+- **siglas**, que podem aparecer por extenso, em minúsculas ou separadas.
 
-Gerar legendas automáticas com inteligência artificial economiza um tempo enorme em comparação com a transcrição manual, mas a revisão humana continua sendo essencial para garantir precisão, principalmente em nomes próprios, termos técnicos e pontuação. Ao combinar velocidade da IA com uma revisão cuidadosa, é possível publicar vídeos legendados com qualidade profissional em uma fração do tempo que esse processo levava antes.
+Mantenha um glossário simples do canal, com a grafia correta de cada termo. Ele serve para todas as revisões seguintes.
+
+### Passada 2: assistir com a legenda ligada
+
+Assista ao vídeo inteiro com a legenda ativada, de preferência em velocidade normal. Nesta passada, procure:
+
+- palavras trocadas por outras parecidas no som;
+- falas sobrepostas (quando duas pessoas falam juntas, a transcrição costuma misturar as frases);
+- pontuação que muda o sentido ("vamos comer, gente" e "vamos comer gente");
+- blocos que somem rápido demais para ler.
+
+### Passada 3: acentos, crase e padrão de escrita
+
+Em português, a transcrição automática erra com frequência acentos diferenciais e homófonos: "e"/"é", "a"/"à"/"há", "mas"/"mais", "sessão"/"seção". Decida também um padrão para números (algarismos para medidas e preços costuma ser mais legível na tela) e para gírias (transcrever como foi falado ou normalizar).
+
+### Prompt pronto para a revisão ortográfica
+
+Exporte a legenda em .srt e use um assistente de IA para uma primeira correção. O prompt precisa proibir mudanças na minutagem e na fala:
+
+```
+Você é revisor de legendas em português do Brasil.
+Abaixo está um arquivo .srt gerado por transcrição automática.
+
+Glossário (grafia correta, use exatamente assim):
+- [Nome da marca]
+- [Nome do produto]
+- [Termo técnico 1]
+- [Termo técnico 2]
+
+Regras:
+1. Corrija apenas ortografia, acentuação, crase, pontuação e os termos do glossário.
+2. NÃO altere números de bloco nem minutagens.
+3. NÃO reescreva, resuma nem "melhore" a fala. Mantenha gírias e repetições.
+4. Se uma palavra parecer errada mas você não tiver certeza do que foi dito, mantenha como está e liste o número do bloco no final, em "Trechos para ouvir de novo".
+5. Devolva o arquivo .srt completo, no mesmo formato.
+
+[cole o conteúdo do .srt]
+```
+
+O assistente não ouve o áudio. Ele só enxerga o texto, então pode "corrigir" uma palavra que estava certa. Por isso a lista de trechos para ouvir de novo é tão importante, e a passada 2 continua obrigatória. Para mais técnicas de pedido, veja o guia sobre [como melhorar seus prompts](/artigos/como-melhorar-seus-prompts).
+
+### Antes e depois (exemplo ilustrativo)
+
+```
+Antes (transcrição automática):
+12
+00:00:41,200 --> 00:00:44,000
+esse strap e de algodao e tem 15 cm
+
+Depois (revisado):
+12
+00:00:41,200 --> 00:00:44,000
+Este strap é de algodão e tem 50 cm.
+```
+
+No exemplo, a revisão ortográfica corrigiu os acentos, mas só a passada assistindo ao vídeo pega o "15" que deveria ser "50".
+
+## Acessibilidade: o que a legenda precisa ter
+
+Para quem é surdo ou tem deficiência auditiva, a legenda não é um enfeite, é o conteúdo. A iniciativa de acessibilidade do W3C ([WAI](https://www.w3.org/WAI/media/av/captions/)) define a legenda acessível como a versão em texto das informações de fala e também das informações sonoras necessárias para entender o conteúdo, sincronizada com o áudio. Na prática:
+
+- **Identifique quem fala** quando houver mais de uma pessoa e não estiver óbvio na imagem (por exemplo, "ANA:" no início do bloco).
+- **Inclua sons que importam para a compreensão**: [campainha], [risos], [música de suspense]. Não é preciso descrever todo ruído, só o que muda o sentido.
+- **Mantenha a sincronia**: legenda adiantada ou atrasada atrapalha tanto quanto legenda errada.
+- **Dê tempo de leitura**: blocos curtos, de preferência até duas linhas, e que não sumam antes de serem lidos.
+- **Garanta contraste**: texto claro com contorno ou fundo escuro funciona sobre qualquer imagem.
+- **Não cubra informação importante** da imagem, nem fique embaixo dos botões do app em vídeos verticais.
+
+O W3C também diferencia legenda no mesmo idioma do áudio (a que serve para acessibilidade) de legenda traduzida para outro idioma. Se o seu objetivo é alcançar público em outras línguas, a tradução de legenda ou a dublagem entram depois; veja o guia de [dublagem com IA](/artigos/dublagem-ia-videos-idiomas).
+
+## Legenda em vídeo curto: o que muda
+
+Em Shorts, Reels e TikTok a legenda costuma ser embutida e em destaque, com poucas palavras por vez. As regras de revisão são as mesmas, mas o erro fica ainda mais visível. O fluxo completo de vídeo curto, da ideia à publicação, está no guia de [IA para Shorts, Reels e TikTok](/artigos/ia-para-shorts-reels-tiktok).
+
+## Erros comuns
+
+- Publicar a legenda automática sem assistir ao vídeo com ela ligada.
+- Pedir a um assistente de IA para "melhorar" a legenda e ele reescrever a fala.
+- Mudar a minutagem ao editar o .srt manualmente e dessincronizar o resto do arquivo.
+- Usar legenda embutida estilizada e esquecer que ela não pode ser corrigida sem reexportar o vídeo.
+- Ignorar sons e trocas de falante em vídeos com mais de uma pessoa.
+- Deixar a legenda em cima de texto da tela, de preço ou do produto.
+
+## Checklist antes de publicar
+
+- O idioma de transcrição estava configurado como português?
+- Nomes de marca, produto e pessoas batem com o glossário?
+- Números, preços e medidas foram conferidos ouvindo o áudio?
+- Acentos, crase e homófonos foram revisados?
+- Falas sobrepostas e trocas de falante estão identificadas?
+- Sons importantes para entender o vídeo aparecem na legenda?
+- Cada bloco fica tempo suficiente na tela para ser lido?
+- A legenda está legível e fora da área dos botões do app?
+
+Planos, limites e disponibilidade de recursos mudam com frequência; confira a página oficial de cada ferramenta antes de montar sua rotina.

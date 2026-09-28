@@ -1,74 +1,129 @@
 ---
-title: "Claude e segurança de dados: o que a Anthropic promete"
-description: "Entenda as práticas de segurança e privacidade do Claude, como a Anthropic trata seus dados e boas práticas para usar a IA com mais tranquilidade."
+title: "Claude e privacidade: a Anthropic usa suas conversas para treinar a IA?"
+description: "Veja como o Claude trata seus dados: opção Model Improvement, retenção de 30 dias ou 5 anos, planos empresariais e o passo a passo para conferir a configuração."
 slug: "claude-seguranca-privacidade-dados"
 category: "Claude"
-tags: ["claude", "seguranca", "privacidade", "anthropic"]
+tags: ["claude", "segurança", "privacidade", "anthropic", "lgpd", "dados"]
 publishedAt: "2026-07-12"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["claude seguranca", "privacidade claude", "anthropic dados", "claude e privacidade"]
+keywords: ["claude privacidade", "claude treina com minhas conversas", "claude segurança de dados", "anthropic dados", "model improvement claude", "claude lgpd"]
+faq:
+  - question: "O Claude usa minhas conversas para treinar os modelos?"
+    answer: "Nas contas Free, Pro e Max (incluindo o Claude Code usado nessas contas), só se a opção de melhoria de modelos (Model Improvement) estiver ligada. Há exceções, como conversas sinalizadas para revisão de segurança e o feedback de polegar para cima ou para baixo. Nos planos Team, Enterprise e na API, não há treinamento com seus dados por padrão."
+  - question: "Por quanto tempo a Anthropic guarda minhas conversas?"
+    answer: "Nas contas de consumidor, uma conversa apagada sai do histórico na hora e dos sistemas em até 30 dias. Com a opção Model Improvement ligada, os dados podem ser mantidos por até 5 anos, sem identificação. Conteúdo que viola as políticas pode ser guardado por até 2 anos."
+  - question: "Desligar a opção apaga o que já foi usado?"
+    answer: "Não. Segundo a Anthropic, ao desligar, as novas conversas não serão usadas e as conversas guardadas deixam de entrar em treinamentos futuros, mas os dados continuam nos treinamentos já iniciados e nos modelos já treinados."
+  - question: "As conversas anônimas do Claude são usadas para treinamento?"
+    answer: "Não. A Anthropic afirma que conversas Incognito nunca são usadas para melhorar o Claude, mesmo com a opção Model Improvement ligada."
+sources:
+  - name: "Anthropic — Updates to Consumer Terms and Privacy Policy (2025)"
+    url: "https://www.anthropic.com/news/updates-to-our-consumer-terms"
+  - name: "Anthropic Privacy Center — Is my data used for model training? (consumidor)"
+    url: "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training"
+  - name: "Anthropic Privacy Center — How do I change my Model Improvement privacy settings?"
+    url: "https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings"
+  - name: "Anthropic Privacy Center — How long do you store my data?"
+    url: "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data"
+  - name: "Anthropic Privacy Center — Is my data used for model training? (comercial)"
+    url: "https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training"
+  - name: "Anthropic — Privacy Policy"
+    url: "https://www.anthropic.com/legal/privacy"
+related:
+  - "ia-privacidade-seguranca"
+  - "claude-planos-precos-comparacao"
+  - "o-que-e-claude-anthropic"
+  - "etica-ia-guia-pratico"
 ---
 
-Com o uso crescente de inteligência artificial no trabalho e na vida pessoal, a segurança e a privacidade dos dados se tornaram preocupações centrais para qualquer pessoa que utiliza essas ferramentas. A Anthropic, empresa responsável pelo Claude, construiu boa parte da sua reputação em torno do compromisso com segurança e uso responsável de IA. Neste artigo, explicamos os principais pontos sobre como o Claude lida com dados e privacidade, além de boas práticas para o usuário.
+A resposta curta: depende do plano e de uma configuração que você controla. Desde 2025, a Anthropic pode usar conversas das contas Free, Pro e Max para treinar o Claude, mas só se o usuário ativar a opção de melhoria de modelos. Nos planos empresariais e na API, o padrão é não treinar com os seus dados. Abaixo está o que vale hoje, quanto tempo os dados ficam guardados, as exceções e como conferir a sua configuração em menos de um minuto.
 
-## O compromisso declarado da Anthropic com segurança
+## Resumo: o que acontece com seus dados em cada tipo de conta
 
-A Anthropic se apresenta publicamente como uma empresa focada em desenvolver IA de forma segura e responsável, com pesquisa dedicada a reduzir riscos como respostas nocivas, vieses indesejados e uso indevido da tecnologia. Esse posicionamento é um dos motivos pelos quais muitas empresas e profissionais que lidam com dados sensíveis optam pelo Claude em relação a outras alternativas do mercado.
+| Tipo de conta | Treinamento de modelos | Retenção |
+|---|---|---|
+| Free, Pro e Max com Model Improvement desligado | Não usa suas conversas, com as exceções listadas abaixo | Conversa apagada sai do histórico na hora e dos sistemas em até 30 dias |
+| Free, Pro e Max com Model Improvement ligado | Pode usar conversas e sessões do Claude Code | Até 5 anos, sem identificação |
+| Conversas anônimas (Incognito), qualquer plano | Nunca usadas para melhorar o Claude, mesmo com a opção ligada | Consulte a política de retenção |
+| Team e Enterprise | Não treina por padrão | Guardadas até o usuário apagar; depois, removidas em até 30 dias. Enterprise pode ter retenção personalizada |
+| API | Não treina por padrão | Apagados em até 30 dias; há acordos de retenção zero |
 
-## Como os dados são tratados
+Fontes: [central de privacidade da Anthropic](https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training) e página sobre [tempo de armazenamento de dados](https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data).
 
-De forma geral, plataformas de IA como o Claude costumam seguir princípios como:
+## O que mudou em 2025
 
-- **Uso das conversas para melhorar os modelos**: dependendo da configuração de privacidade escolhida pelo usuário, as conversas podem ou não ser usadas para treinamento futuro dos modelos.
-- **Políticas de retenção de dados**: a empresa define por quanto tempo as conversas ficam armazenadas antes de serem eliminadas, conforme suas políticas oficiais.
-- **Configurações de privacidade para o usuário**: geralmente é possível ajustar preferências relacionadas ao uso dos dados nas configurações da conta.
-- **Diferenciação entre uso pessoal e empresarial**: contas empresariais costumam ter políticas de dados mais rígidas, voltadas para atender exigências de compliance corporativo.
+Em 28 de agosto de 2025, a Anthropic [atualizou os termos para consumidores](https://www.anthropic.com/news/updates-to-our-consumer-terms): passou a usar dados das contas Free, Pro e Max, incluindo o Claude Code, para treinar modelos, desde que o usuário ative a configuração. Quem já tinha conta teve até 8 de outubro de 2025 para escolher. Com a opção ligada, a retenção sobe para até 5 anos; desligada, continua a regra de 30 dias. Conversas apagadas não entram no treinamento.
 
-Como essas políticas podem ser atualizadas ao longo do tempo, é sempre recomendável consultar diretamente a política de privacidade oficial da Anthropic para informações atualizadas e precisas.
+A mudança não afeta serviços com Termos Comerciais: Claude for Work (Team e Enterprise), API, Amazon Bedrock, Google Cloud Vertex AI, Claude Gov e Claude for Education.
 
-## Boas práticas de segurança ao usar o Claude
+## Como conferir e mudar a configuração (passo a passo)
 
-Independentemente das garantias oferecidas pela empresa, existem cuidados que qualquer usuário deve adotar ao utilizar ferramentas de IA:
+No computador ou no navegador:
 
-1. **Evite compartilhar senhas, dados bancários completos ou documentos de identidade** diretamente no chat.
-2. **Anonimize informações sensíveis de terceiros** antes de enviar documentos para análise, como remover nomes e dados pessoais quando não forem estritamente necessários.
-3. **Revise as configurações de privacidade da conta**, ajustando conforme o nível de sensibilidade do seu uso.
-4. **Use contas empresariais** quando estiver lidando com dados corporativos sensíveis, aproveitando políticas de segurança mais robustas voltadas para empresas.
-5. **Verifique políticas específicas de compartilhamento**, especialmente ao usar recursos como Artifacts que podem ser compartilhados publicamente.
+1. Clique no seu nome, no menu da conta.
+2. Abra **Settings** (Configurações).
+3. Entre em **Privacy** (Privacidade). O atalho direto é claude.ai/settings/data-privacy-controls.
+4. Na opção de ajudar a melhorar os modelos da Anthropic (Model Improvement), ligue ou desligue a chave.
 
-## Segurança para empresas
+No celular, o caminho é o mesmo: seu nome, Settings, Privacy e a chave de melhoria de modelos. Se a interface estiver em português, os nomes aparecem traduzidos.
 
-Empresas que consideram adotar o Claude em processos internos devem avaliar pontos como:
+**O que acontece ao desligar:** segundo a [Anthropic](https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings), as novas conversas e sessões de código deixam de ser usadas, e as conversas já guardadas saem dos próximos treinamentos. Mas o que já entrou em treinamentos iniciados ou em modelos já treinados não é retirado. Ou seja: se a privacidade importa para você, decida antes de colocar material sensível no chat.
 
-| Aspecto | O que verificar |
-|---|---|
-| Retenção de dados | Por quanto tempo as conversas ficam armazenadas |
-| Uso para treinamento | Se os dados da empresa podem ser usados para treinar modelos futuros |
-| Controles de acesso | Possibilidade de gerenciar permissões de usuários e equipes |
-| Conformidade regulatória | Aderência a normas de proteção de dados aplicáveis, como a LGPD no Brasil |
-| Auditoria e logs | Disponibilidade de registros de uso para fins de auditoria interna |
+## As exceções que valem mesmo com a opção desligada
 
-## Riscos gerais do uso de IA generativa
+- **Revisão de segurança:** conversas sinalizadas para revisão de segurança podem ser usadas mesmo com a opção desligada.
+- **Feedback:** o que você envia pelo polegar para cima ou para baixo fica guardado por até 5 anos e pode ser usado em treinamento, desvinculado do seu ID de usuário.
+- **Conversas que você reporta** à Anthropic.
+- **Programas opcionais**, como o Trusted Tester, em que você aceita participar explicitamente.
 
-Vale lembrar que os riscos de privacidade não são exclusivos do Claude, mas sim comuns a qualquer ferramenta de IA generativa. Entre os principais pontos de atenção estão:
+## Quanto tempo cada tipo de dado fica guardado
 
-- Respostas geradas podem conter erros ou informações desatualizadas, exigindo verificação humana.
-- Dados enviados a qualquer serviço em nuvem estão sujeitos às políticas daquele provedor, o que reforça a importância de ler os termos de uso.
-- Ferramentas de compartilhamento (como links de Artifacts ou Projects colaborativos) podem expor informações se configuradas incorretamente.
+Para contas de consumidor (Free, Pro e Max):
 
-## Como a Anthropic se posiciona frente à concorrência
+- **Conversa apagada:** sai do histórico imediatamente e dos sistemas de backend em até 30 dias.
+- **Com Model Improvement ligado:** até 5 anos, sem identificação.
+- **Conteúdo que viola políticas:** até 2 anos; as notas de classificação de segurança, até 7 anos.
+- **Feedback enviado:** até 5 anos.
 
-Comparada a outras grandes empresas de IA, a Anthropic costuma ser vista pelo mercado como especialmente cautelosa em relação a temas de segurança, alinhamento de IA e uso responsável, tema que inclusive está na origem da fundação da empresa. Isso não significa ausência de riscos, mas indica uma cultura organizacional que trata esses temas como prioridade estratégica, o que pode ser um fator relevante na decisão de empresas e profissionais que lidam com dados sensíveis.
+## Memória, conversas anônimas e compartilhamento
 
-## Recomendações finais para o usuário comum
+- **Memória:** vem ativa por padrão no Free, Pro e Max. Tudo o que o Claude lembra aparece em Settings, na seção Memory, onde dá para editar ou apagar. No Team e no Enterprise, a memória começa desligada e o administrador decide.
+- **Incognito:** as conversas anônimas existem em todos os planos e nunca são usadas para treinamento. São a opção indicada para assuntos pontuais e sensíveis.
+- **Artifacts compartilhados:** ao compartilhar um artifact feito numa conversa, quem abre o link também tem acesso aos anexos e arquivos daquela conversa. No Free, artifacts publicados podem ser abertos por qualquer pessoa com o link, sem conta. Revise antes de compartilhar; o [guia de Artifacts](/artigos/claude-artifacts-recursos) explica as opções.
 
-- Leia periodicamente a política de privacidade da ferramenta que você utiliza, já que esses documentos podem ser atualizados.
-- Use o bom senso: trate qualquer informação enviada a uma IA como algo que idealmente não seria um problema se, por algum motivo, vazasse.
-- Aproveite recursos de configuração de privacidade oferecidos pela plataforma, ajustando-os conforme o seu nível de conforto.
-- Para uso profissional com dados sensíveis, prefira sempre planos empresariais com políticas de segurança mais claras e verificáveis.
+## Planos para empresas: o que muda
 
-## Conclusão
+Nos produtos comerciais, a Anthropic afirma que, por padrão, não usa entradas e saídas para treinar modelos. A exceção é o feedback que o usuário envia, e o administrador pode desativar esse envio. Os planos corporativos acrescentam controles:
 
-A segurança e a privacidade de dados são temas centrais para qualquer pessoa ou empresa que utiliza inteligência artificial no dia a dia, e a Anthropic busca se posicionar como uma referência nesse aspecto com o Claude. Ainda assim, cabe ao usuário adotar boas práticas de proteção de informações sensíveis e revisar periodicamente as políticas oficiais da empresa, garantindo um uso mais seguro e consciente da ferramenta.
+- **Team:** de 2 a 150 assentos, SSO, provisionamento JIT, permissões por função, limites de gasto e busca corporativa.
+- **Enterprise:** acrescenta logs de auditoria, SCIM, retenção de dados personalizada, chaves de criptografia do cliente, inferência só nos EUA e configuração HIPAA-ready com BAA.
+
+A Anthropic informa ter certificações ISO 27001:2022, ISO/IEC 42001:2023 e SOC 2 Tipo I e Tipo II; os relatórios ficam no Trust Portal (trust.anthropic.com). Para comparar custos, veja os [planos do Claude](/artigos/claude-planos-precos-comparacao).
+
+## Direitos de quem mora no Brasil
+
+A [política de privacidade da Anthropic](https://www.anthropic.com/legal/privacy), em vigor desde 10 de setembro de 2026, traz uma seção com direitos específicos para residentes no Brasil, como confirmação de tratamento, anonimização, bloqueio ou eliminação de dados, portabilidade e revogação do consentimento. Para quem mora fora da Europa, a controladora dos dados é a Anthropic PBC. Para entender o contexto da LGPD aplicada a ferramentas de IA, veja nosso guia sobre [IA e privacidade](/artigos/ia-privacidade-seguranca).
+
+## Checklist: como usar o Claude com mais segurança
+
+1. **Confira a opção Model Improvement** antes de enviar material de trabalho, e revise de novo sempre que houver aviso de mudança nos termos.
+2. **Não cole senhas, números de cartão, documentos de identidade ou dados de saúde de terceiros.**
+3. **Anonimize antes de enviar.** Troque nomes de clientes, CPFs e endereços por marcadores.
+4. **Use Incognito** para assuntos pontuais e sensíveis.
+5. **Cuidado com o botão de feedback** em conversas confidenciais: o feedback fica guardado por até 5 anos e pode ir para treinamento, mesmo com a opção desligada.
+6. **Para dados de clientes ou da empresa, prefira Team ou Enterprise**, que têm termos comerciais e controles de administração.
+7. **Revise anexos antes de compartilhar um artifact.**
+
+Exemplo de prompt para anonimizar um texto antes de analisá-lo:
+
+```text
+Vou colar abaixo um e-mail de cliente. Antes de qualquer análise, reescreva o texto
+substituindo nomes de pessoas por [NOME], CPF por [CPF], telefones por [TELEFONE],
+e-mails por [EMAIL] e endereços por [ENDEREÇO]. Mostre só a versão anonimizada.
+```
+
+Atenção: esse prompt ainda envia o texto original ao Claude. Ele ajuda a produzir uma versão limpa para compartilhar ou arquivar, mas não substitui anonimizar o conteúdo antes de colá-lo quando os dados forem realmente sensíveis.
+
+Para uma visão geral da ferramenta, volte ao guia [Claude: o que é e como usar](/artigos/o-que-e-claude-anthropic).

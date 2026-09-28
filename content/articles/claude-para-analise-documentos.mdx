@@ -1,82 +1,169 @@
 ---
 title: "Claude para análise de documentos: PDFs, planilhas e contratos"
-description: "Aprenda a usar o Claude para analisar PDFs, planilhas e contratos, extrair informações relevantes e economizar tempo em tarefas de leitura e revisão."
+description: "Como usar o Claude para analisar PDFs, planilhas e contratos: formatos aceitos, limites oficiais, prompts prontos e cuidados com dados sensíveis e a LGPD."
 slug: "claude-para-analise-documentos"
 category: "Claude"
-tags: ["claude", "documentos", "produtividade", "contratos"]
+tags: ["claude", "documentos", "pdf", "planilhas", "contratos", "produtividade"]
 publishedAt: "2026-04-28"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["claude analise de documentos", "ia para contratos", "claude pdf", "resumir documentos com ia"]
+keywords: ["claude analise de documentos", "claude pdf", "ia para contratos", "claude planilha excel", "resumir documentos com ia", "analisar pdf com ia"]
+faq:
+  - question: "Quais tipos de arquivo o Claude aceita?"
+    answer: "Segundo a central de ajuda da Anthropic, o Claude aceita PDF, DOCX, CSV, TXT, HTML, ODT, RTF, EPUB, JSON e XLSX, além das imagens JPEG, PNG, GIF e WebP. Para arquivos XLSX, a execução de código precisa estar ativada."
+  - question: "Qual o tamanho máximo de PDF que o Claude lê?"
+    answer: "A central de ajuda informa até 500 MB por arquivo e até 20 arquivos por conversa no chat, com PDFs de até 1.000 páginas. A análise visual (gráficos e imagens) vale só para PDFs de até 100 páginas. Em Projects, o limite é de 30 MB por arquivo. Esses limites podem mudar; confira a página oficial."
+  - question: "Posso usar o Claude para revisar um contrato?"
+    answer: "Sim, como apoio: ele resume obrigações, localiza prazos, multas e cláusulas de rescisão e aponta termos ambíguos. A decisão sobre assinar ou negociar um contrato importante deve passar por um advogado."
+  - question: "O plano gratuito do Claude analisa documentos?"
+    answer: "A página oficial sobre envio de arquivos não apresenta o recurso como exclusivo dos planos pagos, e o Free inclui execução de código e criação de arquivos. Documentos grandes consomem mais do limite de uso, que é maior nos planos pagos. A Anthropic não publica um número fixo de mensagens por plano."
+  - question: "É seguro enviar documentos confidenciais ao Claude?"
+    answer: "Depende do plano e do conteúdo. Nos planos Free, Pro e Max, as conversas podem ser usadas para treinar modelos se a opção Model Improvement estiver ligada; nos planos Team, Enterprise e API, não há treinamento por padrão. Remova ou anonimize dados pessoais que não sejam necessários para a análise."
+sources:
+  - name: "Anthropic — Upload files to Claude"
+    url: "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+  - name: "Anthropic — Create and edit files with Claude"
+    url: "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude"
+  - name: "Anthropic — What are projects?"
+    url: "https://support.claude.com/en/articles/9517075-what-are-projects"
+  - name: "Anthropic — How do usage and length limits work?"
+    url: "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work"
+  - name: "Anthropic — Is my data used for model training? (consumidor)"
+    url: "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training"
+  - name: "Anthropic — Claude for Microsoft 365"
+    url: "https://claude.com/claude-for-microsoft-365"
+related:
+  - "claude-projects-como-usar"
+  - "claude-seguranca-privacidade-dados"
+  - "ia-analise-dados-decisao"
+  - "claude-artifacts-recursos"
 ---
 
-Ler e analisar documentos extensos é uma das tarefas mais demoradas no trabalho de muitos profissionais: contratos jurídicos, relatórios financeiros, planilhas complexas e materiais de pesquisa. O Claude se tornou uma ferramenta muito útil nesse tipo de tarefa, graças à sua capacidade de lidar com textos longos e manter coerência ao longo de documentos extensos. Neste artigo, mostramos como aproveitar esse recurso na prática.
+Anexar um PDF de 80 páginas e pedir "resuma" até funciona, mas raramente resolve o problema real, que costuma ser outro: achar a cláusula de multa, comparar duas versões de um contrato, entender por que o faturamento caiu num trimestre. Este guia mostra o que o Claude aceita de arquivos, quais são os limites que a Anthropic publica, como pedir análises que você consegue conferir depois e o que não enviar. Se você ainda não conhece a ferramenta, comece pelo [guia sobre o que é o Claude](/artigos/o-que-e-claude-anthropic).
 
-## Por que usar IA para analisar documentos
+## O que o Claude aceita e quais são os limites
 
-Analisar documentos manualmente consome tempo e está sujeito a erros de atenção, principalmente em textos longos e técnicos. Com o apoio do Claude, é possível:
+Segundo a [central de ajuda da Anthropic](https://support.claude.com/en/articles/8241126-upload-files-to-claude):
 
-- Resumir rapidamente o conteúdo principal de um documento extenso.
-- Localizar cláusulas, valores ou informações específicas sem ler tudo manualmente.
-- Comparar diferentes versões de um mesmo documento.
-- Traduzir e simplificar linguagem técnica ou jurídica.
-- Identificar inconsistências, riscos ou pontos de atenção.
-
-## Tipos de documentos que o Claude consegue analisar
-
-| Tipo de documento | Uso comum |
+| Item | O que diz a documentação oficial |
 |---|---|
-| Contratos e termos jurídicos | Identificar cláusulas de risco, prazos e obrigações |
-| Relatórios financeiros | Resumir indicadores, tendências e comparações |
-| Planilhas de dados | Explicar tendências, gerar resumos e insights |
-| Artigos e estudos | Resumir conclusões e metodologia |
-| Manuais e políticas internas | Responder dúvidas com base no conteúdo oficial |
-| E-mails e mensagens longas | Resumir pontos principais e próximos passos |
+| Documentos | PDF, DOCX, CSV, TXT, HTML, ODT, RTF, EPUB e JSON |
+| Planilhas | XLSX, desde que a execução de código esteja ativada |
+| Imagens | JPEG, PNG, GIF e WebP |
+| Tamanho no chat | Até 500 MB por arquivo e até 20 arquivos por conversa |
+| PDFs | Até 1.000 páginas; a análise visual (gráficos, imagens) vale só para PDFs de até 100 páginas |
+| Em Projects | Até 30 MB por arquivo |
 
-## Como enviar documentos para análise
+Dois pontos práticos:
 
-O processo básico costuma envolver anexar o arquivo diretamente na conversa (como um PDF ou planilha) ou colar o texto do documento no chat, quando o conteúdo é menor. A partir daí, você pode fazer perguntas específicas ou pedir um resumo geral. Algumas dicas práticas:
+- **PDF longo com gráficos:** acima de 100 páginas, não conte com a leitura de gráficos e tabelas em imagem. Se os números importantes estão em gráficos, envie só as páginas relevantes ou os dados originais em CSV ou XLSX.
+- **Limite de uso:** a Anthropic não publica um número fixo de mensagens. O limite varia com o tamanho das mensagens, dos arquivos anexados, da conversa e com o modelo escolhido. Documentos grandes consomem mais, segundo a página sobre [limites de uso](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work).
 
-1. **Comece com um resumo geral** do documento antes de pedir análises específicas.
-2. **Faça perguntas objetivas**, como "quais são as cláusulas de rescisão deste contrato?" ou "qual foi a variação de receita entre os trimestres apresentados?".
-3. **Peça a localização exata** da informação dentro do documento, quando disponível, para facilitar a conferência manual.
-4. **Solicite comparações** quando tiver mais de um documento, como duas versões de um contrato ou dois relatórios de períodos diferentes.
+Os limites podem mudar; confira a página oficial antes de planejar um trabalho grande.
 
-## Exemplo de fluxo de análise de contrato
+## Antes de enviar: prepare o documento
 
-Um fluxo comum para revisão de contratos com apoio do Claude:
+1. **Prefira o arquivo original.** Se tiver o documento em versão digital, envie essa em vez de uma digitalização (foto de papel). E atenção: em DOCX e outros formatos que não são PDF, não conte com a leitura de imagens e gráficos inseridos no arquivo; se eles forem importantes, envie os dados originais ou um PDF.
+2. **Remova o que não é necessário para a análise**: CPF, RG, endereços, dados bancários e informações de saúde de terceiros. Troque nomes por "Parte A" e "Parte B" quando o nome não importar.
+3. **Para planilhas, ative a execução de código.** Ela está disponível em todos os planos e, no Free, Pro e Max, fica em Settings > Capabilities. É ela que permite ao Claude fazer contas de verdade sobre os dados, em vez de estimar lendo o texto.
+4. **Envie só as abas e colunas relevantes**, com cabeçalhos claros e sem células mescladas.
 
-1. Enviar o contrato completo.
-2. Pedir um resumo das principais obrigações de cada parte.
-3. Solicitar a identificação de cláusulas de risco, multas e prazos importantes.
-4. Perguntar se existem termos ambíguos ou que mereçam atenção jurídica.
-5. Pedir uma versão simplificada das cláusulas mais técnicas, para facilitar o entendimento de quem não é da área jurídica.
+## Contratos: fluxo e prompts
 
-Vale reforçar: o Claude é um apoio à análise, não substitui a revisão de um profissional jurídico qualificado em decisões contratuais importantes.
+O objetivo é localizar e organizar informações que você vai conferir no documento, não obter um parecer jurídico.
 
-## Exemplo de fluxo de análise de planilha
+### Prompt 1: mapa do contrato
 
-Para planilhas com dados numéricos, um fluxo eficiente é:
+```text
+Você vai me ajudar a entender o contrato anexo. Eu sou a [contratante/contratada].
 
-1. Enviar a planilha ou colar os dados relevantes.
-2. Pedir um resumo das principais tendências (crescimento, quedas, picos).
-3. Solicitar comparações entre períodos, categorias ou produtos.
-4. Pedir sugestões de gráficos ou visualizações para apresentar os dados.
-5. Verificar manualmente os números mais críticos antes de usar em relatórios oficiais.
+Monte uma tabela com: obrigação, parte responsável, prazo, cláusula (número) e trecho literal.
+Depois, liste separadamente:
+- multas e penalidades
+- condições de rescisão e aviso prévio
+- reajuste de valores (índice e periodicidade)
+- renovação automática
+- foro e forma de resolução de conflitos
 
-## Boas práticas para análise de documentos com IA
+Regras: cite sempre o número da cláusula e o trecho exato. Se uma informação
+não estiver no contrato, escreva "não encontrado". Não complete com suposições.
+```
 
-- **Sempre confira números e dados críticos manualmente**, especialmente em documentos financeiros e jurídicos.
-- **Divida documentos muito extensos** em partes, se o arquivo ultrapassar os limites de processamento.
-- **Peça citações diretas do texto original** ao fazer perguntas específicas, o que facilita a verificação.
-- **Combine com os Projects** do Claude quando for analisar múltiplos documentos relacionados ao longo do tempo.
-- **Use linguagem clara e objetiva** nas perguntas, evitando ambiguidades que possam gerar respostas imprecisas.
+### Prompt 2: pontos de atenção
 
-## Cuidados com dados sensíveis
+```text
+Com base no mesmo contrato, liste os termos ambíguos ou desequilibrados para o meu lado,
+explicando em linguagem simples por que merecem atenção.
+Para cada item, sugira uma pergunta que eu deveria fazer ao meu advogado ou à outra parte.
+Não diga se o contrato é "bom" ou "ruim": aponte os pontos para análise.
+```
 
-Ao enviar documentos contendo informações pessoais, financeiras ou confidenciais, é importante verificar as políticas de privacidade e retenção de dados da ferramenta antes de compartilhar o conteúdo. Sempre que possível, remova ou anonimize dados extremamente sensíveis que não sejam necessários para a análise, e evite compartilhar informações de terceiros sem autorização.
+### Prompt 3: comparar versões
 
-## Conclusão
+```text
+Anexei duas versões do mesmo contrato: V1 (original) e V2 (proposta da outra parte).
+Liste todas as diferenças de conteúdo, cláusula por cláusula, em uma tabela:
+cláusula | texto V1 | texto V2 | efeito prático da mudança.
+Ignore mudanças só de formatação ou pontuação.
+```
 
-A capacidade do Claude de lidar com textos longos e manter coerência em documentos extensos o torna uma ferramenta valiosa para profissionais que lidam diariamente com contratos, relatórios e planilhas. Usado com responsabilidade — sempre com revisão humana para decisões críticas — o Claude pode reduzir significativamente o tempo gasto em leitura e análise, liberando tempo para tarefas de maior valor estratégico.
+**Conferência obrigatória:** abra o contrato e verifique cada trecho citado. Se o Claude citar uma cláusula que não existe ou com texto diferente, descarte a análise daquele ponto. Em contratos com valor relevante, o Claude é apoio de leitura; a decisão passa por um advogado.
+
+## Planilhas: fluxo e prompts
+
+### Exemplo prático: vendas de um e-commerce
+
+Cenário hipotético: uma loja que vende no próprio site e no Mercado Livre exporta um CSV com data, canal, SKU, quantidade, preço e custo de frete dos últimos seis meses.
+
+```text
+Anexei o relatório de vendas (CSV). Colunas: data, canal, sku, quantidade, preco_unitario, frete.
+
+1. Antes de analisar, descreva a estrutura do arquivo: número de linhas, período coberto,
+   valores ausentes e qualquer coisa que pareça erro (preço zerado, datas fora do período).
+2. Calcule por mês e por canal: faturamento, número de pedidos e ticket médio.
+3. Liste os 10 SKUs com mais faturamento e os 10 com maior participação do frete no valor do pedido.
+4. Aponte as 3 variações mais relevantes entre meses e as hipóteses possíveis,
+   deixando claro que são hipóteses.
+5. Mostre as fórmulas ou o código usado nos cálculos.
+```
+
+O passo 1 evita o erro mais comum: tirar conclusões de uma planilha com linhas duplicadas ou colunas trocadas. O passo 5 permite refazer as contas no Excel ou no Google Sheets.
+
+Depois da análise, o Claude pode criar um arquivo .xlsx, .docx, .pptx ou PDF com o resultado, recurso disponível em todos os planos segundo a [página sobre criação de arquivos](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude). Nos planos pagos, também existe o Claude for Excel, que funciona dentro da própria planilha. Para transformar a análise em decisões de negócio, veja o guia de [análise de dados com IA](/artigos/ia-analise-dados-decisao).
+
+## Relatórios, artigos e documentos longos
+
+```text
+Leia o documento anexo e responda:
+1. Qual é a conclusão principal, em até 5 linhas?
+2. Quais dados sustentam essa conclusão? (cite página ou seção)
+3. Quais limitações ou ressalvas o próprio documento menciona?
+4. O que o documento NÃO responde sobre [meu tema]?
+Use apenas o conteúdo do documento. Se algo não estiver nele, diga que não está.
+```
+
+Pedir página ou seção de cada afirmação transforma o resumo em algo verificável.
+
+## Vários documentos ao longo do tempo: use Projects
+
+Se você analisa sempre o mesmo tipo de material (contratos de fornecedores, relatórios mensais, manuais internos), crie um Project com os documentos de referência e instruções fixas, como "sempre cite a cláusula". O Free pode criar até 5 projetos; os planos pagos têm uma base de conhecimento ampliada. Veja como montar no [guia do Claude Projects](/artigos/claude-projects-como-usar).
+
+## Erros comuns
+
+- **Aceitar números sem conferir.** Totais, percentuais e datas podem sair errados, sobretudo sem execução de código. Confira os números críticos na fonte.
+- **Perguntas vagas.** "Tem algo errado neste contrato?" gera respostas genéricas. Diga qual é o seu lado e o que você quer proteger.
+- **Misturar documentos sem identificar.** Ao anexar vários arquivos, nomeie cada um no prompt ("contrato V1", "aditivo 2025").
+- **Usar a análise como parecer.** Em decisões jurídicas, fiscais ou médicas, a resposta é ponto de partida, não conclusão.
+
+## Dados sensíveis: o que saber antes de enviar
+
+Nos planos Free, Pro e Max, as conversas podem ser usadas para treinar modelos se a opção Model Improvement estiver ligada. Conversas anônimas (Incognito) nunca são usadas para isso, e conversas apagadas saem do sistema em até 30 dias. Nos planos Team, Enterprise e API, não há treinamento por padrão, segundo a [central de privacidade da Anthropic](https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training).
+
+Mesmo assim, documentos com dados pessoais de clientes, funcionários ou pacientes envolvem obrigações da LGPD para quem os envia. Antes de usar o Claude com esse tipo de material no trabalho:
+
+- confirme se a política da empresa permite e qual plano deve ser usado;
+- anonimize tudo o que não for essencial para a análise;
+- não envie documentos de terceiros sem autorização.
+
+O passo a passo das configurações de privacidade está no guia [Claude e segurança de dados](/artigos/claude-seguranca-privacidade-dados).

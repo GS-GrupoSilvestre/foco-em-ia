@@ -1,84 +1,267 @@
 ---
-title: "Claude Code: como usar IA no terminal para programar"
-description: "Conheça o Claude Code, a ferramenta da Anthropic para usar IA direto no terminal, com exemplos práticos de instalação, comandos e fluxo de trabalho."
+title: "Claude Code: como instalar e usar a IA da Anthropic no terminal"
+description: "Tutorial do Claude Code: planos que incluem, instalação oficial no macOS, Linux e Windows, login, primeiros comandos e os cuidados de segurança antes de usar."
 slug: "claude-code-terminal-guia"
 category: "Claude"
-tags: ["claude code", "terminal", "programacao", "desenvolvimento"]
+tags: ["claude code", "terminal", "programacao", "desenvolvimento", "cli"]
 publishedAt: "2026-05-16"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["claude code", "ia no terminal", "claude cli", "claude para desenvolvedores"]
+keywords: ["claude code", "como instalar claude code", "claude code tutorial", "ia no terminal", "claude cli", "claude code comandos"]
+faq:
+  - question: "O Claude Code é gratuito?"
+    answer: "Não. O Claude Code está incluído nos planos Pro, Max, Team e Enterprise e também pode ser usado com uma conta do Claude Console, pagando por uso da API. O plano Free não inclui o Claude Code. Preços e limites podem mudar; consulte a página oficial."
+  - question: "Como instalar o Claude Code?"
+    answer: "A documentação oficial recomenda o instalador nativo: no macOS, Linux e WSL, o comando curl -fsSL https://claude.ai/install.sh | bash; no Windows PowerShell, irm https://claude.ai/install.ps1 | iex. Também há opções via Homebrew e WinGet. Depois, rode claude --version para confirmar."
+  - question: "O uso do Claude Code gasta o limite do meu plano?"
+    answer: "Sim. Nos planos Pro e Max, o uso do Claude Code conta no mesmo limite de uso do chat do Claude."
+  - question: "O Claude Code pode alterar arquivos sem pedir permissão?"
+    answer: "Pode, dependendo do modo de permissão ativo. Há modos em que o Claude pede aprovação antes de editar arquivos e rodar comandos e modos mais autônomos, em que ele age sem perguntar a cada passo. O modo inicial depende da versão e das suas configurações, então confira qual está ativo, use Git, trabalhe em uma branch e troque o modo com Shift+Tab se preferir aprovar cada ação."
+  - question: "Preciso saber inglês para usar o Claude Code?"
+    answer: "Os comandos e a documentação oficial estão em inglês, mas os pedidos podem ser escritos em português."
+sources:
+  - name: "Anthropic — Claude Code overview"
+    url: "https://code.claude.com/docs/en/overview"
+  - name: "Anthropic — Claude Code quickstart"
+    url: "https://code.claude.com/docs/en/quickstart"
+  - name: "Anthropic — Use Claude Code with your Pro or Max plan"
+    url: "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan"
+  - name: "Anthropic — Use Claude Code with your Team or Enterprise plan"
+    url: "https://support.claude.com/en/articles/11845131-use-claude-code-with-your-team-or-enterprise-plan"
+  - name: "Anthropic — Claude Code model configuration"
+    url: "https://code.claude.com/docs/en/model-config"
+  - name: "Anthropic — Claude: planos e preços"
+    url: "https://claude.com/pricing"
+related:
+  - "claude-para-programacao"
+  - "claude-planos-precos-comparacao"
+  - "claude-seguranca-privacidade-dados"
+  - "chatgpt-vs-gemini-vs-claude"
 ---
 
-Enquanto o Claude tradicional funciona por meio de um chat no navegador, a Anthropic também oferece o Claude Code, uma ferramenta pensada especificamente para desenvolvedores que trabalham no terminal. Ele leva a inteligência artificial para dentro do fluxo real de programação, permitindo ler, editar e executar código diretamente em projetos existentes. Neste guia, explicamos o que é o Claude Code, como instalar e como aproveitar melhor seus recursos.
+O Claude Code é a ferramenta da Anthropic que coloca o Claude para trabalhar dentro do seu projeto: ele lê os arquivos, edita o código, roda comandos e usa o Git a partir de pedidos em linguagem natural. Este tutorial segue a documentação oficial para mostrar quem pode usar, como instalar no macOS, Linux e Windows, como fazer login, quais são os primeiros comandos e, principalmente, que cuidados tomar antes de deixar uma IA mexer no seu código. Se o que você quer é tirar dúvidas de programação colando trechos no chat, o guia certo é o de [Claude para programação](/artigos/claude-para-programacao).
 
 ## O que é o Claude Code
 
-Claude Code é uma interface de linha de comando (CLI) que conecta o modelo Claude ao ambiente de desenvolvimento do programador. Em vez de copiar e colar trechos de código entre o terminal e um chat no navegador, o desenvolvedor interage diretamente com a IA dentro do próprio terminal, permitindo que o Claude:
+Segundo a [documentação oficial](https://code.claude.com/docs/en/overview), o Claude Code é "an agentic coding tool that reads your codebase, edits files, runs commands, and integrates with your development tools". Na prática, em vez de copiar código para um chat e colar a resposta de volta, você descreve a tarefa e ele localiza os arquivos, propõe e aplica as mudanças e roda os testes, se o projeto tiver testes.
 
-- Leia arquivos e a estrutura completa de um projeto.
-- Edite código diretamente nos arquivos do repositório.
-- Execute comandos, como testes, instalação de dependências ou scripts de build.
-- Navegue por múltiplos arquivos para entender o contexto de um sistema inteiro.
-- Sugira e aplique correções de bugs diretamente no código-fonte.
+Ele funciona em vários lugares:
 
-## Por que usar o Claude Code em vez do chat comum
+- **Terminal** (CLI), o foco deste guia;
+- **IDEs**: VS Code, Cursor e JetBrains;
+- **App desktop**;
+- **Navegador**, em claude.ai/code.
 
-A principal vantagem é a integração direta com o ambiente real de trabalho. Em vez de descrever manualmente a estrutura do projeto para a IA, o Claude Code consegue explorar os arquivos por conta própria, o que reduz o esforço de contextualização e aumenta a precisão das respostas, especialmente em projetos grandes e complexos.
+A documentação também cita integrações com Slack, GitHub Actions e GitLab.
 
-## Como instalar o Claude Code
+### Claude Code e chat: a diferença em uma tabela
 
-De forma geral, o processo de instalação segue este roteiro:
-
-1. Verificar os requisitos do sistema operacional (compatível com os principais sistemas usados por desenvolvedores).
-2. Instalar a ferramenta usando o gerenciador de pacotes recomendado pela documentação oficial da Anthropic.
-3. Autenticar a instalação com a conta Claude, vinculando ao plano contratado.
-4. Navegar até a pasta do projeto desejado pelo terminal.
-5. Iniciar o Claude Code dentro dessa pasta para começar a interagir com o projeto.
-
-Como os comandos exatos podem mudar conforme atualizações da ferramenta, é sempre recomendável consultar a documentação oficial mais recente da Anthropic antes de instalar.
-
-## Fluxo de trabalho típico com o Claude Code
-
-Um uso comum do Claude Code segue este roteiro:
-
-1. **Explorar o projeto**: pedir um resumo da estrutura de pastas e arquivos principais.
-2. **Descrever a tarefa**: explicar o que precisa ser implementado, corrigido ou melhorado.
-3. **Revisar o plano de ação**: o Claude Code costuma apresentar um plano antes de fazer alterações, permitindo aprovação ou ajustes.
-4. **Aplicar as mudanças**: o Claude edita os arquivos necessários diretamente no projeto.
-5. **Rodar testes**: pedir a execução de testes automatizados para validar se a mudança funcionou corretamente.
-6. **Revisar o código final**: sempre conferir manualmente as alterações antes de subir para produção.
-
-## Casos de uso práticos
-
-- **Correção de bugs**: descrever o erro encontrado e pedir para o Claude Code investigar os arquivos relacionados e propor uma correção.
-- **Implementação de novas funcionalidades**: descrever o comportamento esperado e deixar que a IA proponha a implementação inicial.
-- **Refatoração de código legado**: pedir a modernização de trechos antigos, mantendo o comportamento original.
-- **Escrita de testes automatizados**: gerar testes cobrindo funções específicas do projeto.
-- **Documentação de código**: gerar comentários e documentação técnica com base no código existente.
-
-## Boas práticas de uso
-
-- **Trabalhe em um controle de versão** (como Git) antes de aplicar mudanças, garantindo que seja possível reverter alterações indesejadas.
-- **Revise cada alteração proposta**, especialmente em projetos críticos ou em produção.
-- **Divida tarefas grandes em etapas menores**, facilitando a revisão e reduzindo riscos de erros.
-- **Combine com testes automatizados** para validar rapidamente se as mudanças mantiveram o comportamento esperado.
-- **Use branches separadas** para experimentar mudanças sugeridas pela IA antes de integrá-las ao código principal.
-
-## Diferenças entre Claude Code e o chat tradicional
-
-| Aspecto | Chat tradicional | Claude Code |
+| Aspecto | Chat do Claude | Claude Code |
 |---|---|---|
-| Ambiente | Navegador | Terminal, integrado ao projeto |
-| Acesso a arquivos | Manual (colar código) | Direto, lendo e editando arquivos |
-| Execução de comandos | Não | Sim, dentro do ambiente do projeto |
-| Indicado para | Perguntas pontuais, textos, ideias | Projetos de código reais e complexos |
+| Onde roda | Web, desktop e celular | Terminal, IDE, desktop e web |
+| Acesso ao seu projeto | Só o que você cola ou anexa | Lê os arquivos do repositório |
+| Edita arquivos | Não; você copia a resposta | Sim, direto no projeto |
+| Executa comandos | Não no seu computador | Sim, no seu ambiente |
+| Plano | Todos, inclusive o Free | Pro, Max, Team, Enterprise ou API |
 
-## Limitações e cuidados
+## Quais planos incluem o Claude Code
 
-Como qualquer ferramenta de automação que edita arquivos diretamente, o Claude Code exige atenção redobrada: é fundamental trabalhar sempre com controle de versão, revisar as mudanças propostas antes de aceitar e evitar rodar comandos potencialmente destrutivos sem confirmação. Em ambientes de produção, o ideal é sempre testar as alterações em ambientes de desenvolvimento ou homologação antes de aplicar em sistemas reais.
+- **Pro e Max**: incluído. O uso do Claude Code conta no mesmo limite do chat, segundo a [central de ajuda da Anthropic](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan).
+- **Team e Enterprise**: "Claude Code is included with every Team plan seat", e ele também vem no assento dos planos Enterprise novos e self-serve.
+- **Claude Console (API)**: dá para usar com créditos pré-pagos, pagando por token. No primeiro login, é criado automaticamente um workspace "Claude Code" no Console para acompanhar os custos.
+- **Provedores de nuvem**: empresas podem usar via Amazon Bedrock, Google Cloud e Microsoft Foundry.
+- **Free**: não inclui o Claude Code.
 
-## Conclusão
+Para comparar valores e limites, veja o guia de [planos do Claude](/artigos/claude-planos-precos-comparacao). Preços e limites podem mudar; consulte a [página oficial](https://claude.com/pricing).
 
-O Claude Code representa uma evolução natural do uso de IA para programação, trazendo o assistente para dentro do próprio fluxo de trabalho do desenvolvedor. Para times e profissionais que já usam terminal e controle de versão no dia a dia, essa ferramenta pode acelerar significativamente tarefas de desenvolvimento, correção de bugs e manutenção de código, desde que usada com boas práticas de revisão e segurança.
+**Modelo padrão:** no Claude Code, o padrão é o Opus 5.5 para contas Pro, Max, Team, Enterprise e API. Os modelos Fable nunca são padrão e precisam ser escolhidos manualmente; no Pro, eles exigem créditos pagos à parte.
+
+## Pré-requisitos
+
+1. Um terminal aberto (Terminal no macOS e Linux; PowerShell ou Prompt de Comando no Windows).
+2. Um projeto de código para trabalhar, de preferência já versionado com Git.
+3. Uma conta Pro, Max, Team, Enterprise ou do Claude Console.
+4. No Windows nativo, a documentação recomenda instalar o [Git for Windows](https://git-scm.com/downloads/win). Quem usa WSL não precisa dele.
+
+## Passo 1: instale o Claude Code
+
+Rode **um** dos comandos abaixo, conforme o seu sistema. O instalador nativo é o método recomendado pela Anthropic e se atualiza sozinho em segundo plano.
+
+**macOS, Linux e WSL:**
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+**Windows PowerShell:**
+
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+**Windows Prompt de Comando (CMD):**
+
+```batch
+curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+```
+
+Se preferir um gerenciador de pacotes:
+
+```bash
+# Homebrew (macOS/Linux)
+brew install --cask claude-code
+```
+
+```powershell
+# WinGet (Windows)
+winget install Anthropic.ClaudeCode
+```
+
+Instalações via Homebrew e WinGet **não se atualizam sozinhas**. Para atualizar, use `brew upgrade claude-code` ou `winget upgrade Anthropic.ClaudeCode` de tempos em tempos.
+
+**Dois erros comuns no Windows:** se aparecer `The token '&&' is not a valid statement separator`, você está no PowerShell usando o comando do CMD; se aparecer `'irm' is not recognized`, você está no CMD usando o comando do PowerShell. O PowerShell mostra `PS C:\` no início da linha.
+
+## Passo 2: confirme a instalação
+
+Abra uma **nova** janela do terminal e rode:
+
+```bash
+claude --version
+```
+
+Se aparecer um número de versão seguido de "(Claude Code)", está tudo certo. Se o terminal disser que o comando `claude` não foi encontrado, a pasta de instalação ainda não está no PATH; a documentação oficial tem uma página de solução de problemas de instalação para esse caso.
+
+## Passo 3: faça login
+
+Entre na pasta do projeto e inicie o Claude Code:
+
+```bash
+cd /caminho/do/seu/projeto
+claude
+```
+
+Na primeira vez, ele pede login. Com conta de assinatura ou do Console, siga as instruções para concluir a autenticação no navegador. As credenciais ficam salvas, então não é preciso repetir o login. Para trocar de conta depois, digite dentro da sessão:
+
+```text
+/login
+```
+
+Se a variável de ambiente `ANTHROPIC_API_KEY` estiver definida, o Claude Code pula o login e pede que você aprove o uso dessa chave. Atenção: se você tem assinatura e também uma chave de API configurada no sistema, confira qual das duas está sendo usada para não pagar por token sem querer.
+
+## Passo 4: seus primeiros pedidos
+
+Ao iniciar, o Claude Code mostra a versão, o modelo atual e a pasta de trabalho. Digite `/help` para ver os comandos disponíveis. Os exemplos da documentação oficial estão em inglês; abaixo estão versões em português dos mesmos pedidos.
+
+Comece entendendo o projeto, sem alterar nada:
+
+```text
+o que este projeto faz?
+```
+
+```text
+quais tecnologias este projeto usa e onde fica o ponto de entrada principal?
+```
+
+```text
+explique a estrutura de pastas
+```
+
+Depois, uma mudança pequena e fácil de conferir:
+
+```text
+adicione uma função hello world no arquivo principal
+```
+
+E o Git, em linguagem natural:
+
+```text
+quais arquivos eu alterei?
+```
+
+```text
+crie uma branch chamada feature/teste-claude
+```
+
+```text
+faça o commit das minhas alterações com uma mensagem descritiva
+```
+
+### Exemplo prático: corrigir um bug com plano antes
+
+Um pedido bem descrito economiza idas e voltas. Compare:
+
+- Vago: "corrija o bug do login".
+- Específico, no estilo que a documentação recomenda:
+
+```text
+Há um bug no login: depois de digitar a senha errada, a tela fica em branco
+em vez de mostrar a mensagem de erro.
+Antes de alterar qualquer arquivo, investigue a causa e me apresente um plano
+com os arquivos que pretende mudar. Espere minha aprovação.
+Depois de corrigir, rode os testes existentes e me mostre o resultado.
+```
+
+Para tarefas grandes, divida em etapas numeradas (por exemplo: 1. criar a tabela; 2. criar o endpoint; 3. criar a tela) e revise cada uma antes de seguir.
+
+## Comandos essenciais
+
+Comandos que você roda **no terminal**, para abrir o Claude Code:
+
+| Comando | O que faz |
+|---|---|
+| `claude` | Inicia o modo interativo |
+| `claude "tarefa"` | Inicia o modo interativo já com um pedido |
+| `claude -p "pergunta"` | Faz uma consulta única e encerra |
+| `claude -c` | Continua a conversa mais recente da pasta atual |
+| `claude -r` | Retoma uma conversa anterior |
+| `claude --version` | Mostra a versão instalada |
+
+Comandos que você digita **dentro da sessão**:
+
+| Comando | O que faz |
+|---|---|
+| `/help` | Mostra os comandos disponíveis |
+| `/clear` | Limpa o histórico da conversa |
+| `/login` | Troca de conta ou refaz a autenticação |
+| `/resume` | Continua uma conversa anterior |
+| `/exit` | Sai do Claude Code |
+
+Atalhos úteis: digite `/` para ver comandos e skills disponíveis, use Tab para completar comandos, a seta para cima para o histórico e Shift+Tab para alternar o modo de permissão. A lista completa está na referência de CLI da documentação oficial.
+
+## Segurança: leia antes de usar em um projeto real
+
+O ponto mais importante deste guia: o Claude Code tem **modos de permissão**. Em alguns, ele pede aprovação antes de editar arquivos ou rodar comandos; nos mais autônomos, ele edita arquivos e executa comandos **sem perguntar a cada passo**. O modo inicial pode variar conforme a versão instalada, as suas configurações e as regras da sua empresa, por isso confira no início da sessão qual modo está ativo (o [quickstart oficial](https://code.claude.com/docs/en/quickstart) e a documentação explicam as opções).
+
+Checklist antes de cada sessão:
+
+1. **Versione tudo com Git e faça um commit antes de começar.** Assim, qualquer mudança indesejada pode ser desfeita.
+2. **Trabalhe em uma branch separada**, nunca direto na principal.
+3. **Escolha o modo de permissão.** Pressione Shift+Tab para trocar o modo da sessão se quiser aprovar ações uma a uma, principalmente em projetos que você ainda não conhece bem.
+4. **Não abra o Claude Code em pastas com segredos soltos** (arquivos `.env` com senhas de produção, chaves privadas, backups de banco com dados de clientes). Ele lê os arquivos do projeto conforme precisa.
+5. **Desconfie de repositórios de terceiros.** Arquivos de um projeto desconhecido podem conter instruções escritas para enganar assistentes de IA. Revise o que a ferramenta pretende executar.
+6. **Nunca aponte para produção.** Rode em ambiente de desenvolvimento ou homologação; nada de credenciais de banco de produção na máquina onde a IA executa comandos.
+7. **Revise o diff antes do commit.** Peça "mostre um resumo de tudo que você alterou" e confira com `git diff`.
+8. **Rode os testes você também.** O fato de o Claude dizer que os testes passaram não substitui a sua verificação no pipeline de CI.
+
+Sobre privacidade: nas contas Free, Pro e Max, a configuração Model Improvement define se os dados, **incluindo os do Claude Code**, podem ser usados para treinar modelos. Nos planos comerciais (Team, Enterprise e API), não há treinamento por padrão. Os detalhes estão no guia [Claude e segurança de dados](/artigos/claude-seguranca-privacidade-dados).
+
+## Casos de uso que valem o investimento
+
+- **Entrar em um projeto novo**: pedir um mapa da arquitetura antes de ler o código.
+- **Corrigir bugs que envolvem vários arquivos**: descrever o sintoma e pedir a investigação.
+- **Escrever testes** para funções que ainda não têm cobertura.
+- **Refatorar código legado**, com a regra explícita de manter o comportamento e rodar os testes a cada etapa.
+- **Atualizar a documentação**, como o README com as instruções de instalação.
+- **Revisar as próprias alterações** antes de abrir um pull request.
+
+## Quando NÃO usar o Claude Code
+
+- Para uma dúvida pontual de sintaxe ou um conceito: o chat resolve com menos consumo do limite.
+- Em projetos sem controle de versão: primeiro rode `git init` e faça um commit.
+- Em máquinas com acesso direto a sistemas de produção.
+- Quando a política da empresa não permite enviar o código-fonte a serviços externos.
+
+## Próximos passos
+
+Com o básico funcionando, a documentação oficial mostra como personalizar o Claude Code com o arquivo CLAUDE.md, skills, hooks e MCP, e traz guias de boas práticas e fluxos comuns. A Anthropic também mantém tutoriais gratuitos na Claude Academy. Para entender onde o Claude Code se encaixa entre as outras ferramentas da Anthropic, veja o guia sobre [o que é o Claude](/artigos/o-que-e-claude-anthropic).

@@ -1,233 +1,165 @@
 ---
-title: "GPTs personalizados: crie seu próprio assistente no ChatGPT"
-description: "Aprenda como criar GPTs personalizados no ChatGPT sem precisar programar. Guia passo a passo para criar seu assistente de IA sob medida."
+title: "GPTs personalizados vão acabar: o que muda, datas e como migrar para plugins"
+description: "A OpenAI vai aposentar os GPTs personalizados e migrar para plugins. Veja o cronograma, quem ainda pode criar, o que migra e o que fazer com seus GPTs."
 slug: "gpts-personalizados-como-criar"
 category: "ChatGPT"
-tags: ["GPTs personalizados", "criar GPT", "ChatGPT Plus", "automação"]
+tags: ["GPTs personalizados", "custom GPTs", "plugins ChatGPT", "GPT Store", "ChatGPT"]
 publishedAt: "2026-03-25"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["GPTs personalizados", "como criar GPT", "GPT personalizado ChatGPT"]
+keywords: ["GPTs personalizados", "como criar GPT", "GPT personalizado ChatGPT", "fim dos GPTs personalizados", "custom GPT aposentado", "migrar GPT para plugin"]
+faq:
+  - question: "Ainda dá para criar um GPT personalizado?"
+    answer: "Não em contas pessoais. Segundo a OpenAI, a criação e a publicação de novos GPTs não estão disponíveis no Free, Go, Plus e Pro. Ficam restritas a workspaces Business, Enterprise e Edu, onde permitido, e a criação de novos GPTs está prevista para terminar em 26 de outubro de 2026."
+  - question: "Quando os GPTs personalizados deixam de funcionar?"
+    answer: "A aposentadoria padrão está marcada para 11 de dezembro de 2026. Workspaces Enterprise com adiamento aprovado têm até 11 de fevereiro de 2027. Até lá, os GPTs existentes continuam utilizáveis por usuários logados, conforme as permissões de acesso."
+  - question: "O que acontece com meu GPT na migração para plugin?"
+    answer: "As instruções viram uma skill, os apps conectados entram no plugin como apps e os arquivos de conhecimento vão como arquivos de referência. Ações personalizadas, o modelo escolhido, as configurações de compartilhamento e as conversas antigas não são migrados."
+  - question: "Eu só uso GPTs de outras pessoas. Preciso fazer algo?"
+    answer: "Você não precisa migrar um GPT que apenas usa, e nem pode migrá-lo. Confira o aviso exibido no próprio GPT e as orientações de quem o criou."
+sources:
+  - name: "OpenAI Help Center — Custom GPT retirement and migration FAQ"
+    url: "https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq"
+  - name: "OpenAI Help Center — GPTs in ChatGPT"
+    url: "https://help.openai.com/en/articles/8554407-gpts-in-chatgpt"
+  - name: "OpenAI Help Center — ChatGPT Release Notes"
+    url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+  - name: "OpenAI Help Center — Connected apps in ChatGPT"
+    url: "https://help.openai.com/en/articles/11487775-connected-apps-in-chatgpt"
+  - name: "OpenAI Help Center — Projects in ChatGPT"
+    url: "https://help.openai.com/en/articles/10169521-projects-in-chatgpt"
+related:
+  - "custom-instructions-chatgpt"
+  - "chatgpt-memoria-como-usar"
+  - "automacao-processos-ia"
+  - "como-usar-chatgpt-guia-completo"
 ---
 
-# GPTs personalizados: crie seu próprio assistente no ChatGPT
+Os GPTs personalizados, versões do ChatGPT configuradas para uma tarefa específica, estão com os dias contados. Em 11 de setembro de 2026, a OpenAI anunciou nas [notas de lançamento do ChatGPT](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) que vai aposentar os GPTs personalizados em todos os planos e oferecer um caminho de migração para **plugins**. Se você chegou aqui querendo criar um GPT, este guia explica o que mudou, as datas, o que acontece com os GPTs que você criou ou usa e quais alternativas fazem sentido agora.
 
-E se você pudesse criar sua própria versão do ChatGPT, especializada exatamente no que você precisa? Com personalidade definida, regras específicas, conhecimento personalizado e até acesso a ferramentas externas — tudo sem precisar escrever uma linha de código?
+## O que eram os GPTs personalizados
 
-Isso é exatamente o que os **GPTs personalizados** permitem. Desde que a OpenAI lançou essa funcionalidade, milhares de pessoas criaram assistentes especializados para as mais diversas finalidades: de tutores de idiomas a assistentes jurídicos, de geradores de receitas a coaches de negócios.
+Um GPT personalizado reunia, em um só lugar:
 
-Neste guia, você vai aprender como criar o seu próprio GPT do zero.
+- **nome, descrição e iniciadores de conversa**;
+- **instruções** de comportamento (tom, regras, o que fazer e o que evitar);
+- **arquivos de conhecimento** usados como base;
+- **ferramentas** como busca na web, geração de imagens e análise de dados;
+- **ações personalizadas** que chamavam serviços externos.
 
-## O que são GPTs personalizados?
+O resultado podia ser mantido privado, compartilhado por link ou publicado na GPT Store.
 
-GPTs (às vezes chamados de "Custom GPTs") são versões do ChatGPT configuradas para uma finalidade específica. Você define:
+## O que muda: cronograma oficial
 
-- **Como o GPT se apresenta**: nome, avatar, descrição
-- **O que ele sabe**: você pode fazer upload de documentos que ele vai usar como base de conhecimento
-- **Como ele se comporta**: tom de voz, regras, restrições
-- **O que ele pode fazer**: ferramentas como busca na web, geração de imagens, execução de código
+Segundo a [FAQ de aposentadoria e migração](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq), a mudança afeta todos os planos do ChatGPT. As datas publicadas:
 
-O resultado é um assistente especializado que qualquer pessoa pode usar — e que você pode compartilhar publicamente ou manter privado.
+| Data | O que acontece |
+|---|---|
+| 11 de setembro de 2026 | Anúncio e aviso aos administradores |
+| 22 de setembro de 2026 | Data-alvo para a ferramenta de migração e o aviso aos usuários |
+| 26 de outubro de 2026 (previsto) | Fim da criação de novos GPTs personalizados |
+| 11 de dezembro de 2026 | Aposentadoria padrão dos GPTs |
+| 11 de fevereiro de 2027 | Aposentadoria para workspaces com adiamento aprovado |
 
-## Para que servem os GPTs personalizados?
+A própria OpenAI diz que as opções e o momento da migração podem variar por conta e por workspace. Siga o aviso que aparece no produto para a sua conta.
 
-As possibilidades são quase infinitas. Veja alguns exemplos populares:
+### Quem ainda pode criar GPTs
 
-- **Tutor de idiomas**: um GPT que te ensina inglês com exercícios e correções personalizadas
-- **Revisor de textos**: especializado no seu estilo editorial ou nas normas da sua empresa
-- **Assistente de RH**: responde dúvidas de colaboradores com base no manual da empresa
-- **Chef virtual**: sugere receitas com base nos ingredientes que você tem
-- **Consultor de negócios**: especializado no seu setor ou modelo de negócio
-- **Gerador de conteúdo**: com a voz e estilo da sua marca
+De acordo com a [página de ajuda sobre GPTs](https://help.openai.com/en/articles/8554407-gpts-in-chatgpt), a criação e a publicação de novos GPTs **não estão disponíveis em contas pessoais**, incluindo Free, Go, Plus e Pro. A criação fica restrita a workspaces Business, Enterprise e Edu, quando as configurações permitem, e deve terminar em 26 de outubro de 2026.
 
-## Requisitos para criar um GPT
+A página de preços do ChatGPT ainda cita "custom GPTs" entre os recursos do Plus, mas a central de ajuda é explícita sobre o bloqueio em contas pessoais. Na dúvida, vale o que aparece na sua conta.
 
-Para criar um GPT personalizado, você precisa de:
+### Quem ainda pode usar
 
-- **Assinatura ChatGPT Plus** (ou superior)
-- Uma conta ativa na OpenAI
+Até a aposentadoria, os GPTs existentes continuam disponíveis para usuários logados, de acordo com as permissões de acesso de cada um. Depois da data de aposentadoria, eles ficam inacessíveis.
 
-Não é necessário saber programar. O processo é completamente visual e conversacional.
+## O que é um plugin e o que migra
 
-## Passo a passo para criar seu GPT
+Na definição da OpenAI, um plugin empacota recursos em um fluxo de trabalho e pode incluir um ou mais **apps** (conexões com serviços como Google Drive ou Slack), **skills** (instruções reutilizáveis) ou ambos. O antigo Diretório de Apps deu lugar ao Diretório de Plugins em 9 de julho de 2026.
 
-### Passo 1: Acesse o GPT Builder
+Na migração de um GPT para plugin:
 
-1. Entre em [chat.openai.com](https://chat.openai.com)
-2. No menu lateral esquerdo, clique em **"Explorar GPTs"** (Explore GPTs)
-3. Clique no botão **"Criar"** (Create) no canto superior direito
+| Item do GPT | O que acontece |
+|---|---|
+| Instruções | Viram uma skill dentro do plugin |
+| Apps conectados | Entram no plugin como apps |
+| Arquivos de conhecimento | São copiados como arquivos de referência do plugin |
+| Ações personalizadas | **Não** são migradas pelo fluxo automático |
+| Modelo escolhido no GPT | **Não** é levado |
+| Compartilhamento e publicação | **Não** são levados; quem usava não ganha acesso automático |
+| Conversas antigas com o GPT | Ficam no GPT original, não vão para o plugin |
 
-Você vai ver duas abas: **Criar** (Create) e **Configurar** (Configure). Pode usar as duas — vamos explicar ambas.
+Depois de migrado, o GPT original continua utilizável até a aposentadoria, mas vira somente leitura. Só GPTs publicados podem ser migrados; rascunhos não.
 
-### Passo 2: Use o modo de criação conversacional
+## Como migrar um GPT que você criou
 
-Na aba **Criar**, você tem um chat especial onde descreve o que quer para o GPT Builder. Ele vai fazendo perguntas e construindo o GPT junto com você.
+A FAQ da OpenAI descreve o fluxo assim (documentado para workspaces Enterprise; em outras contas, siga o aviso do produto):
 
-Exemplo de como iniciar:
+1. Abra **Meus GPTs** (My GPTs).
+2. No GPT que você quer migrar, escolha a opção **Migrar para plugin** (Migrate to plugin).
+3. Revise os detalhes da migração e siga as instruções.
+4. **Teste o plugin** antes de depender dele: repita as tarefas principais que o GPT fazia e compare os resultados.
+5. Refaça manualmente o que não migra: ações personalizadas, configurações de acesso e a comunicação com quem usava o GPT.
 
-```
-Quero criar um GPT especializado em ajudar empreendedores 
-brasileiros a escrever textos de vendas e copy para redes sociais. 
-Deve ter um tom direto, motivador e usar linguagem brasileira informal. 
-Deve sempre pedir o produto, o público-alvo e o objetivo antes de 
-criar qualquer texto.
-```
+A migração pode ser feita pelo criador do GPT ou por um administrador do workspace.
 
-O Builder vai fazer perguntas de acompanhamento para refinar o GPT. Responda com detalhes.
+## Checklist: o que fazer com seus GPTs agora
 
-### Passo 3: Configure manualmente (aba Configurar)
+**Se você criou GPTs:**
 
-Na aba **Configurar**, você tem controle total sobre cada aspecto do GPT:
+- [ ] Liste os GPTs que você ou sua equipe realmente usam.
+- [ ] Copie as instruções de cada um para um documento seu. É o ativo mais valioso e serve para qualquer alternativa.
+- [ ] Guarde cópias dos arquivos de conhecimento.
+- [ ] Anote as ações personalizadas e as integrações, que não migram sozinhas.
+- [ ] Verifique se sua conta mostra a opção de migração e teste o plugin gerado.
+- [ ] Avise quem usa o GPT sobre o novo caminho antes de 11 de dezembro de 2026.
 
-**Nome e Descrição:**
-- Dê um nome memorável e uma descrição clara do que o GPT faz
-- Essa descrição aparece para quem encontrar seu GPT na loja
+**Se você só usa GPTs de terceiros:**
 
-**Instruções (o coração do GPT):**
-Este é o campo mais importante. Aqui você escreve as regras de comportamento do GPT. Um bom conjunto de instruções inclui:
+- [ ] Veja o aviso no próprio GPT e as orientações do criador.
+- [ ] Salve em outro lugar os resultados de conversas importantes.
+- [ ] Monte uma alternativa com os recursos abaixo caso o criador não migre.
 
-```
-Você é [Nome do GPT], um assistente especializado em [área].
+## Alternativas para contas pessoais
 
-PERSONALIDADE E TOM:
-- [Descreva como o GPT deve falar]
-- [Tom formal/informal, emojis sim/não etc.]
+Quem está no Free, Go, Plus ou Pro não cria mais GPTs, mas consegue reproduzir boa parte do valor deles com recursos que continuam disponíveis:
 
-O QUE VOCÊ DEVE FAZER:
-- [Liste as principais funcionalidades]
-- [Comportamentos esperados]
+- **Projetos**: reúnem conversas e arquivos de um mesmo trabalho, com memória opcional restrita ao projeto. Estão disponíveis para usuários logados em todos os planos. É o substituto mais próximo de um "GPT de uso próprio".
+- **Instruções personalizadas**: definem tom e regras para todas as conversas. Veja como escrever no guia de [instruções personalizadas do ChatGPT](/artigos/custom-instructions-chatgpt).
+- **Memória**: guarda contexto que muda com o tempo. Veja [como usar a memória do ChatGPT](/artigos/chatgpt-memoria-como-usar).
+- **Apps conectados e plugins**: dependem do app, do plano, da região e do workspace. Confira o que aparece na sua conta.
 
-O QUE VOCÊ NÃO DEVE FAZER:
-- [Restrições importantes]
-- [Assuntos fora do escopo]
+### Fluxo sugerido: transformar um GPT em projeto
 
-COMO INICIAR UMA CONVERSA:
-[Descreva como o GPT deve se apresentar e iniciar]
+1. Crie um projeto com o nome do antigo GPT (por exemplo, "Revisor de textos").
+2. Envie os arquivos de conhecimento para o projeto (o limite de arquivos varia por plano).
+3. Cole as instruções do GPT na primeira mensagem do projeto ou adapte-as ao formato abaixo.
+4. Faça todas as conversas daquela tarefa dentro do projeto.
 
-FORMATO DAS RESPOSTAS:
-[Como as respostas devem ser estruturadas]
-```
-
-**Iniciadores de conversa (Conversation Starters):**
-São botões que aparecem quando alguém abre seu GPT pela primeira vez. Coloque as perguntas mais comuns que os usuários fariam.
-
-**Capacidades (Capabilities):**
-- **Web Search**: permite que o GPT pesquise informações na internet
-- **Image Generation (DALL-E)**: permite criar imagens
-- **Code Interpreter**: permite executar código e analisar planilhas
-
-### Passo 4: Faça upload de conhecimento personalizado
-
-Na seção **Conhecimento** (Knowledge), você pode fazer upload de arquivos que o GPT vai usar como base:
-
-- PDFs com documentos da empresa
-- Manuais e guias internos
-- Perguntas frequentes
-- Material de referência específico
-
-Formatos aceitos: PDF, TXT, DOCX, CSV, JSON e outros.
-
-**Atenção:** documentos enviados podem ser acessados pelo usuário se ele perguntar. Para documentos confidenciais, configure adequadamente as instruções.
-
-### Passo 5: Teste e ajuste
-
-Antes de publicar, teste exaustivamente:
-
-1. Use o preview à direita da tela para simular conversas
-2. Teste os casos de uso principais
-3. Tente "quebrar" o GPT com pedidos fora do escopo
-4. Ajuste as instruções com base nos resultados
-
-### Passo 6: Defina a privacidade e publique
-
-Ao clicar em **Salvar**, você escolhe quem pode acessar:
-
-- **Somente eu**: uso privado
-- **Qualquer pessoa com o link**: compartilhamento controlado
-- **Público**: aparece na GPT Store para qualquer usuário
-
-## Exemplo prático: criando um GPT de revisão de textos
-
-Vamos criar um GPT chamado **"Revisor Pro"** para revisão de textos em português brasileiro.
-
-**Nome:** Revisor Pro
-
-**Descrição:** Especialista em revisão de textos em português brasileiro para blogs, redes sociais e documentos profissionais.
-
-**Instruções:**
-```
-Você é o Revisor Pro, um especialista em revisão e aprimoramento 
-de textos em português brasileiro.
-
-SUAS FUNÇÕES:
-1. Corrigir erros gramaticais, ortográficos e de pontuação
-2. Melhorar clareza e fluidez do texto
-3. Adequar o tom ao público e objetivo indicados
-4. Sugerir alternativas quando o texto puder ser mais impactante
-
-COMO TRABALHAR:
-- Sempre pergunte o objetivo do texto e o público-alvo se não forem informados
-- Apresente o texto revisado primeiro, depois explique as alterações
-- Use controle de alterações: [ANTES] → [DEPOIS] para as mudanças principais
-- Explique o porquê de cada mudança significativa
-
-TOM E LINGUAGEM:
-- Seja objetivo e profissional
-- Português brasileiro contemporâneo
-- Evite jargões técnicos de gramática desnecessários
-
-NÃO FAÇA:
-- Não mude o significado original do texto
-- Não adicione informações que não estavam no texto original
-- Não altere nomes próprios, números ou dados específicos
-```
-
-**Iniciadores de conversa:**
-- "Revise este texto para meu blog"
-- "Melhore este e-mail profissional"
-- "Corrija este texto para redes sociais"
-- "Verifique a gramática do meu artigo"
-
-## Dicas para GPTs mais eficazes
-
-### 1. Seja específico nas instruções
-
-GPTs vagos geram resultados vagos. Quanto mais específico for o comportamento esperado, melhor.
-
-### 2. Defina claramente o escopo
-
-Diga o que o GPT deve e o que **não** deve fazer. Isso evita respostas fora do contexto.
-
-### 3. Inclua exemplos de interações
-
-Dentro das instruções, você pode incluir exemplos de como o GPT deve responder:
+Exemplo de instruções para colar em um projeto:
 
 ```
-EXEMPLO DE INTERAÇÃO:
-Usuário: "Me ajuda com um texto"
-GPT: "Com prazer! Antes de começar, me conte: qual é o objetivo 
-do texto e para quem ele será escrito?"
+Você é um revisor de textos em português do Brasil.
+
+FUNÇÕES
+1. Corrigir gramática, ortografia e pontuação.
+2. Melhorar clareza e fluidez.
+3. Ajustar o tom ao público e objetivo informados.
+
+COMO TRABALHAR
+- Se eu não informar objetivo e público, pergunte antes de revisar.
+- Mostre primeiro o texto revisado; depois, as principais mudanças
+  no formato ANTES → DEPOIS, com o motivo.
+
+NÃO FAÇA
+- Não mude o sentido do texto.
+- Não acrescente informações que não estavam no original.
+- Não altere nomes próprios, números ou dados.
 ```
 
-### 4. Teste com usuários reais
+## Para empresas
 
-Depois de publicar, peça para amigos ou colegas testarem e dê atenção ao feedback.
+Workspaces Business, Enterprise e Edu são os que ainda podem criar GPTs até o fim previsto da criação, e são também o foco da documentação de migração. Para equipes que dependem de GPTs internos (atendimento, manuais de RH, padrões de marca), vale tratar a migração como projeto: inventário, dono de cada GPT, teste do plugin e comunicação com os usuários. Ideias para organizar esse tipo de mudança estão em [automação de processos com IA](/artigos/automacao-processos-ia).
 
-### 5. Atualize regularmente
-
-Um bom GPT evolui com o tempo. Adicione novos documentos de conhecimento e refine as instruções com base no uso real.
-
-## Posso ganhar dinheiro com GPTs?
-
-A OpenAI tem um programa de receita para criadores de GPTs populares na GPT Store. Se o seu GPT se tornar popular entre usuários Plus, você pode receber uma participação nos lucros.
-
-Além disso, empresas têm criado GPTs como produto — vendendo acesso a assistentes especializados diretamente para clientes, usando a infraestrutura da OpenAI.
-
-## Conclusão
-
-Criar um GPT personalizado é mais fácil do que parece e o potencial é imenso. Com algumas horas de trabalho, você pode criar um assistente especializado que vai economizar horas de trabalho repetitivo, seja para uso pessoal, da sua equipe ou até como produto para seus clientes.
-
-O melhor: você não precisa saber programar. Basta ter clareza sobre o que você quer que o assistente faça e como deve se comportar.
-
-Comece simples — crie um GPT para uma tarefa específica que você faz todo dia e veja como ele transforma sua rotina.
+Para ver o que mais mudou no ChatGPT, consulte o [guia completo de como usar o ChatGPT](/artigos/como-usar-chatgpt-guia-completo).

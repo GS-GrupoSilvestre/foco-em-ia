@@ -1,7 +1,11 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { ArticleCard } from '@/components/article/ArticleCard'
-import { getArticlesByCategory, getAllCategorySlugs } from '@/lib/articles'
+import {
+  getArticlesByCategory,
+  getAllCategorySlugs,
+  getArticlesBySlugs,
+} from '@/lib/articles'
 import { getCategoryBySlug, siteConfig } from '@/lib/site-config'
 
 interface PageProps {
@@ -41,6 +45,7 @@ export default async function CategoryPage({ params }: PageProps) {
   if (!category) notFound()
 
   const articles = getArticlesByCategory(slug)
+  const pillars = getArticlesBySlugs(category.pillars ?? [])
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -52,6 +57,15 @@ export default async function CategoryPage({ params }: PageProps) {
       '@type': 'Organization',
       name: siteConfig.name,
       url: siteConfig.url,
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: articles.map((article, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `${siteConfig.url}/artigos/${article.slug}`,
+        name: article.frontmatter.title,
+      })),
     },
   }
 
@@ -91,6 +105,33 @@ export default async function CategoryPage({ params }: PageProps) {
             {articles.length} artigo{articles.length !== 1 ? 's' : ''} nesta categoria
           </p>
         </header>
+
+        {/* Comece por aqui: artigos-pilar da categoria (hub) */}
+        {pillars.length > 0 && (
+          <section className="mb-12" aria-labelledby="pillars-heading">
+            <h2
+              id="pillars-heading"
+              className="text-xl font-bold mb-5"
+              style={{ color: 'var(--clr-text)' }}
+            >
+              Comece por aqui
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {pillars.map((article) => (
+                <ArticleCard key={article.slug} article={article} variant="horizontal" />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {articles.length > 0 && (
+          <h2
+            className="text-xl font-bold mb-5"
+            style={{ color: 'var(--clr-text)' }}
+          >
+            Todos os artigos de {category.name}
+          </h2>
+        )}
 
         {articles.length === 0 ? (
           <div

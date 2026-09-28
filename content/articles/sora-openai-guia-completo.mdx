@@ -1,93 +1,144 @@
 ---
-title: "Sora: o gerador de vídeos com IA da OpenAI"
-description: "Entenda o que é o Sora, gerador de vídeos com IA da OpenAI, como funciona, quanto custa usar e como criar seus primeiros vídeos a partir de texto."
+title: "Sora da OpenAI: o que aconteceu com o gerador de vídeos e o que usar agora"
+description: "O Sora da OpenAI foi descontinuado em 2026. Veja o que ele era, as datas do encerramento, como exportar seus vídeos e quais alternativas usar no lugar dele."
 slug: "sora-openai-guia-completo"
 category: "Vídeos"
-tags: ["sora", "openai", "geração de vídeo", "inteligência artificial"]
+tags: ["sora", "openai", "geração de vídeo", "alternativas ao sora", "veo", "runway"]
 publishedAt: "2026-02-01"
 author: "Equipe Foco em IA"
 featured: true
 popular: false
-keywords: ["sora openai", "gerador de vídeo com ia", "sora como usar", "sora vs veo"]
+keywords: ["sora openai", "sora foi descontinuado", "sora acabou", "alternativas ao sora", "exportar vídeos sora", "sora vs veo"]
+faq:
+  - question: "O Sora da OpenAI ainda existe?"
+    answer: "Não como produto. Segundo a central de ajuda da OpenAI, o site e o app do Sora foram descontinuados em 26 de abril de 2026, e a API do Sora foi encerrada em 24 de setembro de 2026."
+  - question: "Como baixar os vídeos que eu criei no Sora?"
+    answer: "A OpenAI indicou a página sora.chatgpt.com/sunset para exportar o conteúdo e avisa que os dados associados ao Sora serão apagados de forma permanente. Como a página de ajuda não informa um prazo final claro, tente exportar o quanto antes."
+  - question: "Dá para gerar vídeos dentro do ChatGPT no lugar do Sora?"
+    answer: "Em setembro de 2026, não há geração de vídeo dentro do ChatGPT. O ChatGPT continua útil para escrever roteiros e prompts, mas a geração precisa ser feita em outra ferramenta."
+  - question: "Qual é a melhor alternativa ao Sora?"
+    answer: "Depende do uso. O Veo 3.1 (no Google Flow) e o Gemini Omni (no app Gemini) são o caminho natural para quem tem plano Google AI; o Runway Gen-4.5 combina geração e edição; o Kling 3.0 gera clipes com áudio nativo em até 4K; e o Midjourney gera vídeos curtos a partir de imagens."
+  - question: "O que acontece com os créditos que comprei para o Sora?"
+    answer: "Segundo a OpenAI, os créditos comprados podem ser usados no Codex. Pedidos de reembolso seguem a política de reembolso das assinaturas do ChatGPT."
+sources:
+  - name: "OpenAI — What to know about the Sora discontinuation"
+    url: "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+  - name: "OpenAI — Sora 2 is here (com aviso de descontinuação)"
+    url: "https://openai.com/index/sora-2/"
+  - name: "Google DeepMind — Veo"
+    url: "https://deepmind.google/models/veo/"
+  - name: "Runway — Preços"
+    url: "https://runway.com/pricing"
+  - name: "Kling — Guia de créditos do VIDEO 3.0"
+    url: "https://kling.ai/blog/kling-video-3-0-credit-cost-guide"
+  - name: "Midjourney — Vídeo"
+    url: "https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video"
+related:
+  - "veo-google-guia"
+  - "runway-ml-edicao-video"
+  - "ia-para-shorts-reels-tiktok"
+  - "ia-video-marketing-anuncios"
 ---
 
-O Sora, criado pela OpenAI, foi um dos primeiros geradores de vídeo por inteligência artificial a chamar atenção do público em geral por conseguir transformar descrições em texto em cenas realistas de poucos segundos. Se você já usou o ChatGPT e ficou curioso sobre como é possível "escrever" um vídeo, este guia explica o que o Sora faz, como começar a usar e quais cuidados tomar.
+Se você chegou aqui procurando o Sora, o gerador de vídeos da OpenAI, a resposta curta é: ele não está mais disponível. Segundo a [central de ajuda da OpenAI](https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation), o site e o app do Sora foram descontinuados em 26 de abril de 2026, e a API do Sora foi encerrada em 24 de setembro de 2026. Este guia explica o que o Sora era, o que aconteceu, como recuperar o que você criou e quais ferramentas fazem hoje o trabalho que ele fazia.
 
-## O que é o Sora
+## Resumo rápido: o que mudou
 
-Sora é um modelo de geração de vídeo que recebe um comando de texto, chamado de prompt, e produz um clipe em vídeo com movimento de câmera, personagens, cenários e até efeitos visuais coerentes entre os quadros. Diferente de editores tradicionais, aqui você não corta nem monta nada manualmente: a IA cria o vídeo do zero a partir da sua descrição.
+| Item | Situação em setembro de 2026 |
+|---|---|
+| Site e app do Sora | Descontinuados em 26/04/2026 |
+| API do Sora | Descontinuada em 24/09/2026 |
+| Exportação de dados | Pela página sora.chatgpt.com/sunset, indicada pela OpenAI |
+| Dados guardados | A OpenAI informa que serão apagados de forma permanente |
+| Créditos comprados | Podem ser usados no Codex, segundo a OpenAI |
+| Vídeo dentro do ChatGPT | Não existe; sem previsão divulgada |
 
-Além de gerar vídeos totalmente novos, o Sora também permite:
+## O que era o Sora
 
-- Animar uma imagem estática, transformando uma foto em um vídeo curto
-- Estender um vídeo já existente, criando continuidade da cena
-- Combinar referências de estilo para manter uma identidade visual consistente
-- Gerar variações de uma mesma cena para escolher a melhor versão
+O Sora era o modelo de geração de vídeo da OpenAI: você descrevia uma cena em texto (o prompt) e recebia um clipe curto com personagens, cenário e movimento de câmera. A segunda versão, o Sora 2, foi anunciada em 30 de setembro de 2025, junto com um app para iOS, lançamento inicial nos Estados Unidos e no Canadá e uma versão "Sora 2 Pro" para assinantes do ChatGPT Pro.
 
-## Como o Sora funciona na prática
+Hoje, a própria [página do Sora 2](https://openai.com/index/sora-2/) abre com o aviso de que, desde 26 de abril de 2026, o produto não está mais disponível. Ou seja: qualquer tutorial que ensine a "entrar no Sora e gerar um vídeo" está desatualizado.
 
-O processo básico de uso segue poucos passos:
+## Cronologia do encerramento
 
-1. Acesse a plataforma do Sora com sua conta OpenAI
-2. Escreva um prompt detalhado descrevendo cena, personagens, iluminação e movimento de câmera
-3. Escolha a duração e o formato do vídeo (vertical, quadrado ou horizontal)
-4. Gere o vídeo e aguarde o processamento, que pode levar de alguns segundos a poucos minutos
-5. Revise o resultado e, se necessário, ajuste o prompt para gerar uma nova versão
+1. **30/09/2025**: a OpenAI anuncia o Sora 2 e o app para iOS.
+2. **26/04/2026**: o site e o app do Sora são descontinuados.
+3. **24/09/2026**: a API do Sora é encerrada, o que afeta desenvolvedores e serviços de terceiros que usavam o modelo por trás.
 
-Quanto mais específico for o prompt, melhor tende a ser o resultado. Prompts vagos como "um cachorro correndo" geram resultados genéricos, enquanto descrições como "um golden retriever correndo em câmera lenta em uma praia ao pôr do sol, filmado com lente grande angular" tendem a produzir vídeos mais próximos do que você imagina.
+Se algum site ou app ainda oferece "vídeos com Sora", desconfie: com a API encerrada, o modelo não está mais disponível pela OpenAI.
 
-## Dicas para escrever bons prompts no Sora
+## Como exportar seus vídeos do Sora
 
-- Descreva o cenário com detalhes visuais (luz, cores, ambiente)
-- Indique o tipo de movimento de câmera desejado, como travelling, zoom ou câmera fixa
-- Especifique o estilo visual, por exemplo cinematográfico, documental ou animação
-- Evite pedir múltiplas ações complexas ao mesmo tempo em um único clipe curto
-- Teste variações do mesmo prompt para comparar resultados
+Se você tinha conta no Sora, a OpenAI indicou este caminho:
 
-## Para que tipo de conteúdo o Sora é indicado
+1. Acesse **sora.chatgpt.com/sunset** com a mesma conta que você usava no Sora.
+2. Use a opção de exportar o conteúdo.
+3. Aguarde o e-mail avisando que a exportação está pronta e baixe o arquivo.
 
-O Sora costuma ser mais útil para:
+A central de ajuda recomenda exportar "o quanto antes" e avisa que os dados associados ao Sora serão apagados de forma permanente após o encerramento. A página não informa um prazo final claro para a exportação, então não conte com ela por muito tempo. Guarde também, em um documento separado, os prompts que funcionaram bem para você: eles podem ser adaptados para outras ferramentas, como mostramos abaixo.
 
-- Criar peças curtas para redes sociais e testes de campanha
-- Produzir vinhetas, transições e elementos visuais para vídeos maiores
-- Gerar storyboards em movimento antes de uma produção real
-- Explorar ideias criativas sem precisar de equipe de filmagem
-- Criar conteúdo conceitual para apresentações e pitches
+## O ChatGPT gera vídeos no lugar do Sora?
 
-Para produções muito longas, com diálogos complexos e continuidade narrativa extensa, ainda é comum combinar o Sora com edição tradicional, já que os modelos de geração de vídeo funcionam melhor em clipes curtos.
+Não. Em setembro de 2026 não há geração de vídeo dentro do ChatGPT, e a OpenAI não divulgou previsão. O ChatGPT continua útil na etapa anterior: escrever roteiros, montar listas de cenas e refinar prompts. Para isso, veja nosso [guia completo do ChatGPT](/artigos/como-usar-chatgpt-guia-completo) e o artigo sobre [IA para roteiro de vídeo](/artigos/ia-para-roteiro-de-video).
 
-## Limitações que você deve conhecer
+## Alternativas ao Sora em 2026
 
-Nenhuma ferramenta de geração de vídeo por IA é perfeita ainda. Ao usar o Sora, vale ter em mente:
+As ferramentas abaixo estão ativas e cobrem o uso típico do Sora (gerar clipes curtos a partir de texto ou imagem). Preços e limites mudam com frequência; confira sempre a página oficial antes de assinar.
 
-- Cenas com muitas pessoas ou objetos podem apresentar distorções
-- Textos dentro do vídeo (como placas ou letreiros) costumam sair incorretos
-- Movimentos muito rápidos ou complexos podem gerar artefatos visuais
-- A consistência entre um clipe e outro pode variar, dificultando continuidade longa
+| Ferramenta | Modelo atual | Destaques confirmados | Onde usar |
+|---|---|---|---|
+| Google Veo | Veo 3.1 | Áudio nativo (falas, efeitos, ambiente), 1080p e 4K, extensão de cena, imagens de referência | Google Flow, app Gemini e Gemini API |
+| Gemini Omni | Omni Flash | Gerador de vídeo do app Gemini; aceita até 5 imagens e 1 vídeo como referência | App Gemini (planos Google AI, maiores de 18) e Flow |
+| Runway | Gen-4.5 e Aleph 2.0 | Geração por texto ou imagem e edição de vídeo existente | runway.com (Gen-4.5 nos planos pagos) |
+| Kling | Kling 3.0 | 4K nativo, áudio com diálogo e lip-sync, multi-shot, 3 a 15 s por geração | kling.ai |
+| Midjourney | Vídeo do Midjourney | Anima imagens em clipes de 5 s, extensíveis até 21 s (480p ou 720p) | midjourney.com |
+| Luma | Ray3.2 | Clipes de até 20 s em 1080p, keyframes, HDR | Luma App (o antigo Dream Machine foi descontinuado) |
 
-## Sora é gratuito ou pago
+### Qual alternativa faz mais sentido para cada situação?
 
-O acesso ao Sora normalmente segue um modelo de assinatura, com um número limitado de gerações incluído nos planos e a possibilidade de gerar mais vídeos mediante pagamento adicional, dependendo da política vigente da OpenAI. Antes de assinar, vale conferir diretamente na plataforma quais são os limites de geração, resolução disponível e duração máxima de vídeo no seu plano.
+- **Você já paga um plano Google AI (Plus, Pro ou Ultra)**: comece pelo Veo 3.1 no Google Flow ou pelo Gemini Omni no app Gemini. É o substituto mais direto, com áudio gerado junto. Veja o [guia do Veo](/artigos/veo-google-guia).
+- **Você precisa gerar e também editar clipes**: o Runway reúne geração (Gen-4.5) e edição de vídeo existente (Aleph 2.0). Detalhes no nosso [guia do Runway](/artigos/runway-ml-edicao-video).
+- **Você quer diálogo e lip-sync no próprio clipe, em alta resolução**: o Kling 3.0 anuncia áudio nativo com diálogo e 4K.
+- **Seu ponto de partida é uma imagem estilizada**: o Midjourney gera a imagem e anima em seguida, no mesmo site.
+- **Você produz vídeos curtos para redes sociais**: geração é só uma parte do processo. Veja o fluxo completo em [IA para Shorts, Reels e TikTok](/artigos/ia-para-shorts-reels-tiktok).
+- **Você faz anúncios**: combine a ferramenta de geração com roteiro e testes de variação, como no guia de [IA para vídeos de marketing e anúncios](/artigos/ia-video-marketing-anuncios).
 
-## Sora vs outros geradores de vídeo
+## Como adaptar um prompt que você usava no Sora
 
-Existem outras ferramentas fortes no mercado, como o Veo do Google e diversos geradores voltados para redes sociais. Na prática, a escolha entre elas costuma depender de:
+Prompts de vídeo costumam funcionar em várias ferramentas com poucas mudanças. O principal ajuste é deixar explícito o que antes ficava implícito: duração curta, formato de tela e, nas ferramentas com áudio nativo, o som.
 
-- Qualidade visual gerada para o tipo de cena que você mais produz
-- Facilidade de integração com o restante do seu fluxo de trabalho
-- Custo por vídeo gerado dentro do seu volume de uso
-- Disponibilidade de recursos como edição, extensão de clipe e controle de câmera
+Exemplo de prompt antigo (hipotético):
 
-O ideal é testar mais de uma ferramenta com o mesmo prompt e comparar os resultados antes de decidir qual usar no seu fluxo de produção de conteúdo.
+```
+Um golden retriever correndo em câmera lenta numa praia ao pôr do sol, lente grande angular.
+```
 
-## Passo a passo rápido para o seu primeiro vídeo
+Exemplo de prompt adaptado para ferramentas atuais:
 
-1. Defina o objetivo do vídeo: é para rede social, apresentação ou teste criativo
-2. Escreva um prompt curto e depois vá refinando com mais detalhes
-3. Gere de três a cinco variações do mesmo prompt
-4. Escolha a versão mais próxima do resultado desejado
-5. Exporte e, se precisar, edite em um editor de vídeo tradicional para adicionar áudio, cortes e legendas
+```
+Vídeo vertical 9:16, cerca de 8 segundos.
+Cena: um golden retriever correndo pela areia molhada de uma praia ao pôr do sol, em câmera lenta.
+Câmera: lente grande angular, na altura do cachorro, acompanhando o movimento da esquerda para a direita.
+Luz: dourada, sol baixo no horizonte, reflexos na água.
+Estilo: realista, cores quentes, sem texto na tela.
+Áudio: ondas quebrando, patas batendo na areia, vento leve. Sem música e sem falas.
+```
 
-## Conclusão
+Checklist para migrar seus prompts:
 
-O Sora representa um avanço importante na criação de vídeos assistida por inteligência artificial, tornando possível gerar cenas visuais complexas apenas descrevendo o que você imagina. Para quem produz conteúdo, testar essa ferramenta pode acelerar bastante o processo criativo, desde que você entenda seus limites atuais e continue combinando IA com edição humana para os resultados finais mais profissionais.
+- Informe o formato (9:16 para Reels e Shorts, 16:9 para YouTube) e uma duração compatível com a ferramenta.
+- Separe cena, câmera, luz, estilo e áudio em linhas. Fica mais fácil ajustar uma coisa de cada vez.
+- Peça "sem texto na tela": letreiros gerados por IA ainda costumam sair com erros.
+- Se a ferramenta aceita imagem de referência, use o primeiro quadro que você exportou do Sora para manter a identidade visual.
+- Gere algumas variações antes de escolher; o mesmo prompt dá resultados diferentes a cada geração.
+
+## O que continua valendo das lições do Sora
+
+O fim do Sora não muda as boas práticas de geração de vídeo com IA:
+
+- Clipes curtos, com uma ação principal, funcionam melhor do que cenas longas com muitos acontecimentos.
+- Personagens e objetos podem mudar de aparência entre gerações; use imagens de referência quando a ferramenta permitir.
+- Movimentos rápidos, mãos e multidões ainda geram artefatos visuais.
+- O acabamento (cortes, legendas, trilha e narração) continua sendo feito em um editor de vídeo.
+
+Também vale a lição de não depender de uma única ferramenta: mantenha cópias locais de tudo o que você gera e registre os prompts que deram certo.

@@ -1,88 +1,148 @@
 ---
-title: "Dublagem com IA: traduza seus vídeos para outros idiomas automaticamente"
-description: "Aprenda como funciona a dublagem com inteligência artificial, como traduzir e dublar seus vídeos para outros idiomas automaticamente e quais cuidados ter."
+title: "Dublagem com IA: como traduzir e dublar vídeos para outros idiomas"
+description: "Como dublar vídeos com IA no ElevenLabs, HeyGen, Synthesia e Descript: passo a passo, revisão da tradução, consentimento de voz e checklist antes de publicar."
 slug: "dublagem-ia-videos-idiomas"
 category: "Vídeos"
-tags: ["dublagem com ia", "tradução de vídeo", "inteligência artificial", "vozes sintéticas"]
+tags: ["dublagem com ia", "tradução de vídeo", "elevenlabs dubbing", "heygen", "clonagem de voz", "vídeo em outros idiomas"]
 publishedAt: "2026-05-20"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["dublagem com ia", "traduzir vídeo com ia", "dublagem automática", "voz sintética para vídeo"]
+keywords: ["dublagem com ia", "traduzir vídeo com ia", "dublagem automática", "elevenlabs dubbing", "heygen tradução de vídeo", "dublar vídeo para inglês"]
+faq:
+  - question: "Qual ferramenta de dublagem com IA suporta português do Brasil?"
+    answer: "Em setembro de 2026, o ElevenLabs Dubbing lista pt-BR e pt-PT entre mais de 90 idiomas, o HeyGen lista português do Brasil e de Portugal na tradução de vídeo, e o Synthesia inclui PT-BR entre os idiomas suportados."
+  - question: "A dublagem com IA mantém a minha voz?"
+    answer: "Pode manter. O ElevenLabs Dubbing detecta vários locutores e preserva a identidade e o tom emocional de quem fala, além do som de fundo. Isso equivale a recriar a voz da pessoa em outro idioma, então só faça com a sua voz ou com autorização de quem aparece no vídeo."
+  - question: "A dublagem com IA faz sincronização labial?"
+    answer: "Depende da ferramenta. O HeyGen oferece tradução só de áudio ou com lip sync. A documentação de dublagem do ElevenLabs não menciona lip sync: ela troca o áudio, e a boca continua a do vídeo original."
+  - question: "Dá para dublar de graça?"
+    answer: "Há opções limitadas. No ElevenLabs, as dublagens do plano gratuito saem com marca d'água e a licença comercial só vem nos planos pagos. No Synthesia, os minutos de AI Dubbing variam conforme o plano. Confira os limites atuais nas páginas oficiais."
+sources:
+  - name: "ElevenLabs — Dubbing"
+    url: "https://elevenlabs.io/docs/overview/capabilities/dubbing"
+  - name: "ElevenLabs — Preços"
+    url: "https://elevenlabs.io/pricing"
+  - name: "ElevenLabs — Instant Voice Cloning"
+    url: "https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning"
+  - name: "HeyGen — Idiomas da tradução de vídeo"
+    url: "https://help.heygen.com/en/articles/11391941-video-translation-languages-we-support"
+  - name: "Synthesia — Preços"
+    url: "https://www.synthesia.io/pricing"
+  - name: "Descript — Preços"
+    url: "https://www.descript.com/pricing"
+related:
+  - "legendas-automaticas-ia"
+  - "elevenlabs-voz-ia"
+  - "avatares-ia-videos-apresentador"
+  - "ia-para-editar-videos-youtube"
 ---
 
-Traduzir e dublar um vídeo para outros idiomas costumava exigir estúdio, dubladores profissionais e um orçamento considerável. Com a inteligência artificial, esse processo ficou muito mais acessível: hoje é possível traduzir a fala de um vídeo e gerar uma nova narração em outro idioma automaticamente, mantendo até características da voz original.
+Dublar um vídeo com IA significa transcrever a fala original, traduzir e gerar um novo áudio no idioma de destino, muitas vezes com uma voz parecida com a de quem falou. O que antes exigia estúdio e dubladores hoje leva minutos, mas o resultado só fica publicável com revisão humana da tradução e autorização de quem tem a voz recriada. Este guia compara as principais ferramentas, mostra um fluxo de trabalho completo e traz os cuidados que evitam os erros mais comuns.
 
-## O que é dublagem com IA
+## Como a dublagem com IA funciona
 
-Dublagem com IA é o processo de traduzir automaticamente o áudio de um vídeo para outro idioma e gerar uma nova narração sintética, sincronizada com o vídeo original. Algumas ferramentas mais avançadas também ajustam o movimento labial das pessoas no vídeo para combinar melhor com o novo idioma, embora esse recurso ainda esteja em evolução.
+1. **Transcrição**: a ferramenta converte a fala em texto e separa os locutores.
+2. **Tradução**: o texto é traduzido para o idioma de destino.
+3. **Síntese de voz**: um novo áudio é gerado, com voz sintética ou com uma recriação da voz original.
+4. **Mixagem**: a nova fala é combinada com o som de fundo e o tempo do vídeo.
+5. **Sincronização labial (opcional)**: algumas ferramentas também ajustam o movimento da boca no vídeo.
 
-O processo básico envolve três etapas:
+## Ferramentas de dublagem com IA
 
-1. Transcrição do áudio original para texto
-2. Tradução desse texto para o idioma de destino
-3. Geração de uma nova narração em áudio, sincronizada com o tempo do vídeo
+| Ferramenta | Pontos confirmados | Lip sync | Português |
+|---|---|---|---|
+| **ElevenLabs Dubbing** | 90+ idiomas; detecta vários locutores, inclusive com falas sobrepostas; preserva identidade e tom de voz; mantém o som de fundo; até 1 GB e 180 min por arquivo no app | Não mencionado na documentação | pt-BR e pt-PT |
+| **HeyGen (tradução de vídeo)** | Tradução para uso em treinamentos, marketing e comunicação interna | Opção de só áudio ou com lip sync | Português do Brasil e de Portugal |
+| **Synthesia (AI Dubbing)** | Dublagem incluída nos planos, com minutos por mês que variam por plano | Consulte a plataforma | PT-BR suportado |
+| **Descript** | Tradução de legendas e dublagem; no plano Business, 30+ idiomas com revisão | Consulte a plataforma | Consulte a plataforma |
 
-## Por que usar dublagem com IA
+Informações das páginas oficiais em setembro de 2026. Recursos, limites e preços mudam com frequência; confira antes de assinar.
 
-Ampliar o alcance de um vídeo para outros idiomas traz benefícios diretos:
+**Detalhes do ElevenLabs que fazem diferença**, segundo a [documentação de dublagem](https://elevenlabs.io/docs/overview/capabilities/dubbing):
 
-- Alcance de públicos internacionais sem precisar gravar o vídeo novamente
-- Redução drástica de custo em comparação com dublagem profissional tradicional
-- Velocidade muito maior, já que o processo pode ser feito em minutos ou poucas horas
-- Possibilidade de manter a mesma identidade de voz em vários idiomas
-- Facilidade para testar novos mercados antes de investir em produção local
+- Dublagens do plano gratuito saem com marca d'água; as dos planos pagos, não. E o plano Free não tem licença comercial.
+- O Dubbing v2 não tem editor dentro do app: o editor detalhado (Dubbing Studio) é do modelo v1. A edição de transcrição e o reprocessamento de áudio pela API são exclusivos do plano Enterprise.
+- Todos os planos self-serve permitem até 3 dublagens simultâneas.
 
-## Passo a passo para dublar um vídeo com IA
+### Qual ferramenta faz mais sentido para cada situação?
 
-1. Escolha uma ferramenta de dublagem com IA que suporte os idiomas desejados
-2. Envie o vídeo original com áudio de boa qualidade
-3. Selecione o idioma de destino da dublagem
-4. Revise a tradução gerada automaticamente, corrigindo termos técnicos ou expressões locais
-5. Escolha a voz sintética que mais combina com o tom do vídeo original
-6. Gere a nova narração e sincronize com o vídeo
-7. Revise o resultado final assistindo ao vídeo dublado por completo antes de publicar
+- **Canal de YouTube ou curso com uma pessoa falando para a câmera**: HeyGen, se o lip sync for importante; ElevenLabs, se o foco for a qualidade da voz e o som de fundo.
+- **Podcast, entrevista ou vídeo com vários locutores**: ElevenLabs Dubbing, que separa locutores e mantém o áudio de fundo.
+- **Treinamento corporativo feito com avatar**: gere o vídeo já no idioma de destino no Synthesia ou no HeyGen, em vez de dublar depois. Veja [avatares de IA](/artigos/avatares-ia-videos-apresentador).
+- **Quem já edita no Descript**: use a dublagem do próprio editor e revise o texto ali.
+- **Orçamento zero**: comece com [legendas automáticas](/artigos/legendas-automaticas-ia) no idioma de destino. Legenda bem feita costuma ser melhor que dublagem ruim.
 
-## Cuidados importantes na tradução automática
+## Passo a passo: dublar um vídeo
 
-A tradução automática evoluiu bastante, mas ainda comete erros que merecem atenção:
+1. **Prepare o original**: exporte o vídeo com a fala o mais limpa possível. Ruído, música alta e falas sobrepostas pioram a transcrição.
+2. **Monte um glossário**: nomes de produtos, marcas, termos técnicos e como devem ficar no idioma de destino (veja o prompt abaixo).
+3. **Envie o vídeo** para a ferramenta e escolha o idioma de origem e o de destino.
+4. **Defina a voz**: voz original recriada (só com autorização) ou uma voz sintética da biblioteca.
+5. **Revise a transcrição e a tradução** antes de aprovar o áudio final. Se a ferramenta não tiver editor, gere a transcrição traduzida à parte e peça revisão a alguém fluente.
+6. **Gere a dublagem** e assista ao vídeo inteiro, com atenção a nomes, números e ritmo.
+7. **Ajuste e publique**: corrija trechos problemáticos, adicione legendas no novo idioma e publique em um canal ou faixa de áudio separada.
 
-- Expressões idiomáticas podem ser traduzidas ao pé da letra, perdendo o sentido original
-- Termos técnicos específicos de uma área podem precisar de ajuste manual
-- Piadas e trocadilhos raramente funcionam bem quando traduzidos de forma automática
-- Nomes próprios e marcas devem ser revisados para garantir que não foram alterados incorretamente
+## Prompts para revisar a tradução
 
-## Escolhendo a voz certa para a dublagem
+### Glossário antes de dublar
 
-A escolha da voz sintética influencia diretamente a percepção do público sobre o vídeo dublado. Ao selecionar uma voz, considere:
+```
+Vou dublar um vídeo do português do Brasil para [idioma].
+Com base na transcrição abaixo, crie uma tabela com:
+- termos técnicos, nomes de produtos e marcas;
+- como cada um deve aparecer no idioma de destino (ou "manter em português", se for nome próprio);
+- expressões idiomáticas que não devem ser traduzidas ao pé da letra, com uma sugestão natural.
+Não traduza o texto inteiro ainda. Não invente termos que não estão na transcrição.
 
-- O tom do conteúdo original, se é mais formal, descontraído ou técnico
-- A faixa etária e o estilo do público-alvo no novo idioma
-- A naturalidade da voz, evitando entonações muito artificiais
-- A consistência entre diferentes vídeos de um mesmo canal ou marca
+Transcrição: [cole aqui]
+```
 
-## Sincronização labial: até onde a tecnologia chega hoje
+### Revisão da tradução automática
 
-Alguns serviços mais avançados oferecem ajuste do movimento labial da pessoa no vídeo para se aproximar do novo idioma falado, tornando a dublagem visualmente mais convincente. Esse recurso costuma funcionar melhor em vídeos com planos mais fechados no rosto e pode apresentar limitações em cenas com muito movimento de câmera ou múltiplas pessoas falando ao mesmo tempo.
+```
+Abaixo estão a transcrição original em português e a tradução automática para [idioma].
+Aponte, trecho a trecho:
+1. erros de sentido;
+2. números, valores, datas ou medidas que mudaram;
+3. frases que ficaram longas demais para o tempo do trecho original;
+4. termos que não seguem o glossário.
+Sugira uma versão corrigida só para os trechos com problema. Não mude o conteúdo nem acrescente informações.
 
-## Casos de uso mais comuns
+Original: [cole aqui]
+Tradução: [cole aqui]
+Glossário: [cole aqui]
+```
 
-A dublagem com IA é especialmente útil para:
+O item 3 é importante: espanhol e inglês ocupam tempos diferentes do português, e frases longas demais ficam aceleradas na dublagem.
 
-- Canais educacionais que querem alcançar públicos em outros países
-- Empresas que precisam adaptar vídeos institucionais para diferentes filiais
-- Criadores de conteúdo que buscam expandir audiência internacionalmente
-- Cursos online que desejam oferecer aulas em múltiplos idiomas
-- Vídeos de treinamento corporativo usados em equipes globais
+**Cenário hipotético**: uma loja que vende acessórios de academia no Brasil quer testar anúncios em espanhol. Ela dubla o vídeo de demonstração do produto, revisa a tradução com o prompt acima e confere se medidas e materiais continuam iguais ao original. Se o vídeo diz "cinquenta centímetros", a versão em espanhol não pode virar outra medida nem ganhar características que o produto não tem.
 
-## Boas práticas para um resultado mais natural
+## Consentimento: de quem é a voz?
 
-- Grave o áudio original com boa qualidade, evitando ruídos de fundo
-- Fale de forma clara e em ritmo moderado, facilitando a transcrição e tradução
-- Sempre revise manualmente a tradução antes de gerar o áudio final
-- Teste diferentes vozes sintéticas para encontrar a que soa mais natural no idioma de destino
-- Ouça o vídeo dublado por completo antes de publicar, verificando ritmo e sincronização
+Quando a ferramenta preserva a voz original, ela está recriando a voz de uma pessoa em um idioma que ela nunca falou. Por isso:
 
-## Conclusão
+- **Sua própria voz**: sem problema, desde que você esteja confortável com o resultado.
+- **Voz de convidados, entrevistados ou funcionários**: peça autorização por escrito para a dublagem com voz recriada, dizendo em quais idiomas e canais o vídeo será usado. No Brasil, o Código Civil (art. 20) protege a transmissão da palavra e a imagem de uma pessoa, principalmente em usos comerciais.
+- **Clonagem de voz no ElevenLabs**: para criar um clone instantâneo, o usuário precisa confirmar que tem o direito e o consentimento para clonar a voz; o clone profissional só pode ser da própria voz, mesmo com consentimento de outra pessoa. Veja o [guia do ElevenLabs](/artigos/elevenlabs-voz-ia).
+- **Sem autorização**: use uma voz sintética da biblioteca, não a voz recriada.
+- **Transparência**: informe na descrição do vídeo que a versão em outro idioma foi dublada com IA.
 
-A dublagem com inteligência artificial tornou possível levar conteúdo em vídeo para públicos internacionais de forma muito mais rápida e acessível do que os métodos tradicionais. Ainda assim, revisar a tradução e ouvir o resultado final com atenção continua sendo fundamental para garantir que o vídeo dublado transmita a mesma mensagem e o mesmo tom do conteúdo original.
+## Checklist antes de publicar
+
+- A tradução foi revisada por alguém fluente?
+- Números, preços, medidas e datas continuam iguais ao original?
+- Nomes de pessoas, marcas e produtos foram pronunciados corretamente?
+- O ritmo está natural, sem trechos acelerados?
+- O som de fundo e a música continuam com volume adequado?
+- Há autorização de todas as pessoas cuja voz foi recriada?
+- O vídeo avisa que a versão dublada foi feita com IA?
+
+## Limitações
+
+- **Humor, gírias e trocadilhos** raramente sobrevivem à tradução automática.
+- **Lip sync** funciona melhor em planos fechados no rosto e com uma pessoa falando por vez.
+- **Falas sobrepostas** confundem a separação de locutores, mesmo em ferramentas que prometem lidar com isso.
+- **Revisão tem custo**: sem editor no app, corrigir um trecho pode exigir outra ferramenta ou uma nova geração.
+
+Depois de dublar, o próximo passo costuma ser a edição final e a publicação. Veja [IA para editar vídeos do YouTube](/artigos/ia-para-editar-videos-youtube) e o fluxo completo de [IA para Shorts, Reels e TikTok](/artigos/ia-para-shorts-reels-tiktok).

@@ -1,179 +1,136 @@
 ---
-title: "ChatGPT Canvas: escreva e programe com IA lado a lado"
-description: "Guia completo sobre o ChatGPT Canvas. Aprenda a usar o modo de edição colaborativa para escrever textos e criar código com IA em tempo real."
+title: "ChatGPT Canvas: o que mudou e como usar os blocos de escrita e de código"
+description: "O Canvas saiu dos modelos GPT-5.5 e o ChatGPT passou a usar blocos de escrita e de código. Veja o que mudou e como editar textos e programar no chat hoje."
 slug: "chatgpt-canvas-guia"
 category: "ChatGPT"
-tags: ["ChatGPT Canvas", "edição colaborativa", "programação IA", "escrita com IA"]
+tags: ["ChatGPT Canvas", "blocos de escrita", "writing blocks", "programação com IA", "escrita com IA"]
 publishedAt: "2026-04-22"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["ChatGPT Canvas", "canvas ChatGPT como usar", "edição colaborativa IA"]
+keywords: ["ChatGPT Canvas", "canvas ChatGPT como usar", "canvas ChatGPT sumiu", "writing blocks ChatGPT", "blocos de escrita ChatGPT", "code blocks ChatGPT"]
+faq:
+  - question: "O Canvas do ChatGPT acabou?"
+    answer: "Em 28 de maio de 2026, a OpenAI informou que o Canvas não estaria mais disponível no GPT-5.5 Instant e no GPT-5.5 Thinking e que escrita e código passariam a ser feitos direto nas respostas, com blocos de escrita e blocos de código. A documentação atual da OpenAI não descreve o Canvas como recurso disponível."
+  - question: "O que são os blocos de escrita do ChatGPT?"
+    answer: "São áreas de rascunho editáveis para e-mails, mensagens, posts e documentos. Você pode editar o texto direto, formatar, abrir em tela cheia e pedir ao ChatGPT para revisar um trecho selecionado ou o rascunho inteiro."
+  - question: "Dá para rodar código dentro do ChatGPT?"
+    answer: "Segundo a OpenAI, os blocos de código permitem executar código Python compatível e ver a saída no console, além de pré-visualizar HTML, React, SVG, diagramas Mermaid e gráficos. As ações disponíveis variam por dispositivo, plano e configurações da conta."
+sources:
+  - name: "OpenAI Help Center — Writing blocks and code blocks in ChatGPT"
+    url: "https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt"
+  - name: "OpenAI Help Center — Model Release Notes"
+    url: "https://help.openai.com/en/articles/9624314-model-release-notes"
+  - name: "OpenAI Help Center — ChatGPT Release Notes"
+    url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+related:
+  - "chatgpt-para-escrever-textos"
+  - "claude-artifacts-recursos"
+  - "como-usar-chatgpt-guia-completo"
+  - "claude-para-programacao"
 ---
 
-# ChatGPT Canvas: escreva e programe com IA lado a lado
+Se você procurou o botão do Canvas no ChatGPT e não encontrou, a explicação está nas notas oficiais: em 28 de maio de 2026, segundo as [notas de lançamento de modelos da OpenAI](https://help.openai.com/en/articles/9624314-model-release-notes), o Canvas deixou de estar disponível no GPT-5.5 Instant e no GPT-5.5 Thinking, e as funções de escrita e programação passaram a ficar direto nas respostas do chat, por meio de **blocos de escrita** (writing blocks) e **blocos de código** (code blocks). Este guia explica o que era o Canvas, o que mudou e como fazer hoje o mesmo tipo de trabalho.
 
-Imagine poder escrever um texto ou criar um programa enquanto a IA trabalha junto com você na mesma tela — editando, sugerindo e refinando em tempo real, sem você precisar copiar e colar entre diferentes janelas. Esse é o conceito do **ChatGPT Canvas**.
+## O que era o Canvas
 
-O Canvas é um modo de trabalho colaborativo dentro do ChatGPT que transforma a interface de chat em algo mais parecido com um editor de documentos ou IDE. Se você escreve textos, cria código ou precisa refinar rascunhos de forma iterativa, o Canvas pode mudar completamente a sua forma de trabalhar.
+O Canvas abria um painel ao lado da conversa, parecido com um editor de documentos ou de código. Nele, você e o ChatGPT trabalhavam no mesmo texto: dava para editar direto, selecionar trechos e pedir mudanças só naquela parte, sem gerar uma resposta nova do zero.
 
-## O que é o ChatGPT Canvas?
+## O que mudou
 
-O Canvas é uma área de trabalho compartilhada que aparece ao lado do chat. Quando ativado, ele cria um **espaço de edição** onde o conteúdo — seja um texto ou código — aparece de forma editável. Você e o ChatGPT podem trabalhar nesse conteúdo ao mesmo tempo.
+- **28 de maio de 2026**: a OpenAI informou que o Canvas não estaria mais disponível nos modelos GPT-5.5 Instant e GPT-5.5 Thinking. Por um período, usuários pagos ainda podiam acessá-lo por modelos legados, até a saída desses modelos.
+- **Hoje**: a central de ajuda da OpenAI documenta os blocos de escrita e de código como a forma de editar textos e código no chat. A antiga página de ajuda do Canvas não está mais disponível, e a documentação atual não descreve o Canvas nos modelos GPT-5.6.
 
-Em vez de o ChatGPT gerar um texto completo no chat e você copiar para um editor, com o Canvas:
+Na prática: não conte com o Canvas. Os blocos cobrem a maior parte do que ele fazia, dentro da própria resposta.
 
-- O texto aparece em um painel lateral editável
-- Você pode selecionar trechos e pedir alterações específicas
-- O ChatGPT edita o documento em si, não gera uma nova versão do zero
-- Você pode editar diretamente no Canvas também
-- Há ferramentas rápidas para ações comuns com um clique
+## Blocos de escrita: como usar
 
-É como ter um Google Docs onde a IA é um coautor ativo.
+Segundo a [página de ajuda sobre blocos de escrita e de código](https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt), os blocos de escrita são áreas de rascunho editáveis para e-mails, mensagens, posts e documentos.
 
-## Como acessar o Canvas
+### Passo a passo
 
-O Canvas está disponível para usuários do **ChatGPT Plus** e planos superiores.
+1. Peça um rascunho de forma direta, por exemplo: "Escreva um e-mail de resposta para o meu gerente" ou "Escreva uma atualização curta para a equipe".
+2. O rascunho aparece em um bloco de escrita dentro da resposta.
+3. Edite o texto diretamente no bloco, se quiser ajustar algo à mão.
+4. Selecione um trecho e peça ao ChatGPT para revisar só aquela parte, ou peça a revisão do rascunho inteiro.
+5. Use a formatação (negrito, itálico, títulos, links e listas) e, se precisar de espaço, abra em tela cheia.
+6. Copie o texto final ou, quando o recurso estiver disponível na sua conta, salve o rascunho na sua Biblioteca ou envie o e-mail direto do ChatGPT.
 
-Para ativar o Canvas numa conversa:
-1. Abra o ChatGPT
-2. Selecione o modelo **GPT-4o** (o Canvas funciona com esse modelo)
-3. Inicie uma conversa e peça algo como "Escreva um artigo sobre X" ou "Crie um código que faça Y"
-4. Quando o ChatGPT entender que a tarefa se beneficiaria do Canvas, ele vai ativar automaticamente
-5. Você também pode digitar explicitamente: "Use o Canvas para..." ou clicar no ícone de Canvas no menu
+As ações disponíveis dependem do tipo de bloco, do dispositivo, do plano, das configurações do workspace e de o recurso estar ativo na sua conta.
 
-## Canvas para escrita de textos
+### Exemplo prático: post para Instagram de uma loja
 
-O Canvas para escrita tem funcionalidades específicas para trabalhar com conteúdo textual.
-
-### Ferramentas rápidas de escrita
-
-Ao abrir o Canvas com um texto, você verá botões no painel com ações como:
-
-- **Ajustar tamanho**: encurtar ou alongar o texto
-- **Alterar tom**: tornar mais formal, informal, direto, elaborado
-- **Verificar gramática**: revisão ortográfica e gramatical
-- **Adicionar emojis**: inserir emojis em pontos estratégicos
-- **Ajustar nível de leitura**: simplificar ou tornar mais técnico
-
-Essas ações aplicam mudanças diretamente no documento, sem precisar digitar prompts.
-
-### Como editar trechos específicos
-
-Uma das funcionalidades mais úteis é poder selecionar um trecho específico do texto e pedir alterações só naquela parte.
-
-1. Selecione um parágrafo ou frase no Canvas
-2. Uma barra de ferramentas aparece com a opção de pedir modificação
-3. Escreva o que quer mudar: "Deixe este parágrafo mais curto" ou "Torne esta parte mais empolgante"
-4. O ChatGPT edita apenas aquela seleção
-
-Isso é muito mais preciso do que pedir para "reescrever o segundo parágrafo" em um chat normal.
-
-### Exemplo prático: criando um artigo no Canvas
+Exemplo de prompt:
 
 ```
-Crie no Canvas um artigo de blog sobre os benefícios do 
-home office para profissionais de tecnologia. 
-Público: desenvolvedores de software, 25-35 anos.
-Tom: descontraído mas informativo.
-Extensão: 600 palavras.
-Inclua: introdução, 4 tópicos principais, conclusão.
+Escreva um post para o Instagram da minha loja de acessórios de academia
+anunciando a volta do strap de algodão ao estoque.
+Público: quem treina musculação há pelo menos 6 meses.
+Tom: direto e animado, sem exagero.
+Formato: legenda de até 80 palavras + 5 hashtags.
+Use apenas estas informações: strap de algodão, 50 cm, para exercícios de puxada.
+Não invente preço, promoção ou garantia.
 ```
 
-Depois que o artigo aparecer no Canvas, você pode:
-- Clicar em um parágrafo que ficou muito formal e pedir para torná-lo mais leve
-- Selecionar a conclusão e pedir para adicionar um call-to-action
-- Usar o botão "Verificar gramática" para uma revisão rápida
-- Pedir ao chat ao lado: "Adicione um exemplo real no segundo tópico"
+Depois que o rascunho aparecer no bloco:
 
-## Canvas para programação
+- selecione a primeira frase e peça: "Deixe esta abertura mais curta e com uma pergunta";
+- selecione as hashtags e peça: "Troque por hashtags em português";
+- peça para o rascunho inteiro: "Faça uma versão para o WhatsApp da loja, sem hashtags".
 
-Para desenvolvedores, o Canvas é especialmente poderoso. Ele cria um ambiente próximo de um editor de código, com funcionalidades específicas para programação.
+## Blocos de código: como usar
 
-### Ferramentas rápidas de código
+Quando você pede algo de programação, o ChatGPT coloca o código em blocos de código automaticamente. Segundo a OpenAI, eles permitem:
 
-- **Adicionar comentários**: documenta o código automaticamente
-- **Adicionar logs**: insere print/console.log estratégicos para debugging
-- **Verificar bugs**: análise de possíveis erros
-- **Otimizar**: sugere melhorias de performance
-- **Traduzir para outra linguagem**: converte o código para Python, JavaScript, etc.
+- copiar, editar e ver em tela cheia;
+- identificar a linguagem do código;
+- alternar entre **Código** e **Prévia**;
+- **executar código Python compatível** e ver a saída no console;
+- pré-visualizar **HTML, React, SVG, diagramas Mermaid e gráficos**;
+- gerar links de compartilhamento somente leitura.
 
-### Exemplo prático: criando código no Canvas
+### Exemplo prático: função Python
+
+Exemplo de prompt:
 
 ```
-Crie no Canvas uma função Python que:
-- Recebe uma lista de preços de produtos
-- Aplica um desconto de 10% em produtos acima de R$ 100
-- Retorna um dicionário com o preço original e o preço com desconto
-- Inclua tratamento de erros e docstring
+Crie uma função Python que:
+- receba uma lista de preços de produtos;
+- aplique 10% de desconto nos produtos acima de 100;
+- retorne uma lista de dicionários com preço original e preço com desconto;
+- trate entradas inválidas e tenha docstring.
+Inclua 3 exemplos de uso e execute-os para mostrar a saída.
 ```
 
-Depois que o código aparecer, você pode:
-- Clicar em "Adicionar comentários" para documentar automaticamente
-- Selecionar uma função específica e pedir "Adicione validação de tipo aqui"
-- Pedir "Adicione testes unitários para esta função"
-- Usar "Traduzir para JavaScript" se precisar do equivalente em JS
+Depois, continue na mesma conversa:
 
-### Trabalhando com código iterativamente
+1. "Adicione testes unitários para os casos de borda."
+2. "Explique a lógica em comentários curtos."
+3. "Agora gere uma página HTML simples que mostre essa tabela de preços" e use a prévia para conferir.
 
-O Canvas é ideal para desenvolvimento iterativo. Por exemplo:
+### Quando o bloco de código não basta
 
-**Turno 1:** "Crie a estrutura básica de uma API REST com Flask"
+Para projetos com vários arquivos, tarefas longas ou mudanças em um repositório, o caminho da OpenAI hoje é o **Codex**, o agente de programação incluído nos planos do ChatGPT (limitado no Free e ampliado nos planos pagos). Tarefas longas com vários entregáveis, que não são só código, ficam no **ChatGPT Work**.
 
-**Turno 2:** (selecionando a rota de login) "Adicione autenticação JWT aqui"
+## Canvas antes e blocos agora
 
-**Turno 3:** (selecionando o código de banco de dados) "Otimize essas queries SQL"
+| O que você fazia no Canvas | Como fazer hoje |
+|---|---|
+| Editar o texto direto | Editar dentro do bloco de escrita |
+| Selecionar um trecho e pedir mudança | Selecionar no bloco e pedir revisão do trecho |
+| Formatar o documento | Negrito, itálico, títulos, links e listas no bloco |
+| Rodar e testar código | Executar Python compatível no bloco de código |
+| Pré-visualizar páginas | Alternar para Prévia (HTML, React, SVG, Mermaid, gráficos) |
 
-**Turno 4:** "Adicione comentários explicando toda a lógica"
+Recursos específicos que o Canvas oferecia, como atalhos prontos de ajuste de tamanho ou de nível de leitura e o histórico de versões, não aparecem na documentação atual dos blocos. Se precisar, peça em texto ("encurte em 30%", "simplifique para leigos") e guarde as versões importantes copiando para um documento seu.
 
-Cada pedido refina o mesmo documento, sem perder o contexto anterior.
+## Limitações e cuidados
 
-## Dicas para usar o Canvas de forma mais eficiente
+- **Nem toda ação aparece para todos**: salvar na Biblioteca e enviar e-mail direto dependem da conta e do recurso estar disponível.
+- **Documentos longos**: para textos muito extensos, trabalhe por seções.
+- **Código executado não é código testado em produção**: revise dependências, segurança e dados antes de usar.
+- **Revise tudo o que for publicar**: dados, promessas e tom continuam sendo sua responsabilidade.
 
-### 1. Seja explícito para ativar o Canvas
+## Alternativas para editar lado a lado
 
-Se o Canvas não abrir automaticamente, diga explicitamente: "Use o Canvas para criar..." ou "Abra no Canvas..."
-
-### 2. Use seleção para edições precisas
-
-Em vez de descrever onde está a mudança ("no segundo parágrafo, na terceira frase"), selecione o texto diretamente. É mais rápido e mais preciso.
-
-### 3. Combine edição manual com IA
-
-Você pode editar diretamente no Canvas e depois pedir para a IA continuar, corrigir ou expandir o que você escreveu. É uma colaboração real.
-
-### 4. Use o histórico de versões
-
-O Canvas mantém um histórico das versões. Se uma mudança não ficar boa, você pode desfazer e voltar para a versão anterior.
-
-### 5. Para código, sempre peça testes
-
-Depois de criar um código no Canvas, peça: "Adicione testes unitários para as principais funções." Isso aumenta muito a qualidade do código final.
-
-## Limitações do Canvas
-
-- **Documentos muito longos**: o Canvas funciona melhor com conteúdos de tamanho moderado. Documentos muito extensos podem ter problemas de edição
-- **Formatação complexa**: tabelas complexas e formatação muito elaborada podem não renderizar perfeitamente
-- **Não é um editor offline**: tudo fica no chat e você precisa copiar para salvar permanentemente em outro lugar
-- **Disponível apenas em modelos específicos**: confira sempre qual modelo está usando
-
-## Quando usar o Canvas (e quando não usar)
-
-**Use o Canvas quando:**
-- Está trabalhando em um texto ou código que vai iterar várias vezes
-- Precisa editar partes específicas sem reescrever o todo
-- Quer ter o histórico de versões das edições
-- Está criando algo que vai refinar colaborativamente
-
-**Prefira o chat normal quando:**
-- É uma tarefa rápida e única
-- Precisa de uma resposta simples de texto
-- Está fazendo pesquisa ou pergunta de informação
-
-## Conclusão
-
-O ChatGPT Canvas representa uma evolução importante na forma como usamos IA para criar conteúdo. Ele transforma o ChatGPT de um gerador de texto em um **colaborador de edição**, muito mais adequado para como o processo criativo realmente funciona — de forma iterativa, refinando e ajustando.
-
-Para escritores, o Canvas elimina o vai e vem de copiar texto entre o ChatGPT e o Word. Para desenvolvedores, é como ter um programador parceiro sempre disponível para revisar e melhorar o código.
-
-Se você ainda não experimentou, abra o ChatGPT agora e tente criar algo no Canvas. A experiência é significativamente diferente do chat tradicional e pode mudar a forma como você trabalha.
+Se você gosta de trabalhar em um documento separado da conversa, há alternativas em outras ferramentas. O Gemini, do Google, tem um recurso chamado Canvas incluído no plano gratuito. O Claude oferece os Artifacts, disponíveis em todos os planos, para criar documentos, apresentações e pequenas ferramentas interativas; veja o guia de [Artifacts do Claude](/artigos/claude-artifacts-recursos). Para técnicas de texto que funcionam em qualquer ferramenta, veja [ChatGPT para escrever textos](/artigos/chatgpt-para-escrever-textos). E para o panorama completo do ChatGPT hoje, consulte o [guia completo de como usar o ChatGPT](/artigos/como-usar-chatgpt-guia-completo).

@@ -1,85 +1,186 @@
 ---
-title: "Gemini no Gmail e Google Docs: como usar no dia a dia"
-description: "Descubra como usar o Gemini dentro do Gmail e do Google Docs para escrever e-mails, resumir mensagens e criar documentos com mais agilidade."
+title: "Gemini no Gmail e Google Docs: quem tem acesso, passo a passo e prompts"
+description: "Veja como usar o Gemini no Gmail e no Google Docs, quais planos pessoais e do Google Workspace liberam o recurso e prompts prontos para e-mails e documentos."
 slug: "gemini-no-gmail-google-docs"
 category: "Gemini"
-tags: ["gemini", "gmail", "google-docs", "produtividade"]
+tags: ["gemini", "gmail", "google-docs", "google-workspace", "produtividade"]
 publishedAt: "2026-02-25"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["gemini no gmail", "gemini no google docs", "ia no gmail", "assistente de escrita google"]
+keywords: ["gemini no gmail", "gemini no google docs", "help me write gmail", "gemini google workspace", "google ai pro gmail", "ia no gmail"]
+faq:
+  - question: "Preciso pagar para usar o Gemini no Gmail e no Google Docs?"
+    answer: "Na prática, sim. As centrais de ajuda do Gmail e do Docs informam que os recursos exigem um plano Google Workspace ou Google AI elegível. O uso do 'Help me write' em conta pessoal sem plano é descrito pelo Google como disponível apenas nos EUA."
+  - question: "O Google AI Plus libera o Gemini no Google Docs?"
+    answer: "Segundo a página oficial de planos no Brasil, o Google AI Plus inclui Gemini no Gmail e no Vids. O Gemini no Documentos e em outros apps aparece nos planos Google AI Pro e Ultra."
+  - question: "Quais planos do Google Workspace incluem o Gemini no Docs?"
+    answer: "Pela página de preços do Workspace, o Business Starter tem acesso limitado (Gemini no Gmail e no Vids, além do app Gemini). Business Standard, Plus e Enterprise incluem Gemini no Gmail, Docs, Sheets, Slides, Drive, Meet e outros apps. Em contas corporativas, o administrador também pode controlar a disponibilidade."
+  - question: "O Gemini no Gmail e no Docs funciona em português?"
+    answer: "Sim. A lista oficial de idiomas do Google Workspace com Gemini inclui português (Brasil) no recurso de escrita e no painel lateral do Gmail e do Docs."
+sources:
+  - name: "Google — Colaborar com o Gemini no Gmail (Central de Ajuda do Gmail)"
+    url: "https://support.google.com/mail/answer/14355636?hl=en&co=GENIE.Platform%3DDesktop"
+  - name: "Google — Escrever e-mails com o Gemini no Gmail (Central de Ajuda do Gmail)"
+    url: "https://support.google.com/mail/answer/13955415?hl=en&co=GENIE.Platform%3DDesktop"
+  - name: "Google — Colaborar com o Gemini no Google Docs (Central de Ajuda)"
+    url: "https://support.google.com/docs/answer/14206696?hl=en"
+  - name: "Google — Planos do Gemini no Brasil"
+    url: "https://gemini.google/br/subscriptions/?hl=pt-BR"
+  - name: "Google — Planos e preços do Google Workspace"
+    url: "https://workspace.google.com/intl/pt-BR/pricing"
+  - name: "Google — Idiomas suportados no Google Workspace com Gemini"
+    url: "https://support.google.com/docs/answer/14925782?hl=en"
+related:
+  - "como-usar-gemini-google"
+  - "gemini-para-planilhas-sheets"
+  - "gemini-prompts-eficientes"
+  - "ia-produtividade-trabalho"
 ---
 
-Um dos maiores diferenciais do Gemini em relação a outros assistentes de IA é estar embutido diretamente nos aplicativos que milhões de pessoas já usam todos os dias: Gmail e Google Docs. Em vez de abrir uma aba separada para conversar com a IA e depois copiar e colar o resultado, você pode acionar o Gemini sem sair do e-mail ou do documento que está editando.
+O Gemini pode trabalhar dentro do Gmail e do Google Docs: ele resume conversas longas, escreve rascunhos, ajusta o tom de um texto e monta documentos a partir de outros arquivos do Drive, sem copiar e colar entre abas. O problema é que nem toda conta tem acesso, e a diferença entre planos pessoais (Google AI Plus, Pro e Ultra) e planos do Google Workspace confunde muita gente. Este guia mostra quem tem acesso, o passo a passo em cada app e prompts prontos para copiar. Se você ainda está conhecendo a ferramenta, comece pelo [guia completo do Gemini](/artigos/como-usar-gemini-google).
 
-Neste artigo, mostramos como aproveitar esses recursos na prática.
+## Quem tem acesso: planos pessoais vs. Google Workspace
 
-## Onde encontrar o Gemini no Gmail
+As centrais de ajuda do [Gmail](https://support.google.com/mail/answer/14355636?hl=en&co=GENIE.Platform%3DDesktop) e do Docs dizem que os recursos exigem "an eligible Google Workspace or Google AI plan". Cruzando com a [página oficial de planos no Brasil](https://gemini.google/br/subscriptions/?hl=pt-BR) e a página de preços do Workspace (setembro de 2026), o quadro fica assim:
 
-Ao abrir o Gmail pelo navegador ou pelo aplicativo, você vai encontrar o ícone do Gemini geralmente no canto da tela ou dentro da própria caixa de redação de e-mails. A partir dele, é possível:
+| Tipo de conta | Gemini no Gmail | Gemini no Google Docs |
+|---|---|---|
+| Conta Google pessoal gratuita | Não incluído (o "Help me write" sem plano é só nos EUA) | Não incluído |
+| Google AI Plus | Sim | Não (o plano cita Gmail e Vids) |
+| Google AI Pro ou Ultra | Sim | Sim |
+| Workspace Business Starter | Sim, com acesso limitado | Não |
+| Workspace Business Standard, Plus ou Enterprise | Sim | Sim |
 
-- Resumir uma thread de e-mails longa
-- Escrever uma resposta com base no contexto da conversa
-- Ajustar o tom de um e-mail (mais formal, mais direto, mais amigável)
-- Gerar rascunhos completos a partir de uma instrução curta
+Alguns detalhes que evitam frustração:
 
-### Exemplo prático: resumindo uma caixa de entrada cheia
+- **Conta pessoal:** na página brasileira, o Google AI Plus aparece por R$ 24,99/mês e o Google AI Pro por R$ 96,99/mês. Preços e benefícios podem mudar; confira a página oficial antes de assinar. Para decidir se o plano compensa, veja nossa análise dos [planos pagos do Gemini](/artigos/gemini-advanced-vale-a-pena).
+- **Conta de empresa ou escola:** o que vale é o plano do Workspace contratado pela organização e as configurações do administrador. Há também um complemento vendido à parte, o "AI Expanded Access".
+- **Português:** a lista oficial de idiomas inclui português (Brasil) no recurso de escrita e no painel lateral do Gmail e do Docs.
+- **Outro caminho:** no app Gemini (gemini.google.com), os Apps conectados permitem que o assistente consulte Gmail, Drive e Docs a partir do chat. É diferente de usar o Gemini dentro do Gmail; explicamos em [apps conectados do Gemini](/artigos/gemini-extensoes-integracoes).
 
-Imagine que você recebeu uma troca de dez mensagens sobre um projeto e não teve tempo de ler tudo. Basta abrir a conversa e pedir ao Gemini algo como "resuma os principais pontos dessa conversa e liste o que ainda precisa de resposta". Em segundos, você tem um resumo organizado, sem precisar rolar a tela lendo cada mensagem.
+## Como usar o Gemini no Gmail
 
-### Exemplo prático: escrevendo um e-mail do zero
+O Gmail tem duas portas de entrada: o painel lateral (para resumir, buscar e redigir) e o recurso de escrita dentro da janela de e-mail. As instruções abaixo valem para o Gmail no computador; os nomes entre parênteses são os da interface em inglês usados pela Central de Ajuda.
 
-Ao clicar em "novo e-mail", você pode acionar o assistente e descrever o que precisa, por exemplo: "escreva um e-mail educado avisando que vou me atrasar 15 minutos para a reunião". O Gemini gera um rascunho completo, que você pode editar antes de enviar.
+### Resumir uma conversa e extrair tarefas
 
-## Onde encontrar o Gemini no Google Docs
+1. Abra o Gmail no computador e entre na conversa que quer resumir.
+2. Clique no botão do Gemini no canto superior direito ("Ask Gemini").
+3. Digite o pedido na caixa do painel e envie.
+4. Leia o resumo e, se precisar, peça um ajuste na mesma conversa ("agora só o que depende de mim").
 
-No Google Docs, o Gemini aparece como um painel lateral ou como um ícone flutuante dentro do documento. Alguns dos usos mais comuns incluem:
+Segundo o Google, o painel também busca informações na caixa de entrada, como horários de voo e rastreio de pedidos, e redige e-mails novos.
 
-1. **Gerar um primeiro rascunho**: descreva o assunto e o objetivo do texto, e o Gemini cria uma versão inicial
-2. **Resumir um documento longo**: útil para relatórios, atas de reunião ou artigos extensos
-3. **Reescrever trechos**: peça para deixar um parágrafo mais formal, mais curto ou mais claro
-4. **Criar estrutura de tópicos**: peça um esqueleto de tópicos antes de escrever o texto completo
-5. **Revisar gramática e coesão**: peça sugestões de melhoria no texto já escrito
+### Escrever ou reescrever um e-mail
 
-### Exemplo prático: criando um relatório
+1. Clique em Escrever (Compose) ou responda a um e-mail.
+2. Na janela de redação, use a barra de prompt na parte inferior para descrever o e-mail. Se ela não aparecer, clique no botão de ajuda para escrever ("Help me write").
+3. Clique em criar ("Create") e revise o rascunho.
+4. Para refinar, escreva uma nova instrução ("mencione o prazo de sexta-feira") ou use os atalhos de tom, como formalizar, deixar mais amigável ou encurtar ("Formalize", "Friendly", "Shorten").
+5. Use desfazer e refazer para alternar entre versões antes de enviar.
 
-Digamos que você precise redigir um relatório mensal de vendas. Você pode pedir ao Gemini: "crie uma estrutura de relatório mensal de vendas com introdução, resultados, comparação com o mês anterior e conclusão". A partir dessa estrutura, é só preencher com os dados reais ou pedir para o próprio Gemini organizar números que você fornecer.
+### Prompts prontos para e-mail
 
-## Tabela: principais comandos úteis
+Copie, troque o que está entre colchetes e cole no painel ou na barra de escrita:
 
-| Situação | O que pedir ao Gemini |
-|---|---|
-| E-mail longo sem tempo de ler | "Resuma esta conversa em tópicos" |
-| Precisa responder rápido | "Escreva uma resposta educada confirmando a reunião" |
-| Documento sem estrutura clara | "Crie um sumário com os principais tópicos" |
-| Texto muito informal para o trabalho | "Reescreva este parágrafo em tom mais profissional" |
-| Relatório extenso | "Resuma os pontos principais em até 5 tópicos" |
+```text
+Resuma esta conversa em até 5 tópicos. Depois liste separadamente:
+(1) o que já foi decidido, (2) o que ainda está em aberto e
+(3) o que depende de mim, com prazo, se houver.
+```
 
-## Dicas para aproveitar melhor a integração
+```text
+Escreva uma resposta curta e cordial ao [fornecedor], pedindo a
+confirmação da nova data de entrega do pedido [número]. Tom
+profissional, sem culpar ninguém. Termine com uma pergunta objetiva.
+```
 
-### Seja claro sobre o objetivo do texto
+```text
+Reescreva meu rascunho para ficar mais direto e educado. Mantenha
+todos os números, datas e nomes exatamente como estão.
+```
 
-Em vez de pedir apenas "escreva um e-mail", explique o contexto: para quem é, qual o assunto e qual resultado você espera obter com a mensagem.
+```text
+Procure na minha caixa de entrada os e-mails de [empresa] deste mês
+e me diga quais pedidos ainda não foram confirmados.
+```
 
-### Use o histórico como referência
+### Exemplo prático: responder um cliente sem inventar informação
 
-No Gmail, o Gemini consegue considerar o conteúdo da conversa já existente, então aproveite isso para gerar respostas mais coerentes com o que já foi dito.
+Cenário hipotético: uma loja que vende acessórios de treino no Mercado Livre e em site próprio recebe o e-mail de um cliente perguntando se o strap de musculação serve para levantamento terra e se vem em outro tamanho.
 
-### Revise antes de enviar
+> Demonstração editorial — Produto: strap de musculação. Características fornecidas: algodão; 50 cm; uso para puxadas; auxílio de pegada.
 
-Mesmo com respostas bem escritas, é importante revisar nomes, datas e informações específicas antes de enviar um e-mail ou finalizar um documento, já que a IA pode errar detalhes pontuais.
+Prompt usado na barra de escrita da resposta:
 
-### Combine com outros apps do Google Workspace
+```text
+Escreva uma resposta cordial a este cliente. Use SOMENTE estas
+informações do produto: algodão; 50 cm; indicado para puxadas;
+ajuda na pegada. Não invente medidas, garantia, prazo de entrega,
+outros tamanhos ou indicações de uso que não estejam nesta lista.
+Se o cliente perguntou algo que não está nas informações, diga que
+vamos confirmar com a equipe e responder em breve.
+```
 
-O mesmo painel do Gemini costuma estar disponível também no Google Sheets e no Google Slides, o que permite manter um fluxo de trabalho fluido entre documentos, planilhas e apresentações.
+Resultado esperado (ilustrativo): um e-mail que informa material, comprimento e indicação de uso, e diz que a loja vai confirmar a questão do levantamento terra e de outros tamanhos. Se o rascunho do Gemini afirmar algo fora da lista (por exemplo, "disponível em 60 cm"), apague antes de enviar. Esse cuidado vale para qualquer resposta a cliente.
 
-## Limitações a considerar
+## Como usar o Gemini no Google Docs
 
-- Em contas de trabalho ou educacionais, a disponibilidade do Gemini pode depender de configurações feitas pelo administrador do Google Workspace
-- Nem todos os recursos avançados estão disponíveis na versão gratuita
-- Documentos muito extensos podem ser resumidos de forma mais genérica, exigindo ajustes manuais
+1. Abra um documento no Google Docs pelo computador.
+2. Clique no botão do Gemini no canto superior direito ("Ask Gemini").
+3. Escolha uma das sugestões ou escreva seu pedido e pressione Enter.
+4. Para trabalhar sobre um trecho, selecione o texto e use o botão flutuante de refinar ("Refine"), que oferece opções como reescrever, aprimorar ou imitar o estilo do documento.
+5. Para usar outros arquivos como base, abra o ícone de fontes ("Sources") e busque arquivos do Drive digitando "@".
 
-## Vale a pena usar o Gemini no Gmail e no Docs?
+De acordo com a Central de Ajuda, o Gemini no Docs escreve e edita textos, resume arquivos do Drive e e-mails do Gmail, usa outros arquivos como referência e gera imagens. Um detalhe importante: o histórico da conversa no painel se perde quando você atualiza o navegador ou fecha e reabre o documento. Copie para o texto o que quiser guardar.
 
-Para quem já depende desses aplicativos no trabalho ou nos estudos, sim. A grande vantagem é a economia de tempo: em vez de alternar entre abas e ferramentas diferentes, você resolve boa parte das tarefas de escrita e organização sem sair do próprio e-mail ou documento. Comece testando em tarefas simples, como resumir uma conversa ou revisar um parágrafo, e vá incorporando o assistente aos poucos na sua rotina.
+### Prompts prontos para documentos
+
+```text
+Crie a estrutura de um relatório mensal de vendas com: resumo
+executivo, resultados por canal, comparação com o mês anterior,
+problemas do mês e próximos passos. Use apenas títulos e uma frase
+de orientação em cada seção.
+```
+
+```text
+Com base no arquivo @[nome da planilha de vendas], escreva o resumo
+executivo deste relatório em até 150 palavras. Não arredonde números
+e não inclua dados que não estejam no arquivo.
+```
+
+```text
+Transforme estas anotações soltas em uma ata de reunião com:
+participantes, decisões, pendências (responsável e prazo) e
+próximos passos. Se faltar responsável ou prazo, escreva "a definir".
+```
+
+```text
+Revise o texto selecionado para clareza e coesão. Não mude o sentido
+nem acrescente informações. Liste ao final as 3 principais mudanças.
+```
+
+### Fluxo sugerido: do e-mail ao documento
+
+1. No Gmail, peça ao Gemini o resumo da conversa com o cliente ou fornecedor e a lista de pendências.
+2. No Docs, abra um documento novo e peça uma proposta ou plano de ação usando esse e-mail como fonte (pelo ícone de fontes).
+3. Refine seção por seção com o botão de refinar e revise números e datas.
+4. Volte ao Gmail e use o recurso de escrita para redigir o e-mail que acompanha o documento.
+
+## Erros comuns e limitações
+
+- **Procurar o botão em uma conta sem plano:** se o Gemini não aparece, confira primeiro o plano (tabela acima) ou fale com o administrador do Workspace.
+- **Assinar o AI Plus esperando o Docs:** o Plus cobre Gmail e Vids; o Docs entra a partir do AI Pro.
+- **Enviar sem revisar:** a IA pode errar nomes, datas e valores ou afirmar coisas que não estavam no contexto. Revise sempre antes de enviar ou compartilhar.
+- **Colar dados sensíveis sem pensar:** CPF, dados de saúde ou dados de clientes exigem cuidado redobrado. Veja o guia de [IA e privacidade](/artigos/ia-privacidade-seguranca).
+- **Contar com o histórico do Docs:** ele some ao recarregar a página ou reabrir o arquivo.
+- **Resumos de documentos longos:** podem deixar de fora detalhes importantes. Para decisões, leia o trecho original.
+
+## Para quem vale a pena
+
+- **Profissional que vive no e-mail** (atendimento, vendas, compras): o Gemini no Gmail já resolve boa parte do dia, e o AI Plus cobre o Gmail.
+- **Quem escreve relatórios, propostas e atas:** o ganho maior está no Docs, o que exige AI Pro ou Ultra na conta pessoal, ou Workspace Business Standard em diante.
+- **Empresas:** avalie o plano do Workspace como um todo, já que o mesmo Gemini aparece no Sheets, no Slides e no Meet. Para planilhas, veja o guia do [Gemini no Google Sheets](/artigos/gemini-para-planilhas-sheets).
+
+Para tirar mais das respostas, vale ler também como escrever [prompts eficientes para o Gemini](/artigos/gemini-prompts-eficientes), com dicas específicas para Gems e arquivos do Google.

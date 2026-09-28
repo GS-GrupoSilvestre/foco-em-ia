@@ -1,6 +1,6 @@
 ---
-title: "Artifacts do Claude: crie documentos, sites e apps direto no chat"
-description: "Entenda o que são os Artifacts do Claude, como funcionam e veja exemplos práticos de documentos, páginas e mini aplicativos criados direto no chat."
+title: "Artifacts do Claude: como criar documentos, dashboards e apps no chat"
+description: "Saiba o que são os Artifacts do Claude, como criar, editar e compartilhar documentos, dashboards e pequenos apps, o que muda por plano e prompts prontos."
 slug: "claude-artifacts-recursos"
 category: "Claude"
 tags: ["claude", "artifacts", "produtividade", "ferramentas"]
@@ -8,69 +8,129 @@ publishedAt: "2026-04-10"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["claude artifacts", "criar site com ia", "claude documentos", "recursos do claude"]
+keywords: ["claude artifacts", "artifacts claude como usar", "criar app com claude", "compartilhar artifact claude", "recursos do claude"]
+faq:
+  - question: "Os Artifacts do Claude são gratuitos?"
+    answer: "Sim. Todos os planos, incluindo o Free, criam artifacts no chat. Templates de Design, Slides e Docs, conexão com apps e armazenamento de dados são exclusivos dos planos pagos."
+  - question: "Como compartilhar um artifact?"
+    answer: "Abra o artifact e clique em Share. No Free, a opção é publicar: qualquer pessoa com o link pode ver e usar, sem conta. No Pro e no Max, dá para compartilhar por link ou convidar por e-mail. No Team e no Enterprise, o compartilhamento segue as regras da organização."
+  - question: "Onde encontro os artifacts que já criei?"
+    answer: "Todos ficam salvos na aba Artifacts, na barra lateral do Claude, e podem ser abertos a partir de qualquer conversa."
+  - question: "O que são artifacts legados?"
+    answer: "São artifacts criados no chat antes de 16 de setembro de 2026. Eles continuam funcionando e podem ser publicados e compartilhados, mas não é possível criar novas versões deles."
+sources:
+  - name: "Anthropic — What are artifacts and how do I use them?"
+    url: "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+  - name: "Anthropic — Share artifacts"
+    url: "https://support.claude.com/en/articles/9547008-share-artifacts"
+  - name: "Anthropic — Create and edit files with Claude"
+    url: "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude"
+  - name: "Anthropic — Claude: planos e preços"
+    url: "https://claude.com/pricing"
+related:
+  - "claude-projects-como-usar"
+  - "o-que-e-claude-anthropic"
+  - "claude-para-programacao"
+  - "ia-analise-dados-decisao"
 ---
 
-Entre os recursos mais elogiados do Claude está o Artifacts, uma funcionalidade que transforma o resultado de uma conversa em um objeto visual e interativo — um documento formatado, uma página web, um gráfico ou até um pequeno aplicativo — tudo isso sem sair do chat. Neste artigo, explicamos o que são os Artifacts, como usá-los e quais são os principais casos de uso.
+Os Artifacts são a parte do Claude que transforma um pedido em algo pronto para mostrar a alguém: um documento, uma apresentação, um design, um dashboard ou uma pequena ferramenta interativa. Em vez de copiar texto do chat para outro programa, você vê o resultado pronto ao lado da conversa, pede ajustes e compartilha por link. Este guia explica como criar, editar e compartilhar artifacts, o que muda de um plano para outro e traz prompts prontos para testar.
 
-## O que são os Artifacts
+## O que é um artifact
 
-Normalmente, quando você conversa com uma IA, a resposta aparece como texto corrido dentro do chat. Os Artifacts mudam essa dinâmica: em vez de apenas texto, o Claude pode gerar um espaço separado, ao lado da conversa, onde o conteúdo é exibido de forma visual e organizada — como uma página renderizada, um documento formatado ou um gráfico interativo.
+A Anthropic define artifact como "qualquer coisa que o Claude faz para você e que você colocaria na frente de alguém: um design, uma apresentação, um documento, um dashboard ou uma pequena ferramenta interativa", segundo a [central de ajuda](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them).
 
-Isso é especialmente útil quando o resultado final não é "apenas uma resposta", mas sim um produto — como uma página de destino, um relatório visual ou uma pequena ferramenta.
+O Claude cria um artifact automaticamente quando o conteúdo é substancial e independente (em geral, mais de 15 linhas) e é algo que você provavelmente vai querer editar, refinar ou reaproveitar fora da conversa. Exemplos:
 
-## Tipos de conteúdo que podem ser criados
+- **Documentos:** relatórios, propostas, roteiros e políticas internas.
+- **Apresentações e designs:** slides e peças visuais, com templates nos planos pagos.
+- **Dashboards e gráficos:** a partir de uma planilha ou de números que você colar.
+- **Pequenas ferramentas:** calculadoras, simuladores, quizzes e checklists interativos.
 
-Os Artifacts suportam uma variedade de formatos, incluindo:
+Artifacts são diferentes da **criação de arquivos**, em que o Claude gera um .docx, .xlsx, .pptx ou PDF para você baixar. Os dois recursos se complementam: o artifact é para ver, usar e compartilhar no navegador; o arquivo é para levar para o Word, o Excel ou o PowerPoint.
 
-- **Documentos formatados**, como relatórios, propostas e resumos com títulos, listas e tabelas.
-- **Páginas web (HTML)**, incluindo landing pages simples, formulários e páginas de apresentação.
-- **Gráficos e visualizações de dados**, a partir de números ou tabelas fornecidas.
-- **Pequenos aplicativos interativos**, como calculadoras, listas de tarefas, jogos simples e ferramentas utilitárias.
-- **Diagramas e fluxogramas**, úteis para explicar processos e arquiteturas.
-- **Trechos de código organizados**, com destaque de sintaxe e estrutura clara.
+## O que muda em cada plano
 
-## Como usar os Artifacts na prática
+| Recurso | Free | Pro e Max | Team e Enterprise |
+|---|---|---|---|
+| Criar artifacts no chat | Sim | Sim | Sim |
+| Templates de Design, Slides e Docs (beta) | Não | Sim | Sim (no Enterprise, um responsável precisa ativar cada template) |
+| Conectar apps | Não | Sim | Sim |
+| Armazenar dados | Não | Sim | Sim |
+| Compartilhar | Publicar com link público | Link ou convite por e-mail | Dentro da organização e, se permitido, por link externo |
 
-O processo é simples: ao pedir para o Claude criar algo que se beneficia de uma visualização — por exemplo, "crie uma página de apresentação para o meu produto" ou "monte uma calculadora de orçamento simples" — o Claude automaticamente gera o conteúdo em um Artifact, exibido separadamente da conversa.
+## Como criar e editar um artifact: passo a passo
 
-A partir daí, você pode:
+1. **Ative o recurso.** No Free, Pro e Max, vá em Settings, depois Capabilities, e ligue a execução de código e criação de arquivos. No Team e no Enterprise, isso fica nas configurações da organização.
+2. **Peça o que você quer em qualquer conversa**, descrevendo conteúdo, público e formato. Também dá para começar pela aba Artifacts ou, nos planos pagos, escolher **Output** na caixa de mensagem e partir de um template.
+3. **Revise o resultado** exibido ao lado da conversa.
+4. **Peça ajustes** na própria conversa ("troque o gráfico de pizza por barras", "adicione um campo de frete"). Em artifacts de template, dá para editar direto: digitar no documento, mudar um slide ou mover elementos no design.
+5. **Em documentos, edite só um trecho:** selecione o texto, clique em **Edit with Claude** e descreva a mudança.
+6. **Encontre depois na aba Artifacts**, na barra lateral, onde ficam todos os que você criou.
 
-1. Visualizar o resultado renderizado, como se fosse o produto final.
-2. Pedir ajustes específicos, como mudar cores, textos ou funcionalidades.
-3. Publicar ou compartilhar o Artifact, dependendo da plataforma utilizada.
-4. Reaproveitar o mesmo Artifact em conversas futuras, atualizando-o conforme necessário.
+Se a interface estiver em português, os nomes dos botões aparecem traduzidos.
 
-## Exemplos práticos de uso
+## Prompts prontos para testar
 
-**Pequenos negócios**: criar uma página simples de apresentação de produtos ou serviços, sem precisar contratar um desenvolvedor, servindo como rascunho inicial para validar uma ideia.
+Exemplo prático para quem vende em marketplace (os números são hipotéticos, para você substituir pelos seus):
 
-**Educadores**: montar quizzes interativos, calculadoras de notas ou materiais visuais para explicar conceitos em sala de aula.
+```text
+Crie uma calculadora interativa de preço de venda para marketplace.
+Campos: custo do produto, embalagem, frete pago pelo vendedor, comissão do
+marketplace (%), imposto (%) e margem desejada (%).
+Mostre: preço de venda sugerido, lucro por unidade em reais e margem real.
+Deixe os campos em branco para eu preencher e explique a fórmula usada abaixo
+da calculadora.
+```
 
-**Times de marketing**: gerar protótipos rápidos de landing pages para testar mensagens antes de investir em produção completa.
+Exemplo prático para análise de vendas (anexe um CSV com as colunas indicadas):
 
-**Análise de dados**: transformar números de uma planilha em gráficos visuais, facilitando a interpretação de tendências e comparações.
+```text
+Anexei um CSV com as colunas data, produto, canal e valor. Monte um dashboard com:
+faturamento por mês, top 5 produtos e participação de cada canal. Use apenas os
+dados do arquivo. Se encontrar linhas vazias ou datas inválidas, liste-as num
+quadro separado em vez de corrigir por conta própria.
+```
 
-**Desenvolvedores**: prototipar rapidamente componentes de interface ou pequenas ferramentas para validar ideias antes de implementá-las no projeto principal.
+Exemplo prático para treinamento interno:
 
-## Vantagens dos Artifacts
+```text
+Crie um quiz interativo com 8 perguntas de múltipla escolha sobre a política de
+trocas que vou colar abaixo. Mostre a resposta certa e o trecho da política que a
+justifica depois de cada resposta. Não crie regras que não estejam no texto.
+```
 
-- **Visualização imediata**: você vê o resultado final, não apenas uma descrição em texto.
-- **Iteração rápida**: pedir ajustes é tão simples quanto continuar a conversa.
-- **Redução de ferramentas externas**: para protótipos simples, não é necessário abrir um editor de código ou design separado.
-- **Facilidade de compartilhamento**: dependendo do plano e da plataforma, é possível compartilhar o link do Artifact com outras pessoas.
+Para ir além em código e interfaces, veja [Claude para programação](/artigos/claude-para-programacao). Para decisões a partir de números, o guia de [análise de dados com IA](/artigos/ia-analise-dados-decisao) complementa este.
 
-## Boas práticas ao criar Artifacts
+## Como compartilhar (e o que o outro lado vê)
 
-- **Seja específico no pedido inicial**, descrevendo cores, estilo, conteúdo e funcionalidades desejadas.
-- **Peça uma versão simples primeiro**, e depois refine com pedidos pontuais de ajuste.
-- **Use exemplos de referência** quando quiser um estilo visual específico.
-- **Trate o resultado como um rascunho avançado**, especialmente em páginas web ou aplicativos mais complexos — revisões técnicas continuam importantes antes de qualquer uso em produção.
+1. Abra o artifact e clique em **Share**.
+2. Escolha o nível de acesso.
+3. Copie o link.
 
-## Limitações a considerar
+O que muda por plano, segundo a página sobre [compartilhamento de artifacts](https://support.claude.com/en/articles/9547008-share-artifacts):
 
-Os Artifacts são ótimos para prototipagem rápida e materiais de uso simples, mas têm limites: aplicativos muito complexos, com integrações externas robustas ou necessidades específicas de infraestrutura, ainda exigem desenvolvimento tradicional. Além disso, é importante revisar todo conteúdo gerado antes de publicá-lo oficialmente, garantindo qualidade e adequação à marca ou ao público-alvo.
+- **Free:** a opção é publicar. Qualquer pessoa com o link pode ver e usar o artifact, sem precisar de conta no Claude.
+- **Pro e Max:** dá para liberar para quem tiver o link ou convidar pessoas por e-mail. Quem recebe pode usar, copiar e salvar a própria versão.
+- **Team e Enterprise:** o acesso segue as permissões da organização, com link externo apenas se o administrador permitir.
 
-## Conclusão
+**Três cuidados importantes antes de compartilhar:**
 
-Os Artifacts ampliam significativamente o que é possível fazer dentro de uma conversa com o Claude, transformando pedidos em documentos, páginas e ferramentas visuais prontas para uso ou para servir de ponto de partida em projetos maiores. Para quem busca agilidade na criação de protótipos, materiais visuais e pequenas aplicações, esse recurso é um dos grandes diferenciais do Claude em relação a assistentes de IA mais tradicionais, baseados apenas em texto.
+- Ao compartilhar um artifact criado numa conversa, quem abre também tem acesso aos anexos e arquivos daquela conversa. Revise se há documentos sensíveis.
+- Alguns artifacts usam armazenamento compartilhado, em que os dados digitados ficam visíveis para todos os usuários. Confira isso antes de inserir qualquer informação sensível. O armazenamento aceita só texto, com limite de 20 MB por artifact.
+- Despublicar é definitivo: não é possível publicar de novo o mesmo artifact, e os dados armazenados nele são apagados.
+
+Para entender o que acontece com seus dados em geral, veja o guia de [privacidade no Claude](/artigos/claude-seguranca-privacidade-dados).
+
+## Artifacts legados
+
+Os artifacts criados no chat antes de 16 de setembro de 2026 passaram a ser chamados de legados. Eles continuam funcionando e ainda podem ser publicados e compartilhados, mas não é possível criar novas versões deles. Se você quer evoluir um artifact antigo, peça ao Claude que crie um novo a partir do conteúdo do anterior.
+
+## Limitações e quando não usar
+
+- **Protótipo não é produto final.** Uma landing page ou calculadora gerada no chat é ótima para validar uma ideia, mas não substitui um site com hospedagem, domínio, segurança e manutenção.
+- **Erros acontecem.** O Claude pode tentar corrigir um artifact que não funciona, mas nem sempre consegue; alguns erros exigem investigação manual.
+- **Confira números e fórmulas.** Em dashboards e calculadoras, teste com valores conhecidos antes de confiar no resultado.
+- **Recursos avançados são pagos.** Templates, conexão com apps e armazenamento de dados ficam fora do Free.
+
+Os artifacts rendem mais quando combinados com [Projects](/artigos/claude-projects-como-usar): o projeto guarda as regras e os arquivos de referência, e cada artifact já nasce no padrão certo. Para uma visão geral do assistente, veja [Claude: o que é e como usar](/artigos/o-que-e-claude-anthropic).

@@ -22,6 +22,8 @@ export interface ArticleFrontmatter {
   keywords?: string[]
   faq?: FAQ[]
   sources?: Source[]
+  /** Slugs escolhidos manualmente para "Artigos relacionados" (têm prioridade sobre o cálculo automático). */
+  related?: string[]
 }
 
 export interface ArticleMeta {
@@ -40,6 +42,8 @@ export interface Category {
   description: string
   icon: string
   color: string
+  /** Slugs dos artigos-pilar exibidos em "Comece por aqui" na página da categoria. */
+  pillars?: string[]
 }
 
 export interface SearchResult {

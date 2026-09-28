@@ -1,6 +1,6 @@
 ---
-title: "Como escrever prompts para gerar imagens incríveis com IA"
-description: "Aprenda a estrutura, técnicas e exemplos práticos de prompts para gerar imagens melhores com qualquer IA de imagem, do iniciante ao avançado."
+title: "Como escrever prompts para gerar imagens com IA: estrutura e exemplos"
+description: "Aprenda uma estrutura de prompt para imagens com IA, veja exemplos de antes e depois e copie prompts prontos para foto de produto, post, banner e ilustração."
 slug: "como-escrever-prompts-para-imagens"
 category: "Imagens"
 tags: ["prompts", "engenharia-de-prompt", "geracao-de-imagens", "dicas"]
@@ -8,103 +8,188 @@ publishedAt: "2026-03-24"
 author: "Equipe Foco em IA"
 featured: false
 popular: true
-keywords: ["como escrever prompt para imagem", "prompt para ia de imagem", "engenharia de prompt imagens", "dicas de prompt"]
+keywords: ["como escrever prompt para imagem", "prompt para ia de imagem", "exemplos de prompt para imagem", "prompt pronto para gerar imagem", "prompt negativo"]
+faq:
+  - question: "Qual é a estrutura de um bom prompt para imagem?"
+    answer: "Uma ordem que funciona na maioria das ferramentas é: assunto principal, ação ou pose, cenário, estilo visual, iluminação, enquadramento e formato. Depois, acrescente restrições do que não deve aparecer."
+  - question: "Posso escrever o prompt em português?"
+    answer: "Na maioria das ferramentas, sim. Se o resultado não seguir o pedido, teste a mesma descrição em inglês e compare. Texto que deve aparecer na imagem precisa ficar entre aspas, exatamente como deve ser escrito."
+  - question: "O que é prompt negativo?"
+    answer: "É a lista do que você não quer na imagem. Algumas ferramentas têm um campo próprio para isso; nas demais, escreva a restrição no próprio texto, como 'sem texto' ou 'sem pessoas ao fundo'."
+sources:
+  - name: "Ideogram — Ideogram 4.0"
+    url: "https://ideogram.ai/blog/ideogram-4.0/"
+  - name: "Midjourney — V8.1 is now the default model"
+    url: "https://updates.midjourney.com/v8-1-is-now-the-default-model/"
+  - name: "OpenAI — Images in ChatGPT"
+    url: "https://help.openai.com/en/articles/11084440-images-in-chatgpt"
+  - name: "Google — Gerar e editar imagens no app Gemini"
+    url: "https://support.google.com/gemini/answer/14286560?hl=en&co=GENIE.Platform%3DDesktop"
+related:
+  - "como-criar-imagens-com-ia"
+  - "como-melhorar-seus-prompts"
+  - "ideogram-texto-em-imagens"
+  - "ia-imagens-para-ecommerce"
 ---
 
-A diferença entre uma imagem gerada por IA que parece amadora e uma que parece profissional quase sempre está no prompt, ou seja, no texto que você usa para descrever o que quer. A boa notícia é que escrever bons prompts é uma habilidade que qualquer pessoa pode aprender, sem precisar de conhecimento técnico avançado.
+A diferença entre uma imagem de IA com cara de amadora e uma que parece profissional quase sempre está no prompt, o texto que descreve o que você quer. Os geradores não adivinham intenção: eles preenchem com escolhas próprias tudo o que você deixa em aberto. Este guia mostra uma estrutura que funciona no ChatGPT Images, no Gemini, no Midjourney, no Ideogram, no Stable Diffusion e em outras ferramentas, exemplos de antes e depois e prompts prontos para copiar. Se você ainda está escolhendo a ferramenta, comece pelo [guia de como criar imagens com IA](/artigos/como-criar-imagens-com-ia).
 
-Neste guia prático, vamos mostrar uma estrutura simples para montar prompts, além de exemplos reais que você pode adaptar para qualquer gerador de imagem, seja DALL-E, Midjourney, Stable Diffusion ou outro.
+## A estrutura em sete partes
 
-## Por que o prompt é tão importante
+Monte o prompt nesta ordem. Nem toda imagem precisa das sete, mas cada parte que você omite vira uma decisão da IA.
 
-Os modelos de geração de imagem não "leem sua mente": eles interpretam literalmente o texto que você escreve. Um prompt vago como "uma cidade bonita" pode gerar qualquer coisa, de uma foto realista a um desenho infantil. Já um prompt detalhado, com assunto, estilo, iluminação e composição bem definidos, tende a gerar resultados muito mais próximos do que você imaginou.
+1. **Assunto principal**: o que ou quem está na imagem, com características visíveis (cor, material, idade, roupa).
+2. **Ação ou pose**: o que está acontecendo.
+3. **Cenário**: onde a cena se passa e o que há ao fundo.
+4. **Estilo visual**: fotografia, ilustração vetorial, aquarela, renderização 3D, pintura a óleo.
+5. **Iluminação**: luz natural lateral, luz de estúdio suave, entardecer, neon.
+6. **Enquadramento**: close-up, plano aberto, vista de cima, ângulo baixo, foco raso.
+7. **Formato e restrições**: proporção (quadrado, vertical, horizontal) e o que não deve aparecer.
 
-## A estrutura básica de um bom prompt
+Modelo para copiar:
 
-Uma fórmula simples que funciona na maioria das ferramentas segue esta ordem:
+```
+[assunto com detalhes visíveis], [ação ou pose], [cenário], [estilo visual], [iluminação], [enquadramento], formato [quadrado/vertical/horizontal], sem [o que evitar]
+```
 
-1. **Assunto principal**: o que ou quem está na imagem.
-2. **Ação ou pose**: o que está acontecendo na cena.
-3. **Ambiente e cenário**: onde a cena se passa.
-4. **Estilo visual**: fotografia, ilustração, pintura, 3D, aquarela etc.
-5. **Iluminação**: luz natural, luz de estúdio, entardecer, neon.
-6. **Detalhes técnicos**: enquadramento, ângulo de câmera, nível de detalhe.
+## Antes e depois: três exemplos
 
-### Exemplo passo a passo
+### Exemplo 1: foto de animal
 
-Prompt fraco:
+Antes:
 
 ```
 um cachorro
 ```
 
-Prompt melhorado com a estrutura completa:
+Depois:
 
 ```
-Um golden retriever correndo em um campo de flores amarelas, tarde ensolarada, fotografia profissional, lente grande angular, foco nítido no animal, fundo levemente desfocado
+Golden retriever adulto correndo em um campo de flores amarelas, fim de tarde ensolarado, fotografia realista, lente grande angular, foco nítido no animal e fundo levemente desfocado, formato horizontal, sem pessoas
 ```
 
-Perceba como o segundo prompt dá muito mais informação para o modelo trabalhar, resultando em uma imagem mais previsível e alinhada com a expectativa.
+O que mudou: raça e idade definidas, cenário concreto, horário que determina a luz, estilo e enquadramento explícitos e uma restrição.
 
-## Palavras-chave que fazem diferença
+### Exemplo 2: imagem para post de loja
 
-Algumas palavras funcionam como "atalhos" para estilos específicos e ajudam bastante:
+Antes:
 
-- **Fotorrealista, fotografia profissional, DSLR**: para resultados que parecem foto real.
-- **Ilustração digital, arte vetorial, desenho plano (flat design)**: para peças gráficas mais estilizadas.
-- **Aquarela, pintura a óleo, giz de cera**: para efeitos artísticos tradicionais.
-- **Renderização 3D, estilo Pixar, baixa poligonagem**: para resultados tridimensionais.
-- **Minimalista, cores vibrantes, alto contraste**: para direcionar a estética geral.
+```
+imagem de promoção de café
+```
 
-## Como descrever composição e enquadramento
+Depois:
 
-Termos de fotografia e cinema ajudam a controlar como a cena é enquadrada:
+```
+Xícara de cerâmica branca com café coado sobre bancada de madeira clara, grãos de café espalhados, vapor subindo, fotografia de produto com luz natural de janela à esquerda, vista levemente de cima, espaço vazio no lado direito para texto, formato quadrado, sem texto na imagem
+```
 
-| Termo | Efeito na imagem |
+O que mudou: em vez de pedir "promoção", o prompt descreve a cena e reserva espaço para o texto, que você adiciona depois em um editor. Isso evita letras deformadas.
+
+### Exemplo 3: ilustração para blog
+
+Antes:
+
+```
+ilustração sobre trabalho remoto
+```
+
+Depois:
+
+```
+Ilustração vetorial plana de uma pessoa trabalhando com notebook em uma mesa perto da janela, planta ao lado, paleta de azul-marinho, bege e laranja suave, traços simples, fundo liso, formato horizontal 16:9, sem texto
+```
+
+O que mudou: estilo gráfico definido, paleta limitada a três cores e fundo liso, o que deixa a imagem coerente com a identidade de um blog.
+
+## Como pedir texto dentro da imagem
+
+Texto é o ponto em que os geradores mais erram, embora os modelos recentes tenham melhorado. O [anúncio da V8.1 do Midjourney](https://updates.midjourney.com/v8-1-is-now-the-default-model/), por exemplo, cita melhor renderização de texto, e o [Ideogram 4.0](https://ideogram.ai/blog/ideogram-4.0/) aceita prompts em JSON estruturado e controle de paleta por códigos hexadecimais. Mesmo assim, siga três regras:
+
+- Coloque o texto exato entre aspas: `com o título "Promoção de inverno"`.
+- Peça textos curtos, de uma a quatro palavras.
+- Diga onde o texto fica e como: `título centralizado no topo, letras brancas em caixa alta, fonte sem serifa`.
+
+Para peças em que o texto precisa sair perfeito (preço, prazo, nome da marca), gere a imagem sem texto e escreva por cima no editor. Veja mais no [guia do Ideogram](/artigos/ideogram-texto-em-imagens).
+
+## Vocabulário que ajuda
+
+| Você quer | Termos para usar |
 |---|---|
-| Close-up | Foco bem próximo no assunto |
-| Plano aberto | Mostra bastante do cenário ao redor |
-| Vista de cima (top view) | Câmera posicionada olhando de cima |
-| Ângulo baixo | Câmera posicionada abaixo do assunto, sensação de grandiosidade |
-| Foco raso (desfoque de fundo) | Assunto nítido, fundo desfocado |
+| Parecer foto real | fotografia realista, luz natural, textura detalhada, profundidade de campo |
+| Peça gráfica limpa | ilustração vetorial plana, formas geométricas, fundo liso, paleta limitada |
+| Efeito artístico | aquarela, pintura a óleo, gravura, desenho a lápis |
+| Aparência 3D | renderização 3D, materiais foscos, iluminação de estúdio |
+| Destacar o assunto | foco raso, fundo desfocado, alto contraste |
+| Mostrar o ambiente | plano aberto, vista aérea, grande angular |
 
-## Usando prompts negativos
+Evite pedir "no estilo de" artistas vivos ou de estúdios e marcas conhecidas. Descreva as características do estilo (cores, traço, época) em vez do nome. Isso reduz risco ético e jurídico e costuma dar resultados mais originais.
 
-Algumas ferramentas permitem indicar o que você não quer na imagem, o chamado "prompt negativo". Isso é especialmente útil para evitar problemas comuns, como:
+## Prompt negativo e restrições
 
-```
-mãos deformadas, dedos extras, texto ilegível, marca d'água, baixa qualidade, distorção
-```
-
-Mesmo em ferramentas que não têm um campo separado para isso, você pode incluir instruções negativas no próprio texto, como "sem texto na imagem" ou "sem pessoas ao fundo".
-
-## Técnicas avançadas
-
-- **Peso de termos**: em algumas ferramentas, é possível dar mais ou menos importância a uma palavra específica dentro do prompt, útil quando um elemento não está aparecendo com força suficiente.
-- **Referência de artista ou estilo**: mencionar um estilo artístico conhecido (sem citar nomes de artistas vivos, por questões éticas e de direitos autorais) ajuda a direcionar a estética, como "estilo art déco" ou "estilo cyberpunk".
-- **Iteração progressiva**: gere uma primeira versão, veja o que não ficou bom e ajuste o prompt especificamente naquele ponto, em vez de reescrever tudo do zero.
-- **Prompts em camadas**: para cenas complexas, descreva primeiro o elemento principal, depois o secundário e por último o ambiente, mantendo uma ordem lógica de importância.
-
-## Erros comuns ao escrever prompts
-
-- Ser vago demais, deixando muita coisa em aberto para a IA "decidir".
-- Colocar informações contraditórias, como pedir "foto realista" e "estilo cartoon" ao mesmo tempo.
-- Ignorar a proporção da imagem (retrato, paisagem, quadrado), que muda bastante a composição.
-- Não testar variações, desistindo no primeiro resultado insatisfatório.
-- Esquecer de especificar o número de elementos, como "duas pessoas" em vez de deixar implícito.
-
-## Modelo de prompt para copiar e adaptar
+Algumas ferramentas e interfaces têm um campo separado para dizer o que você não quer. Um exemplo de lista:
 
 ```
-[assunto principal] + [ação/pose] + [cenário] + [estilo visual] + [iluminação] + [enquadramento]
+mãos deformadas, dedos extras, texto ilegível, marca d'água, baixa qualidade, distorção, objetos cortados na borda
 ```
 
-Exemplo aplicado a uma foto de produto:
+Nas ferramentas sem esse campo, escreva a restrição no próprio prompt: "sem texto", "sem pessoas ao fundo", "sem reflexos na superfície".
+
+## Editar em vez de gerar de novo
+
+ChatGPT, Gemini, Firefly e outras ferramentas permitem enviar uma imagem e pedir alterações. Nesse caso, o prompt muda de natureza: diga o que manter e o que trocar.
 
 ```
-Um par de tênis esportivos brancos, flutuando sobre fundo azul degradê, fotografia de produto para e-commerce, iluminação de estúdio suave, ângulo frontal levemente elevado, alta definição
+Mantenha o produto exatamente como está, com a mesma cor, formato e proporção. Troque apenas o fundo por uma bancada de mármore claro com luz suave vinda da esquerda. Não adicione objetos sobre o produto.
 ```
 
-## Conclusão
+No Gemini, a edição de imagens exige 18 anos ou mais, segundo a central de ajuda do Google.
 
-Escrever bons prompts é menos sobre "mágica" e mais sobre método: quanto mais claro, específico e organizado for o seu texto, melhores serão os resultados. Use a estrutura de assunto, ação, cenário, estilo, iluminação e enquadramento como ponto de partida, teste variações e vá refinando aos poucos. Com prática, você vai perceber que consegue prever com bastante precisão o que cada prompt vai gerar.
+## Prompts prontos para copiar
+
+**Foto de produto em fundo neutro**
+
+```
+Garrafa térmica de aço inox fosco na cor verde-escuro, em pé, centralizada sobre fundo branco infinito, fotografia de produto com luz de estúdio suave e sombra discreta abaixo, ângulo frontal levemente elevado, formato quadrado, sem texto e sem outros objetos
+```
+
+**Post de Instagram para serviço**
+
+```
+Mãos de uma cabeleireira finalizando um corte em um salão iluminado e moderno, fotografia realista, luz natural suave, foco nas mãos e no cabelo, fundo desfocado, formato vertical 4:5, espaço livre na parte superior para título, sem texto
+```
+
+**Banner horizontal para site**
+
+```
+Mesa de escritório organizada vista de cima com notebook, caderno aberto, caneta e xícara de café, paleta de branco, cinza-claro e azul, fotografia realista com luz difusa, formato horizontal 16:9, metade esquerda livre para texto, sem logotipos
+```
+
+**Ilustração para artigo**
+
+```
+Ilustração vetorial plana de um pequeno empreendedor organizando caixas de encomendas em um estoque, paleta de verde, amarelo-mostarda e cinza, traços simples, fundo liso bege, formato horizontal, sem texto
+```
+
+**Capa de vídeo (thumbnail)**
+
+```
+Pessoa surpresa olhando para a tela de um celular, fundo colorido liso em amarelo, iluminação forte e frontal, close-up do rosto e do celular, alto contraste, formato horizontal 16:9, espaço à direita para texto grande, sem texto
+```
+
+## Erros comuns
+
+- **Pedidos contraditórios**: "foto realista em estilo cartoon".
+- **Quantidades implícitas**: escreva "duas pessoas", "três frutas".
+- **Esquecer o formato**: a mesma cena muda muito entre vertical e horizontal.
+- **Reescrever tudo a cada tentativa**: mude um elemento por vez para saber o que funcionou.
+- **Parar na primeira imagem**: gere variações e escolha.
+
+## Método de refinamento em quatro rodadas
+
+1. **Rodada 1**: assunto, cenário e estilo. Avalie só a composição geral.
+2. **Rodada 2**: acrescente iluminação e enquadramento.
+3. **Rodada 3**: corrija o que saiu errado com uma instrução específica ("a xícara está grande demais; reduza para metade do tamanho").
+4. **Rodada 4**: formato final e restrições. Guarde o prompt vencedor em um documento para reutilizar.
+
+Os mesmos princípios valem para texto: clareza, contexto e iteração. Para aprofundar, veja [como melhorar seus prompts](/artigos/como-melhorar-seus-prompts). Se o seu objetivo é vender, o próximo passo é o guia de [fotos de produto para e-commerce com IA](/artigos/ia-imagens-para-ecommerce).

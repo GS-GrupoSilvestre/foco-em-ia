@@ -1,148 +1,196 @@
 ---
 title: "IA e privacidade: o que você precisa saber antes de usar"
-description: "Entenda como as ferramentas de IA tratam seus dados, o que diz a LGPD e quais cuidados tomar para usar ChatGPT, Gemini e outras IAs com total segurança."
+description: "Veja como ChatGPT, Claude e Gemini usam seus dados, como desativar o uso para treinamento, o que diz a LGPD e o checklist do que nunca colar em uma IA."
 slug: "ia-privacidade-seguranca"
 category: "Guias"
-tags: ["privacidade", "segurança", "LGPD", "proteção de dados"]
+tags: ["privacidade", "segurança", "LGPD", "ANPD", "proteção de dados", "ChatGPT", "Claude", "Gemini"]
 publishedAt: "2026-03-01"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["IA e privacidade", "LGPD inteligência artificial", "segurança ChatGPT"]
+keywords: ["IA e privacidade", "LGPD inteligência artificial", "segurança ChatGPT", "desativar treinamento ChatGPT", "privacidade Gemini", "privacidade Claude", "o que não colar no ChatGPT"]
+faq:
+  - question: "O ChatGPT usa minhas conversas para treinar a IA?"
+    answer: "Nas contas pessoais, isso depende da configuração 'Improve the model for everyone', em Settings > Data controls, segundo a central de ajuda da OpenAI. Conversas temporárias não são usadas para treinar modelos, e o conteúdo de workspaces Business, Enterprise e Edu não é usado para treinamento por padrão."
+  - question: "Como impedir que o Claude use minhas conversas para treinamento?"
+    answer: "Nas contas Free, Pro e Max, a configuração se chama Model Improvement e fica nas configurações de privacidade do claude.ai. Mesmo desligada, conversas sinalizadas para revisão de segurança e feedbacks enviados podem ser usados. Conversas no modo Incognito nunca são usadas para melhorar o Claude."
+  - question: "Como desativar o uso das conversas no Gemini?"
+    answer: "Desligue a opção Keep Activity na página Gemini Apps Activity da sua Conta Google. Segundo o Google, com ela desligada as conversas ficam guardadas por 72 horas e não são usadas para treinar modelos, a menos que você envie feedback."
+  - question: "A LGPD se aplica quando uso IA?"
+    answer: "A LGPD vale para quem trata dados pessoais com fins econômicos ou profissionais, como empresas que usam IA com dados de clientes. Ela não se aplica ao uso por pessoa física para fins exclusivamente particulares e não econômicos. As empresas que oferecem as ferramentas de IA seguem obrigadas pela lei ao tratar dados de pessoas no Brasil. Este conteúdo não é aconselhamento jurídico."
+  - question: "O Brasil já tem uma lei específica de inteligência artificial?"
+    answer: "Não. Em setembro de 2026, o PL 2338/2023 havia sido aprovado pelo Senado em dezembro de 2024 e seguia em análise em comissão especial na Câmara dos Deputados, sem sanção."
+sources:
+  - name: "Planalto — Lei Geral de Proteção de Dados (Lei 13.709/2018)"
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+  - name: "ANPD — Base jurídica"
+    url: "https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/base-juridica"
+  - name: "OpenAI — Data Controls FAQ"
+    url: "https://help.openai.com/en/articles/7730893-data-controls-faq"
+  - name: "Anthropic — Is my data used for model training?"
+    url: "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training"
+  - name: "Google — Central de Privacidade dos Apps Gemini"
+    url: "https://support.google.com/gemini/answer/13594961?hl=en"
+  - name: "Câmara dos Deputados — PL 2338/2023, ficha de tramitação"
+    url: "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262"
+related:
+  - "claude-seguranca-privacidade-dados"
+  - "etica-ia-guia-pratico"
+  - "chatgpt-memoria-como-usar"
+  - "ia-para-pequenas-empresas"
 ---
 
-## IA e privacidade: o que você precisa saber antes de usar
+Você cola um contrato no ChatGPT para pedir um resumo. Envia a foto de um exame para o Gemini explicar. Pede ao Claude para revisar a planilha de clientes da empresa. É prático, mas para onde vão essas informações? Este guia mostra, com base nas páginas oficiais de cada empresa, como desligar o uso das suas conversas para treinamento no ChatGPT, no Claude e no Gemini, o que a LGPD garante a você e um checklist do que nunca colar em uma IA.
 
-Você cola um contrato no ChatGPT para pedir um resumo. Envia uma foto de um exame médico para o Gemini explicar. Pede para a IA revisar a planilha de clientes da empresa. Tudo muito prático — mas você já parou para pensar **para onde vão essas informações**?
+*Aviso: este conteúdo é informativo e não substitui orientação jurídica.*
 
-A inteligência artificial trouxe ganhos enormes de produtividade, mas também novas preocupações com privacidade e segurança. Neste guia, você vai entender como as ferramentas de IA lidam com seus dados, o que a **Lei Geral de Proteção de Dados (LGPD)** tem a ver com isso e quais cuidados práticos adotar no dia a dia.
+## Para onde vão os dados que você digita
 
----
+Quando você conversa com um chatbot, o texto e os arquivos enviados saem do seu aparelho e são processados nos servidores da empresa. Dependendo do serviço e das suas configurações, essas informações podem:
 
-## Por que privacidade importa quando se usa IA
+- ficar guardadas no histórico da sua conta;
+- ser lidas por revisores humanos em uma amostra de conversas (o Google, por exemplo, informa isso na [Central de Privacidade dos Apps Gemini](https://support.google.com/gemini/answer/13594961?hl=en));
+- ser usadas para treinar versões futuras dos modelos;
+- ser mantidas por um período para segurança e prevenção de abusos, mesmo depois de apagadas do histórico.
 
-Quando você conversa com um chatbot, o texto que você digita (e os arquivos que envia) normalmente sai do seu computador e é processado nos servidores da empresa que oferece a ferramenta. Dependendo do serviço e das suas configurações, essas informações podem:
+Isso não significa má-fé. Significa que o que você digita **não é um pensamento privado**: é mais parecido com um e-mail enviado a um prestador de serviço.
 
-- Ficar armazenadas no histórico da sua conta
-- Ser revisadas por pessoas para controle de qualidade e segurança
-- Ser usadas para treinar e melhorar versões futuras do modelo
-- Ser mantidas por um período para fins legais ou de prevenção de abusos
+## Como desativar o uso das suas conversas para treinamento
 
-Isso não significa que as empresas estejam agindo de má-fé. Significa apenas que **o que você digita não é como um pensamento privado** — é mais parecido com um e-mail enviado a um prestador de serviço.
+Os procedimentos abaixo seguem as centrais de ajuda oficiais, consultadas em setembro de 2026. Os nomes das opções estão como aparecem nessas páginas (em inglês); na interface em português, podem aparecer traduzidos. As empresas mudam essas telas com frequência, então confira o link oficial se não encontrar a opção.
 
----
+### ChatGPT (OpenAI)
+1. Abra o menu da sua conta e entre em **Settings**.
+2. Vá em **Data controls**.
+3. Desligue **"Improve the model for everyone"**.
+
+Para assuntos mais delicados, use o **chat temporário**: segundo a [central de ajuda da OpenAI](https://help.openai.com/en/articles/7730893-data-controls-faq), essas conversas não aparecem no histórico, não são usadas para melhorar os modelos e podem ser mantidas por até 30 dias por motivos de segurança. A mesma página informa que o conteúdo de workspaces ChatGPT Business, Enterprise e Edu não é usado para treinamento por padrão.
+
+A memória do ChatGPT é uma configuração separada; o guia sobre [memória do ChatGPT](/artigos/chatgpt-memoria-como-usar) mostra como revisar e apagar o que ele guardou.
+
+### Claude (Anthropic)
+1. No claude.ai, abra as configurações de privacidade (endereço claude.ai/settings/data-privacy-controls).
+2. Confira a opção **Model Improvement** e deixe-a desligada se não quiser que suas conversas sejam usadas para treinamento.
+
+Segundo a [página de privacidade da Anthropic](https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training), mesmo com a opção desligada há exceções: conversas sinalizadas para revisão de segurança, programas opcionais de teste e o feedback de "polegar para cima ou para baixo". Conversas no modo **Incognito** nunca são usadas para melhorar o Claude. Nos planos comerciais (Team, Enterprise e API), a Anthropic não usa o conteúdo para treinamento por padrão. Mais detalhes no guia [Claude e segurança de dados](/artigos/claude-seguranca-privacidade-dados).
+
+### Gemini (Google)
+1. Acesse a página **Gemini Apps Activity** da sua Conta Google (myactivity.google.com/product/gemini).
+2. Desligue a opção **Keep Activity**.
+
+De acordo com a [Central de Privacidade dos Apps Gemini](https://support.google.com/gemini/answer/13594961?hl=en), com a opção desligada as conversas ficam guardadas por 72 horas e não são usadas para treinar modelos, a menos que você envie feedback. Há também os **chats temporários**, que ficam guardados por 72 horas e não são revisados por pessoas para melhorar o modelo. O próprio Google recomenda não digitar informações confidenciais que você não gostaria que um revisor visse.
+
+### Resumo rápido
+
+| Ferramenta | Onde desligar o uso para treinamento | Modo de conversa mais reservado |
+|---|---|---|
+| ChatGPT | Settings > Data controls > "Improve the model for everyone" | Chat temporário |
+| Claude | Configurações de privacidade > Model Improvement | Incognito |
+| Gemini | Gemini Apps Activity > Keep Activity | Chat temporário |
+
+Desligar o treinamento **não** transforma a ferramenta em cofre: as empresas ainda processam e guardam as conversas por algum tempo para responder e para segurança. Por isso, o checklist a seguir continua valendo.
+
+## Checklist: o que nunca colar em uma IA
+
+- Senhas, PINs e códigos de verificação (SMS, e-mail ou app autenticador)
+- Número completo de cartão, CVV, dados de acesso ao banco e chaves de API
+- Fotos de RG, CNH ou documentos completos com CPF
+- Exames, laudos e informações de saúde de outras pessoas
+- Dados de clientes (nome, telefone, endereço, CPF, histórico de compras) sem autorização da empresa
+- Contratos, propostas e planilhas confidenciais da empresa em contas pessoais
+- Conversas privadas de terceiros, prints de grupos e áudios de outras pessoas
+- Fotos de crianças e informações que identifiquem menores
+- Código-fonte proprietário e credenciais de sistemas
+
+Se precisar da ajuda da IA com um desses conteúdos, anonimize antes.
+
+### Técnica de anonimização: antes e depois
+
+**Antes (não cole assim):**
+```text
+Resuma a reclamação da cliente Maria Souza, CPF 123.456.789-00, telefone (11) 99999-0000, que comprou o pedido 48213 em 12/03 e quer reembolso de R$ 389,90.
+```
+
+**Depois (versão segura):**
+```text
+Resuma a reclamação de uma cliente que comprou um produto em março e pede reembolso de um valor entre R$ 300 e R$ 400. Sugira uma resposta cordial que explique os próximos passos do reembolso, sem prometer prazos.
+```
+*(Exemplo hipotético; os dados acima são fictícios.)*
+
+A IA ajuda do mesmo jeito, e nenhum dado pessoal sai do seu controle.
 
 ## O que a LGPD diz sobre isso
 
-A **LGPD (Lei nº 13.709/2018)** é a lei brasileira que regula o tratamento de dados pessoais. Ela vale para empresas e organizações que tratam dados de pessoas no Brasil, inclusive quando usam ferramentas de IA.
+A **Lei Geral de Proteção de Dados (Lei 13.709/2018)** regula o tratamento de dados pessoais no Brasil. Ela vale para empresas e profissionais que tratam dados de pessoas, inclusive quando usam IA. Não se aplica, porém, ao uso por pessoa física para fins exclusivamente particulares e não econômicos (art. 4º). Na prática: quem responde pela LGPD é a empresa que oferece a IA e a empresa que usa IA com dados de clientes, não você quando pede ajuda para planejar suas férias.
 
-### Conceitos básicos da LGPD
+### Conceitos básicos
 
 | Termo | O que significa |
 |---|---|
-| Dado pessoal | Qualquer informação que identifique ou possa identificar uma pessoa: nome, CPF, e-mail, telefone, endereço |
-| Dado pessoal sensível | Origem racial ou étnica, religião, opinião política, saúde, vida sexual, dados genéticos ou biométricos |
+| Dado pessoal | Informação relacionada a pessoa identificada ou identificável: nome, CPF, e-mail, telefone, endereço |
+| Dado pessoal sensível | Origem racial ou étnica, convicção religiosa, opinião política, filiação sindical, saúde, vida sexual, dado genético ou biométrico |
 | Titular | A pessoa a quem os dados se referem |
-| Controlador | Quem decide como e por que os dados são tratados |
+| Controlador | Quem toma as decisões sobre o tratamento dos dados |
 | Operador | Quem trata os dados em nome do controlador |
-| ANPD | Autoridade Nacional de Proteção de Dados, órgão que fiscaliza a lei |
+| ANPD | Agência Nacional de Proteção de Dados, que fiscaliza a lei |
 
-### Direitos que você tem como titular
+Desde a [Lei 15.352/2026](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm), a ANPD é uma agência reguladora; a sigla foi mantida, mas o nome "Autoridade Nacional de Proteção de Dados", que aparece em textos antigos, está desatualizado.
 
-A LGPD garante, entre outros, o direito de:
+### Seus direitos como titular
+A LGPD (art. 18) garante, entre outros, o direito de:
 
-- **Saber** se uma empresa trata seus dados e como
-- **Acessar** os dados que ela tem sobre você
-- **Corrigir** dados incompletos ou errados
-- **Pedir a eliminação** de dados tratados com base no seu consentimento
-- **Revogar o consentimento** a qualquer momento
-- **Solicitar revisão** de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses
+- confirmar se uma empresa trata seus dados e acessá-los;
+- corrigir dados incompletos ou errados;
+- pedir a eliminação de dados tratados com base no seu consentimento;
+- pedir a portabilidade;
+- revogar o consentimento.
 
-Esse último ponto é especialmente relevante na era da IA: se um sistema automatizado decide, por exemplo, negar seu crédito, você pode pedir informações sobre os critérios usados e a revisão da decisão.
+O **art. 20** é especialmente importante na era da IA: você pode **solicitar a revisão** de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses, como a definição de perfil de crédito ou de consumo, e pedir informações sobre os critérios usados. Atenção a um detalhe: o parágrafo que exigia revisão por uma pessoa foi vetado, então a lei garante o direito de pedir a revisão, mas não diz expressamente que ela precisa ser feita por um humano.
 
-### E as empresas que usam IA?
+### Empresas que usam IA
+Se você trabalha em uma empresa e cola dados de clientes em uma ferramenta de IA, **a empresa continua responsável** por esses dados perante a LGPD. A lei prevê sanções que incluem multa de até 2% do faturamento no Brasil, limitada a R$ 50 milhões por infração (art. 52). Por isso, muitas organizações definem em política interna quais ferramentas podem ser usadas e com que tipo de informação. Pequenos negócios podem começar pelo guia de [IA para pequenas empresas](/artigos/ia-para-pequenas-empresas), aplicando as mesmas regras de anonimização.
 
-Se você trabalha em uma empresa e cola dados de clientes em uma ferramenta de IA, a **empresa continua responsável** por esses dados perante a LGPD. Por isso, muitas organizações criaram políticas internas definindo quais ferramentas podem ser usadas e com que tipo de informação. Vazamentos e usos indevidos podem gerar sanções da ANPD, além de danos à reputação.
+### A ANPD já agiu em casos de IA
+- **Meta (2024):** a ANPD suspendeu preventivamente, em julho de 2024, o uso de dados pessoais para treinar a IA generativa da Meta no Brasil. Depois, na [Nota Técnica nº 39/2024](https://www.gov.br/anpd/pt-br/centrais-de-conteudo/documentos-tecnicos-orientativos/sei_anpd-0140555-nota-tecnica.pdf/@@display-file/file), considerou adequado um plano de conformidade com condições, como não usar, por ora, dados de menores de 18 anos e oferecer um formulário simplificado de oposição.
+- **Grok (2026):** na Nota Técnica nº 1/2026, a ANPD apontou possíveis violações da LGPD na geração de imagens sexualizadas pelo Grok, do X, e recomendou fiscalização e medidas imediatas.
 
-Vale lembrar que o Brasil também discute uma regulamentação específica para inteligência artificial no Congresso. Acompanhe as novidades, porque as regras podem evoluir.
+### E a lei específica de IA?
+O Brasil ainda **não tem** uma lei de inteligência artificial em vigor. O PL 2338/2023 foi aprovado pelo Senado em dezembro de 2024 e, em setembro de 2026, seguia em análise em comissão especial na [Câmara dos Deputados](https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262). O texto ainda pode mudar e, se for alterado, volta ao Senado.
 
----
+## Versões pessoais x corporativas
 
-## Os principais riscos de privacidade ao usar IA
-
-### 1. Compartilhar dados sensíveis sem perceber
-O risco mais comum é o próprio usuário. Colar prontuários, extratos bancários, documentos com CPF ou conversas privadas de terceiros expõe informações que talvez não devessem sair do seu controle.
-
-### 2. Vazamento de informações corporativas
-Código-fonte, estratégias, contratos e dados de clientes inseridos em ferramentas não autorizadas podem ficar fora do controle da empresa.
-
-### 3. Golpes com IA
-Criminosos usam IA para clonar vozes, criar vídeos falsos (deepfakes) e escrever mensagens de phishing muito convincentes. Golpes do tipo "filho pedindo PIX com voz clonada" já são realidade no Brasil.
-
-### 4. Aplicativos falsos ou pouco confiáveis
-Há muitos apps que se passam por ferramentas famosas ou que prometem "IA grátis ilimitada" e coletam dados de forma abusiva.
-
-### 5. Fotos e dados biométricos
-Apps que transformam sua foto em avatar ou "envelhecem" seu rosto podem coletar dados biométricos, considerados sensíveis pela LGPD. Leia os termos antes.
-
----
-
-## Como usar IA com mais segurança: checklist prático
-
-### Configurações da conta
-- Verifique se a ferramenta permite **desativar o uso das conversas para treinamento** e ative essa opção se preferir.
-- Use o **modo de conversa temporária** (quando existir) para assuntos mais delicados.
-- Apague periodicamente conversas antigas que não precisa mais.
-- Ative a **autenticação em dois fatores**.
-
-### O que evitar digitar
-- Senhas e códigos de verificação
-- Números de cartão, dados bancários e chaves PIX de terceiros
-- CPF, RG e documentos completos
-- Informações de saúde de outras pessoas
-- Segredos comerciais e dados de clientes sem autorização da empresa
-
-### Técnica da anonimização
-Antes de colar um texto, substitua dados reais por genéricos:
-
-- "João da Silva, CPF ..." vira "Cliente A"
-- "Empresa XYZ Ltda." vira "Empresa do setor de varejo"
-- Valores exatos podem virar faixas aproximadas
-
-A IA continua conseguindo ajudar, e você reduz bastante o risco.
-
-### No ambiente de trabalho
-- Pergunte ao setor de TI ou de compliance quais ferramentas são aprovadas.
-- Prefira versões corporativas (planos empresariais), que costumam oferecer garantias contratuais de que os dados não serão usados para treinamento.
-- Nunca use contas pessoais para processar dados de clientes.
-
----
-
-## Comparativo: versões gratuitas x corporativas
-
-| Aspecto | Versões gratuitas/pessoais | Versões empresariais |
+| Aspecto | Contas pessoais (Free, planos individuais) | Planos para empresas (ChatGPT Business/Enterprise, Claude Team/Enterprise, Workspace) |
 |---|---|---|
-| Uso dos dados para treino | Geralmente ativado por padrão, com opção de desativar | Geralmente desativado por contrato |
-| Controle administrativo | Nenhum | Painel para gestores |
-| Contrato de tratamento de dados | Termos de uso padrão | Contratos específicos, úteis para a LGPD |
-| Indicado para | Uso pessoal com dados não sensíveis | Dados corporativos e de clientes |
+| Uso para treinamento | Depende de uma configuração que você controla (veja acima) | OpenAI e Anthropic informam que não treinam com esse conteúdo por padrão |
+| Controle administrativo | Só o próprio usuário | Painel de administração para a empresa |
+| Termos | Termos de uso padrão | Termos comerciais, mais adequados para documentar a conformidade com a LGPD |
+| Indicado para | Uso pessoal, com dados não sensíveis | Dados corporativos e de clientes, conforme a política da empresa |
 
-As políticas mudam com frequência, então sempre confira a página de privacidade oficial da ferramenta que você usa.
+No trabalho, pergunte à TI ou ao jurídico quais ferramentas estão aprovadas e **nunca use uma conta pessoal para processar dados de clientes**.
 
----
+## Outros riscos que merecem atenção
 
-## Como se proteger de golpes feitos com IA
+### Aplicativos falsos
+Há apps que imitam nomes famosos ou prometem "IA grátis ilimitada" para coletar dados. Baixe só o app oficial e confira o nome do desenvolvedor (OpenAI, Anthropic, Google, Microsoft).
 
-- **Combine uma palavra-código com a família** para confirmar pedidos de dinheiro por telefone ou áudio.
-- Desconfie de urgência: "preciso do PIX agora" é um sinal clássico de golpe.
-- Ligue de volta para o número que você já conhece antes de transferir qualquer valor.
-- Verifique vídeos de famosos oferecendo investimentos ou produtos milagrosos — muitos são deepfakes.
-- Denuncie perfis e anúncios suspeitos nas próprias plataformas.
+### Fotos e biometria
+Apps que transformam sua foto em avatar ou "envelhecem" o rosto podem tratar dados biométricos, que a LGPD classifica como sensíveis. Leia os termos antes de enviar selfies, principalmente de crianças.
 
----
+### Golpes feitos com IA
+Golpistas usam IA para clonar vozes, criar vídeos falsos (deepfakes) e escrever mensagens de phishing convincentes. Para se proteger:
 
-## Conclusão
+- Combine uma **palavra-código com a família** para confirmar pedidos de dinheiro por telefone ou áudio.
+- Desconfie de urgência: "preciso do Pix agora" é sinal clássico de golpe.
+- Desligue e ligue de volta para o número que você já conhece antes de transferir qualquer valor.
+- Desconfie de vídeos de famosos oferecendo investimentos ou produtos milagrosos.
+- Denuncie perfis e anúncios suspeitos na própria plataforma.
 
-Usar inteligência artificial com segurança não exige ser especialista em tecnologia. Exige, sobretudo, **atenção ao que você compartilha**. Trate cada conversa com a IA como algo que pode ser lido por terceiros, conheça seus direitos garantidos pela LGPD e ajuste as configurações de privacidade das ferramentas que você usa.
+## Resumo: sua rotina de privacidade com IA
 
-Com esses cuidados, você aproveita todos os benefícios da IA sem abrir mão da sua privacidade — nem da privacidade de quem confia em você.
+1. Desligue o uso para treinamento nas ferramentas que você usa (ChatGPT, Claude, Gemini).
+2. Use chat temporário ou Incognito para assuntos delicados.
+3. Anonimize antes de colar qualquer texto com dados pessoais.
+4. No trabalho, use apenas ferramentas e planos aprovados pela empresa.
+5. Revise as configurações a cada poucos meses, porque as políticas mudam.
+
+Para entender os dilemas mais amplos, como vieses e transparência, leia o guia de [ética na IA](/artigos/etica-ia-guia-pratico). E, se ainda está dando os primeiros passos, comece pelo guia [o que é inteligência artificial](/artigos/o-que-e-inteligencia-artificial).

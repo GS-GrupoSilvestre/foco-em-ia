@@ -1,95 +1,269 @@
 ---
-title: "Veo: o gerador de vídeos com IA do Google"
-description: "Conheça o Veo, gerador de vídeos com IA do Google, como criar vídeos a partir de texto ou imagem e como ele se compara a outras ferramentas do mercado."
+title: "Veo 3.1 do Google: como gerar vídeos com IA no Flow e no Gemini"
+description: "Guia do Veo 3.1: onde usar (Google Flow, app Gemini e API), planos e créditos no Brasil, passo a passo e prompts de vídeo prontos para copiar e adaptar."
 slug: "veo-google-guia"
 category: "Vídeos"
-tags: ["veo", "google", "geração de vídeo", "inteligência artificial"]
+tags: ["veo", "veo 3.1", "google flow", "gemini omni", "geração de vídeo", "prompts de vídeo"]
 publishedAt: "2026-02-19"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["veo google", "gerador de vídeo google", "veo como usar", "veo ia"]
+keywords: ["veo google", "veo 3.1", "como usar o veo", "google flow", "gerar vídeo com ia google", "prompts para veo", "gemini omni"]
+faq:
+  - question: "O Veo é gratuito?"
+    answer: "Não no plano gratuito do Gemini. Para gerar vídeos no app Gemini é preciso um plano Google AI (ou licença Workspace elegível) e ter 18 anos ou mais. No Brasil, a página oficial lista geração de vídeo e créditos do Google Flow nos planos AI Plus, AI Pro e AI Ultra."
+  - question: "Qual é a versão atual do Veo?"
+    answer: "Em setembro de 2026, a versão atual é o Veo 3.1, com áudio nativo, vídeos em 1080p e 4K, extensão de cena, imagens de referência e transição entre primeiro e último quadro. Veo 2 e Veo 3 foram desligados na Gemini API em 30 de junho de 2026."
+  - question: "O app Gemini usa o Veo para criar vídeos?"
+    answer: "Segundo a Central de Ajuda do Gemini, o gerador de vídeo do app hoje é o Gemini Omni. O Veo 3.1 aparece no Google Flow (versões Lite, Fast e Quality) e na Gemini API."
+  - question: "Quanto tempo tem um vídeo gerado com o Veo 3.1?"
+    answer: "No Google Flow, o Veo 3.1 gera clipes de 4, 6 ou 8 segundos. O Gemini Omni Flash 1.1 chega a 10 segundos. Para vídeos mais longos, use a extensão de cena (disponível no Veo 3.1 Lite no Flow) ou junte vários clipes em um editor."
+  - question: "Posso usar prompts em português no Veo?"
+    answer: "Sim, você pode descrever a cena em português. Para falas em português dentro do vídeo, teste antes de produzir em escala: se a pronúncia ou o sotaque não ficarem bons, gere o vídeo sem falas e grave ou sintetize a narração à parte."
+sources:
+  - name: "Google DeepMind — Veo"
+    url: "https://deepmind.google/models/veo/"
+  - name: "Google — Modelos e recursos do Flow (Central de Ajuda)"
+    url: "https://support.google.com/flow/answer/16352836"
+  - name: "Google — Gerar vídeos no app Gemini (Central de Ajuda)"
+    url: "https://support.google.com/gemini/answer/16126339?hl=en&co=GENIE.Platform%3DDesktop"
+  - name: "Google — Planos do Gemini no Brasil"
+    url: "https://gemini.google/br/subscriptions/?hl=pt-BR"
+  - name: "Google — Gemini Omni"
+    url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/"
+  - name: "Google — Descontinuações da Gemini API"
+    url: "https://ai.google.dev/gemini-api/docs/deprecations"
+related:
+  - "ia-para-shorts-reels-tiktok"
+  - "ia-video-marketing-anuncios"
+  - "ia-para-roteiro-de-video"
+  - "runway-ml-edicao-video"
 ---
 
-O Veo é o gerador de vídeos com inteligência artificial desenvolvido pelo Google, capaz de transformar descrições em texto e imagens em vídeos curtos com qualidade visual bastante elevada. Ele está disponível em produtos como o Google Gemini e ferramentas voltadas para criadores de conteúdo, e vem se tornando uma das opções mais usadas por quem já trabalha dentro do ecossistema Google.
+O Veo é a família de modelos de geração de vídeo do Google DeepMind, e a versão atual, em setembro de 2026, é o **Veo 3.1**. Ele cria clipes curtos a partir de texto ou imagens e gera o áudio junto (falas, efeitos sonoros e som ambiente). A dúvida mais comum é onde usar: o Veo 3.1 está no Google Flow e na Gemini API, enquanto o app Gemini hoje usa outro modelo, o Gemini Omni. Este guia explica essa divisão, o que cada plano dá no Brasil, como gerar o primeiro vídeo e traz prompts prontos para copiar.
 
-## O que é o Veo
+## O que o Veo 3.1 faz
 
-O Veo funciona de forma parecida com outros modelos de geração de vídeo: você escreve um prompt descrevendo a cena desejada e a IA gera um clipe com movimento, iluminação e ambientação coerentes. Ele também aceita como entrada uma imagem de referência, permitindo animar uma foto ou manter um estilo visual específico ao longo de vários vídeos.
+Segundo a [página oficial do Veo no Google DeepMind](https://deepmind.google/models/veo/), o Veo 3.1 oferece:
 
-Entre os principais recursos do Veo estão:
+- **Áudio nativo**: efeitos sonoros, som ambiente e até diálogo gerados junto com a imagem.
+- **Resolução em 1080p e 4K.**
+- **Extensão de cena** (Scene Extension): continua um clipe mantendo a consistência visual e sonora.
+- **Imagens de referência** (Ingredients): você envia imagens de personagens, objetos ou cenários para guiar o resultado.
+- **Primeiro e último quadro**: o modelo cria a transição entre duas imagens.
+- **Imagem para vídeo**, formatos verticais e horizontais e controles de câmera.
 
-- Geração de vídeo a partir de texto (text-to-video)
-- Geração de vídeo a partir de uma imagem inicial (image-to-video)
-- Controle de estilo visual e de movimento de câmera
-- Integração com outras ferramentas do Google, como o Gemini
+As versões anteriores saíram de cena: segundo a [página de descontinuações da Gemini API](https://ai.google.dev/gemini-api/docs/deprecations), Veo 2, Veo 3 e Veo 3 Fast foram desligados na API em 30 de junho de 2026. Se um tutorial fala em "vídeos de 8 segundos com Veo 2 no Gemini Advanced", ele está desatualizado duas vezes: o Veo 2 saiu e o nome Gemini Advanced foi substituído pelo Google AI Pro.
 
-## Como começar a usar o Veo
+## Veo, Gemini Omni e Flow: onde usar cada um
 
-Para gerar seu primeiro vídeo com o Veo, o caminho costuma seguir esta lógica:
+| Onde | Modelo de vídeo | Para quem | O que esperar |
+|---|---|---|---|
+| **Google Flow** (flow.google.com) | Veo 3.1 Lite, Fast e Quality; Gemini Omni Flash 1.1 | Assinantes Google AI | Estúdio criativo com controle de quadros, referências e extensão; usa créditos do Flow |
+| **App Gemini** (gemini.google.com e celular) | Gemini Omni | Plano Google AI ou licença Workspace elegível, 18+ | Mais simples: descreve o vídeo no chat, com até 5 imagens e 1 vídeo de referência |
+| **Gemini API** | veo-3.1-generate-preview e veo-3.1-lite-generate-preview | Desenvolvedores | Integração em apps e automações, cobrada por uso |
 
-1. Acesse a ferramenta pelo produto do Google em que o Veo está disponível
-2. Escreva um prompt descrevendo a cena, o estilo e a ação principal
-3. Opcionalmente, envie uma imagem de referência para guiar o resultado
-4. Escolha proporção e duração do vídeo
-5. Gere o clipe e avalie o resultado, ajustando o prompt se necessário
+Na prática, para quem quer controlar a cena, o Flow é o lugar certo. Para quem quer um clipe rápido sem sair da conversa, o app Gemini resolve. O Gemini Omni foi anunciado no Google I/O de maio de 2026 como um modelo multimodal voltado a criar e editar vídeo, e também gera áudio sob pedido.
 
-Assim como em outras ferramentas de geração de vídeo, prompts mais descritivos tendem a gerar resultados mais próximos da sua intenção original.
+### Recursos por modelo no Flow
 
-## Boas práticas de prompt para o Veo
+Segundo a [Central de Ajuda do Flow](https://support.google.com/flow/answer/16352836):
 
-- Descreva o assunto principal da cena de forma clara e objetiva
-- Inclua referências de iluminação, como "luz natural suave" ou "luz de neon à noite"
-- Especifique o tipo de enquadramento, por exemplo close-up, plano aberto ou plano médio
-- Use adjetivos de estilo, como cinematográfico, realista ou estilo animação
-- Evite pedir várias cenas diferentes dentro de um único vídeo curto
+| Recurso | Veo 3.1 Lite | Veo 3.1 Fast | Veo 3.1 Quality | Gemini Omni Flash 1.1 |
+|---|---|---|---|---|
+| Texto para vídeo | Sim | Sim | Sim | Sim |
+| Primeiro quadro (e primeiro + último) | Sim | Sim | Sim | Sim |
+| Imagens de referência (Ingredients) | Sim | Sim | Não | Sim |
+| Estender vídeo | Sim | Não | Não | Em breve |
+| Editar vídeo existente | Não | Não | Não | Sim |
+| Durações | 4, 6 ou 8 s | 4, 6 ou 8 s | 4, 6 ou 8 s | 4, 6, 8 ou 10 s |
 
-## Casos de uso mais comuns
+O custo em créditos varia por modelo e resolução e aparece nas configurações do próprio Flow; o Google não publica uma tabela fixa na página de ajuda.
 
-O Veo costuma ser bastante utilizado para:
+## Planos e créditos no Brasil
 
-- Criar peças publicitárias curtas para testes de campanha
-- Gerar conteúdo visual para redes sociais sem precisar de câmera ou equipe
-- Produzir elementos visuais de apoio para vídeos institucionais
-- Criar protótipos visuais de ideias antes de uma produção maior
-- Gerar variações rápidas de uma mesma cena para escolher a melhor opção
+O plano gratuito do Gemini não inclui geração de vídeo. A [página oficial de planos no Brasil](https://gemini.google/br/subscriptions/?hl=pt-BR) lista, em setembro de 2026:
 
-## Pontos fortes do Veo
+| Plano | Preço mensal (página oficial BR) | Créditos do Google Flow |
+|---|---|---|
+| Gratuito | R$ 0 | Sem geração de vídeo |
+| Google AI Plus | R$ 24,99 | 200 |
+| Google AI Pro | R$ 96,99 | 1.000 |
+| Google AI Ultra | R$ 779,90 (limites 5x) ou R$ 999,90 (limites 20x) | 10.000 ou 25.000, conforme a variante |
 
-Um dos diferenciais mais citados por quem usa o Veo é a qualidade do movimento de câmera e a coerência visual entre os quadros, o que faz os vídeos parecerem mais naturais em comparação com gerações mais antigas de outras ferramentas. A integração com o ecossistema Google também facilita o fluxo de trabalho de quem já usa outras ferramentas da empresa no dia a dia.
+Os planos exigem 18 anos ou mais. Segundo o Google, o Ultra tem o maior acesso à geração de vídeo com Veo 3.1. Preços e limites podem mudar; consulte a página oficial antes de assinar. Para entender o que mais cada plano inclui, veja nosso [guia do Gemini](/artigos/como-usar-gemini-google).
 
-## Limitações a considerar
+Quem escolhe: o **AI Plus** serve para testar e fazer poucos clipes por mês; o **AI Pro** faz sentido para quem produz conteúdo toda semana; o **Ultra** é para produção intensa ou profissional.
 
-Mesmo com boa qualidade visual, o Veo ainda apresenta desafios comuns a esse tipo de tecnologia:
+## Passo a passo: primeiro vídeo no Google Flow
 
-- Textos e letreiros dentro da cena podem sair distorcidos
-- Cenas com múltiplos personagens interagindo podem gerar inconsistências
-- A duração dos clipes gerados costuma ser curta, exigindo edição posterior para vídeos mais longos
-- Resultados podem variar bastante dependendo da complexidade do prompt
+1. Acesse **flow.google.com** com a conta Google que tem o plano Google AI.
+2. Crie um novo projeto.
+3. Escolha o modo de geração: texto para vídeo, a partir de quadros (primeiro quadro, ou primeiro e último) ou a partir de imagens de referência (Ingredients).
+4. Selecione o modelo. Para testar ideias, use o **Veo 3.1 Fast** ou o **Lite**, que custam menos créditos; deixe o **Quality** para a versão final.
+5. Defina o formato (horizontal ou vertical) e a duração (4, 6 ou 8 segundos).
+6. Cole o prompt (veja os modelos abaixo) e gere.
+7. Compare as versões geradas. Se o clipe for bom mas curto, use a extensão (no Veo 3.1 Lite) para continuar a cena.
+8. Baixe o clipe e finalize em um editor, com cortes, legendas e trilha.
 
-## Veo é gratuito
+## Passo a passo: vídeo no app Gemini (Gemini Omni)
 
-O acesso ao Veo normalmente varia conforme o plano do produto Google em que ele está integrado, podendo incluir um número limitado de gerações gratuitas e opções pagas para volumes maiores ou resolução superior. Antes de planejar um projeto, é importante verificar diretamente na plataforma os limites atuais de uso do seu plano.
+Segundo a [Central de Ajuda do Gemini](https://support.google.com/gemini/answer/16126339?hl=en&co=GENIE.Platform%3DDesktop):
 
-## Veo vs Sora e outras ferramentas
+1. Acesse gemini.google.com com uma conta que tenha plano Google AI.
+2. Abra o menu lateral e escolha a opção de criar vídeo ("Create video" na interface em inglês).
+3. Se quiser, escolha um modelo pronto (template).
+4. Escreva o prompt. Se quiser som, peça o áudio no próprio texto.
+5. Opcionalmente, envie até 5 imagens e/ou 1 vídeo de referência.
+6. Envie e aguarde: a geração pode levar alguns minutos.
 
-Ao comparar o Veo com concorrentes como o Sora, alguns pontos costumam pesar na decisão:
+A edição de vídeo para vídeo não está disponível no Espaço Econômico Europeu, na Suíça, no Reino Unido e em alguns estados dos EUA, segundo a mesma página.
 
-- Qualidade visual para o tipo específico de cena que você produz com mais frequência
-- Facilidade de integração com as ferramentas que você já usa no dia a dia
-- Custo por vídeo gerado considerando o seu volume de produção
-- Recursos extras disponíveis, como extensão de clipes ou edição integrada
+## Como estruturar um prompt de vídeo
 
-Testar o mesmo prompt em diferentes ferramentas é a forma mais confiável de decidir qual delas entrega o resultado mais adequado ao seu projeto.
+Um prompt de vídeo bom descreve uma cena filmável, não uma ideia abstrata. Use esta ordem:
 
-## Passo a passo para seu primeiro projeto com Veo
+1. **Formato e duração**: vertical 9:16 ou horizontal 16:9, 8 segundos.
+2. **Sujeito**: quem ou o que aparece, com detalhes visuais.
+3. **Ação**: uma ação principal. Clipes curtos não comportam uma história inteira.
+4. **Cenário**: lugar, época, clima.
+5. **Câmera**: enquadramento (close, plano médio, plano aberto) e movimento (fixa, travelling, aproximação lenta, drone).
+6. **Luz e estilo**: luz natural, estúdio, neon; realista, cinematográfico, animação.
+7. **Áudio**: o que se ouve. Se não quiser falas ou música, diga isso.
+8. **Restrições**: "sem texto na tela", "sem logotipos", "sem pessoas ao fundo".
 
-1. Escolha um objetivo claro para o vídeo, como um anúncio, um post ou uma vinheta
-2. Escreva um prompt inicial simples e vá adicionando detalhes aos poucos
-3. Gere algumas variações e compare os resultados lado a lado
-4. Selecione o clipe mais alinhado ao que você imaginou
-5. Finalize em um editor de vídeo, adicionando trilha sonora, legendas e cortes
+## Prompts de vídeo prontos para copiar
 
-## Conclusão
+Os modelos abaixo são pontos de partida editoriais. Troque os trechos entre colchetes e gere variações antes de escolher.
 
-O Veo se firma como uma das principais alternativas para geração de vídeo com inteligência artificial, especialmente para quem já utiliza produtos do Google no cotidiano. Compreender bem como escrever prompts eficazes e conhecer as limitações atuais da ferramenta ajuda a extrair o máximo de qualidade visual e acelerar a produção de conteúdo em vídeo.
+### 1. B-roll para vídeo do YouTube
+
+```
+Vídeo horizontal 16:9, 8 segundos.
+Close de mãos digitando em um notebook sobre uma mesa de madeira, ao lado de uma xícara de café fumegante.
+Câmera: movimento lateral lento da esquerda para a direita, profundidade de campo rasa.
+Luz: manhã, luz natural entrando por uma janela à esquerda.
+Estilo: realista, tons quentes.
+Áudio: som suave de teclado e ambiente de escritório silencioso. Sem música, sem falas.
+Sem texto na tela.
+```
+
+### 2. Abertura vertical para Reels ou Shorts
+
+```
+Vídeo vertical 9:16, 6 segundos.
+Uma rua de [cidade brasileira] ao entardecer, com luzes de lojas acendendo.
+Câmera: drone subindo devagar e revelando a rua de cima.
+Estilo: cinematográfico, cores vivas, levemente dessaturado nas sombras.
+Áudio: ambiente urbano leve, com trânsito distante.
+Sem texto na tela; vou adicionar o título na edição.
+```
+
+### 3. Produto em destaque (e-commerce)
+
+```
+Vídeo vertical 9:16, 8 segundos.
+Um [produto] apoiado sobre uma superfície de [material], em fundo neutro [cor].
+Câmera: órbita lenta de 180 graus ao redor do produto, foco sempre no produto.
+Luz: estúdio, luz principal suave pela esquerda e contraluz para destacar o contorno.
+Estilo: fotografia publicitária realista.
+Áudio: trilha eletrônica discreta, sem falas.
+Não altere cor, formato, logotipo ou detalhes do produto. Sem texto na tela.
+```
+
+Dica: use a foto real do produto como primeiro quadro ou imagem de referência. Sem isso, a IA inventa detalhes.
+
+### 4. Cena com diálogo curto
+
+```
+Vídeo horizontal 16:9, 8 segundos.
+Uma atendente sorridente atrás do balcão de uma padaria de bairro, entregando um pacote a um cliente.
+Ela diz, em português do Brasil: "Tá quentinho, acabou de sair do forno!"
+Câmera: plano médio, fixa, na altura dos olhos.
+Luz: manhã, luz natural e iluminação quente da vitrine.
+Áudio: a fala da atendente, som ambiente de padaria, sem música.
+```
+
+Teste a pronúncia antes de produzir em escala. Se a fala não soar natural, gere a cena sem diálogo e sobreponha uma narração feita à parte, por exemplo com o [ElevenLabs](/artigos/elevenlabs-voz-ia).
+
+### 5. Transição entre duas imagens (primeiro e último quadro)
+
+Envie a imagem inicial e a final e descreva só o movimento:
+
+```
+Transição suave de 6 segundos entre a primeira e a última imagem.
+A câmera avança lentamente enquanto o ambiente muda do dia para a noite.
+Mantenha a mesma posição dos objetos principais.
+Áudio: ambiente que vai de pássaros durante o dia a grilos à noite.
+```
+
+### 6. Personagem consistente com imagens de referência
+
+Envie de uma a três imagens do personagem (ou mascote da marca) e use:
+
+```
+Use as imagens de referência para manter o rosto, o cabelo e a roupa do personagem iguais.
+Vídeo vertical 9:16, 8 segundos.
+O personagem entra em uma cozinha moderna, abre a geladeira e olha para a câmera com expressão de surpresa.
+Câmera: plano médio, fixa.
+Luz: cozinha bem iluminada, tons claros.
+Áudio: porta da geladeira abrindo, sem música, sem falas.
+```
+
+### 7. Cena extensível (para usar com a extensão do Flow)
+
+```
+Vídeo horizontal 16:9, 8 segundos.
+Um barco pequeno navegando devagar em um rio cercado por floresta, ao amanhecer, com neblina sobre a água.
+Câmera: acompanhando o barco pela lateral, em movimento contínuo.
+Áudio: remo na água, pássaros ao fundo.
+```
+
+Movimentos contínuos (acompanhar, avançar) facilitam estender a cena depois. Cortes e mudanças bruscas dificultam.
+
+## Demonstração editorial: vídeo de produto sem inventar características
+
+> Demonstração editorial — Produto: strap de musculação. Características fornecidas: algodão; 50 cm; uso para puxadas; auxílio de pegada.
+
+**Informações originais**: só as quatro características acima e uma foto do produto.
+
+**Prompt (com a foto como primeiro quadro)**:
+
+```
+Vídeo vertical 9:16, 8 segundos.
+Use a imagem enviada como primeiro quadro e não altere o produto: mesma cor, textura de algodão, costuras e tamanho.
+Cena: o strap é enrolado no punho de uma pessoa e preso a uma barra de academia, preparando uma puxada.
+Câmera: close nas mãos, movimento lento de aproximação.
+Luz: academia, luz ambiente fria.
+Áudio: ambiente de academia com metal leve ao fundo, sem música, sem falas.
+Não adicione logotipos, textos, etiquetas ou elementos que não estejam na imagem.
+```
+
+**O que revisar no resultado**: se a textura continua parecendo algodão, se o comprimento parece compatível com 50 cm e se a IA não criou logotipo, cor ou acabamento diferente. Se criou, descarte o clipe: vídeo de produto com detalhe inventado gera reclamação e devolução. Antes de publicar no Mercado Livre, Amazon ou Instagram, peça ao fornecedor as informações que faltam (largura, tipo de costura) para a descrição do anúncio; o vídeo não substitui esses dados.
+
+## Erros comuns e limitações
+
+- **Texto na cena**: letreiros e rótulos ainda podem sair com erros. Adicione textos na edição.
+- **Várias ações em um clipe**: 8 segundos comportam uma ação. Divida a história em cenas.
+- **Produto "melhorado" pela IA**: sem imagem de referência, o modelo inventa detalhes. Sempre use a foto real.
+- **Mãos, multidões e movimentos rápidos**: ainda geram artefatos. Prefira planos simples.
+- **Custo de créditos**: gerar tudo no modelo Quality consome o saldo rápido. Rascunhe no Fast ou Lite.
+- **Continuidade**: personagens mudam entre clipes. Use imagens de referência e descreva roupa e cenário sempre do mesmo jeito.
+
+## Veo ou outra ferramenta?
+
+| Situação | O que faz mais sentido |
+|---|---|
+| Já tem plano Google AI | Veo 3.1 no Flow ou Gemini Omni no app Gemini |
+| Precisa editar um vídeo já filmado | Gemini Omni (edição vídeo para vídeo) ou Aleph, do [Runway](/artigos/runway-ml-edicao-video) |
+| Precisa de um apresentador falando para a câmera | Ferramentas de avatar, como HeyGen e Synthesia |
+| Procurava o Sora | O Sora foi descontinuado; veja o [que aconteceu com o Sora](/artigos/sora-openai-guia-completo) |
+| Produz vídeos curtos em série | Gere os clipes no Veo e monte no editor; veja o fluxo em [IA para Shorts, Reels e TikTok](/artigos/ia-para-shorts-reels-tiktok) |
+
+## Uso responsável
+
+- Não gere vídeos realistas de pessoas reais sem autorização e não use o Veo para simular depoimentos de clientes.
+- Informe quando uma cena foi gerada por IA, principalmente em anúncios. Em propaganda eleitoral, o TSE exige rotulagem explícita de conteúdo sintético nas eleições de 2026.
+- Revise o áudio gerado: falas criadas pela IA podem dizer algo diferente do que você pediu.
+
+Para transformar os clipes em campanhas, o próximo passo é o guia de [IA para vídeos de marketing e anúncios](/artigos/ia-video-marketing-anuncios).

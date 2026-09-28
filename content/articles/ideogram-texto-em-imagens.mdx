@@ -1,98 +1,145 @@
 ---
-title: "Ideogram: a IA que escreve texto perfeito dentro de imagens"
-description: "Conheça o Ideogram, gerador de imagens com IA especializado em texto legível dentro de imagens, com dicas de uso e exemplos práticos de prompts."
+title: "Ideogram: como criar imagens com texto legível usando IA"
+description: "Veja como usar o Ideogram para gerar cartazes, posts e capas com texto legível: Ideogram 4.0, planos, uso comercial, prompts prontos e cuidados com acentos."
 slug: "ideogram-texto-em-imagens"
 category: "Imagens"
-tags: ["ideogram", "texto-em-imagens", "geracao-de-imagens", "design"]
+tags: ["ideogram", "ideogram 4.0", "texto-em-imagens", "geracao-de-imagens", "design"]
 publishedAt: "2026-04-30"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["ideogram ia", "gerador de imagem com texto", "ia que escreve texto em imagem", "ideogram como usar"]
+keywords: ["ideogram ia", "ideogram 4.0", "gerador de imagem com texto", "ia que escreve texto em imagem", "ideogram como usar", "ideogram planos"]
+faq:
+  - question: "O Ideogram é gratuito?"
+    answer: "Há um plano Free com créditos semanais para contas elegíveis, sem geração privada. Os planos pagos, em setembro de 2026, são Plus (US$ 20/mês ou US$ 15/mês no anual), Pro (US$ 60/mês ou US$ 42/mês no anual) e Team (a partir de 2 usuários). Preços podem mudar; confira a página oficial."
+  - question: "Qual é o modelo atual do Ideogram?"
+    answer: "O Ideogram 4.0, publicado em 3 de junho de 2026. É um modelo de pesos abertos com 9,3 bilhões de parâmetros, que aceita prompts estruturados em JSON e controle de paleta por códigos hexadecimais. Os pesos têm licença não comercial."
+  - question: "Posso usar as imagens do Ideogram comercialmente?"
+    answer: "As imagens geradas no app ideogram.ai podem ser usadas para qualquer finalidade, inclusive comercial, segundo a página de preços. Já os pesos abertos do Ideogram 4.0 têm licença não comercial: rodar o modelo no próprio servidor para fins comerciais exige licença paga."
+  - question: "O Ideogram escreve bem em português?"
+    answer: "Pode funcionar, mas não há garantia de acerto em português. Na prática, revise acentos, til e cedilha letra por letra e prefira frases curtas. Se errar, corrija no editor em vez de gerar dezenas de vezes."
+sources:
+  - name: "Ideogram — Preços"
+    url: "https://ideogram.ai/pricing"
+  - name: "Ideogram 4.0 — Detalhes técnicos"
+    url: "https://ideogram.ai/blog/ideogram-4.0/"
+  - name: "Ideogram — Licenciamento"
+    url: "https://ideogram.ai/licensing/"
+  - name: "Midjourney — V8.1 como padrão"
+    url: "https://updates.midjourney.com/v8-1-is-now-the-default-model/"
+related:
+  - "ia-para-logos-identidade-visual"
+  - "como-escrever-prompts-para-imagens"
+  - "canva-ia-recursos"
+  - "dall-e-guia-completo"
 ---
 
-Por muito tempo, um dos maiores problemas dos geradores de imagem por IA era escrever texto legível dentro das imagens: letras trocadas, palavras deformadas e frases sem sentido eram comuns. O Ideogram surgiu justamente para resolver esse problema, se destacando como uma das ferramentas mais confiáveis quando o objetivo é gerar imagens que incluem palavras, frases ou até logotipos com texto.
-
-Neste artigo, vamos explicar o que é o Ideogram, por que ele se destaca nesse quesito específico e como escrever prompts para aproveitar melhor esse recurso.
+Letras trocadas e palavras deformadas foram, por muito tempo, a marca registrada das imagens feitas por IA. O Ideogram ganhou espaço justamente por tratar o texto dentro da imagem como prioridade, o que o torna útil para cartazes, posts com frase, capas e rascunhos de logotipo. Este guia mostra como usar a ferramenta, o que mudou com o Ideogram 4.0, quanto custa e como escrever pedidos que aumentam a chance de o texto sair certo, inclusive em português.
 
 ## O que é o Ideogram
 
-O Ideogram é um gerador de imagens por inteligência artificial focado em qualidade visual e, principalmente, em renderizar texto de forma legível e bem posicionada dentro das imagens geradas. Isso o torna especialmente útil para criar peças que exigem palavras integradas ao design, como cartazes, banners, capas com títulos, memes, camisetas e materiais publicitários.
+O Ideogram é um gerador de imagens por IA disponível em ideogram.ai, com foco em qualidade visual e em texto legível e bem posicionado. Serve para peças em que a palavra faz parte do design: chamadas promocionais, títulos de capa, frases em estampas, convites e memes.
 
-Enquanto outras ferramentas de geração de imagem tratam o texto como "mais um elemento visual" (e por isso costumam errar a ortografia ou distorcer as letras), o Ideogram foi treinado com foco especial nessa capacidade, entregando resultados consideravelmente mais confiáveis quando o pedido envolve palavras específicas.
+Em 3 de junho de 2026, a empresa publicou o **Ideogram 4.0**, um modelo de **pesos abertos** com 9,3 bilhões de parâmetros. Segundo o [anúncio técnico](https://ideogram.ai/blog/ideogram-4.0/):
 
-## Por que texto em imagem é tão difícil para IA
+- Aceita prompts em JSON estruturado, o que permite descrever separadamente cada elemento da imagem, inclusive o texto.
+- Permite controlar a paleta com cores em código hexadecimal.
+- Gera de 256 a 2048 pixels por lado.
+- Tem uma versão compactada (checkpoint nf4) que roda em uma GPU de 24 GB.
 
-Modelos de geração de imagem aprendem padrões visuais a partir de bilhões de imagens, mas letras e palavras são estruturas muito específicas: pequenas variações de traço mudam completamente o significado de uma palavra, enquanto na maioria dos outros elementos visuais (como uma nuvem ou uma árvore) pequenas variações não fazem diferença perceptível. Por isso, "escrever" corretamente dentro de uma imagem é uma tarefa mais exigente do que parece, e poucas ferramentas conseguem fazer isso de forma consistente.
+Junto com os pesos, a empresa publicou o código de inferência e um guia de prompts.
 
-## Casos de uso ideais para o Ideogram
+## Por que texto em imagem é difícil para a IA
 
-- **Posts para redes sociais** com frases de efeito ou chamadas curtas.
-- **Capas de conteúdo** (vídeos, artigos, e-books) com título já integrado ao design.
-- **Cartazes e banners promocionais** com texto de destaque.
-- **Camisetas e produtos personalizados** com frases estampadas.
-- **Memes e conteúdo humorístico** com legendas embutidas na imagem.
-- **Conceitos de logotipo com nome da marca** já incluído no rascunho visual.
+Em uma nuvem ou árvore, pequenas variações passam despercebidas. Numa letra, um traço fora do lugar muda a palavra. Por isso, "escrever" dentro de uma imagem exige precisão que muitos modelos não tinham. Poder descrever o texto como um elemento separado no prompt estruturado do Ideogram 4.0 ajuda a atacar esse problema, mas não elimina a necessidade de revisão.
 
-## Como escrever prompts eficientes no Ideogram
+## Planos e preços
 
-A regra mais importante é ser explícito sobre o texto desejado, geralmente colocando a frase entre aspas dentro do prompt.
-
-Exemplo de prompt básico:
-
-```
-Cartaz motivacional com a frase "Nunca desista" em letras grandes, fundo de pôr do sol, estilo minimalista
-```
-
-Exemplo mais elaborado:
-
-```
-Banner promocional para loja de roupas com o texto "Liquidação de Verão" em destaque, cores vibrantes, tipografia moderna, fundo com elementos tropicais
-```
-
-Dicas para melhorar a taxa de acerto do texto:
-
-- Prefira **frases curtas**, já que frases muito longas aumentam a chance de erro de grafia.
-- Especifique o **estilo da tipografia** desejada (moderna, manuscrita, serifada, bold).
-- Indique a **posição do texto** na composição, como "texto centralizado no topo" ou "texto na parte inferior da imagem".
-- Sempre **revise o resultado** antes de usar, já que mesmo ferramentas especializadas ainda podem cometer pequenos erros ocasionais.
-
-## Tabela comparativa: texto em imagem por ferramenta
-
-| Ferramenta | Confiabilidade de texto | Observação |
+| Plano | Preço (setembro de 2026) | O que inclui |
 |---|---|---|
-| Ideogram | Alta | Especializado nesse recurso |
-| DALL-E | Boa | Funciona bem em frases curtas |
-| Midjourney | Variável | Melhorou muito, mas ainda erra em frases longas |
-| Stable Diffusion (modelos padrão) | Baixa a média | Depende muito do checkpoint usado |
+| Free | US$ 0 | Créditos lentos semanais para contas elegíveis; sem geração privada |
+| Plus | US$ 20/mês ou US$ 15/mês no anual | 1.000 créditos prioritários/mês, créditos lentos ilimitados, geração privada |
+| Pro | US$ 60/mês ou US$ 42/mês no anual | 3.500 créditos prioritários/mês, geração privada |
+| Team | US$ 30/usuário/mês ou US$ 20 no anual | 1.500 créditos prioritários por usuário; mínimo de 2 usuários |
+| Enterprise | Sob consulta | Condições negociadas com a empresa |
 
-## Boas práticas de design ao usar texto gerado por IA
+Valores da [página oficial de preços](https://ideogram.ai/pricing). Preços e limites podem mudar. Não existe plano "Basic" na página atual; tutoriais antigos que citam esse nome estão desatualizados.
 
-- Sempre revise a ortografia da palavra gerada antes de publicar, mesmo em ferramentas especializadas.
-- Se o texto sair quase certo, mas com pequenos erros, pode ser mais rápido corrigir manualmente em um editor de imagem do que tentar gerar de novo várias vezes.
-- Combine o texto gerado por IA com elementos gráficos adicionais (ícones, molduras, efeitos) feitos em um editor tradicional para elevar o acabamento final.
-- Para uso comercial sério (embalagens, materiais impressos em grande escala), sempre vetorize ou refine o texto manualmente, já que pequenas imperfeições ficam mais visíveis em impressões grandes.
+## Passo a passo: primeira imagem com texto
 
-## Exemplos práticos de prompts por finalidade
+1. Acesse ideogram.ai e entre com sua conta.
+2. Escreva o prompt deixando a frase exata **entre aspas**.
+3. Diga onde o texto deve ficar e com que tipo de letra.
+4. Defina a proporção pelo formato da peça (1:1 feed, 4:5 retrato, 9:16 Stories, 16:9 capa de YouTube).
+5. Gere, compare as opções e escolha a que tiver o texto correto.
+6. Revise letra por letra, principalmente acentos. Se houver um erro pequeno, corrija num editor de imagem.
+7. Se a peça não puder aparecer publicamente antes do lançamento, use um plano com geração privada (Plus ou superior).
 
-**Post de rede social com frase motivacional:**
+## Como escrever prompts que acertam o texto
+
+- **Frase exata entre aspas:** `com o texto "Liquidação de Verão"`.
+- **Frases curtas:** quanto mais longo o texto, maior a chance de erro.
+- **Tipografia:** "sem serifa em negrito", "manuscrita", "serifada clássica".
+- **Posição:** "centralizado no topo", "na faixa inferior".
+- **Exclusão:** termine com "sem nenhum outro texto na imagem" para evitar letras soltas no fundo.
+- **Cores:** cite cores concretas ou códigos hex (por exemplo, #1E3A8A) quando a identidade da marca importar.
+
+## Exemplos de prompts por finalidade
+
+Modelos para adaptar. Troque as frases pelas suas.
+
+**Post de Instagram com frase:**
 
 ```
-Imagem quadrada para Instagram com a frase "Foco no processo" em tipografia elegante, fundo em tons pastel, estilo clean
+Imagem quadrada para Instagram com a frase exata "Foco no processo" em tipografia serifada elegante, centralizada, fundo em tons pastel com textura de papel, estilo clean. Sem nenhum outro texto na imagem.
 ```
 
-**Capa de vídeo com título:**
+**Capa de vídeo do YouTube:**
 
 ```
-Capa de vídeo estilo miniatura do YouTube com o texto "5 Dicas de IA" em letras grandes e chamativas, expressão de surpresa, cores contrastantes
+Capa de vídeo 16:9 com o título exato "5 dicas de IA" em letras grandes sem serifa, brancas com contorno escuro, no lado esquerdo; à direita, ilustração de um notebook com ícones flutuando; cores contrastantes azul e amarelo. Sem nenhum outro texto.
 ```
 
-**Camiseta com frase de efeito:**
+**Estampa de camiseta:**
 
 ```
-Estampa de camiseta com a frase "Trabalhe com propósito" em letras manuscritas, fundo branco, estilo simples para impressão
+Estampa de camiseta com a frase exata "Trabalhe com propósito" em letras manuscritas pretas, fundo branco liso, estilo simples para impressão, sem outros elementos.
 ```
 
-## Conclusão
+**Banner promocional para loja virtual:**
 
-O Ideogram resolve um dos problemas mais frustrantes da geração de imagens por IA: colocar texto legível e bem posicionado dentro das composições. Para quem trabalha com design de posts, banners, capas e materiais que dependem de frases integradas ao visual, essa ferramenta se tornou uma opção natural, economizando tempo que antes seria gasto corrigindo letras deformadas em outras plataformas.
+```
+Banner horizontal largo para loja de acessórios de academia com o texto exato "Semana do Treino" em letras grandes sem serifa à esquerda, fundo em gradiente escuro com textura sutil de metal, espaço vazio à direita para inserir a foto real do produto depois. Não escreva preços, descontos, frete ou qualquer outro texto.
+```
+
+No banner, a instrução final evita que a IA invente promessas comerciais (desconto, frete grátis) que a loja não definiu. A foto real do produto entra depois, num editor. O fluxo completo para produtos está em [IA para fotos de produtos no e-commerce](/artigos/ia-imagens-para-ecommerce).
+
+## Texto em português: cuidados extras
+
+- Não conte com o mesmo acerto do inglês: palavras com acento e cedilha tendem a exigir mais revisão.
+- Confira **acentos, til e cedilha** ("promoção", "ação", "você"). São os erros mais comuns.
+- Se uma palavra acentuada insistir em sair errada, gere a arte sem o texto e aplique a frase num editor como o [Canva](/artigos/canva-ia-recursos).
+
+## Como outras ferramentas lidam com texto
+
+| Ferramenta | O que a fonte oficial diz |
+|---|---|
+| Ideogram 4.0 | Ferramenta conhecida pelo foco em texto na imagem; o modelo 4.0 aceita prompts estruturados em JSON |
+| ChatGPT Images | A OpenAI destacou a renderização de texto no lançamento da geração nativa de imagens, em 2025. Veja [como criar imagens no ChatGPT](/artigos/dall-e-guia-completo) |
+| Midjourney V8.1 | O [anúncio da V8.1](https://updates.midjourney.com/v8-1-is-now-the-default-model/) cita melhor renderização de texto |
+
+Nenhuma ferramenta garante texto sem erro. Revise sempre.
+
+## Boas práticas de design
+
+- **Revise antes de publicar**, mesmo quando o texto parece certo à primeira vista.
+- **Corrija pequenos erros no editor** em vez de gerar de novo várias vezes.
+- **Para impressão em grande formato** (embalagem, faixa, fachada), refaça o texto em fonte real num programa de design. Imperfeições ficam visíveis quando ampliadas.
+- **Para logotipos**, use o Ideogram para explorar ideias e finalize com um designer em vetor. Veja [IA para criar logos e identidade visual](/artigos/ia-para-logos-identidade-visual).
+
+## Uso comercial e licenças
+
+- **Imagens geradas no app:** a Ideogram diz que não reivindica a propriedade das imagens geradas e que você pode usá-las para qualquer finalidade, inclusive comercial.
+- **Pesos abertos do Ideogram 4.0:** licença não comercial (pesquisa, avaliação e projetos pessoais). Para usar comercialmente no próprio servidor, a [página de licenciamento](https://ideogram.ai/licensing/) exige a Self-Serve Commercial License (US$ 300/mês, de 10 mil a 100 mil imagens por mês) ou a Enterprise, acima disso.
+
+Para comparar com outras ferramentas de imagem, veja o [guia de como criar imagens com IA](/artigos/como-criar-imagens-com-ia).

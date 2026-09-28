@@ -1,78 +1,136 @@
 ---
-title: "Como melhorar seus prompts e obter resultados muito melhores"
-description: "Técnicas práticas para melhorar seus prompts no ChatGPT, Gemini e Claude: contexto, exemplos, formato, iteração e modelos prontos para copiar e adaptar."
+title: "Como escrever prompts melhores: guia de prompt engineering para iniciantes"
+description: "O que é prompt engineering e como escrever prompts melhores no ChatGPT, Gemini e Claude: elementos, técnicas, exemplos de antes e depois e modelo para copiar."
 slug: "como-melhorar-seus-prompts"
 category: "Guias"
-tags: ["prompts", "prompt engineering", "ChatGPT", "produtividade"]
+tags: ["prompts", "prompt engineering", "engenharia de prompt", "ChatGPT", "produtividade"]
 publishedAt: "2026-03-18"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["como melhorar prompts", "prompts melhores ChatGPT", "técnicas de prompt"]
+keywords: ["prompt engineering", "como escrever prompts", "como melhorar prompts", "o que é prompt", "engenharia de prompt", "como criar prompts", "prompts melhores ChatGPT", "técnicas de prompt"]
+faq:
+  - question: "O que é prompt engineering?"
+    answer: "É a prática de escrever, testar e ajustar as instruções que você dá a uma IA para obter respostas mais úteis. Na prática, é saber explicar bem o que você quer: objetivo, contexto, tarefa, formato, tom e restrições."
+  - question: "Preciso saber programar para fazer prompt engineering?"
+    answer: "Não. Para usar ChatGPT, Gemini ou Claude no dia a dia, prompt engineering é comunicação escrita em linguagem comum. Programação só entra quando você integra modelos de IA em sistemas via API."
+  - question: "Prompt longo é sempre melhor?"
+    answer: "Não. Melhor é o prompt com as informações que a IA não tem como adivinhar. Um prompt curto e preciso vence um prompt longo cheio de repetição ou de instruções contraditórias."
+  - question: "Os mesmos prompts funcionam no ChatGPT, no Gemini e no Claude?"
+    answer: "Na maioria dos casos, sim. Os princípios são os mesmos nos três. Pequenos ajustes, como pedir explicitamente a resposta em português ou mudar o formato, podem ser necessários."
+  - question: "Devo escrever os prompts em inglês?"
+    answer: "Não é necessário. Os principais assistentes entendem e respondem bem em português. Escreva no idioma em que você quer a resposta e deixe isso explícito se for diferente."
+sources:
+  - name: "OpenAI — GPT-5.6 and GPT-6 Pro in ChatGPT"
+    url: "https://help.openai.com/en/articles/20001354-gpt-56-in-chatgpt"
+  - name: "OpenAI — ChatGPT Custom Instructions"
+    url: "https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions"
+  - name: "Anthropic — Change the model, effort, and thinking settings"
+    url: "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+  - name: "Anthropic — What are projects?"
+    url: "https://support.claude.com/en/articles/9517075-what-are-projects"
+  - name: "Google — Gems (Central de Ajuda do Gemini)"
+    url: "https://support.google.com/gemini/answer/15236321"
+related:
+  - "melhores-prompts-chatgpt"
+  - "o-que-e-inteligencia-artificial"
+  - "gemini-prompts-eficientes"
+  - "como-escrever-prompts-para-imagens"
 ---
 
-## Como melhorar seus prompts e obter resultados muito melhores
+Você pediu algo para a IA e recebeu uma resposta genérica, longa demais ou fora do que queria? Quase sempre a solução está no **prompt**, a instrução que você escreve. Este guia explica, do zero, o que é prompt engineering e mostra, com exemplos de antes e depois, como escrever pedidos que geram respostas prontas para usar no ChatGPT, no Gemini, no Claude ou em qualquer outro assistente. No final, há um modelo para copiar e preencher.
 
-Você já pediu algo para a IA e recebeu uma resposta genérica, longa demais ou simplesmente fora do que queria? Isso acontece com todo mundo — e quase sempre a solução está no **prompt**, a instrução que você escreve.
+## O que é prompt e o que é prompt engineering
 
-Se você já conhece o básico, este guia é o próximo passo. Vamos mostrar técnicas práticas, com exemplos antes e depois, para transformar respostas medianas em resultados que você realmente consegue usar.
+**Prompt** é a mensagem que você envia para uma inteligência artificial: uma pergunta, uma instrução, um pedido ou um conjunto de informações. "Me dê uma receita de bolo de cenoura" é um prompt. "Explique inflação como se eu tivesse 12 anos" também.
 
----
+**Prompt engineering** (ou engenharia de prompt) é a habilidade de escrever, testar e ajustar esses pedidos para obter respostas melhores. Não exige programação nem conhecimento técnico: é comunicação clara com uma ferramenta que sabe muita coisa, mas não sabe nada sobre a sua situação. Se você ainda está entendendo como esses sistemas funcionam, vale ler antes [o que é inteligência artificial](/artigos/o-que-e-inteligencia-artificial).
 
-## Por que a qualidade do prompt faz tanta diferença
+## Por que a IA responde mal a pedidos vagos
 
-Os modelos de linguagem funcionam prevendo a resposta mais provável para o que você escreveu. Quando o pedido é vago, a IA preenche as lacunas com o "caminho do meio" — e o resultado fica genérico.
+Os modelos de linguagem geram a resposta mais provável para o que você escreveu. Quando o pedido é vago, a IA preenche as lacunas com o caminho do meio, e o resultado fica genérico.
 
-Quando você dá contexto, objetivo e critérios claros, a IA tem muito menos margem para adivinhar. Pense nela como um estagiário brilhante, mas que chegou hoje na empresa: sabe muito, porém não conhece sua situação.
+Pense nela como um estagiário brilhante que chegou hoje na empresa: sabe muito, mas não conhece seus clientes, seu tom nem o que você já tentou. Tudo o que você explicaria para essa pessoa, explique para a IA.
 
----
+## Os elementos de um bom prompt
 
-## Técnica 1: comece pelo objetivo final
+Nem todo prompt precisa de todos, mas quanto mais importante a tarefa, mais deles vale incluir.
 
-Antes de escrever, pergunte-se: **o que eu vou fazer com essa resposta?** Publicar, enviar para um cliente, estudar, apresentar?
+### 1. Objetivo: o que você vai fazer com a resposta
+
+Publicar, enviar a um cliente, estudar, apresentar? O destino muda o tom, o tamanho e o foco.
 
 - Antes: "Escreva sobre energia solar."
-- Depois: "Vou publicar um post no blog da minha empresa de instalação de painéis solares em Goiânia. O objetivo é convencer donos de casa a pedir um orçamento. Escreva um artigo de 600 palavras explicando as vantagens da energia solar residencial."
+- Depois: "Vou publicar um post no blog da minha empresa de instalação de painéis solares em Goiânia. O objetivo é convencer donos de casa a pedir um orçamento. Escreva um artigo de 600 palavras sobre as vantagens da energia solar residencial."
 
-Saber o destino muda o tom, o tamanho e o foco do texto.
+### 2. Contexto: o que só você sabe
 
----
+- Quem é o público (idade, nível de conhecimento, região).
+- Qual é a sua situação ou empresa.
+- O que já foi tentado.
+- Restrições importantes (orçamento, prazo, regras).
 
-## Técnica 2: dê contexto rico
+### 3. Tarefa: um verbo de ação claro
 
-Inclua informações que só você sabe:
+"Escreva", "liste", "resuma", "compare", "explique", "traduza", "revise". Uma tarefa principal por prompt funciona melhor do que cinco ao mesmo tempo.
 
-- Quem é o público (idade, nível de conhecimento, região)
-- Qual é a sua situação ou empresa
-- O que já foi tentado
-- Restrições importantes (orçamento, prazo, regras)
+### 4. Formato da resposta
 
-Uma boa regra: se você estivesse delegando a tarefa para uma pessoa, o que precisaria explicar? Explique o mesmo para a IA.
-
----
-
-## Técnica 3: defina o formato de saída
-
-A IA segue formatos muito bem quando você pede. Exemplos:
-
-- "Responda em uma tabela com as colunas: ferramenta, preço aproximado, ponto forte."
-- "Liste em tópicos curtos, no máximo 8 itens."
-- "Estruture como e-mail com assunto, saudação, corpo e assinatura."
-- "Dê a resposta em até 3 parágrafos."
+A IA segue formatos muito bem quando você pede.
 
 | Se você quer... | Peça assim |
 |---|---|
-| Comparar opções | "em formato de tabela" |
-| Algo para ler rápido | "em tópicos curtos" |
-| Um texto pronto para publicar | "em parágrafos, com subtítulos" |
+| Comparar opções | "em tabela com as colunas X, Y e Z" |
+| Ler rápido | "em tópicos curtos, no máximo 8" |
+| Um texto para publicar | "em parágrafos, com subtítulos" |
 | Um passo a passo | "em lista numerada" |
-| Algo para apresentar | "em formato de slides, com título e 3 bullets por slide" |
+| Uma apresentação | "em slides, com título e 3 bullets por slide" |
+| Um e-mail | "com assunto, saudação, corpo e assinatura" |
 
----
+### 5. Tom e público
 
-## Técnica 4: mostre exemplos (few-shot)
+"Formal, mas acolhedor", "simples, para quem nunca investiu", "técnico, para desenvolvedores". Dizer para quem é o texto costuma resolver o tom sozinho.
 
-Se você tem um estilo específico em mente, mostre. A IA imita padrões com enorme facilidade.
+### 6. Restrições: o que não fazer
+
+- "Não passe de 150 palavras."
+- "Não use jargão técnico."
+- "Evite clichês como 'no mundo de hoje'."
+- "Não invente dados. Se não souber, diga que não sabe."
+
+A última é a mais importante quando a precisão importa. Em anúncios de produto, por exemplo, instruir a IA a usar só as características fornecidas evita medidas e promessas inventadas; veja uma demonstração completa em [ChatGPT para empreendedores](/artigos/chatgpt-para-empreendedores).
+
+## Antes e depois: e-mail para cliente insatisfeito
+
+Prompt fraco:
+
+```text
+Escreva um e-mail para um cliente insatisfeito.
+```
+
+Prompt forte:
+
+```text
+Sou atendente de uma loja online de roupas. Um cliente reclamou que recebeu uma camiseta no tamanho errado.
+Escreva um e-mail pedindo desculpas e explicando que vamos trocar o produto sem custo e que a coleta será feita em até 2 dias úteis.
+Tom: formal, mas acolhedor. Tamanho: até 150 palavras.
+```
+
+| Elemento | Prompt fraco | Prompt forte |
+|---|---|---|
+| Contexto | Nenhum | Atendente de loja online de roupas |
+| Tarefa | "Escreva um e-mail" | Pedir desculpas e explicar a troca sem custo |
+| Formato | Não definido | E-mail de até 150 palavras |
+| Tom | Não definido | Formal, mas acolhedor |
+| Restrições | Nenhuma | Troca sem custo, coleta em até 2 dias úteis |
+
+O primeiro gera um e-mail genérico que você teria de reescrever. O segundo gera um e-mail que dá para enviar depois de uma revisão rápida.
+
+## Técnicas para ir além do básico
+
+### Mostre exemplos (few-shot)
+
+Se você tem um estilo em mente, mostre. A IA imita padrões com facilidade.
 
 ```text
 Quero descrições de produtos no mesmo estilo destes exemplos:
@@ -80,26 +138,17 @@ Quero descrições de produtos no mesmo estilo destes exemplos:
 Exemplo 1: "Caneca Café Forte. Porque segunda-feira não perdoa. 350 ml de coragem em cerâmica."
 Exemplo 2: "Almofada Soneca. Macia o suficiente para você esquecer os boletos."
 
-Agora escreva no mesmo estilo para: garrafa térmica, agenda 2026 e mouse sem fio.
+Agora escreva no mesmo estilo para: garrafa térmica, agenda 2027 e mouse sem fio.
+Se precisar de uma medida que eu não informei, deixe [MEDIDA] no lugar.
 ```
 
----
+### Atribua um papel
 
-## Técnica 5: atribua um papel
+"Atue como professor de matemática do ensino médio", "você é um consultor de RH de pequenas empresas", "aja como um revisor exigente". O papel ajuda a calibrar vocabulário e profundidade, mas funciona melhor junto com contexto e objetivo, não sozinho.
 
-Pedir para a IA assumir uma função ajuda a calibrar vocabulário e profundidade:
+### Separe instruções e conteúdo
 
-- "Atue como professor de matemática do ensino médio..."
-- "Você é um consultor de RH com experiência em pequenas empresas..."
-- "Aja como um revisor exigente e aponte os problemas do texto abaixo..."
-
-O papel funciona melhor combinado com contexto e objetivo, não sozinho.
-
----
-
-## Técnica 6: separe instruções e conteúdo
-
-Quando o prompt tem um texto longo para analisar, deixe claro onde começa e termina cada parte. Use marcadores simples:
+Quando o prompt inclui um texto longo, deixe claro onde começa e termina cada parte:
 
 ```text
 Tarefa: resuma o texto abaixo em 5 tópicos para um público leigo.
@@ -112,53 +161,49 @@ TEXTO:
 
 Isso evita que a IA confunda o seu pedido com o conteúdo a ser analisado.
 
----
+### Peça o raciocínio e as premissas
 
-## Técnica 7: peça raciocínio passo a passo
+Para cálculo, lógica ou decisão, peça que a IA mostre as premissas antes da conclusão:
 
-Para problemas com lógica, cálculo ou decisão, peça para a IA explicar o raciocínio:
+```text
+Analise passo a passo se vale mais a pena financiar ou comprar à vista um carro de R$ 60 mil, considerando que tenho o dinheiro aplicado.
+Liste as premissas (taxa do financiamento, rendimento da aplicação, prazo) antes da conclusão e diga quais eu preciso confirmar.
+```
 
-> "Analise passo a passo se vale mais a pena financiar ou comprar à vista um carro de 60 mil reais, considerando que tenho o dinheiro aplicado. Mostre as premissas antes da conclusão."
+Os assistentes atuais têm modos de raciocínio próprios. No ChatGPT gratuito, o botão **Think** aciona o raciocínio para perguntas mais difíceis, e os planos pagos têm níveis como Medium e High, segundo a [OpenAI](https://help.openai.com/en/articles/20001354-gpt-56-in-chatgpt). No Claude, dá para escolher o nível de esforço, e nos modelos mais novos o raciocínio fica sempre ligado, segundo a [Anthropic](https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings). Mesmo com esses modos, pedir as premissas continua útil: é assim que você confere se a conta faz sentido.
 
-Isso aumenta a chance de acerto e permite que você **confira** cada etapa. Modelos de "raciocínio" mais recentes já fazem isso internamente, mas pedir as premissas continua útil para você auditar.
+### Peça para a IA fazer perguntas primeiro
 
----
+Quando você não sabe bem o que precisa, inverta o jogo:
 
-## Técnica 8: itere em vez de recomeçar
+```text
+Quero montar um plano de marketing para minha loja de roupas em Belo Horizonte.
+Antes de responder, faça as perguntas de que você precisa para criar um plano personalizado. Faça no máximo 6 perguntas.
+```
 
-O primeiro resultado raramente é o final. Trate a conversa como uma edição em conjunto:
+### Itere em vez de recomeçar
+
+O primeiro resultado raramente é o final. Trate a conversa como uma edição a quatro mãos:
 
 1. "Ficou bom, mas está formal demais. Deixe mais leve."
 2. "Corte pela metade mantendo os pontos principais."
 3. "Troque o exemplo do segundo parágrafo por um mais próximo da realidade brasileira."
 4. "Agora me dê 3 opções de título."
 
-Pedidos pequenos e específicos funcionam melhor do que reescrever o prompt todo do zero.
+Ajustes pequenos e específicos funcionam melhor do que reescrever o prompt todo.
 
----
+### Peça para a IA melhorar o seu prompt
 
-## Técnica 9: peça para a IA fazer perguntas
+```text
+Vou colar um prompt que escrevi. Não o execute ainda.
+Aponte o que está ambíguo, que contexto falta e que formato de resposta seria mais útil.
+Depois, reescreva o prompt melhorado.
 
-Quando você não sabe bem o que precisa, inverta o jogo:
+MEU PROMPT:
+[cole aqui]
+```
 
-> "Quero montar um plano de marketing para minha loja de roupas. Antes de responder, me faça as perguntas que você precisa para criar um plano realmente personalizado."
-
-Essa técnica é ótima para tarefas complexas e evita respostas genéricas.
-
----
-
-## Técnica 10: defina o que NÃO fazer
-
-Restrições negativas também ajudam:
-
-- "Não use jargões técnicos."
-- "Não invente dados; se não souber, diga que não sabe."
-- "Evite clichês como 'no mundo de hoje'."
-- "Não passe de 150 palavras."
-
----
-
-## Modelo de prompt completo para copiar
+## Modelo de prompt para copiar
 
 ```text
 Contexto: [quem você é e qual a situação]
@@ -167,38 +212,55 @@ Tarefa: [o que a IA deve fazer]
 Público: [para quem é]
 Formato: [lista, tabela, e-mail, tamanho]
 Tom: [formal, descontraído, técnico, simples]
-Restrições: [o que evitar]
+Restrições: [o que evitar; "use apenas as informações fornecidas"]
 Exemplo: [opcional, um modelo do resultado esperado]
 ```
 
-Preencha os colchetes e apague o que não se aplica. Com o tempo, você vai fazer isso naturalmente, sem precisar do modelo.
+Preencha os colchetes e apague o que não se aplica.
 
----
+### Exemplo prático: o modelo preenchido
 
-## Antes e depois: um exemplo completo
+Antes:
 
-**Antes:**
-> "Me dá ideias de posts."
+```text
+Me dá ideias de posts.
+```
 
-**Depois:**
-> "Tenho uma clínica veterinária em Recife que atende principalmente cães e gatos. Quero aumentar o engajamento no Instagram. Sugira 10 ideias de posts para o próximo mês, misturando dicas de cuidados, curiosidades e bastidores da clínica. Apresente em tabela com as colunas: ideia, formato (carrossel, reels ou foto) e legenda curta. Tom leve e acolhedor."
+Depois:
 
-A segunda versão entrega algo pronto para colocar em prática.
+```text
+Contexto: tenho uma clínica veterinária em Recife que atende principalmente cães e gatos.
+Objetivo: aumentar o engajamento no Instagram no próximo mês.
+Tarefa: sugira 10 ideias de posts, misturando dicas de cuidados, curiosidades e bastidores da clínica.
+Público: tutores de pets da região.
+Formato: tabela com as colunas ideia, formato (carrossel, Reels ou foto) e legenda curta.
+Tom: leve e acolhedor.
+Restrições: nada de orientação médica específica; dicas gerais com convite para consulta.
+```
 
----
+A segunda versão entrega um plano que dá para começar a executar no mesmo dia.
+
+## Salve os prompts que funcionam
+
+Não é preciso repetir o contexto em toda conversa. Cada assistente tem um lugar para instruções permanentes:
+
+- **ChatGPT**: as Instruções personalizadas guardam quem você é e como quer as respostas, com limite de 1.500 caracteres no Free e no Go e de 5.000 nos planos pagos, segundo a [OpenAI](https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions). Veja o passo a passo em [instruções personalizadas do ChatGPT](/artigos/custom-instructions-chatgpt).
+- **Gemini**: os Gems são versões personalizadas do Gemini para tarefas repetitivas e estão disponíveis em todos os planos.
+- **Claude**: os Projects reúnem instruções e arquivos de um tema; o plano gratuito permite até 5 projetos.
+
+E mantenha um documento com seus melhores prompts já preenchidos. Para começar com uma base pronta, veja os [50 prompts prontos para o ChatGPT](/artigos/melhores-prompts-chatgpt).
+
+## Os mesmos princípios valem em qualquer IA de texto
+
+Objetivo, contexto, formato e restrições funcionam no ChatGPT, no Gemini e no Claude, que têm versões gratuitas para praticar. Cada ferramenta tem suas particularidades; se você usa o Google, veja [como escrever prompts eficientes para o Gemini](/artigos/gemini-prompts-eficientes). Para geradores de imagem, a lógica muda um pouco: entram estilo, composição, luz e enquadramento, como mostramos em [como escrever prompts para imagens](/artigos/como-escrever-prompts-para-imagens).
 
 ## Erros que sabotam seus prompts
 
-- Juntar muitos pedidos diferentes em um único prompt
-- Contradizer instruções ("seja detalhado" e "seja breve" ao mesmo tempo)
-- Não revisar fatos, números e citações
-- Esquecer de dizer o público-alvo
-- Aceitar a primeira resposta sem pedir ajustes
+- **Ser vago demais**: "escreva algo sobre finanças" não diz nada.
+- **Juntar muitos pedidos** diferentes em um único prompt.
+- **Dar instruções contraditórias**: "seja detalhado" e "seja breve" ao mesmo tempo.
+- **Esquecer o público-alvo.**
+- **Não revisar fatos**, números e citações: a IA pode errar com segurança.
+- **Desistir na primeira tentativa**: ajuste e tente de novo. Isso é iteração, e iteração é o centro do prompt engineering.
 
----
-
-## Conclusão
-
-Melhorar seus prompts é a forma mais rápida e barata de extrair mais valor da inteligência artificial. Contexto, objetivo, formato, exemplos e iteração são os pilares. Escolha duas ou três técnicas deste guia e aplique ainda hoje nas suas tarefas — a diferença aparece já na primeira conversa.
-
-Salve os prompts que funcionarem bem e monte sua própria biblioteca. Em poucas semanas, você vai conversar com a IA como quem conversa com um colega de trabalho experiente.
+Para praticar agora: pegue uma tarefa real desta semana, escreva o prompt com o modelo acima, compare com o que você pediria antes e ajuste em duas ou três rodadas.

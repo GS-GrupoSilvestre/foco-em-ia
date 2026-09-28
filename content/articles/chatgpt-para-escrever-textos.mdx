@@ -1,6 +1,6 @@
 ---
-title: "ChatGPT para escrever: técnicas para textos melhores"
-description: "Aprenda técnicas avançadas para usar o ChatGPT na produção de textos de qualidade. Dicas para blogs, redes sociais, e-mails e conteúdo profissional."
+title: "ChatGPT para escrever: técnicas e prompts para textos melhores"
+description: "Como usar o ChatGPT para escrever textos que não parecem de robô: voz, ângulo, edição, redes sociais e checklist de revisão, com prompts prontos para copiar."
 slug: "chatgpt-para-escrever-textos"
 category: "ChatGPT"
 tags: ["ChatGPT para escrever", "produção de conteúdo", "copywriting", "textos com IA"]
@@ -8,221 +8,244 @@ publishedAt: "2026-04-08"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["ChatGPT para escrever", "escrever textos com ChatGPT", "produção de conteúdo IA"]
+keywords: ["ChatGPT para escrever", "escrever textos com ChatGPT", "prompts para escrever textos", "texto com IA que não parece robô", "produção de conteúdo IA"]
+faq:
+  - question: "Como fazer o texto do ChatGPT não parecer escrito por IA?"
+    answer: "Defina a voz antes de pedir o texto, dê um ângulo específico, forneça suas próprias histórias e dados e, no final, rode um checklist de revisão que corta clichês, varia o tamanho das frases e adiciona exemplos concretos. A edição humana final continua indispensável."
+  - question: "Posso publicar o texto do ChatGPT sem revisar?"
+    answer: "Não é recomendável. O ChatGPT pode inventar números, citações e fatos com segurança. Confira toda informação verificável e ajuste o texto para a sua voz antes de publicar."
+  - question: "Como fazer o ChatGPT escrever sempre no meu estilo?"
+    answer: "Descreva seu estilo nas Instruções personalizadas ou em um Projeto com exemplos de textos seus. As instruções personalizadas aceitam até 1.500 caracteres no Free e no Go e até 5.000 nos planos pagos, segundo a OpenAI."
+  - question: "O ChatGPT ainda tem o Canvas para editar textos?"
+    answer: "A OpenAI removeu o Canvas dos modelos GPT-5.5 em maio de 2026. Hoje o ChatGPT trabalha com writing blocks, blocos de escrita editáveis para e-mails, posts e documentos."
+sources:
+  - name: "OpenAI — Working with writing blocks and code blocks in ChatGPT"
+    url: "https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt"
+  - name: "OpenAI — Model Release Notes"
+    url: "https://help.openai.com/en/articles/9624314-model-release-notes"
+  - name: "OpenAI — ChatGPT Custom Instructions"
+    url: "https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions"
+  - name: "OpenAI — Projects in ChatGPT"
+    url: "https://help.openai.com/en/articles/10169521-projects-in-chatgpt"
+related:
+  - "como-melhorar-seus-prompts"
+  - "melhores-prompts-chatgpt"
+  - "ia-para-criacao-de-conteudo"
+  - "claude-para-escrita-criativa"
 ---
 
-# ChatGPT para escrever: técnicas para textos melhores
+Pedir um texto ao ChatGPT é fácil. Receber um texto que tenha voz, ponto de vista e que ninguém identifique como "texto de IA" exige método. Este guia mostra as técnicas que mais mudam o resultado, com prompts prontos para copiar, um exemplo de antes e depois e um fluxo para quem escreve com frequência: blogueiros, criadores de conteúdo, profissionais de marketing e quem escreve muito no trabalho.
 
-Usar o ChatGPT para escrever textos é fácil. Usar o ChatGPT para escrever **textos bons** — aqueles que parecem humanos, que têm voz, que engajam — isso já exige técnica.
+## Por que os textos do ChatGPT parecem genéricos
 
-Se você já tentou pedir um texto ao ChatGPT e ficou com aquela sensação de "parece que foi a IA que escreveu isso", este artigo é para você. Vamos mostrar como elevar o nível dos seus textos com o ChatGPT, independentemente se você é blogueiro, criador de conteúdo, profissional de marketing ou simplesmente alguém que escreve muito no trabalho.
+Sem orientação, o ChatGPT tende a produzir textos reconhecíveis:
 
-## Por que os textos do ChatGPT parecem genéricos?
+- **Transições prontas**: "Em suma", "É importante destacar que", "Cabe ressaltar".
+- **Estrutura previsível**: introdução, três tópicos, conclusão.
+- **Tom neutro demais**: nenhuma opinião, nenhuma personalidade.
+- **"Os dois lados" sempre**: em vez de uma posição clara, uma lista de perspectivas.
+- **Adjetivos vazios**: "robusto", "abrangente", "holístico", "impactante".
 
-Antes das técnicas, precisamos entender o problema. O ChatGPT tem algumas tendências que, sem orientação adequada, produzem textos reconhecíveis como IA:
+Isso acontece porque, quando o pedido é vago, a IA escolhe o caminho mais provável, e o mais provável é o genérico. As técnicas abaixo tiram essa margem de adivinhação. Se quiser a base teórica, veja o guia [como escrever prompts melhores](/artigos/como-melhorar-seus-prompts).
 
-- **Frases de transição genéricas**: "Em suma", "É importante destacar que", "Cabe ressaltar"
-- **Estrutura muito previsível**: sempre introdução + 3 tópicos + conclusão
-- **Tom neutro demais**: sem personalidade, sem ponto de vista forte
-- **Evita opiniões diretas**: tende a apresentar "diferentes perspectivas" em vez de uma posição clara
-- **Palavras de enchimento**: "robusto", "abrangente", "holístico", "impactante"
+## Técnica 1: defina a voz antes de pedir o texto
 
-Saber disso é metade do caminho. Agora veja como resolver.
+Prompt fraco:
 
-## Técnica 1: Defina uma voz antes de pedir o texto
-
-O erro mais comum é pedir um texto sem definir a voz. Antes de qualquer coisa, diga ao ChatGPT exatamente o tom que você quer.
-
-**Prompt fraco:**
-```
+```text
 Escreva um texto sobre produtividade no trabalho remoto.
 ```
 
-**Prompt forte:**
-```
-Escreva um artigo sobre produtividade no trabalho remoto com 
-estas características de voz:
-- Tom: direto, ligeiramente irônico, como alguém que já tentou 
-  tudo e sabe o que funciona de verdade
-- Linguagem: informal, primeira pessoa, sem jargão corporativo
-- Evite: clichês motivacionais, frases como "é fundamental" ou 
-  "é importante"
-- Inclua: opinião clara do autor, ao menos um exemplo pessoal fictício
-- Público: profissionais entre 28 e 40 anos, experientes em home office
-```
+Prompt forte:
 
-Essa definição de voz transforma completamente o resultado.
-
-## Técnica 2: Dê um ponto de vista controverso ou específico
-
-Textos com posição clara são mais interessantes que textos que "equilibram todas as perspectivas". Instrua o ChatGPT a defender uma tese específica.
-
-```
-Escreva um artigo defendendo que reuniões diárias de equipe 
-fazem mais mal do que bem para a produtividade. 
-Use dados e argumentos concretos. 
-Não apresente "o outro lado" — isso é um artigo de opinião.
+```text
+Escreva um artigo de 700 palavras sobre produtividade no trabalho remoto.
+Voz:
+- Tom: direto, levemente irônico, de quem já tentou de tudo.
+- Linguagem: informal, primeira pessoa, sem jargão corporativo.
+- Evite: clichês motivacionais, "é fundamental", "é importante destacar".
+- Público: profissionais de 28 a 40 anos que já trabalham em home office.
+Minha experiência para usar no texto: [2 ou 3 situações reais suas].
+Se precisar de um exemplo que eu não forneci, deixe um marcador [EXEMPLO PESSOAL AQUI] em vez de inventar.
 ```
 
-Textos com posição forte geram mais leitura, mais comentários e mais engajamento.
+A última linha é importante: sem ela, o ChatGPT inventa uma "história pessoal" que nunca aconteceu, e isso é um problema de credibilidade.
 
-## Técnica 3: O método dos ângulos
+## Técnica 2: dê uma tese, não só um tema
 
-Em vez de pedir um texto sobre um tema, dê ao ChatGPT um **ângulo específico**. O ângulo é o que diferencia um texto mediano de um texto que as pessoas compartilham.
+Textos que defendem uma ideia costumam ser mais interessantes do que textos que equilibram todas as perspectivas. Diga qual posição o texto deve sustentar e de onde vêm os argumentos:
 
-Compare:
-- **Tema**: "alimentação saudável" (genérico)
-- **Ângulo**: "Por que a maioria das dietas falha na segunda semana — e o que fazer diferente" (específico e intrigante)
+```text
+Escreva um artigo de opinião defendendo que reuniões diárias de equipe atrapalham mais do que ajudam em equipes pequenas.
+Argumentos que eu quero usar: [liste os seus].
+Use apenas dados que eu fornecer abaixo. Se um argumento precisar de número, escreva [DADO A CONFIRMAR].
+Não apresente o outro lado: é um texto de opinião, assinado por mim.
 
-Para encontrar bons ângulos, use este prompt:
-
-```
-Me dê 10 ângulos originais e inesperados para escrever sobre 
-o tema [X]. Cada ângulo deve ter um elemento de surpresa ou 
-contradição com o que as pessoas esperam sobre o tema.
+DADOS:
+[cole dados com fonte, se tiver]
 ```
 
-Depois escolha o melhor e peça o texto com esse ângulo específico.
+## Técnica 3: o método dos ângulos
 
-## Técnica 4: Escreva a sua abertura, peça ajuda para o restante
+O ângulo é o recorte específico que faz alguém querer ler.
 
-A primeira frase e o primeiro parágrafo são os mais importantes — e também os mais difíceis para o ChatGPT acertar com sua voz. Uma estratégia eficaz:
+- **Tema**: "alimentação saudável" (genérico).
+- **Ângulo**: "Por que a maioria das dietas falha na segunda semana e o que fazer diferente" (específico).
 
-1. Você escreve o primeiro parágrafo (com sua voz autêntica)
-2. Passa para o ChatGPT e pede que continue **no mesmo estilo**
+Para encontrar ângulos:
 
-```
-Aqui está o início de um artigo que estou escrevendo. Continue 
-a partir daqui mantendo exatamente o mesmo tom, ritmo de frases 
-e nível de informalidade:
-
-[Seu parágrafo inicial aqui]
-
-Continue por mais 4 parágrafos sobre [assunto], mantendo o foco em [ângulo].
+```text
+Me dê 10 ângulos para um texto sobre [tema] voltado a [público].
+Cada ângulo deve contrariar uma crença comum ou trazer um recorte inesperado.
+Formato: título provisório + uma frase explicando a tese.
 ```
 
-Esse método garante que a voz humana dê o tom e o ChatGPT escale a produção.
+Escolha um e peça o texto com aquele ângulo. Um tema, dez ângulos, dez textos diferentes.
 
-## Técnica 5: Use o ChatGPT como editor, não como escritor
+## Técnica 4: escreva a abertura e peça a continuação
 
-Às vezes o melhor uso do ChatGPT na escrita não é criar o texto — é melhorar o que você já criou.
+A primeira frase e o primeiro parágrafo são os que mais carregam a sua voz. Escreva-os você e deixe o ChatGPT continuar:
 
-### Para melhorar clareza:
-```
-Reescreva o parágrafo abaixo deixando-o mais claro e direto, 
-sem perder nenhuma informação importante. 
-Elimine palavras desnecessárias.
+```text
+Abaixo está o começo de um texto meu. Continue por mais 4 parágrafos sobre [assunto], com foco em [ângulo].
+Mantenha o mesmo tom, o mesmo ritmo de frases e o mesmo nível de informalidade.
+Não repita ideias que já estão no começo.
 
-[Seu parágrafo]
-```
-
-### Para tornar mais envolvente:
-```
-Este texto está correto mas está seco. Reescreva tornando-o mais 
-envolvente, sem adicionar informações novas. 
-Use recursos como: perguntas retóricas, frases curtas para ritmo, 
-exemplos concretos no lugar de afirmações abstratas.
-
-[Seu texto]
+COMEÇO:
+"""
+[seu parágrafo]
+"""
 ```
 
-### Para adaptar o tom:
+## Técnica 5: use o ChatGPT como editor
+
+Muitas vezes o melhor uso não é gerar o texto, e sim melhorar o que você escreveu.
+
+Para clareza:
+
+```text
+Reescreva o parágrafo abaixo mais claro e direto, sem perder nenhuma informação.
+Corte palavras desnecessárias. Depois, liste o que você cortou.
+
+[seu parágrafo]
 ```
-Reescreva este e-mail profissional para soar mais amigável e menos formal, 
-mantendo o conteúdo intacto. Público: colegas de trabalho com quem 
-tenho boa relação.
 
-[Seu e-mail]
+Para deixar mais envolvente:
+
+```text
+Este texto está correto, mas seco. Reescreva de forma mais envolvente, sem adicionar informações novas.
+Use frases curtas para dar ritmo e troque afirmações abstratas por exemplos concretos que já estão no texto.
+
+[seu texto]
 ```
 
-## Técnica 6: Criação de textos para redes sociais
+Para ajustar o tom:
 
-Para redes sociais, o ChatGPT precisa de mais especificidade ainda, porque cada plataforma tem seu formato.
+```text
+Reescreva este e-mail para soar mais próximo e menos formal, mantendo o conteúdo.
+Destinatários: colegas com quem tenho boa relação.
 
-### Para Instagram (legenda):
+[seu e-mail]
 ```
-Escreva 3 versões de legenda para Instagram sobre [tema], 
-com estas características:
-- Máximo 150 palavras cada
-- Começa com um gancho forte (primeira linha como hook)
-- Inclui call-to-action no final
+
+Quando o ChatGPT gera e-mails, posts ou documentos, eles podem aparecer como **writing blocks**, blocos de escrita que você edita direto na conversa, segundo a [central de ajuda da OpenAI](https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt). O antigo Canvas foi removido dos modelos GPT-5.5 em maio de 2026 e não deve ser tratado como recurso atual.
+
+## Técnica 6: um prompt por rede social
+
+Cada plataforma tem formato e ritmo próprios. Seja explícito.
+
+Instagram (legenda):
+
+```text
+Escreva 3 versões de legenda para Instagram sobre [tema ou foto].
+- Até 120 palavras cada
+- Primeira linha como gancho
+- Chamada para ação no final: [comentar / chamar no WhatsApp / clicar no link da bio]
 - Tom: [descreva]
-- Emojis: use no máximo 5, estrategicamente
-- Hashtags: NÃO inclua (vou adicionar depois)
+- No máximo 3 emojis e nenhuma hashtag (vou adicionar depois)
 ```
 
-### Para LinkedIn (artigo/post):
-```
-Escreva um post para LinkedIn sobre [tema]. 
-Formato: começa com uma história ou dado surpreendente, 
-desenvolve o insight principal em 3-4 parágrafos curtos, 
-termina com uma pergunta para engajamento.
-Tom: profissional mas humano. Sem bullet points. 
-Linguagem: direto, sem jargão corporativo. 
-Extensão: 200-300 palavras.
+LinkedIn:
+
+```text
+Escreva um post para o LinkedIn sobre [tema].
+Comece com uma situação real que eu vivi: [descreva].
+Desenvolva a ideia principal em 3 ou 4 parágrafos curtos e termine com uma pergunta.
+Sem listas, sem jargão corporativo, entre 200 e 300 palavras.
 ```
 
-### Para Twitter/X (thread):
-```
-Crie uma thread de 7 tweets sobre [tema]. 
-Tweet 1: hook forte que faça as pessoas quererem ler mais.
-Tweets 2-6: um insight por tweet, com transições fluidas.
-Tweet 7: conclusão + call-to-action.
-Cada tweet: máximo 250 caracteres. 
-Tom: [descreva].
+X (antigo Twitter):
+
+```text
+Crie uma sequência de 7 posts sobre [tema].
+Post 1: gancho. Posts 2 a 6: uma ideia por post. Post 7: conclusão e chamada para ação.
+Até 270 caracteres por post. Tom: [descreva].
 ```
 
-## Técnica 7: O checklist de humanização
+## Técnica 7: o checklist de humanização
 
-Depois que o ChatGPT escrever um texto, passe este checklist para humanizá-lo:
+Depois do rascunho, rode esta revisão:
 
+```text
+Revise o texto abaixo aplicando estas regras:
+1. Troque expressões genéricas por linguagem específica.
+2. Elimine adjetivos vazios (robusto, abrangente, impactante, poderoso).
+3. Varie o tamanho das frases: algumas bem curtas, outras longas.
+4. Corte pelo menos 20% das palavras.
+5. Onde houver afirmação abstrata, sugira um exemplo concreto entre colchetes para eu preencher.
+6. Liste no final todas as afirmações que precisam de checagem (números, nomes, datas, citações).
+
+TEXTO:
+"""
+[cole o texto]
+"""
 ```
-Revise o texto abaixo e faça as seguintes alterações:
 
-1. Substitua expressões genéricas por linguagem mais específica e humana
-2. Elimine adjetivos vazios (robusto, abrangente, impactante, poderoso)
-3. Adicione uma opinião pessoal clara em pelo menos 2 momentos
-4. Varie o tamanho das frases: algumas curtas, algumas longas
-5. Elimine pelo menos 20% das palavras (seja mais conciso)
-6. Adicione pelo menos um exemplo concreto e específico
+### Exemplo prático: antes e depois da revisão
 
-Texto original:
-[cole o texto aqui]
-```
+Rascunho genérico (ilustrativo):
 
-Essa "passada de edição" faz uma diferença enorme na qualidade final.
+> "No mundo de hoje, é fundamental que as empresas adotem estratégias robustas de comunicação para impactar seus clientes de forma abrangente."
 
-## Tipos de textos que o ChatGPT domina bem
+Depois do checklist (ilustrativo):
 
-- E-mails profissionais e de vendas
-- Descrições de produtos para e-commerce
-- Roteiros para vídeos explicativos
-- FAQs e textos institucionais
-- Primeiros rascunhos de artigos de blog
-- Propostas comerciais (com base em informações que você fornece)
+> "Seu cliente lê a mensagem no ônibus, entre uma notificação e outra. Você tem uma frase para ganhar a atenção dele. Use-a para dizer o que ele ganha, não o que você faz."
 
-## Tipos de textos que exigem mais cuidado
+A segunda versão não acrescenta dados: só troca abstrações por uma cena concreta e corta as palavras vazias.
 
-- **Jornalismo**: o ChatGPT pode inventar fatos, números e citações. Sempre verifique
-- **Textos muito pessoais**: sua história de vida, memórias, opiniões profundas
-- **Conteúdo técnico especializado**: em áreas como medicina, direito ou engenharia, sempre revise com um especialista
-- **Textos criativos de alto nível**: poesia, conto literário, peças teatrais — o ChatGPT pode fazer rascunhos mas raramente atinge o nível de um escritor talentoso
+## Faça o ChatGPT lembrar do seu estilo
 
-## Fluxo de trabalho recomendado
+Se você escreve sempre para o mesmo blog ou marca, não repita a descrição da voz a cada conversa:
 
-Para quem quer usar o ChatGPT de forma consistente na produção de textos, recomendamos este fluxo:
+1. **Instruções personalizadas**: descreva seu tom, seu público e as palavras que você não usa. O limite é de 1.500 caracteres no Free e no Go e de 5.000 nos planos pagos, segundo a [OpenAI](https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions). Veja como configurar em [instruções personalizadas do ChatGPT](/artigos/custom-instructions-chatgpt).
+2. **Projetos**: crie um projeto para a sua marca e anexe dois ou três textos seus como referência de estilo, além de um guia de estilo curto. Projetos estão disponíveis em todos os planos, com limite de arquivos menor no gratuito.
 
-1. **Defina**: objetivo, público, tom, canal
-2. **Crie o ângulo**: o ponto específico que torna o texto interessante
-3. **Gere o rascunho**: com um prompt detalhado
-4. **Humanize**: aplique o checklist de humanização
-5. **Edite com sua voz**: adicione suas próprias experiências e perspectivas
-6. **Revise**: leia em voz alta para sentir o ritmo
+## Onde o ChatGPT ajuda e onde exige cuidado
 
-## Conclusão
+Ajuda bastante em:
 
-O ChatGPT é uma ferramenta poderosa para escrita, mas o que diferencia um texto mediocre de um texto excelente é a orientação que você dá. Quanto mais específico você for sobre voz, ângulo, formato e tom, melhor será o resultado.
+- e-mails profissionais e de vendas;
+- descrições de produtos a partir de características que você fornece (veja o exemplo completo em [ChatGPT para empreendedores](/artigos/chatgpt-para-empreendedores));
+- roteiros de vídeos explicativos;
+- FAQs e textos institucionais;
+- primeiros rascunhos de artigos;
+- propostas comerciais com dados que você informa.
 
-A IA não substitui o escritor — ela amplifica a capacidade de quem sabe usá-la. Use essas técnicas e você vai perceber que o ChatGPT pode se tornar uma das ferramentas mais valiosas na sua produção de conteúdo.
+Exige mais cuidado em:
 
-Experimente hoje mesmo uma dessas técnicas com um texto que você precisa escrever. A diferença vai ser imediata.
+- **jornalismo e textos com dados**: o ChatGPT pode inventar números, fontes e citações. Confira tudo;
+- **textos muito pessoais**: memórias e opiniões precisam vir de você;
+- **conteúdo técnico especializado**: saúde, direito, finanças e engenharia pedem revisão de um profissional da área;
+- **literatura**: ajuda em rascunhos e exercícios, mas a voz autoral continua sendo o trabalho do escritor. Para ficção e roteiros, compare também com o [Claude para escrita criativa](/artigos/claude-para-escrita-criativa).
+
+## Fluxo sugerido para escrever com o ChatGPT
+
+1. **Defina**: objetivo, público, tom e canal.
+2. **Escolha o ângulo** com o prompt da técnica 3.
+3. **Forneça a matéria-prima**: suas histórias, dados com fonte e opiniões.
+4. **Gere o rascunho** com a voz definida (técnica 1).
+5. **Rode o checklist** de humanização (técnica 7).
+6. **Cheque os fatos** listados no final do checklist.
+7. **Edite com sua voz** e leia em voz alta para ajustar o ritmo.
+
+Para ter prompts de escrita e de outras áreas à mão, veja a lista de [50 prompts prontos para o ChatGPT](/artigos/melhores-prompts-chatgpt). Se você ainda está se familiarizando com a ferramenta, comece pelo [guia completo de como usar o ChatGPT](/artigos/como-usar-chatgpt-guia-completo).

@@ -1,242 +1,230 @@
 ---
-title: "Como Criar Imagens com IA: Guia Completo para Iniciantes em 2025"
-description: "Aprenda a gerar imagens com IA usando Midjourney, DALL-E, Stable Diffusion e outros. Guia prático com dicas de prompt, exemplos e comparativos."
+title: "Como criar imagens com IA: guia completo para iniciantes"
+description: "Aprenda a criar imagens com IA no ChatGPT, Gemini (Nano Banana), Midjourney, Firefly, Ideogram, FLUX e Stable Diffusion, com prompts, fluxos e uso comercial."
 slug: "como-criar-imagens-com-ia"
 category: "Imagens"
-tags: ["geração de imagens", "midjourney", "dall-e", "stable diffusion", "ia para imagens"]
+tags: ["geração de imagens", "chatgpt images", "nano banana", "midjourney", "ia para imagens"]
 publishedAt: "2025-01-22"
 author: "Equipe Foco em IA"
 featured: true
 popular: true
-keywords: ["criar imagens com ia", "geração de imagens ia", "midjourney como usar", "dall-e tutorial", "stable diffusion iniciante"]
+keywords: ["criar imagens com ia", "geração de imagens ia", "gerador de imagens ia", "como criar imagem no chatgpt", "nano banana gemini", "midjourney como usar"]
 faq:
   - question: "Qual é a melhor IA para criar imagens?"
-    answer: "Para fotorrealismo e qualidade geral, o Midjourney v6 lidera. Para integração com texto e acessibilidade, o DALL-E 3 via ChatGPT é excelente. Para maior controle e uso gratuito, o Stable Diffusion é a melhor opção de código aberto."
-  - question: "É preciso saber inglês para usar geradores de imagem IA?"
-    answer: "Os melhores resultados ainda vêm de prompts em inglês, mas ferramentas como o DALL-E 3 e o Ideogram aceitam prompts em português com boa qualidade. Para resultados profissionais, vale a pena aprender prompts básicos em inglês."
+    answer: "Depende do objetivo. Para começar sem instalar nada, o ChatGPT Images e o Nano Banana no app Gemini funcionam por conversa, em português. O Midjourney (V8.2) é focado em estética e só tem planos pagos. O Ideogram é conhecido por texto dentro da imagem. FLUX e Stable Diffusion interessam a quem quer pesos abertos e controle técnico."
+  - question: "Dá para criar imagens com IA de graça?"
+    answer: "Sim, com limites. O ChatGPT Images está disponível em todos os planos, inclusive o gratuito, com geração mais limitada. O app Gemini oferece o Nano Banana 2 para usuários logados. Ideogram, Adobe Firefly e Canva também têm níveis gratuitos. O Midjourney não menciona plano gratuito na página oficial de planos."
+  - question: "Preciso escrever o prompt em inglês?"
+    answer: "Não. ChatGPT e Gemini entendem pedidos em português. Em ferramentas com sintaxe própria, como o Midjourney, muita gente ainda escreve em inglês por hábito. Se a imagem tiver texto em português, peça o texto exato entre aspas e revise acentos e cedilha antes de publicar."
+  - question: "Posso usar imagens geradas por IA comercialmente?"
+    answer: "Na maioria das ferramentas, sim, mas as regras variam. A OpenAI diz nos termos que o usuário é dono do resultado. O Midjourney exige plano Pro ou Mega para empresas com receita acima de US$ 1 milhão por ano. Modelos de pesos abertos como Ideogram 4.0 e FLUX.2 dev têm licença não comercial. Confira os termos de cada ferramenta."
 sources:
-  - name: "Midjourney"
-    url: "https://www.midjourney.com"
-  - name: "OpenAI DALL-E"
-    url: "https://openai.com/dall-e-3"
-  - name: "Stability AI"
-    url: "https://stability.ai"
+  - name: "OpenAI — Introducing ChatGPT Images 2.5"
+    url: "https://openai.com/index/introducing-chatgpt-images-2-5/"
+  - name: "OpenAI Help Center — Images in ChatGPT"
+    url: "https://help.openai.com/en/articles/11084440-images-in-chatgpt"
+  - name: "Google — Gerar e editar imagens no app Gemini (Central de Ajuda)"
+    url: "https://support.google.com/gemini/answer/14286560?hl=en&co=GENIE.Platform%3DDesktop"
+  - name: "Midjourney — Versões"
+    url: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+  - name: "Adobe — Adobe Firefly"
+    url: "https://www.adobe.com/br/products/firefly.html"
+  - name: "Black Forest Labs — Modelos FLUX disponíveis"
+    url: "https://help.bfl.ai/articles/7655484417-what-flux-models-are-available"
+related:
+  - "ia-imagens-para-ecommerce"
+  - "direitos-autorais-imagens-ia"
+  - "ia-imagens-gratis-vs-pago"
+  - "ia-edicao-fotos-photoshop"
 ---
 
-Criar imagens com inteligência artificial passou de curiosidade de tecnólogos a habilidade essencial para designers, marqueteiros, criadores de conteúdo e profissionais de inúmeras áreas. Em 2025, você consegue gerar imagens de qualidade profissional em segundos — com a ferramenta certa e o prompt certo.
+Criar uma imagem com inteligência artificial hoje é tão simples quanto descrever o que você quer numa conversa. A parte difícil é outra: escolher a ferramenta certa para o seu objetivo, escrever um pedido que a IA entenda e saber o que pode ou não ser usado comercialmente. Este guia resolve essas três coisas, com as ferramentas e modelos disponíveis em setembro de 2026.
 
-Este guia apresenta as principais ferramentas e ensina como usá-las do zero.
+## Como a IA gera uma imagem
 
-## Como funciona a geração de imagens com IA?
+Os geradores de imagem são treinados com enormes volumes de pares de imagem e texto. Com isso, o modelo aprende a relação entre palavras e elementos visuais. Quando você escreve um pedido (o prompt), ele produz uma imagem nova que tenta corresponder à descrição.
 
-Os geradores de imagem modernos são treinados em bilhões de pares de imagem + texto coletados da internet. O modelo aprende as associações entre palavras e elementos visuais. Quando você escreve um prompt, o modelo "imagina" a imagem mais provável com base nesses padrões aprendidos.
+Duas mudanças recentes importam para quem está começando:
 
-A tecnologia dominante hoje chama-se **diffusion model** (modelo de difusão): começa com "ruído" aleatório e vai refinando progressivamente até chegar na imagem final. É por isso que às vezes as imagens demoram alguns segundos para "aparecer" de forma progressiva.
+- **Geração dentro do chat.** ChatGPT e Gemini geram e editam imagens na própria conversa. Você pede ajustes em português ("deixe o fundo mais claro", "tire a pessoa da direita") sem aprender sintaxe.
+- **Edição tão importante quanto criação.** Os modelos atuais editam fotos enviadas por você, o que é mais útil para negócios do que criar tudo do zero.
 
-## As principais ferramentas em 2025
+## As principais ferramentas hoje
+
+### ChatGPT Images (OpenAI)
+
+O gerador de imagens do ChatGPT se chama **ChatGPT Images**. A versão 2.5 foi lançada em 8 de setembro de 2026 para usuários de todos os planos, segundo o [anúncio da OpenAI](https://openai.com/index/introducing-chatgpt-images-2-5/). O antigo DALL·E não é mais usado: o GPT oficial do DALL·E foi aposentado em agosto de 2026. Explicamos essa mudança em [criar imagens no ChatGPT (antigo DALL·E)](/artigos/dall-e-guia-completo).
+
+- **Bom para:** quem já usa o ChatGPT, edição por conversa, ajustes finos numa foto enviada.
+- **Acesso:** todos os planos, inclusive o gratuito ("limited and slower image generation" no Free). O recurso "Images with thinking" é do Plus, Pro e Business.
+- **Proporção:** peça no prompt o formato desejado (por exemplo, "vertical 9:16" ou "quadrado 1:1").
+
+### Nano Banana no app Gemini (Google)
+
+O app Gemini usa a família **Nano Banana**: Nano Banana 2 Lite, Nano Banana 2 (para todos os usuários logados) e Nano Banana Pro (exige um plano Google AI). Segundo a Central de Ajuda do Gemini, o download sai em 2K com plano Google AI ou em 1K sem plano. É preciso ter 13 anos ou mais para gerar e 18 ou mais para editar imagens. O Imagen não é mais o gerador do app.
+
+- **Bom para:** quem vive no ecossistema Google, edição de fotos por conversa em português.
+- **Acesso:** app e site do Gemini.
 
 ### Midjourney
 
-**O que é**: O gerador de imagens mais popular e amplamente considerado o melhor em qualidade geral.
+O Midjourney é focado em estética e direção de arte. A versão padrão é a **V8.2**, desde 24 de julho de 2026. Funciona no site midjourney.com (o Discord continua como opção) e também gera vídeos curtos. O guia completo está em [Midjourney: guia completo](/artigos/midjourney-guia-completo).
 
-**Melhores para**: Arte conceitual, ilustração, fotorrealismo, imagens para marketing.
-
-**Como acessar**: midjourney.com (interface web) ou servidor Discord oficial.
-
-**Preço**: A partir de $10/mês. Sem versão gratuita permanente.
-
-**Qualidade**: ⭐⭐⭐⭐⭐
-
-### DALL-E 3 (via ChatGPT)
-
-**O que é**: Gerador de imagens da OpenAI, integrado ao ChatGPT Plus.
-
-**Melhores para**: Imagens com texto incorporado, ilustrações conceituais, uso rápido sem configuração.
-
-**Como acessar**: ChatGPT Plus ($20/mês) ou API da OpenAI.
-
-**Preço**: Incluído no ChatGPT Plus; gratuito com limite no Bing Image Creator.
-
-**Qualidade**: ⭐⭐⭐⭐
-
-### Stable Diffusion
-
-**O que é**: Modelo de código aberto que roda localmente ou via serviços online.
-
-**Melhores para**: Usuários técnicos que querem controle total, uso comercial sem restrições, experimentação.
-
-**Como acessar**: Localmente (requer GPU), ou via plataformas como DreamStudio, Automatic1111.
-
-**Preço**: Gratuito (local) ou modelo de créditos online.
-
-**Qualidade**: ⭐⭐⭐ (varia muito com configurações)
+- **Bom para:** arte conceitual, moodboards, imagens com forte identidade visual.
+- **Acesso:** só planos pagos, a partir de US$ 10/mês (Basic), em setembro de 2026. A página de planos não menciona plano gratuito.
 
 ### Adobe Firefly
 
-**O que é**: Gerador de imagens da Adobe, treinado em imagens licenciadas.
+O modelo principal da Adobe é o **Firefly Image 5**. O app Firefly também dá acesso a modelos de parceiros, como Nano Banana 2, GPT Image 1.5 e FLUX.2 [pro]. A Adobe afirma que os modelos Firefly são "seguros para uso comercial" por serem treinados com conteúdo licenciado e de domínio público. Essa afirmação vale para os modelos da própria Adobe, não para os de parceiros.
 
-**Melhores para**: Profissionais criativos, uso comercial seguro, integração com Photoshop.
-
-**Como acessar**: adobe.com/firefly ou Photoshop.
-
-**Preço**: Incluído em planos Creative Cloud ou créditos avulsos.
-
-**Qualidade**: ⭐⭐⭐⭐
-
-### Leonardo.AI
-
-**O que é**: Plataforma com múltiplos modelos e foco em geração para jogos e concept art.
-
-**Melhores para**: Game art, concept art, customização avançada.
-
-**Como acessar**: leonardo.ai
-
-**Preço**: Gratuito (150 créditos/dia) ou planos pagos.
-
-**Qualidade**: ⭐⭐⭐⭐
+- **Bom para:** quem já usa Photoshop ou Creative Cloud e precisa de mais segurança jurídica.
+- **Acesso:** nível gratuito com limites diários. Os planos pagos no Brasil começam no Firefly Standard (R$ 47/mês em setembro de 2026).
 
 ### Ideogram
 
-**O que é**: Especialista em geração de texto dentro de imagens.
+O Ideogram ficou conhecido por escrever texto legível dentro das imagens. O modelo mais recente, **Ideogram 4.0** (junho de 2026), foi publicado com pesos abertos. Veja como usar em [Ideogram: texto dentro de imagens](/artigos/ideogram-texto-em-imagens).
 
-**Melhores para**: Logos, cartazes, imagens com tipografia, banners.
+- **Bom para:** cartazes, capas, posts com frase, rascunhos de logotipo.
+- **Acesso:** ideogram.ai, com plano Free (créditos semanais para contas elegíveis) e planos Plus, Pro e Team.
 
-**Como acessar**: ideogram.ai
+### FLUX (Black Forest Labs)
 
-**Preço**: Gratuito (25 gerações/dia) ou planos pagos.
+A família FLUX tem hoje o **FLUX.2** (imagem e edição, com versões klein, pro, max, flex e dev) e o **FLUX 3**, anunciado em julho de 2026 com foco inicial em vídeo com áudio. Dá para usar no Playground da BFL, pela API ou baixando pesos abertos. Os detalhes e as licenças estão em [FLUX: modelos e como usar](/artigos/flux-ai-guia).
 
-**Qualidade**: ⭐⭐⭐⭐ (para imagens com texto)
+### Stable Diffusion (Stability AI)
 
-## Como escrever prompts para geração de imagens
+O modelo de imagem mais recente da Stability AI é o **Stable Diffusion 3.5** (Large, Large Turbo e Medium), de outubro de 2024. Pode rodar no seu computador ou ser usado pela web no Stable Assistant. A licença é gratuita, inclusive para uso comercial, para quem fatura menos de US$ 1 milhão por ano. Veja o [guia do Stable Diffusion para iniciantes](/artigos/stable-diffusion-guia-iniciantes).
 
-O prompt é a parte mais importante do processo. Aqui está uma estrutura que funciona bem:
+### Canva
 
-### A fórmula básica
+O Canva tem geração de imagem entre as ferramentas de IA. No plano Grátis, são até 20 usos de IA por mês. É prático quando a imagem vai direto para uma arte já montada no Canva.
 
-**[Assunto] + [Estilo] + [Lighting] + [Câmera/Composição] + [Qualidade]**
+## Qual ferramenta faz mais sentido para cada situação?
 
-Exemplos:
+| Situação | Por onde começar | Por quê |
+|---|---|---|
+| Nunca gerou uma imagem | ChatGPT Images ou Gemini | Conversa em português, sem instalar nada, com nível gratuito |
+| Editar a foto real de um produto | ChatGPT Images ou Gemini (edição) | Você parte da foto verdadeira e pede só o que quer mudar |
+| Arte com estética marcante | Midjourney | Foco em direção de arte e estilo; só planos pagos |
+| Imagem com frase ou título | Ideogram (e revisão manual) | Especializado em texto na imagem |
+| Já trabalha no Photoshop | Adobe Firefly | Integração com as ferramentas da Adobe e modelos Firefly treinados com conteúdo licenciado |
+| Quer rodar no próprio computador | Stable Diffusion 3.5 ou FLUX.2 [klein] 4B | Pesos abertos; o klein 4B tem licença Apache 2.0 |
+| Arte para post que já está no Canva | Canva | Gera e diagrama no mesmo lugar |
+| Orçamento zero | ChatGPT, Gemini, Ideogram Free, Canva Grátis | Todos têm uso gratuito com limites |
 
-❌ Prompt fraco:
-> "um gato"
+Quando **não** usar IA: foto de produto que vai para anúncio como se fosse real, retrato de pessoa real sem autorização e qualquer imagem que possa enganar o cliente sobre o que ele vai receber.
 
-✅ Prompt eficaz:
-> "A fluffy orange cat sitting on a windowsill, golden hour lighting, shallow depth of field, photorealistic, 8k, detailed fur texture"
+## Passo a passo: sua primeira imagem no ChatGPT ou no Gemini
 
-### Elementos importantes para incluir
+1. Abra o ChatGPT ou o app Gemini e entre na sua conta.
+2. Escreva o pedido começando com "Crie uma imagem de..." e descreva assunto, estilo, ambiente, luz e formato (veja a fórmula abaixo). Para editar uma foto sua, anexe a imagem junto com o pedido.
+3. Aguarde a geração. Pedidos complexos podem levar mais tempo.
+4. Peça ajustes na mesma conversa, um de cada vez: "mude a proporção para 9:16", "deixe a luz mais quente", "remova o texto do fundo".
+5. Para mudar só uma parte, descreva com precisão o que deve mudar e o que deve ficar igual ("troque só o fundo; mantenha o produto, as cores e o enquadramento").
+6. Baixe o resultado e guarde o prompt que funcionou para reaproveitar depois.
 
-**Estilo artístico:**
-- Photorealistic, hyperrealistic
-- Oil painting, watercolor, digital art
-- Anime, manga, cartoon
-- Cinematic, film photography
-- Illustration, concept art
+## Como escrever um bom prompt de imagem
 
-**Iluminação:**
-- Golden hour, soft natural light
-- Studio lighting, dramatic shadows
-- Neon lights, cyberpunk lighting
-- Backlit, silhouette
+Uma estrutura que funciona na maioria das ferramentas:
 
-**Composição:**
-- Close-up, portrait, full body shot
-- Wide angle, aerial view, bird's eye view
-- Rule of thirds, centered composition
+```
+[Assunto] + [Estilo] + [Ambiente] + [Iluminação] + [Enquadramento] + [Formato/uso]
+```
 
-**Qualidade:**
-- 8k, ultra-detailed, high quality
-- Sharp focus, intricate details
-- Professional photography, award-winning
+Antes (vago):
 
-### Palavras que potencializam qualquer prompt
+```
+um gato
+```
 
-Para o Midjourney e DALL-E, adicionar esses termos tende a melhorar os resultados:
-- `--ar 16:9` (proporção para o Midjourney)
-- `cinematic`, `atmospheric`
-- `masterpiece`, `best quality`
-- `detailed`, `intricate`
-- `realistic lighting`
+Depois (específico):
 
-## Guia rápido por ferramenta
+```
+Um gato laranja de pelo longo sentado no parapeito de uma janela, fotografia realista, fim de tarde com luz dourada entrando pela janela, fundo desfocado, enquadramento de meio corpo, formato vertical 4:5 para Instagram
+```
 
-### Começando com o DALL-E 3 (mais fácil)
+Elementos que mais fazem diferença:
 
-1. Acesse [chat.openai.com](https://chat.openai.com) (precisa do Plus)
-2. Na conversa, simplesmente peça: "Crie uma imagem de [descrição]"
-3. O DALL-E 3 aceita pedidos em linguagem natural — você não precisa de prompt técnico
-4. Peça refinamentos: "Torne mais dramático", "Adicione mais detalhes", "Mude para tom quente"
+- **Estilo:** fotografia realista, aquarela, ilustração digital, 3D, desenho vetorial, pintura a óleo.
+- **Iluminação:** luz natural de janela, luz de estúdio suave, contraluz, neon, dia nublado.
+- **Enquadramento:** close, plano médio, corpo inteiro, vista de cima, grande angular.
+- **Formato:** 1:1 para feed, 4:5 para retrato no Instagram, 9:16 para Stories e Reels, 16:9 para YouTube e banners.
 
-**Dica**: O DALL-E 3 é excepcionalmente bom em adicionar texto em imagens — algo que outros modelos geralmente falham.
+Nos modelos atuais, que entendem linguagem natural, descrever a cena com clareza costuma render mais do que empilhar termos como "8k" ou "masterpiece". Para aprofundar, veja [como escrever prompts para imagens](/artigos/como-escrever-prompts-para-imagens).
 
-### Começando com o Midjourney
+## Exemplos de prompts
 
-1. Acesse [midjourney.com](https://midjourney.com) e crie uma conta
-2. Digite seu prompt na caixa de pesquisa ou use o Discord
-3. Escreva `/imagine [seu prompt]` no Discord
-4. Aguarde 4 variações geradas
-5. Use U1-U4 para "upscale" (ampliar) ou V1-V4 para variações
+Os exemplos abaixo são modelos para adaptar. Troque os detalhes pelo seu caso.
 
-**Parâmetros úteis:**
-- `--ar 16:9` — proporção widescreen
-- `--q 2` — maior qualidade (mais lento)
-- `--stylize 250` — mais estilizado (padrão: 100)
-- `--no [palavra]` — excluir elemento
+**Ilustração para artigo de blog:**
 
-### Começando com o Leonardo.AI
+```
+Ilustração digital de uma pessoa trabalhando em um notebook com gráficos flutuando ao redor, tons de azul e laranja, estilo flat moderno, espaço vazio à esquerda para título, formato 16:9
+```
 
-1. Acesse [leonardo.ai](https://leonardo.ai)
-2. Escolha um modelo (Stable Diffusion XL, Leonardo Diffusion, etc.)
-3. Digite seu prompt e configure:
-   - Número de imagens: 2-4 para começar
-   - Proporção: escolha conforme necessidade
-   - Guidance Scale: 7-12 (quanto o modelo segue o prompt)
-4. Clique em "Generate"
+**Post com frase (melhor no Ideogram ou no ChatGPT):**
 
-## Exemplos de prompts testados
+```
+Arte quadrada para Instagram com a frase exata "Foco no processo" em tipografia sem serifa grande e centralizada, fundo em tons pastel, estilo minimalista. Não escreva nenhum outro texto.
+```
 
-### Foto de produto para e-commerce
-> "A luxury perfume bottle, elegant design, placed on a marble surface, studio lighting with soft shadows, white background, commercial product photography, 8k, ultra-detailed"
+**Cena de negócios:**
 
-### Ilustração para artigo de blog
-> "A futuristic workspace with holographic AI interface, person working at floating screens, cyberpunk aesthetic, soft blue tones, digital illustration style, detailed, 16:9"
+```
+Fotografia realista de uma pequena equipe reunida em volta de uma mesa em um escritório com janelas grandes, luz natural, clima colaborativo, enquadramento de plano médio, formato 3:2
+```
 
-### Logo/mascote
-(Use o Ideogram para isso)
-> "A friendly robot mascot holding a magnifying glass, modern flat design logo, blue and white colors, simple, clean, professional, vector style"
+**Arte conceitual:**
 
-### Cena de negócios
-> "Business team in a modern office having a productive meeting, diverse group, natural lighting through large windows, photorealistic, professional photography style"
+```
+Biblioteca antiga com livros flutuando no ar, luz de velas, atmosfera de fantasia, arquitetura detalhada, composição cinematográfica, formato 16:9
+```
 
-### Arte conceitual
-> "Ancient library with magical floating books, warm candlelight, ethereal atmosphere, fantasy art style, detailed architecture, intricate details, cinematic composition"
+## Fluxo sugerido para e-commerce: edite a foto real
 
-## Uso comercial: o que você pode e não pode fazer
+Para loja virtual, Mercado Livre ou Amazon, o caminho mais seguro é partir de uma foto verdadeira do produto e usar a IA só para trocar fundo, ambiente ou iluminação. Criar o produto do zero pode gerar detalhes que ele não tem.
 
-Esta é uma área importante e em evolução. O resumo prático:
+> Demonstração editorial — Produto: strap de musculação. Características fornecidas: algodão; 50 cm; uso para puxadas; auxílio de pegada.
 
-| Ferramenta | Uso comercial (gratuito) | Uso comercial (pago) |
-|------------|--------------------------|----------------------|
-| Midjourney | Não | Sim (planos Pro e acima) |
-| DALL-E 3 | Sim | Sim |
-| Stable Diffusion | Sim (código aberto) | Sim |
-| Adobe Firefly | Sim (créditos incluídos) | Sim |
-| Leonardo.AI | Sim (com atribuição) | Sim |
-| Ideogram | Sim | Sim |
+**Informações originais:** uma foto do strap sobre a mesa, tirada com o celular, e as quatro características acima.
 
-Sempre verifique os termos de uso atualizados da ferramenta que escolher, pois essas políticas mudam.
+**Exemplo de prompt (enviando a foto junto):**
 
-## Dicas para melhores resultados
+```
+Use a foto enviada do strap de musculação. Mantenha o produto exatamente como está: mesma cor, mesmo formato, mesma costura, mesmo comprimento aparente e sem adicionar logotipo, etiqueta ou texto. Troque apenas o fundo por uma bancada de academia desfocada, com luz natural suave. Não acrescente acessórios, medidas, selos ou qualquer elemento que não esteja na foto original. Formato 1:1.
+```
 
-1. **Comece simples e refine**: Não tente o prompt perfeito de primeira. Gere, analise, ajuste.
-2. **Use referências de estilo**: "no estilo de Edward Hopper", "estilo Bauhaus", "fotografado por Annie Leibovitz"
-3. **Especifique o que não quer**: No Midjourney use `--no deformed hands, blurry, text`
-4. **Salve os prompts que funcionam**: Crie uma biblioteca pessoal de prompts eficazes
-5. **Experimente proporções**: 1:1 para social, 16:9 para desktop/YouTube, 9:16 para Stories
+**Resultado esperado (estrutura):**
 
-## Conclusão
+- Mesma peça, sem alteração de cor, textura ou costura.
+- Fundo novo de academia, desfocado.
+- Nenhum texto, selo ou medida inserido na imagem.
 
-A geração de imagens com IA democratizou o acesso a conteúdo visual de qualidade. Não é mais necessário ser designer ou ter budget para contratar um fotógrafo para cada necessidade.
+**Checklist antes de publicar:**
 
-O melhor caminho para começar: experimente o DALL-E 3 via ChatGPT (se já tem o Plus) ou o Leonardo.AI (gratuito com créditos diários). Quando estiver confortável com prompts, experimente o Midjourney para qualidade máxima.
+- Compare lado a lado com a foto original: a IA mudou cor, costura ou formato? Se mudou, descarte.
+- A imagem principal do anúncio segue as regras de fotos do marketplace? Confira a política de imagens do canal antes de subir.
+- Falta informação? Largura e tipo de costura não foram fornecidos, então não devem aparecer em nenhuma imagem ou legenda. Peça esses dados ao fornecedor antes de usá-los no anúncio.
 
-A curva de aprendizado é pequena — em uma tarde de experimentação, você já consegue criar imagens que surpreenderão quem não sabe que foram feitas por IA.
+## Uso comercial: o que cada ferramenta diz
+
+| Ferramenta | O que dizem os termos (setembro de 2026) |
+|---|---|
+| ChatGPT Images | Pelos termos da OpenAI, o usuário é dono do resultado ("you own the Output"), e resultados parecidos podem ser gerados para outras pessoas |
+| Midjourney | O usuário é dono das imagens; empresas com receita acima de US$ 1 milhão por ano precisam do plano Pro ou Mega |
+| Adobe Firefly | A Adobe diz que os modelos Firefly são seguros para uso comercial; modelos de parceiros não entram nessa garantia |
+| Ideogram (app) | A empresa diz que não reivindica a propriedade das imagens e que elas podem ser usadas para qualquer fim, inclusive comercial |
+| Ideogram 4.0 (pesos abertos) | Licença não comercial; uso comercial self-hosted exige licença paga |
+| FLUX | Varia por modelo: FLUX.2 [klein] 4B é Apache 2.0; FLUX.2 [dev] e klein 9B são não comerciais |
+| Stable Diffusion 3.5 | Community License: grátis, inclusive comercial, abaixo de US$ 1 milhão de receita anual |
+
+Ser "dono" pelos termos da ferramenta não é o mesmo que ter direito autoral garantido por lei. No Brasil, a Lei 9.610/98 define o autor como pessoa física, e não há regra específica para imagens feitas por IA.
+
+## Erros comuns de iniciantes
+
+1. **Pedir tudo de uma vez.** Gere uma versão, veja o que falta e ajuste uma coisa por vez.
+2. **Confiar no texto gerado.** Mesmo ferramentas boas em texto erram acentos e letras. Revise palavra por palavra.
+3. **Usar imagem de pessoa real sem autorização.** Além das políticas das ferramentas, há risco jurídico e de reputação.
+4. **Esquecer o formato.** Defina a proporção antes: refazer depois muda a composição.
+5. **Não guardar o que funcionou.** Monte uma lista com seus melhores prompts por tipo de peça.
+6. **Esquecer que preços e limites mudam.** Consulte a página oficial da ferramenta antes de assinar.

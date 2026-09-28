@@ -1,91 +1,199 @@
 ---
-title: "IA para vídeos de marketing e anúncios: como criar campanhas rápido"
-description: "Descubra como usar inteligência artificial para criar vídeos de marketing e anúncios rapidamente, com roteiro, edição e variações prontas para testar."
+title: "IA para vídeos de marketing e anúncios: fluxo, prompts e cuidados legais"
+description: "Como usar IA em vídeos de anúncio: briefing, roteiros e variações para teste, cenas, voz e edição, com cuidados contra promessa enganosa e uso de imagem e voz."
 slug: "ia-video-marketing-anuncios"
 category: "Vídeos"
-tags: ["marketing", "anúncios em vídeo", "inteligência artificial", "publicidade digital"]
+tags: ["marketing", "anúncios em vídeo", "inteligência artificial", "publicidade digital", "e-commerce", "direito de imagem"]
 publishedAt: "2026-07-16"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["ia para vídeos de marketing", "ia para anúncios em vídeo", "criar anúncio com ia", "vídeo publicitário com ia"]
+keywords: ["ia para vídeos de marketing", "ia para anúncios em vídeo", "criar anúncio com ia", "vídeo publicitário com ia", "variações de anúncio com ia", "propaganda enganosa ia"]
+faq:
+  - question: "Posso usar IA para gerar a cena do meu produto no anúncio?"
+    answer: "Com muito cuidado. Cenas geradas funcionam para fundo, clima e ilustração, mas o produto deve aparecer como ele é. Se a cena gerada mudar cor, tamanho, acabamento ou resultado, o anúncio pode induzir o consumidor a erro, o que o Código de Defesa do Consumidor proíbe (art. 37). O caminho seguro é filmar ou fotografar o produto real e usar IA no roteiro, na edição e nas variações."
+  - question: "Posso clonar a voz de um famoso ou de um locutor para o meu anúncio?"
+    answer: "Não sem autorização. O Código Civil permite que a pessoa proíba o uso da própria imagem e da própria palavra para fins comerciais, com direito a indenização. As ferramentas também restringem: no ElevenLabs, a clonagem instantânea exige confirmar que você tem direito e consentimento para clonar a voz, e a clonagem profissional só aceita a própria voz do usuário, mesmo com consentimento de terceiros."
+  - question: "Quantas variações de anúncio devo criar com IA?"
+    answer: "Não existe número certo. Uma regra prática é variar um elemento por vez (gancho, oferta ou chamada) para saber o que causou a diferença de resultado. Três a cinco versões de gancho sobre o mesmo corpo de vídeo já permitem um teste inicial, desde que todas digam só o que é verdade sobre o produto."
+  - question: "O Google Ads aceita anúncios feitos com IA?"
+    answer: "A política de deturpação do Google Ads não proíbe o uso de IA em si, mas proíbe alegações imprecisas ou que atraiam o usuário com um resultado improvável, omissão de informações relevantes e manipulação de mídia para enganar. Isso vale para qualquer anúncio, feito ou não com IA."
+sources:
+  - name: "Planalto — Código de Defesa do Consumidor (Lei 8.078/1990)"
+    url: "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+  - name: "Planalto — Código Civil (Lei 10.406/2002)"
+    url: "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+  - name: "Google Ads — Política de deturpação (Misrepresentation)"
+    url: "https://support.google.com/adspolicy/answer/6020955?hl=en"
+  - name: "ElevenLabs — Instant Voice Cloning"
+    url: "https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning"
+  - name: "ElevenLabs — Política de PVC (voz de terceiros)"
+    url: "https://elevenlabs.io/docs/help-center/product/voices/voice-cloning/can-i-create-a-professional-voice-clone-of-someone-elses-voice"
+  - name: "Google DeepMind — Veo"
+    url: "https://deepmind.google/models/veo/"
+related:
+  - "ia-para-marketing-digital"
+  - "ia-para-ecommerce-vendas"
+  - "avatares-ia-videos-apresentador"
+  - "ia-para-roteiro-de-video"
 ---
 
-Produzir vídeos de marketing e anúncios costumava exigir orçamento alto, equipe de produção e semanas de planejamento. Com a inteligência artificial, pequenas e médias empresas agora conseguem criar campanhas em vídeo de forma muito mais rápida e acessível, testando várias versões de um anúncio antes mesmo de gastar com produção tradicional.
+A inteligência artificial reduz o custo de produzir um vídeo de anúncio e, principalmente, o custo de produzir várias versões dele para testar. É nisso que ela mais ajuda uma pequena empresa: em vez de apostar todo o orçamento em um único vídeo, você grava uma vez e testa ganchos, ofertas e formatos diferentes. O risco cresce na mesma proporção: a IA também gera promessas que o produto não cumpre, cenas que não correspondem ao item vendido e vozes ou rostos de pessoas que nunca autorizaram. Este guia mostra um fluxo completo, com prompts prontos e um exemplo de e-commerce, e os cuidados legais que valem no Brasil.
 
-## Por que usar IA em vídeos de marketing e anúncios
+## Onde a IA entra no anúncio em vídeo
 
-A inteligência artificial ajuda em praticamente todas as etapas de produção de um vídeo publicitário, incluindo:
+| Etapa | O que a IA faz bem | O que continua com você |
+|---|---|---|
+| Briefing e oferta | Organizar informações, sugerir ângulos de comunicação | Definir o que é verdade sobre o produto e a oferta |
+| Roteiro | Escrever ganchos, corpos e chamadas em várias versões | Cortar exageros e promessas sem prova |
+| Imagem | Gerar fundos, aberturas e ilustrações; recortar e reenquadrar | Mostrar o produto real, como ele é |
+| Voz | Narrar com voz sintética de biblioteca ou com a sua própria voz clonada | Garantir direito e consentimento sobre qualquer voz |
+| Edição | Legendas, reenquadramento para cada formato, cortes | Ritmo, clareza da oferta nos primeiros segundos |
+| Variações | Multiplicar ganchos, chamadas e formatos | Escolher o que testar e ler os resultados |
 
-- Geração de roteiro persuasivo a partir de um briefing simples
-- Criação de narração em voz sintética sem precisar contratar um locutor
-- Geração de cenas visuais ou animações a partir de texto ou imagens do produto
-- Edição automática com cortes dinâmicos e legendas
-- Criação de múltiplas variações do mesmo anúncio para testes de campanha
+## Etapa 1: briefing com provas
 
-## Etapas para criar um vídeo de marketing com IA
+O briefing de um anúncio precisa separar o que você pode afirmar do que você gostaria de afirmar. O Código de Defesa do Consumidor exige que quem anuncia mantenha os dados fáticos, técnicos e científicos que sustentam a mensagem (art. 36, parágrafo único). Na prática, cada característica do anúncio precisa de uma origem: ficha do fornecedor, laudo, foto, nota fiscal, política da loja.
 
-### 1. Defina o objetivo e o público do anúncio
+```
+Vou criar anúncios em vídeo. Guarde este briefing para as próximas respostas.
 
-Antes de usar qualquer ferramenta, é fundamental ter clareza sobre o que o vídeo precisa alcançar: gerar reconhecimento de marca, apresentar um produto, gerar vendas diretas ou apoiar uma promoção específica. Esse objetivo guia todas as decisões seguintes.
+Produto: [nome]
+Características comprovadas (com a origem de cada uma): [ex.: "algodão — ficha do fornecedor"]
+Oferta: [preço, frete, prazo, condição — exatamente como estará na página]
+Público: [quem compra, principal dúvida ou objeção]
+Plataforma e formato: [ex.: Reels e Stories na vertical, YouTube na horizontal]
+Duração: [ex.: 15 e 30 segundos]
+Proibido afirmar: [ex.: resultados de saúde, desempenho, comparações com concorrentes, "o melhor", "garantido"]
+Chamada para ação: [uma só]
 
-### 2. Gere o roteiro com apoio da IA
+Antes de continuar, liste qualquer informação do briefing que pareça promessa sem prova.
+```
 
-Use uma ferramenta de IA para criar um roteiro persuasivo, informando o produto, o público-alvo, o tom desejado e a duração aproximada do vídeo. Peça diferentes versões do gancho inicial, já que os primeiros segundos são decisivos para prender a atenção em anúncios.
+## Etapa 2: roteiro e variações para teste
 
-### 3. Escolha entre gravação real ou geração visual por IA
+A lógica de teste é variar um elemento por vez. Se você troca gancho, oferta e música ao mesmo tempo, não sabe o que fez a diferença.
 
-Dependendo do orçamento e do tipo de produto, você pode:
+```
+Com base no briefing, crie um anúncio de [duração] segundos em três partes:
+- GANCHO (até 3 segundos)
+- CORPO (demonstração do produto real)
+- CHAMADA (a do briefing)
 
-- Gravar cenas reais e usar IA apenas para edição, legendas e ajustes
-- Gerar cenas totalmente por IA a partir de descrições em texto
-- Combinar imagens reais do produto com cenas geradas ou animadas por IA
+Escreva 1 corpo e 1 chamada fixos e 5 ganchos diferentes, em estilos distintos (pergunta, problema do dia a dia, demonstração imediata, objeção comum, contraste antes e depois SEM prometer resultado).
+Para cada gancho, indique o que aparece na tela.
+Regras:
+- use somente as características comprovadas do briefing;
+- não use superlativos sem prova ("o melhor", "o mais resistente");
+- não prometa resultado de saúde, desempenho, ganho financeiro ou estético;
+- se precisar de uma informação que não está no briefing, escreva [VERIFICAR].
+```
 
-### 4. Adicione narração com voz sintética
+Depois, peça uma revisão crítica:
 
-Ferramentas de geração de voz permitem criar uma narração profissional a partir do roteiro escrito, testando diferentes tons de voz até encontrar o que melhor combina com a mensagem da marca.
+```
+Revise os 5 ganchos e o corpo como um revisor de publicidade.
+Aponte qualquer frase que possa:
+1. ser entendida como promessa de resultado;
+2. sugerir característica que não está no briefing;
+3. omitir condição importante da oferta (prazo, frete, estoque, requisito);
+4. parecer depoimento de cliente sem ser.
+Sugira uma versão segura para cada frase apontada.
+```
 
-### 5. Edite e finalize com apoio de IA
+Para aprofundar a estrutura de roteiro, veja o guia de [IA para roteiro de vídeo](/artigos/ia-para-roteiro-de-video).
 
-Use recursos automáticos de corte, legendas e ajuste de ritmo para finalizar o vídeo rapidamente, garantindo que a mensagem principal apareça nos primeiros segundos, algo essencial em anúncios exibidos em redes sociais.
+## Etapa 3: imagem real, imagem gerada ou as duas
 
-### 6. Gere variações para testes
+- **Gravação real (recomendado para produto físico):** o produto aparece como é. A IA entra no recorte, na remoção de fundo, no reenquadramento e nas legendas.
+- **Cenas geradas para contexto:** modelos como o [Veo 3.1](https://deepmind.google/models/veo/), do Google, geram vídeo com áudio nativo a partir de texto; servem para abertura, clima e ilustração de conceito.
+- **Imagens do produto tratadas com IA:** fundo trocado, cenário ambientado. O guia de [fotos de produto com IA](/artigos/ia-imagens-para-ecommerce) mostra como fazer sem alterar o item.
 
-Um dos maiores benefícios da IA em marketing é a facilidade de criar múltiplas versões do mesmo anúncio, variando gancho inicial, chamada para ação ou estilo visual, permitindo testar qual delas performa melhor antes de investir mais orçamento em veiculação.
+A regra que protege você e o cliente: a IA pode mudar o que está em volta do produto, nunca o produto. Cor, tamanho, acabamento, quantidade na embalagem e resultado de uso precisam ser os reais.
 
-## Boas práticas para anúncios em vídeo gerados com IA
+## Etapa 4: voz e rosto, só com autorização
 
-- Mantenha a mensagem principal clara nos primeiros segundos do vídeo
-- Use uma chamada para ação direta e fácil de entender
-- Adapte o formato do vídeo para cada plataforma de anúncio, como vertical para redes sociais e horizontal para outros canais
-- Teste diferentes vozes e estilos visuais antes de escalar a campanha
-- Sempre revise o conteúdo gerado por IA para garantir que está alinhado à identidade da marca
+Voz sintética de biblioteca e a sua própria voz clonada são os caminhos seguros. O problema começa quando o anúncio usa a voz ou o rosto de outra pessoa.
 
-## Cuidados ao usar IA em campanhas publicitárias
+- **O que diz a lei:** o [art. 20 do Código Civil](https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm) permite que a pessoa proíba a transmissão da própria palavra ou o uso da própria imagem quando destinados a fins comerciais, sem prejuízo de indenização, salvo se tiver autorizado.
+- **O que dizem as ferramentas:** no ElevenLabs, a clonagem instantânea de voz exige confirmar que você tem direito e consentimento para clonar aquela voz, e a clonagem profissional só aceita a própria voz do usuário, mesmo que a outra pessoa consinta. Todo áudio gerado pode ser rastreado até a conta responsável. Detalhes no guia do [ElevenLabs](/artigos/elevenlabs-voz-ia).
+- **Avatares:** apresentadores virtuais baseados em pessoas reais exigem autorização por escrito, com escopo (quais anúncios, por quanto tempo, em quais canais). O guia de [avatares de IA](/artigos/avatares-ia-videos-apresentador) tem um checklist de autorização.
 
-- Verifique se as imagens ou cenas geradas representam corretamente o produto real, evitando promessas visuais que não condizem com a realidade
-- Revise informações sobre preços, condições e características do produto mencionadas no roteiro
-- Confira as políticas das plataformas de anúncio sobre uso de conteúdo gerado por inteligência artificial
-- Evite depender cem por cento de conteúdo gerado por IA em campanhas que exigem forte conexão emocional com a marca, combinando com elementos reais quando possível
+Nunca use voz ou rosto de famosos, influenciadores ou clientes para simular recomendação. Além do problema de imagem, isso sugere um apoio que não existe, o que a [política do Google Ads](https://support.google.com/adspolicy/answer/6020955?hl=en) trata como deturpação. Depoimento de cliente só com o cliente real e autorização dele.
 
-## Como medir o desempenho de vídeos gerados com IA
+## Etapa 5: edição e formatos
 
-Depois de veicular os anúncios, acompanhe métricas como:
+Com o corpo gravado e os ganchos definidos, a edição com IA multiplica as versões:
 
-- Taxa de retenção nos primeiros segundos do vídeo
-- Taxa de cliques na chamada para ação
-- Custo por resultado dentro da plataforma de anúncios utilizada
-- Comparação de desempenho entre as diferentes variações testadas
+1. Monte o corpo uma vez.
+2. Grave ou gere cada gancho separadamente e encaixe no início.
+3. Gere legendas automáticas e revise nomes, preços e condições (IA erra nome de produto e número com frequência).
+4. Exporte na vertical para Reels, Stories, TikTok e Shorts e na horizontal quando o anúncio for para o YouTube.
+5. Coloque a oferta e o nome do produto legíveis nos primeiros segundos, porque parte do público assiste sem som.
 
-Esses dados ajudam a entender quais roteiros, vozes e estilos visuais gerados por IA realmente convertem melhor para o seu público específico.
+As ferramentas de edição com IA para vídeo curto estão no guia de [IA para Shorts, Reels e TikTok](/artigos/ia-para-shorts-reels-tiktok).
 
-## Vantagens de escalar campanhas com IA
+## Exemplo prático: anúncio de 15 segundos para loja virtual
 
-- Redução significativa do tempo entre a ideia e o vídeo pronto para veiculação
-- Possibilidade de testar mais variações com o mesmo orçamento
-- Menor dependência de estúdios e equipes externas para vídeos simples
-- Facilidade para adaptar o mesmo anúncio para diferentes idiomas e mercados
+> Demonstração editorial — Produto: strap de musculação. Características fornecidas: algodão; 50 cm; uso para puxadas; auxílio de pegada.
 
-## Conclusão
+Cenário hipotético: uma loja que vende no próprio site, no Mercado Livre e na Amazon quer testar um anúncio vertical de 15 segundos no Instagram.
 
-A inteligência artificial tornou a produção de vídeos de marketing e anúncios muito mais acessível, permitindo que empresas de qualquer tamanho testem várias versões de campanha em uma fração do tempo e do custo tradicional. O segredo para bons resultados está em manter um objetivo claro, revisar cuidadosamente cada etapa gerada pela IA e usar os dados de desempenho para refinar continuamente as próximas campanhas em vídeo.
+**Corpo fixo (produto real):**
+
+```
+[close: strap na mão, sendo enrolado na barra]
+"Strap de algodão, 50 centímetros."
+[uma repetição de puxada com o strap]
+"Para auxiliar a pegada nas puxadas."
+CHAMADA: "Veja no link." [texto na tela: nome do produto]
+```
+
+**Cinco ganchos para teste (um por versão):**
+
+```
+1. "Sua mão cansa antes das costas na puxada?"
+2. "Nunca usou strap? Olha como ele funciona."
+3. [demonstração imediata, sem fala: strap sendo colocado]
+4. "Strap serve pra quê?"
+5. "Pegada escapando no fim da série?"
+```
+
+**O que foi barrado na revisão (e por quê):**
+
+| Frase sugerida pela IA | Problema | Versão segura |
+|---|---|---|
+| "Aumente sua carga em 30%" | Resultado numérico sem prova | Removida |
+| "Evita lesões" | Promessa de saúde sem prova | Removida |
+| "O strap mais resistente do Brasil" | Superlativo sem prova | "Strap de algodão, 50 cm" |
+| "Aprovado por atletas" | Sugere endosso que não existe | Removida |
+| "Últimas unidades!" | Urgência falsa se o estoque não for baixo | Só usar se for verdade na data |
+
+Antes de publicar, a loja ainda precisa pedir ao fornecedor a largura, a costura e se o produto é vendido em par ou unidade, e garantir que a página do produto e o anúncio no marketplace digam exatamente o mesmo.
+
+## Cuidados legais e de plataforma
+
+- **Propaganda enganosa:** o [Código de Defesa do Consumidor](https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm) proíbe publicidade enganosa ou abusiva (art. 37). É enganosa a informação inteira ou parcialmente falsa, ou mesmo por omissão, capaz de induzir o consumidor a erro sobre natureza, características, qualidade, quantidade, propriedades, origem ou preço. Também é enganosa por omissão a publicidade que deixa de informar dado essencial.
+- **Prova das alegações:** quem anuncia deve manter os dados que sustentam a mensagem (art. 36, parágrafo único). Guarde a origem de cada afirmação do vídeo.
+- **Políticas das plataformas:** o Google Ads proíbe alegações imprecisas ou que atraiam com resultado improvável, omissão de informações relevantes e mídia manipulada para enganar. Meta, TikTok e outras plataformas têm regras próprias de anúncio e de rotulagem de conteúdo gerado por IA; leia as da plataforma em que vai anunciar.
+- **Propaganda eleitoral:** conteúdo com IA em campanha política segue regras específicas do TSE, incluindo proibição de deepfakes e rotulagem obrigatória. Este guia trata só de anúncios comerciais.
+
+## Como ler os resultados sem se enganar
+
+- Compare versões que diferem em um único elemento.
+- Olhe a retenção nos primeiros segundos para avaliar o gancho e o custo por resultado para avaliar o anúncio como um todo.
+- Dê tempo e orçamento parecidos a todas as versões antes de concluir.
+- Guarde um registro simples: versão, gancho, período, resultado. É esse histórico que vai orientar os próximos briefings.
+
+Para a estratégia de marketing em torno dos vídeos, veja o guia de [IA para marketing digital](/artigos/ia-para-marketing-digital).
+
+## Checklist antes de veicular
+
+- Cada característica citada tem uma origem comprovada?
+- O produto aparece como ele é, sem alteração por IA?
+- A oferta (preço, frete, prazo, condição) está completa e igual à página de venda?
+- Não há promessa de resultado, superlativo sem prova ou urgência falsa?
+- Toda voz e todo rosto têm autorização por escrito?
+- Não há depoimento ou endosso simulado?
+- As legendas foram revisadas?
+- As regras de anúncio e de rotulagem de IA da plataforma foram conferidas?

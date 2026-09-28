@@ -88,7 +88,13 @@ export default async function ArticlePage({ params }: PageProps) {
   if (!article) notFound()
 
   const { frontmatter, content, readingTime } = article
-  const relatedArticles = getRelatedArticles(slug, frontmatter.category, frontmatter.tags)
+  const relatedArticles = getRelatedArticles(
+    slug,
+    frontmatter.category,
+    frontmatter.tags,
+    3,
+    frontmatter.related ?? []
+  )
   const headings = extractHeadings(content)
   const articleUrl = absoluteUrl(`/artigos/${slug}`)
   const publishedTime = new Date(frontmatter.publishedAt).toISOString()

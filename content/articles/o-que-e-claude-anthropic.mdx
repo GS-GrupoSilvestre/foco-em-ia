@@ -1,150 +1,171 @@
 ---
-title: "O que é o Claude da Anthropic? Tudo Sobre a IA que Concorre com o ChatGPT"
-description: "Conheça o Claude, o modelo de IA da Anthropic. Entenda seus diferenciais, como acessar gratuitamente, comparação com ChatGPT e os melhores casos de uso."
+title: "Claude: o que é e como usar a IA da Anthropic"
+description: "Entenda o que é o Claude, da Anthropic: modelos atuais, recursos, planos e um passo a passo para começar a usar a IA em português, do cadastro ao 1º prompt."
 slug: "o-que-e-claude-anthropic"
 category: "Claude"
-tags: ["claude", "anthropic", "claude ai", "modelos de ia", "alternativa chatgpt"]
+tags: ["claude", "anthropic", "claude ai", "modelos de ia", "alternativa ao chatgpt", "guia"]
 publishedAt: "2025-01-20"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["o que é claude", "claude anthropic", "claude ia", "claude vs chatgpt", "anthropic ia"]
+keywords: ["o que é claude", "claude ai", "como usar o claude", "claude anthropic", "claude em português", "claude é gratuito", "modelos do claude"]
 faq:
   - question: "O Claude é gratuito?"
-    answer: "Sim, o Claude tem uma versão gratuita em claude.ai. O Claude Pro (pago) dá acesso a mais mensagens por dia e aos modelos mais avançados como Claude Opus."
-  - question: "Claude é melhor que ChatGPT?"
-    answer: "Depende da tarefa. O Claude tende a ser melhor em análise de documentos longos, redação de texto com tom consistente e seguir instruções complexas. O ChatGPT tem vantagem em integrações de terceiros e geração de imagens. O melhor é testar os dois para seu caso específico."
+    answer: "Sim. O plano Free permite conversar na web, no desktop e no celular, fazer busca na web, criar arquivos, usar memória, conectores e Artifacts, com os modelos Sonnet e Haiku. Os planos pagos (Pro, Max, Team e Enterprise) dão mais uso e acrescentam recursos como Opus, Research e Claude Code. Preços e limites podem mudar; consulte a página oficial."
+  - question: "Qual é o modelo mais recente do Claude?"
+    answer: "Em setembro de 2026, os modelos atuais são Claude Opus 5.5 (lançado em 22/09/2026), Claude Sonnet 5, Claude Haiku 4.5 e Claude Fable 5.1. O Sonnet 5 é o padrão dos planos Free e Pro desde o lançamento, e o modelo pode ser trocado no seletor. Claude 3.x, Sonnet 4, Opus 4 e Opus 4.1 já foram aposentados."
+  - question: "O Claude funciona em português e no Brasil?"
+    answer: "Sim. O Brasil está entre os países atendidos pelo Claude desde agosto de 2024, e a interface pode ser configurada em português do Brasil. O Claude entende e responde em português."
+  - question: "O Claude acessa a internet?"
+    answer: "Sim. A busca na web está disponível inclusive no plano gratuito, com citações nas respostas. O Research, que faz várias buscas encadeadas, é exclusivo dos planos pagos."
+  - question: "O Claude é melhor que o ChatGPT?"
+    answer: "Depende da tarefa, do ecossistema que você usa e do orçamento. Não existe vencedor absoluto. O melhor caminho é testar os dois planos gratuitos com as suas tarefas reais; nosso comparativo entre ChatGPT, Gemini e Claude ajuda a decidir."
+  - question: "A Anthropic usa minhas conversas para treinar o Claude?"
+    answer: "Nas contas Free, Pro e Max, só se a opção de melhoria de modelos (Model Improvement) estiver ligada. Nos planos comerciais (Team, Enterprise e API), não há treinamento com seus dados por padrão. Conversas anônimas (Incognito) nunca são usadas para treinamento."
 sources:
-  - name: "Anthropic Claude"
-    url: "https://claude.ai"
-  - name: "Anthropic Research"
-    url: "https://www.anthropic.com/research"
+  - name: "Anthropic — Claude: planos e preços"
+    url: "https://claude.com/pricing"
+  - name: "Anthropic — Models overview (Claude Platform Docs)"
+    url: "https://platform.claude.com/docs/en/models/overview"
+  - name: "Anthropic — Model deprecations (Claude Platform Docs)"
+    url: "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  - name: "Anthropic — Introducing Claude Sonnet 5"
+    url: "https://www.anthropic.com/news/claude-sonnet-5"
+  - name: "Anthropic — Introducing Claude Opus 5.5"
+    url: "https://www.anthropic.com/claude-opus-5-5"
+  - name: "Anthropic — Claude.ai supported countries and regions"
+    url: "https://www.anthropic.com/claude-ai-locations"
+related:
+  - "claude-planos-precos-comparacao"
+  - "chatgpt-vs-gemini-vs-claude"
+  - "claude-projects-como-usar"
+  - "claude-artifacts-recursos"
 ---
 
-Enquanto o ChatGPT domina as manchetes e o Gemini avança no ecossistema Google, há uma terceira força na guerra das IAs que muitos profissionais consideram superior para determinados trabalhos: o **Claude**, desenvolvido pela Anthropic.
+O Claude é o assistente de inteligência artificial da Anthropic. Ele conversa em linguagem natural, lê documentos e imagens, pesquisa na web, escreve e revisa textos, programa, cria arquivos e monta pequenos aplicativos dentro do chat. Este guia explica o que o Claude é hoje, quais modelos e recursos estão disponíveis, quanto custa e, principalmente, como começar a usá-lo em português, do cadastro ao primeiro prompt útil.
 
-Menos famoso que o ChatGPT para o público geral, o Claude tem uma base de usuários fiel — especialmente entre escritores, pesquisadores e desenvolvedores que valorizam coerência, segurança e a capacidade de lidar com textos muito longos.
+## O que é o Claude
 
-## O que é a Anthropic?
+O Claude é um modelo de linguagem (LLM) oferecido como chat em [claude.ai](https://claude.ai), em apps para computador e celular e via API para desenvolvedores. Você escreve um pedido, pode anexar arquivos ou dar contexto, e ele responde com base no que aprendeu no treinamento e no material que você enviou.
 
-A Anthropic foi fundada em 2021 por ex-funcionários da OpenAI, incluindo Dario Amodei (CEO) e Daniela Amodei (Presidente). A empresa tem um foco declarado em **segurança em IA** — ela desenvolveu o conceito de "IA constitucional", uma abordagem para treinar modelos com valores mais alinhados aos humanos.
+Alguns pontos ajudam a entender como ele funciona na prática:
 
-Essa ênfase em segurança e alinhamento não é apenas marketing: o Claude é notavelmente mais consistente em recusar pedidos prejudiciais sem ser excessivamente restritivo, e tende a ser mais transparente sobre suas incertezas.
+- **Não é um banco de dados.** O Claude gera respostas a partir de padrões aprendidos, por isso pode errar com confiança. Dados, números e citações importantes precisam ser conferidos.
+- **Tem data de corte de conhecimento.** O Opus 5.5 foi treinado com dados até junho de 2026 e o Sonnet 5 até janeiro de 2026, segundo a [visão geral de modelos da Anthropic](https://platform.claude.com/docs/en/models/overview). Para assuntos recentes, ative a busca na web.
+- **Lida bem com material longo.** Nos planos pagos, os modelos mais novos aceitam até 1 milhão de tokens de contexto, o que permite trabalhar com relatórios, contratos e bases de código extensas numa mesma conversa.
 
-## A família de modelos Claude
+A Anthropic, empresa por trás do Claude, se define como uma Public Benefit Corporation cujo propósito é o desenvolvimento responsável de IA avançada, e publica uma "constituição" que descreve os valores e o comportamento esperados do Claude.
 
-A Anthropic usa uma nomenclatura de personalidades — Haiku, Sonnet e Opus — para seus modelos, ordenados do mais rápido/econômico ao mais capaz:
+O Claude chegou oficialmente ao Brasil em 1º de agosto de 2024, e o país segue na lista de [regiões atendidas](https://www.anthropic.com/claude-ai-locations). A interface pode ser configurada em português do Brasil.
 
-### Claude Haiku
-O modelo mais leve e rápido. Ideal para tarefas simples, respostas rápidas e uso em produção onde velocidade e custo importam. Não está disponível diretamente no claude.ai para usuários finais, mas é amplamente usado via API.
+## Os modelos do Claude em 2026
 
-### Claude Sonnet
-O modelo intermediário e o mais usado. Equilibra qualidade e velocidade. É o que a maioria dos usuários do claude.ai acessa por padrão. Excelente para a maioria das tarefas.
+A Anthropic organiza seus modelos em famílias: Haiku (rápido e barato), Sonnet (equilíbrio), Opus (mais capaz) e, desde 2026, Fable (raciocínio mais exigente). Em setembro de 2026, os modelos atuais são:
 
-### Claude Opus
-O modelo mais avançado. Para tarefas complexas que exigem raciocínio profundo, análise sofisticada e máxima qualidade. Disponível no plano Claude Pro.
+| Modelo | Perfil | Onde usar no app |
+|---|---|---|
+| Claude Opus 5.5 | Lançado em 22/09/2026; na documentação para desenvolvedores, é o ponto de partida recomendado para a maioria das tarefas | Planos pagos (Pro em diante) |
+| Claude Sonnet 5 | Equilíbrio entre qualidade, velocidade e custo | Todos os planos; padrão do Free e do Pro desde o lançamento |
+| Claude Haiku 4.5 | O mais rápido e barato, bom para tarefas simples e volume alto | Todos os planos |
+| Claude Fable 5.1 | Raciocínio exigente e tarefas longas e autônomas | Max e assentos premium de Team e Enterprise; no Pro, só com créditos pagos à parte; fora do Free |
 
-## Como acessar o Claude
+Segundo o [anúncio do Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5), ele é o modelo padrão dos planos Free e Pro. Você pode trocar de modelo no seletor da conversa e, nos modelos compatíveis, ajustar o nível de esforço (de Low a Max). Nos modelos mais novos, como o Opus 5.5, o raciocínio estendido fica sempre ligado.
 
-### Versão gratuita (claude.ai)
+Existe ainda o Claude Mythos 5.1, uma versão com salvaguardas diferentes para cibersegurança e ciências da vida. Ele é restrito a organizações verificadas e, por enquanto, disponível só para organizações dos Estados Unidos. Não está ao alcance de usuários comuns no Brasil.
 
-Acesse [claude.ai](https://claude.ai) e crie uma conta. Você terá acesso ao Claude Sonnet com um limite diário de mensagens razoável para uso pessoal.
+**Atenção a conteúdos antigos:** Claude 3, 3.5 e 3.7, Claude Sonnet 4, Opus 4 e Opus 4.1 já foram aposentados, segundo a [página de descontinuação de modelos](https://platform.claude.com/docs/en/about-claude/model-deprecations). Tutoriais que citam esses nomes como "o melhor modelo" estão desatualizados.
 
-### Claude Pro ($20/mês)
+## Como começar a usar o Claude: passo a passo
 
-O plano pago oferece:
-- Mais mensagens por dia (5x mais do que o plano gratuito)
-- Acesso ao Claude Opus
-- Acesso prioritário mesmo em picos de uso
-- Acesso antecipado a novos recursos
+1. **Acesse o Claude.** Entre em [claude.ai](https://claude.ai) no navegador ou baixe o app em claude.com/download. Há versões para macOS, Windows, Linux (em beta), iPhone e Android.
+2. **Crie sua conta.** O plano Free já permite conversar, usar a busca na web e criar arquivos.
+3. **Coloque a interface em português.** Nas configurações de idioma, escolha "Portuguese (Brazilian)". O idioma do modo de voz é configurado separadamente.
+4. **Confira a privacidade.** Em Settings, abra Privacy e decida se quer ativar a opção que permite usar suas conversas para melhorar os modelos. O passo a passo completo está no nosso guia sobre [privacidade e dados no Claude](/artigos/claude-seguranca-privacidade-dados).
+5. **Escolha o modelo.** Para o dia a dia, o padrão (Sonnet 5) resolve bem. Se você assina um plano pago e a tarefa é complexa, experimente o Opus 5.5.
+6. **Faça o primeiro pedido com contexto.** Diga quem você é, o que quer, para quem é o resultado e em que formato. Os prompts abaixo servem de modelo.
+7. **Organize o que se repete.** Se você volta sempre ao mesmo assunto (um cliente, uma loja, uma disciplina), crie um espaço com arquivos e instruções fixas usando o [Claude Projects](/artigos/claude-projects-como-usar).
 
-### Via API (para desenvolvedores)
+### Prompts para começar (copie e adapte)
 
-A Anthropic oferece uma API robusta para integrar o Claude em aplicações. O preço por token é competitivo, especialmente para o Haiku.
+Exemplo de prompt para resumir um documento:
 
-## O que faz o Claude se destacar?
+```text
+Anexei o PDF do contrato de prestação de serviços. Faça um resumo em até 10 tópicos,
+destacando prazos, multas, reajuste e condições de rescisão. Ao final, liste as
+cláusulas que merecem atenção de um advogado. Cite o número da cláusula em cada ponto
+e diga "não encontrado" quando uma informação não estiver no documento.
+```
 
-### 1. Janela de contexto enorme
+Exemplo de prompt para descrição de produto (e-commerce):
 
-O Claude 3 aceita até **200.000 tokens** de contexto — o equivalente a um livro inteiro ou vários documentos longos em uma única conversa. Isso é um diferencial real para análise de relatórios, contratos, bases de código ou qualquer situação que exija processar muito texto de uma vez.
+```text
+Você é redator de marketplace. Escreva um título de até 60 caracteres, 5 bullets e uma
+descrição curta para o produto abaixo, para anúncio no Mercado Livre.
+Produto: strap de musculação. Características fornecidas: algodão; 50 cm; uso para
+puxadas; auxílio de pegada.
+Regras: use somente as características informadas. Não invente medidas, materiais,
+certificações ou garantias. Se faltar algo importante para o comprador, liste no final
+o que devo perguntar ao fornecedor.
+```
 
-### 2. Excelência em redação e estilo
+Exemplo de prompt para estudar:
 
-Muitos escritores e criadores de conteúdo preferem o Claude porque ele:
-- Mantém tom e voz consistentes ao longo de textos longos
-- Segue instruções de estilo com mais fidelidade
-- Produz texto que "soa mais humano" para muitos leitores
-- É melhor em capturar e manter a voz do autor quando solicitado
+```text
+Explique juros compostos para alguém que nunca estudou finanças. Use um exemplo com
+números simples, depois me faça 3 perguntas para eu testar se entendi. Corrija minhas
+respostas uma a uma.
+```
 
-### 3. Honestidade e transparência
+Se a resposta não ficar boa, peça ajustes na mesma conversa ("mais curto", "tom mais formal", "sem jargões") em vez de recomeçar.
 
-O Claude é notavelmente mais propenso a dizer "não sei" ou "não tenho certeza" em vez de inventar informações confiantes. Isso reduz o problema das alucinações — não elimina, mas torna o modelo mais confiável para pesquisa.
+## O que o Claude faz além do chat
 
-### 4. Seguir instruções complexas
+- **Busca na web**: disponível em todos os planos, com citações nas respostas. O **Research**, que faz várias buscas encadeadas e entrega um relatório com fontes, é exclusivo dos planos pagos.
+- **Análise de arquivos**: aceita PDF, DOCX, CSV, TXT, HTML, JSON, EPUB, planilhas XLSX (com execução de código ativa) e imagens JPEG, PNG, GIF e WebP. Os limites de tamanho e de páginas estão na [central de ajuda da Anthropic](https://support.claude.com/en/articles/8241126-upload-files-to-claude).
+- **Criação de arquivos**: gera e edita planilhas (.xlsx), apresentações (.pptx), documentos (.docx) e PDFs, em todos os planos, depois de ativar a execução de código nas configurações.
+- **Artifacts**: documentos, dashboards, designs e pequenos apps interativos criados na conversa e salvos numa aba própria. Detalhes em [Artifacts do Claude](/artigos/claude-artifacts-recursos).
+- **Projects**: espaços com arquivos de referência e instruções fixas. O Free pode ter até 5; nos pagos, sem esse limite.
+- **Memória**: ativa por padrão no Free, Pro e Max. O que o Claude lembra pode ser revisto e apagado nas configurações de memória, e há conversas anônimas (Incognito) em todos os planos.
+- **Conectores**: ligam o Claude a outros apps e serviços (via MCP) para buscar dados e executar ações. Há um diretório oficial de conectores, e o Free pode ter um conector personalizado.
+- **Voz**: conversa falada no celular, no desktop e na web, em todos os planos; idiomas além do inglês estão em beta.
+- **Claude Code**: ferramenta de programação que lê o projeto, edita arquivos e roda comandos no terminal, na IDE ou no navegador, incluída a partir do Pro. Veja o [guia do Claude Code](/artigos/claude-code-terminal-guia).
+- **Extensões**: Claude in Chrome (navega e age em páginas; só planos pagos) e Claude para Excel, PowerPoint e Word (planos pagos; Outlook em beta).
 
-Para prompts com muitas condições e restrições, o Claude tende a seguir todas as instruções com mais fidelidade. É útil para criar templates de resposta complexos ou quando você tem muitas regras de formatação específicas.
+Um ponto que costuma gerar dúvida: a página de planos da Anthropic não lista geração de imagens a partir de texto entre os recursos do Claude. Se o seu objetivo principal é criar imagens, uma ferramenta dedicada a isso é o caminho mais direto.
 
-### 5. Postura ética equilibrada
+## Quanto custa o Claude
 
-O Claude evita conteúdo prejudicial, mas sem ser excessivamente restritivo. Em comparação com versões mais antigas do ChatGPT, muitos usuários acham o Claude mais cooperativo para discussões de ficção, análise crítica e cenários hipotéticos legítimos.
+Em resumo, com valores em dólar e sem impostos, segundo a [página de preços](https://claude.com/pricing):
 
-## Comparativo: Claude vs ChatGPT vs Gemini
+| Plano | Preço de referência | Para quem |
+|---|---|---|
+| Free | US$ 0 | Conhecer a ferramenta e uso ocasional |
+| Pro | US$ 20/mês (ou US$ 17/mês no anual) | Uso frequente, Opus, Research, Claude Code |
+| Max 5x / Max 20x | US$ 100/mês / US$ 200/mês | Uso intenso diário e acesso ao Fable |
+| Team | assento standard a US$ 25/mês (US$ 20 no anual), mínimo de 2 | Pequenas e médias empresas |
+| Enterprise | assento + uso cobrado a preço de API | Grandes empresas com exigências de compliance |
 
-| Característica | Claude | ChatGPT | Gemini |
-|----------------|--------|---------|--------|
-| Janela de contexto | 200k tokens | 128k tokens | 1M tokens |
-| Qualidade de redação | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
-| Análise de código | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
-| Integração com apps | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| Geração de imagens | Não | Sim (Plus) | Sim |
-| Busca na web | Não | Sim (Plus) | Sim |
-| Preço base | Gratuito | Gratuito | Gratuito |
+A Anthropic não publica um número fixo de mensagens por plano: o uso é medido em janelas de 5 horas e em um limite semanal, que variam com o tamanho das conversas, os arquivos e o modelo. Não há preço oficial atual em reais confirmado. Preços e limites podem mudar; consulte a página oficial. A comparação completa, com recomendação por perfil, está em [planos do Claude](/artigos/claude-planos-precos-comparacao).
 
-## Casos de uso ideais para o Claude
+## Claude, ChatGPT ou Gemini?
 
-### Análise de documentos longos
-Precisa analisar um contrato de 80 páginas, uma pesquisa acadêmica extensa ou um relatório corporativo completo? O Claude é uma das melhores opções do mercado para isso.
+Os três têm plano gratuito, busca na web, análise de arquivos e apps para celular. As diferenças estão mais no ecossistema e no tipo de tarefa: o Gemini se integra aos apps do Google, o ChatGPT gera imagens no próprio chat, e o Claude é muito procurado para textos longos, análise de documentos e programação. Nenhum é o melhor em tudo. A comparação detalhada, com recomendações por situação, está em [ChatGPT vs Gemini vs Claude](/artigos/chatgpt-vs-gemini-vs-claude).
 
-### Criação de conteúdo de qualidade
-Para blogs, newsletters, scripts e qualquer conteúdo onde consistência de voz e qualidade importam, o Claude tende a entregar resultados superiores.
+## Quando o Claude faz mais sentido (e quando não)
 
-### Programação assistida
-O Claude é muito bom em explicar código, refatorar e criar documentação técnica. Tem performance ligeiramente inferior ao ChatGPT Plus em geração de código puro, mas supera em explicações e revisão.
+**Faz sentido se você:**
+- analisa contratos, relatórios, PDFs longos ou planilhas com frequência;
+- escreve muito e quer manter tom e estrutura consistentes;
+- programa e quer um assistente que trabalhe direto no projeto (Claude Code);
+- quer organizar trabalho recorrente em Projects com arquivos e instruções fixas.
 
-### Trabalho com prompts complexos
-Quando você tem instruções longas e detalhadas (como um "system prompt" com muitas regras), o Claude segue com mais fidelidade do que os concorrentes.
+**Talvez não seja a primeira escolha se você:**
+- precisa gerar imagens ou vídeos dentro do mesmo assistente;
+- vive no Google Workspace e quer a IA dentro do Gmail e do Docs sem configurar conectores;
+- precisa de uso intenso de modelos avançados sem pagar nada.
 
-### Educação e tutoria
-O Claude é excelente para explicar conceitos de múltiplas perspectivas, adaptar o nível de explicação e manter coerência em conversas educacionais longas.
+**Limitações honestas:** o Claude pode inventar informações (alucinar), especialmente números e referências; o plano gratuito tem limites de uso que podem acabar no meio do trabalho; e recursos como Research, Claude Code e Claude in Chrome ficam fora do Free.
 
-## Limitações do Claude
+## Próximos passos
 
-Ser honesto sobre as limitações faz parte da proposta editorial do Foco em IA:
-
-- **Sem busca na web nativa**: O Claude não acessa a internet por padrão. Para informações atuais, use outros modelos.
-- **Sem geração de imagens**: Diferente do ChatGPT Plus, o Claude não gera imagens.
-- **Ecossistema menor**: Menos integrações e plugins do que o ChatGPT.
-- **Menor adoção geral**: Menos tutoriais, exemplos e comunidade do que o ChatGPT.
-- **Limites de mensagem**: A versão gratuita tem limites que podem frustrar usuários intensivos.
-
-## Vale a pena usar o Claude?
-
-**Sim, especialmente se você:**
-- Trabalha com análise de documentos longos
-- Preza por consistência de estilo na escrita
-- Quer um assistente que admita quando não sabe
-- Precisa seguir instruções complexas de formatação
-- É desenvolvedor que quer entender/explicar código
-
-**Fique no ChatGPT se você:**
-- Precisa de geração de imagens integrada
-- Depende muito de plugins e integrações de terceiros
-- Quer a plataforma com maior comunidade e suporte
-
-**Use os dois:** Como o plano gratuito de ambos está disponível, não há motivo para não experimentar o Claude em paralelo com o ChatGPT para tipos específicos de tarefa e ver qual funciona melhor para você.
-
-## Conclusão
-
-O Claude é uma alternativa séria e, em muitos casos, superior ao ChatGPT para tarefas que envolvem textos longos, redação de qualidade e instruções complexas. A Anthropic construiu um modelo com uma filosofia diferente — priorizando segurança, honestidade e alinhamento com valores humanos — e isso se reflete na experiência de uso.
-
-Se você ainda não testou, acesse [claude.ai](https://claude.ai) e experimente por uma semana. A versão gratuita é generosa o suficiente para você ter uma avaliação real do produto.
+Crie a conta gratuita, faça três ou quatro tarefas reais da sua rotina com os prompts acima e compare o resultado com a ferramenta que você já usa. Se o Claude entrar no seu dia a dia, os próximos passos naturais são [organizar o trabalho em Projects](/artigos/claude-projects-como-usar), criar documentos e ferramentas com [Artifacts](/artigos/claude-artifacts-recursos) e avaliar se vale a pena [assinar um plano pago](/artigos/claude-planos-precos-comparacao). Todos os guias da série estão na [categoria Claude](/categoria/claude).

@@ -1,85 +1,117 @@
 ---
-title: "Planos do Claude: Free, Pro e Max — qual escolher?"
-description: "Compare os planos do Claude (Free, Pro e Max), entenda as diferenças de uso, limites e recursos, e descubra qual opção combina mais com seu perfil."
+title: "Planos do Claude: Free, Pro, Max, Team e Enterprise — qual escolher?"
+description: "Compare os planos do Claude (Free, Pro, Max 5x e 20x, Team e Enterprise): preços oficiais em dólar, modelos, recursos, limites de uso e qual escolher."
 slug: "claude-planos-precos-comparacao"
 category: "Claude"
-tags: ["claude", "planos", "precos", "assinatura"]
+tags: ["claude", "planos", "preços", "assinatura", "claude pro", "claude max"]
 publishedAt: "2026-06-01"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["planos do claude", "claude pro", "claude free", "quanto custa o claude"]
+keywords: ["planos do claude", "quanto custa o claude", "claude pro", "claude max", "claude free", "claude team", "preço claude pro"]
+faq:
+  - question: "Quanto custa o Claude Pro?"
+    answer: "Na página oficial, o Pro custa US$ 20 por mês no plano mensal ou US$ 17 por mês no anual (US$ 200 pagos adiantado), sem impostos. A Anthropic informa que cobra em moeda local onde houver suporte, mas não encontramos página oficial com o preço atual em reais. Preços podem mudar; consulte a página oficial."
+  - question: "Quantas mensagens posso enviar por plano?"
+    answer: "A Anthropic não publica um número fixo de mensagens. O uso é medido por sessão, com janela que reinicia a cada 5 horas, e por um limite semanal. Quanto maiores as conversas, os arquivos e o modelo, mais rápido o limite é consumido."
+  - question: "Qual a diferença entre Max 5x e Max 20x?"
+    answer: "O Max 5x (US$ 100/mês) oferece cinco vezes o uso por sessão do Pro, e o Max 20x (US$ 200/mês), vinte vezes. Ambos incluem prioridade em horários de pico, Claude Code e acesso ao modelo Fable até 50% do limite semanal."
+  - question: "O Claude Pro ainda custa R$ 110?"
+    answer: "Não há confirmação. R$ 110 foi o preço anunciado no lançamento do Claude no Brasil, em agosto de 2024. Hoje a página oficial mostra preços em dólar, e o valor final em reais depende da cobrança e dos impostos aplicáveis."
+sources:
+  - name: "Anthropic — Claude: planos e preços"
+    url: "https://claude.com/pricing"
+  - name: "Anthropic — What is the Pro plan?"
+    url: "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan"
+  - name: "Anthropic — What is the Max plan?"
+    url: "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+  - name: "Anthropic — What is the Team plan?"
+    url: "https://support.claude.com/en/articles/9266767-what-is-the-team-plan"
+  - name: "Anthropic — What is the Enterprise plan?"
+    url: "https://support.claude.com/en/articles/9797531-what-is-the-enterprise-plan"
+  - name: "Anthropic — How do usage and length limits work?"
+    url: "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work"
+related:
+  - "o-que-e-claude-anthropic"
+  - "claude-code-terminal-guia"
+  - "chatgpt-vs-gemini-vs-claude"
+  - "claude-seguranca-privacidade-dados"
 ---
 
-Antes de assinar qualquer ferramenta de IA, é natural querer entender as diferenças entre os planos disponíveis. O Claude, da Anthropic, costuma oferecer opções que vão desde um plano gratuito até planos pagos voltados para uso intenso e profissional. Neste artigo, explicamos as diferenças entre essas categorias de plano e como escolher a melhor opção para o seu perfil de uso.
+O Claude tem seis opções de assinatura: Free, Pro, Max 5x, Max 20x, Team e Enterprise, além da API paga por uso para desenvolvedores. A escolha certa depende de quanto você usa, de quais modelos precisa e de quem vai usar (só você ou uma equipe). Abaixo estão os preços oficiais, o que cada plano inclui, como funcionam os limites de uso e uma recomendação por perfil.
 
-## Visão geral dos planos
+## Tabela de planos e preços
 
-De forma geral, os planos do Claude se organizam em três categorias principais:
+Valores em dólar, sem impostos, conforme a [página oficial de preços](https://claude.com/pricing) e a central de ajuda da Anthropic em setembro de 2026:
 
-- **Plano gratuito (Free)**: acesso básico ao Claude, com limites de uso diário ou mensal, indicado para quem quer conhecer a ferramenta ou usar esporadicamente.
-- **Plano Pro**: voltado para uso regular, com limites de uso bem mais amplos, acesso a modelos mais avançados e recursos extras, como Projects e Artifacts sem restrições relevantes.
-- **Plano Max (ou equivalente de uso intenso)**: pensado para profissionais e times que dependem da IA no dia a dia, com limites ainda maiores de uso e prioridade de acesso em horários de pico.
-
-## Comparativo geral
-
-| Recurso | Free | Pro | Max |
+| Plano | Preço | Modelos no app | Destaques |
 |---|---|---|---|
-| Custo | Gratuito | A partir de cerca de vinte dólares por mês | A partir de cerca de cem dólares por mês |
-| Limite de mensagens | Baixo, renovado periodicamente | Moderado a alto | Muito alto |
-| Acesso a modelos avançados | Limitado | Amplo | Total, com prioridade |
-| Projects | Disponível, com limites | Disponível, com mais espaço | Disponível, com espaço ampliado |
-| Artifacts | Disponível | Disponível | Disponível |
-| Prioridade em horários de pico | Não | Parcial | Sim |
-| Indicado para | Uso esporádico e testes | Profissionais e criadores de conteúdo | Times e uso intensivo diário |
+| Free | US$ 0 | Sonnet e Haiku | Chat na web, desktop e celular; busca na web; criação de arquivos; execução de código; memória; conectores; Artifacts; até 5 Projects |
+| Pro | US$ 20/mês ou US$ 17/mês no anual (US$ 200 adiantado) | Opus, Sonnet e Haiku; Fable só com créditos pagos à parte | Mais uso; Research; Claude Code; Projects sem limite; tarefas agendadas; Claude Design, Slides e Docs; Claude in Chrome e Microsoft 365 |
+| Max 5x | US$ 100/mês | Todos, incluindo Fable até 50% do limite semanal | 5 vezes o uso por sessão do Pro; limites de saída maiores; prioridade em horários de pico; acesso antecipado |
+| Max 20x | US$ 200/mês | Idem | 20 vezes o uso por sessão do Pro |
+| Team | Assento standard: US$ 25/mês (US$ 20 no anual). Assento premium: US$ 125/mês (US$ 100 no anual) | Conforme o assento; Fable nos assentos premium | De 2 a 150 assentos; SSO; permissões por função; limites de gasto; conectores corporativos; Claude Code e Cowork; sem treinamento com seus dados por padrão |
+| Enterprise | US$ 20 por assento/mês (anual) + uso cobrado a preço de API | Conforme a organização | Logs de auditoria; SCIM; retenção de dados personalizada; chaves de criptografia do cliente; configuração HIPAA-ready |
 
-Os valores exatos podem mudar ao longo do tempo, então vale sempre conferir o site oficial da Anthropic para confirmar os preços vigentes antes de assinar.
+Preços e limites podem mudar; consulte a página oficial antes de assinar.
 
-## Quem deve usar o plano gratuito
+### E o preço em reais?
 
-O plano Free é ideal para quem:
+A central de ajuda diz que o Pro custa US$ 20 por mês nos EUA, "com preço na moeda local onde houver suporte". Não encontramos página oficial com o valor atual em reais. O valor de R$ 110 por mês que circula em muitos sites é o anunciado no [lançamento do Claude no Brasil](https://www.anthropic.com/news/claude-brazil), em agosto de 2024, e não deve ser tomado como preço atual. Na dúvida, confira o valor exibido na tela de assinatura antes de confirmar o pagamento.
 
-- Quer testar o Claude antes de decidir por uma assinatura paga.
-- Usa IA generativa apenas ocasionalmente, sem depender dela profissionalmente.
-- Está começando a explorar recursos como Projects e Artifacts em pequena escala.
+## Como funcionam os limites de uso
 
-A principal limitação do plano gratuito costuma ser o número de mensagens disponíveis em um determinado período, o que pode ser insuficiente para quem usa a IA várias vezes ao dia.
+Este é o ponto que mais gera confusão. Segundo a [central de ajuda da Anthropic](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work):
 
-## Quem deve usar o plano Pro
+- **Não existe um número fixo de mensagens.** O Pro tem um limite por sessão que reinicia a cada 5 horas.
+- **O consumo varia.** Mensagens longas, arquivos grandes, conversas extensas e modelos mais pesados (como o Opus) gastam o limite mais rápido.
+- **Há também um limite semanal** que vale para todos os modelos, e a empresa pode aplicar limites adicionais.
+- **Claude Code divide o mesmo limite.** Nos planos Pro e Max, o uso do Claude Code conta no mesmo limite do chat.
 
-O plano Pro é indicado para profissionais que usam o Claude com regularidade, como:
+O Max é descrito em múltiplos do Pro: 5x ou 20x o uso por sessão. No lançamento do Opus 5.5, em 22/09/2026, a Anthropic anunciou aumento dos limites de 5 horas no Pro, Max, Team e Enterprise por assento. Por isso, qualquer tabela com "X mensagens por dia" deve ser vista com desconfiança.
 
-- Criadores de conteúdo que escrevem textos, roteiros ou materiais de marketing diariamente.
-- Desenvolvedores que utilizam a IA como apoio recorrente em projetos de código.
-- Profissionais que analisam documentos, contratos ou relatórios com frequência.
-- Estudantes que usam a IA para estudar diversas disciplinas ao longo da semana.
+**Dica prática:** conversas muito longas consomem mais. Quando mudar de assunto, abra uma nova conversa, e use [Projects](/artigos/claude-projects-como-usar) para não precisar reenviar os mesmos arquivos a cada vez.
 
-Esse plano costuma equilibrar bem custo e benefício, oferecendo limites de uso confortáveis para o dia a dia sem exigir o investimento de planos mais avançados.
+## Qual plano escolher: recomendação por perfil
 
-## Quem deve usar o plano Max
+### Free: para conhecer e para uso ocasional
 
-O plano Max (ou equivalente de maior capacidade) é voltado para quem depende da IA de forma intensiva, como:
+Serve para quem usa IA algumas vezes por semana: resumir um texto, revisar um e-mail, tirar uma dúvida com busca na web. Já inclui Artifacts, criação de arquivos e até 5 Projects. O limite tende a acabar em sessões longas, e ficam de fora Opus, Research, Claude Code e as extensões.
 
-- Times inteiros de uma empresa usando a mesma conta ou processos compartilhados.
-- Desenvolvedores que trabalham o dia inteiro com o Claude Code em projetos grandes.
-- Profissionais que processam grandes volumes de documentos ou geram conteúdo em escala.
-- Usuários que não podem esperar por limites de uso durante horários de pico.
+### Pro: o ponto de partida para quem usa todo dia
 
-## Como escolher o plano ideal
+Indicado para criadores de conteúdo, profissionais que analisam documentos, estudantes com uso intenso e desenvolvedores que querem experimentar o [Claude Code](/artigos/claude-code-terminal-guia). Vale a pena quando você bate no limite do Free com frequência ou precisa do Opus e do Research. Se já sabe que vai usar o ano todo, o plano anual reduz o custo mensal de US$ 20 para US$ 17.
 
-Para decidir qual plano contratar, vale considerar três perguntas principais:
+### Max 5x ou 20x: uso intenso e Claude Code o dia inteiro
 
-1. **Com que frequência você usaria o Claude?** Uso esporádico aponta para o plano gratuito; uso diário, para Pro ou Max.
-2. **Que tipo de tarefa você realiza?** Tarefas simples funcionam bem em qualquer plano; tarefas complexas (código extenso, análise de muitos documentos) se beneficiam dos modelos mais avançados disponíveis nos planos pagos.
-3. **Você depende da IA profissionalmente?** Se a resposta for sim, um plano pago reduz o risco de ficar sem acesso durante um pico de demanda ou limite atingido.
+Faz sentido para quem trabalha várias horas por dia com o Claude, especialmente programando com o Claude Code, ou quem precisa do modelo Fable sem pagar créditos à parte. Comece pelo 5x e só suba para o 20x se o limite continuar acabando antes do fim do dia.
 
-## Dicas para economizar
+Para uma equipe, o plano pensado para isso é o Team, com administração central e regras de dados comerciais.
 
-- Comece sempre pelo plano gratuito para testar se a ferramenta atende às suas necessidades antes de investir em uma assinatura.
-- Avalie o uso real ao final do primeiro mês pago, verificando se os limites do plano Pro já são suficientes antes de migrar para o Max.
-- Fique atento a promoções ou planos anuais, que costumam sair mais em conta do que a cobrança mensal.
-- Para times, verifique se existem planos empresariais com condições diferenciadas em relação às assinaturas individuais.
+### Team: pequenas e médias empresas
 
-## Conclusão
+A partir de 2 pessoas. Traz administração central, SSO, controle de permissões e de gastos, conectores corporativos (Google Drive, Gmail, GitHub, Microsoft 365, Slack) e, pela política da Anthropic, os dados não são usados para treinar modelos por padrão. Assentos premium servem para quem usa muito (por exemplo, desenvolvedores); assentos standard atendem o restante do time.
 
-Escolher entre os planos Free, Pro e Max do Claude depende basicamente da frequência de uso e da complexidade das tarefas realizadas. Para a maioria dos usuários que já incorporaram a IA na rotina profissional, o plano Pro costuma representar o melhor equilíbrio entre custo e benefício, enquanto o plano Max se justifica principalmente para times ou profissionais com uso realmente intensivo diário. O plano gratuito, por sua vez, continua sendo uma ótima porta de entrada para quem ainda está conhecendo o potencial da ferramenta.
+### Enterprise: exigências de compliance
+
+Para grandes organizações que precisam de logs de auditoria, provisionamento via SCIM, retenção de dados personalizada e outras exigências de segurança. Atenção à lógica de cobrança: o assento dá acesso, mas todo o consumo é cobrado a preço de API.
+
+### API: para quem vai integrar o Claude a um sistema
+
+Desenvolvedores que querem usar o Claude dentro de um app, site ou automação pagam por token, sem assinatura. Referência oficial por milhão de tokens (entrada/saída): Haiku 4.5 US$ 1/US$ 5, Sonnet 5 US$ 2/US$ 10, Opus 5.5 US$ 4/US$ 20 e Fable 5.1 US$ 10/US$ 50.
+
+## Checklist antes de assinar
+
+1. **Use o Free por uma ou duas semanas** com as suas tarefas reais e anote quantas vezes o limite acabou.
+2. **Liste os recursos que você realmente precisa.** Research, Claude Code, Opus e extensões para Chrome ou Microsoft 365 só existem nos planos pagos.
+3. **Confira se é uso individual ou de equipe.** Para mais de uma pessoa, compare o Team com assinaturas Pro separadas: o Team acrescenta administração e regras de dados comerciais.
+4. **Veja o valor final na tela de pagamento**, já que os preços oficiais não incluem impostos.
+5. **Revise a privacidade.** Nos planos individuais, decida se permite o uso das conversas para treinamento; os detalhes estão no guia sobre [privacidade no Claude](/artigos/claude-seguranca-privacidade-dados).
+
+## Quando não vale a pena pagar
+
+- Se você usa IA poucas vezes por semana e o Free não trava o seu trabalho.
+- Se você já assina outra IA e só quer o Claude para tarefas pontuais: o Free costuma bastar para comparar.
+- Se o que você mais precisa é gerar imagens ou vídeos, recursos que a página de planos do Claude não lista.
+
+Para entender o que o Claude faz antes de decidir, veja o guia [Claude: o que é e como usar](/artigos/o-que-e-claude-anthropic). Se estiver em dúvida entre assistentes, o comparativo [ChatGPT vs Gemini vs Claude](/artigos/chatgpt-vs-gemini-vs-claude) mostra qual faz mais sentido para cada situação.

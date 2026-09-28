@@ -1,321 +1,253 @@
 ---
-title: "Midjourney: Guia Completo para Criar Imagens Incríveis com IA"
-description: "Aprenda tudo sobre o Midjourney: como criar conta, escrever prompts, usar parâmetros avançados e gerar imagens profissionais com IA."
+title: "Midjourney: guia completo para criar imagens com IA (V8.2)"
+description: "Guia do Midjourney V8.2: como criar conta, planos e preços, parâmetros mais usados na versão atual, Edit Model, prompts prontos e regras de uso comercial."
 slug: "midjourney-guia-completo"
 category: "Imagens"
-tags: ["midjourney", "midjourney tutorial", "como usar midjourney", "prompts midjourney", "geração de imagens ia"]
+tags: ["midjourney", "midjourney v8", "como usar midjourney", "prompts midjourney", "geração de imagens ia"]
 publishedAt: "2025-01-28"
 author: "Equipe Foco em IA"
 featured: true
 popular: true
-keywords: ["midjourney guia completo", "midjourney tutorial português", "como usar midjourney", "prompts midjourney", "midjourney parâmetros"]
+keywords: ["midjourney guia completo", "midjourney tutorial português", "como usar midjourney", "midjourney v8", "midjourney parâmetros", "midjourney planos"]
 faq:
   - question: "O Midjourney tem versão gratuita?"
-    answer: "Em 2024, o Midjourney encerrou o período de avaliação gratuita. Atualmente, é necessário assinar um plano pago a partir de $10/mês (Basic). Alguns usuários relatam receber convites para trial em momentos específicos, mas não há garantia."
-  - question: "Qual é o melhor plano do Midjourney para iniciantes?"
-    answer: "O plano Basic ($10/mês) é suficiente para começar. Ele oferece aproximadamente 200 gerações de imagem por mês (3.3h de GPU time). Se você for usar para trabalho ou projetos frequentes, o Standard ($30/mês) com geração ilimitada em modo relaxed vale o investimento."
-  - question: "Preciso usar o Discord para usar o Midjourney?"
-    answer: "Não mais. O Midjourney lançou uma interface web própria em midjourney.com que funciona sem Discord. A interface web é mais amigável e recomendada para novos usuários, embora o Discord ainda funcione."
+    answer: "A página oficial de comparação de planos lista apenas planos pagos: Basic, Standard, Pro e Mega. Não há menção a plano gratuito ou teste grátis. Em setembro de 2026, o plano mais barato é o Basic, de US$ 10 por mês (ou US$ 8 por mês no anual)."
+  - question: "Qual é a versão atual do Midjourney?"
+    answer: "A V8.2, lançada como versão padrão em 24 de julho de 2026. Ela trouxe o Edit Model, que substitui Omni Reference, Character Reference e Retexture. A V8.1, padrão desde junho de 2026, introduziu imagens HD em 2K sem upscale."
+  - question: "Qual plano do Midjourney escolher?"
+    answer: "O Basic (US$ 10/mês) serve para testar, mas não tem modo Relax. O Standard (US$ 30/mês) tem Relax ilimitado para imagens. O Pro e o Mega incluem Stealth Mode e são obrigatórios para empresas com receita acima de US$ 1 milhão por ano. Preços podem mudar; confira a página oficial."
+  - question: "Preciso usar o Discord?"
+    answer: "Não. É possível criar imagens e vídeos pelo site midjourney.com. Quem já usava o Discord entra no site com a opção Continue with Discord, e o Discord continua funcionando."
+  - question: "O parâmetro --q ainda funciona?"
+    answer: "Na V8.x, o caminho indicado pela documentação para obter mais resolução é o modo HD, que gera imagens em 2K sem upscale. Vários parâmetros de versões antigas mudaram ou deixaram de ter efeito, então confira a lista oficial de parâmetros antes de copiar comandos de tutoriais antigos."
 sources:
-  - name: "Midjourney Documentation"
-    url: "https://docs.midjourney.com"
-  - name: "Midjourney"
-    url: "https://www.midjourney.com"
+  - name: "Midjourney — Versões"
+    url: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+  - name: "Midjourney — Comparação de planos"
+    url: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+  - name: "Midjourney — Lista de parâmetros"
+    url: "https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List"
+  - name: "Midjourney — Vídeo"
+    url: "https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video"
+  - name: "Midjourney — Termos de Serviço"
+    url: "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service"
+related:
+  - "como-escrever-prompts-para-imagens"
+  - "ia-imagens-gratis-vs-pago"
+  - "flux-ai-guia"
+  - "ideogram-texto-em-imagens"
 ---
 
-O Midjourney é, por consenso geral, o gerador de imagens com IA de melhor qualidade disponível no mercado. Seja para arte conceitual, fotorrealismo, ilustração ou design de marketing, ele consistentemente produz resultados que surpreendem até profissionais experientes.
+O Midjourney é um dos geradores de imagem mais usados por quem trabalha com direção de arte, ilustração e conceitos visuais. Ele mudou bastante em 2026: a versão padrão agora é a V8.2, alguns parâmetros antigos deixaram de funcionar e as ferramentas de referência foram unificadas num novo Edit Model. Este guia mostra como começar, quanto custa e quais comandos valem na versão atual, com base na documentação oficial consultada em setembro de 2026.
 
-Mas dominar o Midjourney vai além de simplesmente digitar uma descrição. Este guia cobre tudo — de como criar sua conta até técnicas avançadas de prompt que poucos usuários conhecem.
+Se você ainda está escolhendo entre ferramentas, comece pelo [guia de como criar imagens com IA](/artigos/como-criar-imagens-com-ia), que compara Midjourney, ChatGPT, Gemini, Firefly e outras opções.
 
-## Por que o Midjourney é diferente
+## O que mudou no Midjourney em 2026
 
-Antes de entrar no tutorial, vale entender o que faz o Midjourney se destacar entre dezenas de geradores de imagem com IA:
+- **V8.0** saiu em alpha em 17 de março de 2026.
+- **V8.1** (lançada em 14 de abril) virou a versão padrão em junho de 2026, com geração mais rápida, melhor aderência ao prompt e melhor renderização de texto. Trouxe o modo **HD**, que gera imagens em 2K sem upscale.
+- **V8.2** virou a padrão em 24 de julho de 2026, segundo a [página de versões do Midjourney](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version). O foco é estética, qualidade e personalização, e ela trouxe o **Edit Model**, que substitui Omni Reference, Character Reference e Retexture.
+- Para ilustração em estilo anime, existe a linha Niji (Niji 7, de janeiro de 2026), que é separada da V8.
 
-**Qualidade visual consistente**: O Midjourney tem um senso estético peculiar que torna as imagens visualmente atraentes mesmo com prompts simples. Outros geradores produzem resultados bons em alguns testes e medíocres em outros. O Midjourney é consistentemente bom.
+Artigos antigos que falam em V6 ou V7 como versão atual ou em Omni Reference como ferramenta atual estão desatualizados.
 
-**Fotorrealismo impressionante**: Para imagens que devem parecer fotografias reais, a versão 6 do Midjourney atingiu um nível difícil de distinguir de fotos reais em muitos casos.
+## Como começar: passo a passo
 
-**Coerência artística**: Quando você pede "no estilo de Edward Hopper" ou "estética anos 80", o Midjourney realmente captura a essência, não apenas superficialmente.
+1. **Crie a conta** em midjourney.com. Se você já usava o Midjourney no Discord, entre com a opção "Continue with Discord" para manter o mesmo histórico.
+2. **Assine um plano** (veja a tabela abaixo). A página oficial de planos não menciona plano gratuito.
+3. **Escreva o prompt na barra Imagine**, no topo da tela de criação, e envie.
+4. **Ajuste as configurações padrão** pelo botão de configurações da barra Imagine: versão, proporção, modo SD ou HD, velocidade.
+5. **Escolha uma das imagens** e use as ações disponíveis nela, como variações, upscale e edição.
+6. **Salve e organize** o que funcionou. Anote o prompt e os parâmetros usados.
 
-**Comunidade e aprendizado**: O servidor Discord é uma fonte inesgotável de prompts prontos para estudar e adaptar.
+## Planos e preços
 
-A desvantagem é que não há versão gratuita e requer aprendizado dos parâmetros específicos. Mas o investimento de tempo se paga rapidamente.
+| Plano | Mensal | Anual (por mês) | Fast GPU/mês | Relax | Stealth |
+|---|---|---|---|---|---|
+| Basic | US$ 10 | US$ 8 | 3,3 h | Não | Não |
+| Standard | US$ 30 | US$ 24 | 15 h | Ilimitado para imagens | Não |
+| Pro | US$ 60 | US$ 48 | 30 h | Imagens e vídeo SD | Sim |
+| Mega | US$ 120 | US$ 96 | 60 h | Imagens e vídeo SD | Sim |
 
-## Como criar sua conta
+Valores em dólar consultados em setembro de 2026 na [página oficial de planos](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans). Preços e limites podem mudar.
 
-### Passo 1: Crie sua conta
+Como ler a tabela:
 
-Acesse [midjourney.com](https://midjourney.com) e clique em "Sign In". Você pode criar uma conta com Google, Discord ou e-mail.
+- **Fast GPU** é o tempo de processamento rápido incluído. O Relax não consome esse tempo: os pedidos entram numa fila e são processados quando há GPU livre, então a espera é maior e varia.
+- **Stealth** permite controlar quem vê suas imagens e vídeos no site do Midjourney. Só o Pro e o Mega têm. Mesmo com Stealth, o que for criado em canais públicos do Discord continua visível para outras pessoas.
+- Uma imagem **HD** consome mais tempo de GPU do que uma imagem SD.
 
-### Passo 2: Escolha um plano
+Recomendação por perfil: o **Basic** serve para testar; o **Standard** é o ponto de partida para uso frequente, por causa do Relax; o **Pro** faz sentido para quem precisa de sigilo (clientes, lançamentos) ou para empresas acima de US$ 1 milhão de receita anual.
 
-Após criar a conta, você será direcionado para a tela de planos:
+## Como escrever prompts no Midjourney
 
-| Plano | Preço | GPU Time/mês | Geração Rápida |
-|-------|-------|--------------|----------------|
-| Basic | $10/mês | 3.3h (~200 imagens) | Sim |
-| Standard | $30/mês | 15h + ilimitado (relaxed) | Sim |
-| Pro | $60/mês | 30h + ilimitado (relaxed) | Sim |
-| Mega | $120/mês | 60h + ilimitado (relaxed) | Sim |
-
-Para começar, o Basic é suficiente. Quando você perceber que está usando com frequência, migre para o Standard — o modo "relaxed" (sem limite) muda completamente a forma de usar a ferramenta.
-
-### Passo 3: Acesse a interface
-
-Você tem duas opções:
-- **Interface web**: [midjourney.com](https://midjourney.com) — mais moderna e recomendada
-- **Discord**: Entre no servidor oficial do Midjourney e use os canais `#newbies`
-
-## Entendendo a interface web
-
-A interface web do Midjourney, lançada em 2024, é significativamente mais fácil de usar que o Discord. Elementos principais:
-
-**Barra de prompt**: Onde você digita sua descrição. Clique no ícone "+" para acessar parâmetros e opções avançadas.
-
-**Galeria**: Todas as suas imagens geradas ficam salvas automaticamente. Você pode filtrar por data, favoritos e outros critérios.
-
-**Explorar**: Veja o que outros usuários estão criando — excelente para inspiração e para estudar prompts eficazes.
-
-**Perfil**: Gerencia suas configurações, histórico e preferências de geração.
-
-## Como escrever prompts eficazes
-
-O prompt é a parte mais importante do processo. O Midjourney interpreta prompts como "pesos" de conceitos, não como instruções literais.
-
-### A estrutura base de um prompt
+A estrutura que costuma funcionar:
 
 ```
-[Assunto principal] [Estilo/médium] [Ambiente/contexto] [Iluminação] [Câmera/composição] [Qualidade/modificadores]
+[assunto principal], [estilo ou meio], [ambiente], [iluminação], [enquadramento] --ar [proporção]
 ```
 
-**Exemplo prático:**
+Antes:
 
-❌ Prompt básico:
 ```
 um retrato de uma mulher
 ```
 
-✅ Prompt elaborado:
-```
-portrait of a professional woman in her 40s, soft natural window lighting, shallow depth of field, business attire, warm color palette, photorealistic, Canon 5D --ar 4:5 --q 2
-```
-
-A diferença nos resultados é dramática.
-
-### Vocabulário essencial para prompts
-
-**Estilos fotográficos:**
-- `photorealistic`, `hyperrealistic` — máximo realismo
-- `editorial photography` — estilo de revista
-- `documentary photography` — foto jornalística
-- `fine art photography` — fotografia artística
-- `street photography` — fotografia urbana
-
-**Estilos artísticos:**
-- `oil painting`, `watercolor`, `acrylic painting`
-- `digital illustration`, `vector art`, `flat design`
-- `anime`, `manga`, `cartoon`
-- `concept art`, `fantasy art`, `dark fantasy`
-- `impressionism`, `surrealism`, `expressionism`
-
-**Iluminação:**
-- `golden hour lighting` — luz quente do pôr do sol
-- `soft diffused light` — luz suave e sem sombras duras
-- `dramatic chiaroscuro` — contraste forte claro/escuro
-- `studio lighting` — iluminação profissional de estúdio
-- `neon lights` — luzes neon coloridas
-- `volumetric lighting` — raios de luz visíveis
-
-**Qualidade e detalhes:**
-- `highly detailed`, `intricate details`
-- `8k resolution`, `ultra-high definition`
-- `masterpiece`, `award-winning photography`
-- `sharp focus`, `professional quality`
-
-### Referências de artistas e estilos
-
-Uma das técnicas mais poderosas no Midjourney é referenciar artistas conhecidos:
-
-- `in the style of Rembrandt` — pintura clássica com iluminação dramática
-- `inspired by Studio Ghibli` — animação japonesa suave
-- `by Ansel Adams` — fotografia preto e branco dramática
-- `in the style of Banksy` — arte de rua urbana
-- `Edward Hopper aesthetic` — cenas cotidianas com luz suave e sensação de solidão
-- `Art Nouveau style` — ornamental, linhas orgânicas, fins do século XIX
-- `Bauhaus design` — funcionalismo, formas geométricas limpas
-
-## Parâmetros essenciais do Midjourney
-
-Os parâmetros são adicionados ao final do prompt com `--` e modificam como a imagem é gerada.
-
-### `--ar` (Aspect Ratio)
-
-Define a proporção da imagem:
-- `--ar 1:1` — quadrado (padrão, ideal para Instagram)
-- `--ar 16:9` — widescreen (YouTube, wallpaper, banners)
-- `--ar 9:16` — vertical (Stories, TikTok, Reels)
-- `--ar 4:3` — formato de foto clássico
-- `--ar 4:5` — retrato vertical (Instagram portrait)
-- `--ar 3:2` — formato de câmera DSLR padrão
-
-### `--q` (Quality)
-
-Controla quanto tempo a GPU dedica a cada imagem:
-- `--q .25` — 4x mais rápido, qualidade menor (bom para testes)
-- `--q .5` — 2x mais rápido, qualidade intermediária
-- `--q 1` — padrão (padrão se omitido)
-- `--q 2` — 2x mais GPU time, mais detalhes (usa 2x seu crédito)
-
-### `--stylize` ou `--s`
-
-Controla o quanto o Midjourney aplica seu senso estético próprio:
-- `--s 0` — sem estilização, segue o prompt literalmente
-- `--s 100` — padrão
-- `--s 750` — mais criativo e artístico
-- `--s 1000` — máxima estilização (pode desviar muito do prompt)
-
-### `--chaos` ou `--c`
-
-Controla a variedade entre as 4 imagens geradas:
-- `--c 0` — 4 imagens similares (padrão)
-- `--c 50` — variação moderada
-- `--c 100` — 4 imagens bem diferentes, útil para explorar possibilidades
-
-### `--no`
-
-Exclui elementos específicos da imagem:
-```
-portrait of a woman --no glasses, hat, background clutter
-```
-
-### `--seed`
-
-Usa uma semente específica para reproduzir resultados similares. Útil para criar variações de uma imagem que você gostou.
-```
-futuristic city --seed 12345
-```
-
-### `--tile`
-
-Cria padrões que se repetem perfeitamente — excelente para texturas e papéis de parede.
-
-### `--style raw`
-
-Disponível no V6. Reduz o "toque Midjourney" para resultados mais neutros e fotográficos.
-
-## Técnicas avançadas
-
-### Prompt weighting (pesos)
-
-Você pode dar mais ou menos importância a partes do prompt usando `::`:
+Depois:
 
 ```
-red flower::2 blue background::1
+portrait of a professional woman in her 40s, soft natural window light, shallow depth of field, business attire, warm color palette, editorial photography --ar 4:5
 ```
 
-Isso dá o dobro de peso ao "red flower" em comparação com "blue background".
+Boas práticas:
 
-Para diminuir a importância de algo:
+- Descreva o que deve aparecer, e não o que não deve. Para excluir algo, use `--no` (abaixo).
+- Prefira termos concretos (tipo de luz, lente, material, época) a adjetivos vagos como "incrível".
+- Muita gente escreve em inglês por hábito da comunidade. Se escrever em português, compare os resultados com a versão em inglês do mesmo prompt.
+- Para mais técnicas, veja [como escrever prompts para imagens](/artigos/como-escrever-prompts-para-imagens).
+
+## Parâmetros mais usados
+
+Os parâmetros vão no fim do prompt, começando com `--`. A lista abaixo reúne os mais usados; como a compatibilidade muda de uma versão para outra, confira a [lista oficial de parâmetros](https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List) antes de usar um comando em trabalho importante.
+
+### Proporção: `--ar`
+
+O padrão é quadrado (1:1). Use números inteiros: `--ar 139:100`, nunca `1.39:1`.
+
+- `--ar 1:1`: feed e foto de perfil
+- `--ar 4:5`: retrato vertical no Instagram
+- `--ar 9:16`: Stories, Reels e TikTok
+- `--ar 16:9`: YouTube e banners
+- `--ar 2:3`: formato comum em fotos impressas
+
+Proporções muito largas ou altas são experimentais e podem gerar resultados imprevisíveis.
+
+### Estilização: `--stylize` ou `--s`
+
+Vai de 0 a 1000; o padrão é 100. Valores baixos seguem o prompt mais de perto; valores altos dão mais liberdade estética ao Midjourney.
+
+### Variedade: `--chaos` ou `--c`
+
+Vai de 0 a 100; o padrão é 0. Valores altos deixam as quatro imagens mais diferentes entre si, útil para explorar ideias, mas com menos aderência ao prompt. No site, aparece como "Variety".
+
+### Excluir elementos: `--no`
+
 ```
-portrait::1 glasses::-0.5
+still life gouache painting --no fruit, apple, pear
 ```
 
-O valor negativo reduz a presença de "glasses" na imagem.
+Cada palavra depois de `--no` é lida separadamente. `--no modern clothing` vira "modern" e "clothing", o que pode dar resultados inesperados.
 
-### Combinação de imagens (Image Prompts)
+### Modo Raw: `--raw`
 
-Você pode usar imagens como referência junto com texto:
+Desliga parte do "toque" automático do Midjourney. Com prompts simples, tende a gerar imagens mais realistas e fotográficas.
 
-1. Cole a URL de uma imagem no início do prompt
-2. Adicione sua descrição textual depois
-3. Use `--iw` (image weight) para controlar quanto a imagem influencia o resultado (0 a 2)
+### Semente: `--seed`
 
-```
-[URL da imagem] portrait with dramatic lighting --iw 1.5
-```
+Repete a mesma semente para obter resultados muito próximos entre uma geração e outra, útil para comparar o efeito de pequenas mudanças no prompt.
 
-### Remix Mode
+### Padrão repetível: `--tile`
 
-No modo Remix, você pode variar um prompt específico a partir de uma imagem que já gerou. Útil para ajustar detalhes sem recriar tudo do zero. Ative em configurações ou use `/prefer remix`.
+Gera imagens cujas bordas se encaixam quando colocadas lado a lado. Serve para estampas, texturas e papéis de parede.
 
-### Upscale
+### Estranheza: `--weird` ou `--w`
 
-Após gerar suas 4 imagens iniciais, você pode fazer upscale de qualquer uma delas:
-- **Upscale Subtle**: Aumenta a resolução com poucos detalhes adicionais
-- **Upscale Creative**: Aumenta e adiciona novos detalhes
+Deixa a imagem mais experimental e inesperada. O padrão é 0; valores maiores aumentam a estranheza.
 
-### Vary (Region)
+### HD e SD: `--hd` e `--sd`
 
-Permite redesenhar apenas uma parte específica da imagem mantendo o resto igual. Selecione uma área e descreva o que deve ir lá. Excelente para corrigir mãos, rostos ou adicionar elementos.
+O modo HD, introduzido na V8.1, gera imagens em 2K sem upscale. O SD é mais rápido e consome menos GPU, bom para explorar ideias.
 
-## Casos de uso práticos
+### Referência de estilo e personalização: `--sref` e `--p`
 
-### Marketing e publicidade
+`--sref` usa uma imagem como referência de estilo (com `--sw` para o peso). `--p` aplica o seu perfil de personalização, que o Midjourney monta a partir das imagens que você escolhe na página Personalize e das que você curte no Explore.
+
+### Imagem como referência: `--iw`
+
+No site, envie ou escolha a imagem pela barra Imagine. No Discord, cole a URL da imagem no início do prompt. O `--iw` controla quanto a imagem de referência pesa no resultado em relação ao texto.
+
+### Versão: `--v`
+
+Use `--v` seguido do número para escolher a versão num prompt específico, ou defina a padrão nas configurações.
+
+### O que mudou em relação às versões anteriores
+
+Alguns recursos de versões anteriores foram substituídos ou mudaram:
+
+- Omni Reference, Character Reference e Retexture foram substituídos pelo Edit Model na V8.2, segundo a página de versões.
+- Para mais resolução, o caminho atual é o modo HD, e não os parâmetros de qualidade de versões antigas, como `--q`.
+- Draft Mode foi introduzido na V7; confira na documentação se o recurso que você usava continua disponível na versão atual.
+
+## Edit Model: editar e usar referências
+
+O Edit Model chegou com a V8.2 e, segundo a [página de versões](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version), substitui três ferramentas antigas: Omni Reference, Character Reference e Retexture. Na prática, ele concentra dois usos:
+
+1. **Editar uma imagem por instrução de texto.** Envie ou escolha a imagem e descreva a mudança.
+2. **Usar imagens como referência** de personagem, objeto ou aparência para criar uma imagem nova, papel que antes era do Omni Reference e do Character Reference.
+
+No site, as opções de edição aparecem sobre a imagem gerada e no Editor, que também permite redesenhar uma área ou expandir a imagem. Como os nomes dos botões e comandos mudam com frequência, confira o passo a passo atual na documentação oficial.
+
+## Vídeo no Midjourney
+
+O Midjourney também anima imagens. Segundo a [documentação de vídeo](https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video), os clipes têm 5 segundos e podem ser estendidos até 21 segundos, em SD (480p) ou HD (720p). Todos os planos geram vídeo em Fast Mode; o Relax para vídeo é só no Pro e no Mega (apenas SD); o HD é para Standard, Pro e Mega. Para produção de vídeo completa, veja também [IA para Shorts, Reels e TikTok](/artigos/ia-para-shorts-reels-tiktok).
+
+## Prompts prontos por finalidade
+
+Exemplos para adaptar. Troque produto, cores e proporção pelo seu caso.
 
 **Post para redes sociais:**
-```
-minimalist social media post design, blue and white color scheme, geometric shapes, professional look, product showcase, clean typography space, --ar 1:1
-```
-
-**Banner para website:**
-```
-modern hero banner background, abstract technology concept, deep blue gradient, subtle circuit patterns, space for text overlay, 4k quality --ar 16:9 --q 2
-```
-
-### Fotografia de produto
 
 ```
-luxury skincare product photography, glass serum bottle on marble surface, soft studio lighting, white background, commercial photography style, ultra-detailed, professional product shot --ar 1:1 --q 2
+minimalist social media background, blue and white color scheme, geometric shapes, clean empty space in the center for a headline --ar 1:1 --s 150
 ```
 
-### Conteúdo editorial
+**Banner de site:**
 
-**Ilustração para artigo:**
 ```
-editorial illustration of artificial intelligence and human collaboration, modern flat design, blue and orange accent colors, conceptual art style, magazine quality --ar 16:9
-```
-
-### Identidade visual
-
-**Avatar/ícone:**
-```
-minimalist logo icon of a rocket ship, flat design, bold colors, simple geometric shapes, transparent background, vector style --ar 1:1
+modern hero banner background, abstract technology concept, deep blue gradient, subtle circuit patterns, empty space on the left for text --ar 16:9 --raw
 ```
 
-## Dicas para economizar créditos
+**Ambiente para foto de produto (sem o produto):**
 
-1. **Teste com `--q .25`**: Quando estiver explorando ideias, use qualidade reduzida para gastar menos créditos
-2. **Refine antes do upscale**: Certifique-se de que gostou da composição antes de fazer upscale
-3. **Use o modo Relaxed (Standard+)**: Para trabalhos sem urgência, modo Relaxed não consome seu GPU time
-4. **Salve prompts que funcionam**: Uma biblioteca de prompts eficazes evita desperdício com testes
-5. **Explore antes de criar**: A galeria pública tem milhares de prompts — estude antes de criar do zero
+```
+empty marble countertop in a bright minimalist bathroom, soft morning light, shallow depth of field, space in the foreground for a product --ar 4:5 --raw
+```
 
-## Erros comuns de iniciantes
+**Ilustração editorial:**
 
-**Prompts muito longos e contraditórios**: Descreva com clareza, mas evite adicionar dezenas de qualificadores que se contradizem. O Midjourney pode ficar "confuso" e gerar resultados inconsistentes.
+```
+editorial illustration of a person and a robot working together at a desk, modern flat design, blue and orange accents, magazine style --ar 16:9
+```
 
-**Ignorar os parâmetros**: Muitos usuários só escrevem o texto e nunca usam `--ar`, `--q` ou `--stylize`. Esses parâmetros fazem diferença enorme.
+**Estampa contínua:**
 
-**Desistir cedo demais**: Se a primeira geração não ficou boa, tente variações antes de reescrever o prompt do zero. A mesma descrição pode gerar resultados completamente diferentes.
+```
+tropical leaves pattern, flat vector style, green and beige palette --tile
+```
 
-**Não explorar a galeria**: A aba "Explore" é um curso gratuito de prompts. Passe tempo analisando imagens que você admira e estudando os prompts usados.
+Uma dica para e-commerce: gere o **ambiente vazio** no Midjourney e aplique a foto real do produto depois, num editor. Assim você não corre o risco de a IA inventar detalhes que o produto não tem. O passo a passo está em [IA para fotos de produtos no e-commerce](/artigos/ia-imagens-para-ecommerce).
 
-## Uso comercial: o que você pode usar?
+## Dicas para economizar GPU
 
-Com qualquer plano pago, você tem direitos para uso comercial das imagens geradas. Isso inclui:
-- Usar em materiais de marketing e publicidade
-- Vender as imagens como produtos
-- Incluir em publicações comerciais
-- Usar em sites e aplicativos
+1. **Explore no SD e finalize no HD.** O HD custa mais tempo de GPU por imagem.
+2. **Use o Relax** (Standard ou superior) para o que não é urgente.
+3. **Refine antes de fazer upscale ou editar.** Cada ação extra consome tempo.
+4. **Mantenha uma biblioteca de prompts** que já deram certo, com parâmetros.
 
-Exceção: se sua empresa faturou mais de $1 milhão no último ano, o plano Pro ou superior é necessário para uso comercial.
+## Erros comuns
 
-Sempre verifique os [termos atualizados](https://docs.midjourney.com/docs/terms-of-service) pois as políticas mudam.
+- **Copiar parâmetros de tutoriais antigos.** `--q 2` e `--oref` aparecem em muitos guias, mas foram pensados para versões anteriores. Confira a lista oficial de parâmetros da versão que você está usando.
+- **Prompts longos e contraditórios.** "Minimalista, cheio de detalhes, colorido, preto e branco" confunde qualquer modelo.
+- **Esquecer a proporção.** Mudar depois altera a composição.
+- **Esquecer a privacidade.** No Basic e no Standard não há Stealth, então suas criações ficam visíveis no site do Midjourney.
+- **Confiar no texto da imagem sem revisar.** A V8.1 melhorou a renderização de texto, mas revise sempre. Para peças com frase, o [Ideogram](/artigos/ideogram-texto-em-imagens) é uma alternativa.
 
-## Conclusão
+## Uso comercial
 
-O Midjourney tem uma curva de aprendizado, mas a recompensa é proporcional ao investimento. Em poucas semanas de uso regular, você passa a pensar visualmente de forma diferente — sabendo exatamente quais palavras ativam quais conceitos visuais.
+Pelos [Termos de Serviço do Midjourney](https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service), vigentes desde 27 de maio de 2026:
 
-O ponto de partida recomendado: assine o plano Basic, passe a primeira semana explorando a galeria pública e estudando prompts de outros usuários, depois comece a criar com as técnicas deste guia.
+- Você é dono das imagens (Assets) que cria.
+- Empresas (ou funcionários de empresas) com receita bruta acima de US$ 1 milhão por ano precisam estar no plano **Pro ou Mega** para ser donas das imagens.
+- A propriedade continua mesmo se você rebaixar ou cancelar o plano.
 
-A diferença entre um usuário médio e um avançado no Midjourney não é acesso a recursos secretos — é o vocabulário de prompt e a compreensão de como o modelo interpreta as palavras. E isso vem com prática.
+Ser dono pelos termos do Midjourney não garante proteção de direito autoral por lei. No Brasil, a Lei 9.610/98 define o autor como pessoa física. Entenda os riscos em [direitos autorais de imagens geradas por IA](/artigos/direitos-autorais-imagens-ia).

@@ -1,86 +1,194 @@
 ---
-title: "Claude para programação: como usar IA para escrever código"
-description: "Veja como usar o Claude para programar: gerar código, explicar trechos, corrigir bugs e acelerar projetos de desenvolvimento com exemplos práticos."
+title: "Claude para programação: como usar o chat para explicar, revisar e depurar código"
+description: "Use o chat do Claude para explicar, revisar e depurar código com prompts prontos para copiar, e entenda quando vale trocar o chat pelo Claude Code no terminal."
 slug: "claude-para-programacao"
 category: "Claude"
-tags: ["claude", "programacao", "desenvolvimento", "codigo"]
+tags: ["claude", "programacao", "desenvolvimento", "codigo", "code review", "debugging"]
 publishedAt: "2026-03-22"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["claude para programar", "ia para codigo", "claude desenvolvedor", "claude programacao"]
+keywords: ["claude para programar", "claude programacao", "ia para codigo", "claude para depurar codigo", "claude code review", "claude chat vs claude code"]
+faq:
+  - question: "Preciso pagar para usar o Claude para programar?"
+    answer: "Não para o chat. O plano Free permite colar código, pedir explicações, revisões e correções, e inclui execução de código e Artifacts. O Claude Code, a ferramenta que trabalha direto nos arquivos do projeto, está nos planos Pro, Max, Team e Enterprise, ou pode ser usado com chave de API paga por uso. Preços e limites podem mudar; consulte a página oficial."
+  - question: "Qual a diferença entre usar o Claude no chat e o Claude Code?"
+    answer: "No chat, você cola o trecho de código e recebe a resposta; quem aplica a mudança é você. O Claude Code roda no terminal, na IDE, no app desktop ou na web, lê o repositório, edita arquivos e executa comandos. O chat é melhor para dúvidas pontuais e aprendizado; o Claude Code, para tarefas em um projeto inteiro."
+  - question: "Qual modelo do Claude usar para programar no chat?"
+    answer: "O Sonnet 5 é o modelo padrão dos planos Free e Pro desde o lançamento, em junho de 2026. Nos planos pagos, é possível escolher o Opus 5.5 no seletor de modelos e ajustar o nível de esforço. Para dúvidas simples, o padrão costuma bastar."
+  - question: "É seguro colar o código da minha empresa no Claude?"
+    answer: "Depende do plano e da política da empresa. Nos planos Free, Pro e Max, as conversas podem ser usadas para treinar modelos se a opção Model Improvement estiver ligada. Nos planos comerciais (Team, Enterprise, API), não há treinamento por padrão. Nunca cole senhas, chaves de API ou dados pessoais de clientes."
+sources:
+  - name: "Anthropic — Claude: planos e preços"
+    url: "https://claude.com/pricing"
+  - name: "Anthropic — Claude Code overview"
+    url: "https://code.claude.com/docs/en/overview"
+  - name: "Anthropic — Create and edit files with Claude"
+    url: "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude"
+  - name: "Anthropic — Change the model, effort, and thinking settings"
+    url: "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+  - name: "Anthropic — Introducing Claude Sonnet 5"
+    url: "https://www.anthropic.com/news/claude-sonnet-5"
+  - name: "Anthropic — Is my data used for model training? (consumidor)"
+    url: "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training"
+related:
+  - "claude-code-terminal-guia"
+  - "claude-artifacts-recursos"
+  - "claude-projects-como-usar"
+  - "chatgpt-vs-gemini-vs-claude"
 ---
 
-Programadores de todos os níveis, de iniciantes a profissionais experientes, vêm adotando o Claude como ferramenta de apoio no dia a dia de desenvolvimento. Seja para gerar trechos de código, explicar lógicas complexas ou revisar projetos inteiros, o Claude se tornou um dos assistentes de IA mais usados por quem programa. Neste artigo, mostramos como aproveitar melhor esse recurso.
+Este guia é sobre o uso do Claude **no chat** (web, desktop ou celular) para trabalhar com código: entender um trecho que você herdou, revisar um pull request antes de pedir aprovação, achar a causa de um erro ou escrever testes. Você cola o código, o Claude responde, e quem decide o que entra no projeto é você. Se o que você procura é uma IA que abre o repositório, edita arquivos e roda comandos sozinha, o caminho é o Claude Code, explicado no [guia do Claude Code no terminal](/artigos/claude-code-terminal-guia). Se ainda não conhece a ferramenta, comece pelo [guia sobre o que é o Claude](/artigos/o-que-e-claude-anthropic).
 
-## Por que usar IA para programar
+## Chat ou Claude Code: qual usar
 
-A IA não substitui o raciocínio do desenvolvedor, mas acelera tarefas repetitivas e ajuda a destravar problemas específicos. Entre os principais benefícios estão:
+As duas formas usam a mesma família de modelos (o modelo padrão de cada uma pode ser diferente), mas resolvem problemas diferentes.
 
-- Redução do tempo gasto escrevendo código repetitivo (boilerplate).
-- Explicações rápidas sobre trechos de código desconhecidos ou legados.
-- Ajuda na identificação e correção de bugs.
-- Sugestões de boas práticas e refatoração.
-- Apoio no aprendizado de novas linguagens e frameworks.
+| Situação | Chat do Claude | Claude Code |
+|---|---|---|
+| Entender um trecho de código ou um conceito | Ideal | Funciona, mas é mais do que o necessário |
+| Revisar uma função ou um diff colado | Ideal | Bom, se o código já está no repositório |
+| Depurar um erro com stack trace | Bom | Melhor quando o bug envolve vários arquivos |
+| Implementar uma funcionalidade em um projeto existente | Trabalhoso: você copia e cola tudo | Ideal: lê o projeto e edita os arquivos |
+| Rodar testes e comandos | Só no ambiente de execução do próprio Claude, sem acesso ao seu projeto | Roda no seu ambiente, com sua permissão |
+| Plano necessário | Free, Pro, Max, Team, Enterprise | Pro, Max, Team, Enterprise ou chave de API |
 
-## Principais formas de usar o Claude na programação
+Segundo a [documentação oficial](https://code.claude.com/docs/en/overview), o Claude Code é "an agentic coding tool that reads your codebase, edits files, runs commands, and integrates with your development tools". No chat, nada disso acontece no seu computador: o Claude só vê o que você colar ou anexar.
 
-### 1. Gerar código a partir de uma descrição
+## Antes de começar: ajustes que fazem diferença
 
-Você pode descrever o que precisa em linguagem natural e pedir que o Claude escreva a função, componente ou script correspondente. Quanto mais específico o pedido — linguagem, framework, formato de entrada e saída esperado — melhor será o resultado.
+1. **Escolha o modelo.** O Sonnet 5 é o padrão dos planos Free e Pro, conforme o [anúncio da Anthropic](https://www.anthropic.com/news/claude-sonnet-5). Nos planos pagos, dá para trocar para o Opus 5.5 no seletor, o que ajuda em problemas de lógica mais difíceis. O mesmo seletor permite ajustar o nível de esforço.
+2. **Ative a execução de código**, se quiser que o Claude rode scripts de teste no ambiente de execução dele (sem acesso ao seu computador). O recurso existe em todos os planos e, no Free, Pro e Max, é ligado em Settings > Capabilities.
+3. **Use Projects para contexto fixo.** Se você sempre trabalha no mesmo sistema, crie um projeto com o guia de estilo do time, o esquema do banco e as convenções de nomes. Veja como no [guia do Claude Projects](/artigos/claude-projects-como-usar).
+4. **Tire segredos do código antes de colar.** Troque chaves de API, senhas, tokens e dados de clientes por valores falsos como `SUA_CHAVE_AQUI`.
 
-### 2. Explicar código existente
+## Prompts prontos para copiar
 
-Cole um trecho de código e peça uma explicação linha por linha, ou um resumo do que aquele bloco faz. Isso é extremamente útil ao assumir projetos legados ou revisar código de terceiros.
+Os prompts abaixo funcionam melhor quando você troca os trechos entre colchetes pelas informações reais do seu projeto. Todos são exemplos: adapte a linguagem e o nível de detalhe.
 
-### 3. Depurar erros (debugging)
+### Explicar código que você não escreveu
 
-Cole a mensagem de erro junto com o trecho de código relacionado e peça ajuda para identificar a causa. O Claude consegue sugerir hipóteses e possíveis correções, embora seja sempre recomendável testar as mudanças antes de aplicá-las em produção.
+```text
+Sou desenvolvedor [júnior/pleno/sênior] e acabei de assumir este código.
+Linguagem: [Python 3.12 / TypeScript / PHP 8...]. Framework: [Django / Next.js / Laravel...].
 
-### 4. Refatorar e melhorar código
+1. Explique em 3 frases o que este trecho faz.
+2. Depois, explique bloco a bloco, sem repetir o código inteiro.
+3. Aponte dependências externas e efeitos colaterais (banco, rede, arquivos, variáveis globais).
+4. Liste o que não dá para saber só por este trecho e que eu deveria verificar no resto do projeto.
 
-Peça sugestões de melhoria de legibilidade, performance ou organização de um código já funcional. É uma ótima forma de aprender padrões melhores de escrita.
+[cole o código]
+```
 
-### 5. Escrever testes automatizados
+O item 4 é o que evita a armadilha mais comum: a IA "completar" com suposições aquilo que está em outro arquivo.
 
-Descreva a função ou módulo e peça a criação de testes unitários cobrindo os principais cenários, incluindo casos extremos.
+### Revisar código antes do pull request
 
-## Exemplo de fluxo de trabalho
+```text
+Faça um code review deste diff como um revisor sênior exigente.
+Contexto: [o que a mudança deveria fazer].
 
-Um fluxo comum de uso do Claude em projetos de programação segue mais ou menos esta sequência:
+Organize a resposta em:
+- Bugs ou comportamentos incorretos (com a linha e o porquê)
+- Riscos de segurança (injeção, validação de entrada, dados sensíveis em log, permissões)
+- Casos de borda não tratados
+- Legibilidade e nomes
+- O que está bom e não deve mudar
 
-1. Descrever o objetivo da funcionalidade em linguagem natural.
-2. Pedir uma primeira versão do código.
-3. Revisar manualmente a lógica gerada.
-4. Pedir ajustes específicos (nomes de variáveis, tratamento de erros, comentários).
-5. Solicitar testes para validar o comportamento esperado.
-6. Rodar o código localmente e reportar eventuais falhas para nova correção.
+Não reescreva o código inteiro. Para cada problema, mostre só o trecho corrigido.
+Se algo depender de contexto que você não tem, diga isso em vez de supor.
 
-## Boas práticas ao programar com o Claude
+[cole o diff ou os arquivos alterados]
+```
 
-- **Sempre revise o código gerado** antes de usá-lo em produção; a IA pode cometer erros sutis.
-- **Dê contexto suficiente**, como a linguagem, framework, versão e restrições do projeto.
-- **Divida tarefas grandes em partes menores**, o que costuma gerar resultados mais precisos do que pedir um sistema inteiro de uma vez.
-- **Peça explicações**, não apenas código pronto, especialmente se você está aprendendo.
-- **Combine com ferramentas de controle de versão**, testando as mudanças em branches separadas antes de integrar ao projeto principal.
+### Depurar um erro
 
-## Linguagens e tecnologias suportadas
+```text
+Estou com este erro e não sei a causa.
 
-O Claude é capaz de trabalhar com praticamente todas as linguagens de programação populares, incluindo Python, JavaScript, TypeScript, Java, C#, Go, Ruby, PHP, SQL, entre outras, além de frameworks conhecidos de front-end, back-end e mobile. A qualidade das respostas costuma acompanhar a popularidade da linguagem: tecnologias mais usadas tendem a gerar respostas mais precisas, simplesmente porque existe mais material de referência disponível.
+O que eu esperava: [comportamento esperado]
+O que acontece: [comportamento real]
+Como reproduzir: [passos]
+Ambiente: [sistema, versão da linguagem, versões das bibliotecas principais]
+O que já tentei: [tentativas e resultado]
 
-## Claude Code: o próximo passo para desenvolvedores
+Mensagem de erro completa:
+[cole o stack trace]
 
-Para quem trabalha diretamente no terminal e em projetos de código mais robustos, a Anthropic oferece uma versão dedicada chamada Claude Code, pensada para integrar a IA diretamente ao fluxo de desenvolvimento, permitindo executar comandos, editar arquivos e navegar por repositórios inteiros com apoio da IA. Esse tema é aprofundado em um artigo específico desta série.
+Código relacionado:
+[cole o trecho]
 
-## Limitações a ter em mente
+Liste as 3 hipóteses mais prováveis, da mais para a menos provável, e diga como testar cada uma antes de mudar o código.
+```
 
-Apesar da qualidade elevada, o Claude não substitui a revisão humana. Alguns cuidados importantes:
+Pedir hipóteses com forma de teste, em vez de "corrija o erro", faz o Claude mostrar o raciocínio e deixa você confirmar a causa antes de aplicar qualquer mudança.
 
-- Código gerado por IA pode conter falhas de segurança se não for revisado.
-- Bibliotecas ou funções sugeridas podem estar desatualizadas em relação à versão mais recente.
-- Projetos muito grandes exigem que o contexto seja bem gerenciado, dividindo o trabalho em partes.
-- É essencial testar tudo antes de colocar em produção, especialmente em sistemas críticos.
+### Escrever testes
 
-## Conclusão
+```text
+Escreva testes unitários para a função abaixo usando [pytest / Jest / PHPUnit].
+Cubra: caso feliz, entradas vazias ou nulas, valores limite, entradas inválidas e erros esperados.
+Antes do código, liste em tópicos os cenários que você vai cobrir.
+Não altere a função. Se encontrar um comportamento que parece bug, aponte em vez de "consertar" no teste.
 
-Usar o Claude para programação pode acelerar significativamente o desenvolvimento de software, reduzir tempo gasto em tarefas repetitivas e ajudar tanto iniciantes quanto profissionais experientes a resolver problemas com mais agilidade. O segredo está em usar a IA como parceira de trabalho — que sugere, explica e acelera — mantendo sempre a revisão crítica humana como parte essencial do processo.
+[cole a função]
+```
+
+### Exemplo prático: validação de CPF
+
+Um caso comum em sistemas brasileiros, como cadastro de clientes de e-commerce:
+
+```text
+Escreva uma função em TypeScript que valide CPF.
+Regras: aceitar com ou sem pontuação; rejeitar sequências repetidas (111.111.111-11);
+validar os dois dígitos verificadores.
+Não use bibliotecas externas. Depois do código, escreva 8 casos de teste em Jest,
+incluindo CPFs inválidos. Use apenas CPFs de exemplo, nunca números de pessoas reais.
+```
+
+Confira os testes rodando no seu ambiente. Um código que "parece certo" pode errar justamente no cálculo dos dígitos.
+
+### Refatorar sem mudar o comportamento
+
+```text
+Refatore este código para melhorar a legibilidade, sem alterar o comportamento.
+Restrições: manter a mesma assinatura pública; não adicionar dependências; [outras regras do time].
+Mostre o antes e depois só dos trechos alterados e explique cada mudança em uma linha.
+
+[cole o código]
+```
+
+Para mais técnicas de como pedir, veja o guia sobre [como melhorar seus prompts](/artigos/como-melhorar-seus-prompts).
+
+## Fluxo sugerido para uma tarefa do dia a dia
+
+1. Descreva o objetivo e as restrições (linguagem, versão, o que não pode mudar).
+2. Peça primeiro um plano ou pseudocódigo, não o código final.
+3. Aprove ou corrija o plano e só então peça a implementação.
+4. Peça os testes junto com o código.
+5. Rode tudo no seu ambiente e cole de volta as falhas, com a mensagem completa.
+6. Antes de fazer o commit, peça uma revisão crítica do resultado final ("o que pode quebrar em produção?").
+
+Se a tarefa exigir que você cole muitos arquivos a cada rodada, é sinal de que o Claude Code resolve melhor.
+
+## Artifacts: protótipos que rodam no chat
+
+Quando o objetivo é uma ferramenta pequena e independente, como uma calculadora de frete, um formulário ou um painel simples, o Claude pode criar um Artifact, que aparece ao lado da conversa e pode ser testado ali mesmo. Todos os planos criam Artifacts no chat. Veja exemplos no [guia de Artifacts do Claude](/artigos/claude-artifacts-recursos).
+
+## Limitações e erros comuns
+
+- **Bibliotecas e APIs mudam.** O Claude pode sugerir uma função que mudou de nome ou foi removida numa versão recente. Informe a versão que você usa e confira na documentação oficial da biblioteca.
+- **Ele só vê o que você mostra.** Sem o resto do projeto, a resposta pode assumir coisas erradas sobre tipos, rotas ou o esquema do banco.
+- **Código plausível não é código correto.** Rode os testes e revise a lógica, principalmente em cálculos financeiros, autenticação e permissões.
+- **Segurança exige revisão humana.** Peça explicitamente uma revisão de segurança e, em sistemas críticos, faça também uma revisão com alguém do time.
+- **Conversas muito longas perdem foco.** Quando o assunto mudar, abra uma conversa nova com um resumo do que já foi decidido.
+
+## Privacidade: o que evitar colar
+
+Nos planos Free, Pro e Max, as conversas podem ser usadas para treinar modelos se a opção Model Improvement estiver ligada; nos planos comerciais (Team, Enterprise e API), não há treinamento por padrão, segundo a [central de privacidade da Anthropic](https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training). Mesmo assim, siga a política da sua empresa e nunca cole credenciais, arquivos `.env` ou dados pessoais de clientes. Os detalhes estão no guia [Claude e segurança de dados](/artigos/claude-seguranca-privacidade-dados).
+
+## Quando NÃO usar o chat para código
+
+- Mudanças que tocam muitos arquivos de um projeto grande: use o Claude Code.
+- Código sob contrato de confidencialidade que proíbe o uso de ferramentas externas.
+- Quando você está aprendendo e ainda não sabe revisar a resposta: peça explicação e escreva o código você mesmo.

@@ -1,142 +1,162 @@
 ---
 title: "Ética na IA: o que todo usuário precisa saber"
-description: "Guia prático sobre ética na inteligência artificial: vieses, desinformação, deepfakes, transparência e como usar IA de forma responsável no dia a dia."
+description: "Guia prático de ética na IA: vieses, deepfakes e regras do TSE para 2026, privacidade, transparência e um checklist para usar e publicar conteúdo feito com IA."
 slug: "etica-ia-guia-pratico"
 category: "Guias"
-tags: ["ética", "IA responsável", "vieses", "deepfake"]
+tags: ["ética", "IA responsável", "vieses", "deepfake", "TSE", "transparência"]
 publishedAt: "2026-06-15"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["ética na inteligência artificial", "IA responsável", "vieses da IA"]
+keywords: ["ética na inteligência artificial", "IA responsável", "vieses da IA", "deepfake eleições 2026", "regras TSE inteligência artificial", "como usar IA com ética"]
+faq:
+  - question: "Deepfake é proibido nas eleições de 2026?"
+    answer: "Sim, em propaganda eleitoral. A Resolução TSE 23.755/2026 exige rotulagem explícita de conteúdo sintético e proíbe publicar, republicar ou impulsionar novo conteúdo sintético com imagem ou voz de candidatos nas 72 horas antes e nas 24 horas depois da eleição. Em setembro de 2026, o TSE fixou que a vedação a deepfake exige que o conteúdo seja propaganda eleitoral."
+  - question: "Preciso avisar que usei IA para criar um conteúdo?"
+    answer: "Nem sempre existe obrigação legal, mas há casos em que existe: na propaganda eleitoral de 2026, o TSE exige rótulo explícito. Fora disso, avise sempre que a informação importar para quem recebe, como em atendimento, jornalismo, publicidade, trabalhos escolares e concursos."
+  - question: "O Brasil já tem uma lei de inteligência artificial?"
+    answer: "Não. Em setembro de 2026, o PL 2338/2023 tinha sido aprovado no Senado em dezembro de 2024 e seguia em comissão especial na Câmara. Enquanto isso, já valem a LGPD, o Código de Defesa do Consumidor, a Lei de Direitos Autorais, o Código Penal e as normas eleitorais."
+  - question: "Como perceber viés em uma resposta de IA?"
+    answer: "Refaça o mesmo pedido trocando apenas um atributo (gênero, idade, região, nome) e compare as respostas. Se o tom, a avaliação ou as sugestões mudarem sem motivo, há viés. Nunca use a IA como única base para decisões sobre pessoas."
+sources:
+  - name: "TSE — Resolução nº 23.755/2026"
+    url: "https://www.tse.jus.br/legislacao/compilada/res/2026/resolucao-no-23-755-de-2-de-marco-de-2026"
+  - name: "TSE — Regras sobre IA na campanha eleitoral de 2026"
+    url: "https://www.tse.jus.br/comunicacao/noticias/2026/Abril/por-dentro-das-eleicoes-conheca-as-regras-sobre-uso-de-ia-na-campanha-eleitoral-de-2026"
+  - name: "TSE — Tese sobre deepfake (set/2026)"
+    url: "https://www.tse.jus.br/comunicacao/noticias/2026/Setembro/tse-fixa-tese-sobre-deepfake-e-delimita-regra-para-as-eleicoes-2026"
+  - name: "NIST — Face Recognition Vendor Test Part 3: Demographic Effects (NISTIR 8280)"
+    url: "https://www.nist.gov/publications/face-recognition-vendor-test-part-3-demographic-effects"
+  - name: "UNESCO — Recommendation on the Ethics of Artificial Intelligence"
+    url: "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics"
+  - name: "Senado Federal — PL 2338/2023"
+    url: "https://www25.senado.leg.br/web/atividade/materias/-/materia/157233"
+related:
+  - "ia-privacidade-seguranca"
+  - "direitos-autorais-imagens-ia"
+  - "ia-recrutamento-rh"
+  - "ia-para-estudantes-guia"
 ---
 
-## Ética na IA: o que todo usuário precisa saber
+Ética na IA não é só debate de cientistas e governos. Ela aparece quando você pede a um chatbot para avaliar currículos, quando compartilha um vídeo "bombástico" no WhatsApp, quando cola a planilha de clientes em uma ferramenta gratuita ou quando publica uma imagem de alguém que nunca disse aquilo. Este guia explica os dilemas que mais afetam quem usa IA no dia a dia, com as regras que já valem no Brasil em setembro de 2026 (inclusive as do TSE para as eleições), testes simples para identificar problemas e um checklist para usar antes de publicar.
 
-Quando se fala em ética na inteligência artificial, muita gente pensa em debates distantes, travados por cientistas e governos. Mas a ética da IA também passa pelas escolhas de cada usuário: o que você pede, o que você publica, em que você confia e como você trata as informações de outras pessoas.
+*Aviso: este conteúdo é informativo e não substitui orientação jurídica.*
 
-Este guia explica, de forma prática, os principais dilemas éticos da IA e como agir de forma responsável no dia a dia — no trabalho, nos estudos e nas redes sociais.
+## Por que isso é assunto de todo usuário
 
----
+Sistemas de IA já participam de decisões sobre crédito, seleção de currículos e o que aparece no seu feed. Com as ferramentas generativas, qualquer pessoa produz textos, imagens e vozes em escala. Resultado: **quem usa também responde** pelo que cria, decide e compartilha. Se você ainda está entendendo como esses sistemas funcionam, comece por [o que é inteligência artificial](/artigos/o-que-e-inteligencia-artificial).
 
-## Por que ética na IA é assunto de todo mundo
+## 1. Vieses e discriminação
 
-A IA já influencia decisões importantes: quem recebe crédito, quais currículos são analisados, que notícias aparecem no seu feed, quais vídeos viralizam. E, com as ferramentas generativas, qualquer pessoa pode produzir textos, imagens e vozes em escala.
+Modelos aprendem com dados produzidos por pessoas e podem reproduzir desigualdades presentes nesses dados. Um exemplo bem documentado: em 2019, o NIST, instituto de padrões do governo dos EUA, avaliou algoritmos de reconhecimento facial e encontrou [diferenças demográficas nas taxas de falsos positivos](https://www.nist.gov/publications/face-recognition-vendor-test-part-3-demographic-effects) em muitos (não todos) dos sistemas testados, com taxas mais altas para pessoas da África Ocidental e Oriental e do Leste Asiático. O mesmo estudo mostrou que o problema varia muito de um algoritmo para outro, ou seja, depende das escolhas de quem desenvolve.
 
-Isso significa que **cada usuário se tornou, em alguma medida, responsável** pelo impacto do que cria e compartilha com IA.
+Em IA generativa, o viés aparece de forma mais sutil: descrições estereotipadas de profissões, avaliações diferentes para o mesmo currículo com nomes diferentes, imagens que repetem sempre o mesmo "tipo" de pessoa.
 
----
+**Teste prático (faça você mesmo):**
 
-## Os 7 principais temas éticos da IA
+```text
+Avalie este perfil para uma vaga de analista financeiro e dê uma nota de 0 a 10,
+justificando: [cole o perfil, com o nome "Mariana"]
+```
 
-### 1. Vieses e discriminação
-Modelos de IA aprendem com dados produzidos por humanos — e herdam nossos preconceitos. Exemplos já documentados em diversos países:
+Depois, envie o mesmo pedido em outra conversa trocando só o nome (por "Marcos") ou a cidade. Se a nota ou a justificativa mudarem sem motivo objetivo, você encontrou um viés. É por isso que a IA **não deve decidir sozinha** sobre pessoas. Em RH, isso é ainda mais sensível; veja [IA em recrutamento e gestão de pessoas](/artigos/ia-recrutamento-rh).
 
-- Sistemas de recrutamento que desfavoreciam mulheres
-- Reconhecimento facial com mais erros para pessoas negras
-- Geradores de imagem que representam "médico" quase sempre como homem branco
+## 2. Desinformação e alucinações
 
-**O que você pode fazer:** questione respostas estereotipadas, peça diversidade de forma explícita quando fizer sentido e nunca use a IA como única base para decisões sobre pessoas.
+Modelos de linguagem podem inventar fatos, números e citações com total confiança. E podem ser usados de propósito para produzir boatos em massa.
 
-### 2. Desinformação e alucinações
-A IA pode inventar fatos com total confiança. Além disso, pode ser usada propositalmente para criar notícias falsas em massa.
+**O que fazer:**
 
-**O que você pode fazer:** verifique informações antes de compartilhar, desconfie de conteúdos que despertam muita indignação e use agências de checagem.
+- Peça fontes e **abra** os links: citação que não existe é sinal de alucinação.
+- Desconfie de conteúdo que desperta indignação imediata; é o tipo que mais se espalha.
+- Antes de repassar, procure a informação em veículos e órgãos oficiais ou em agências de checagem.
 
-### 3. Deepfakes e manipulação
-Vídeos e áudios falsos cada vez mais realistas são usados em golpes financeiros, difamação, pornografia não consentida e manipulação política. No Brasil, a Justiça Eleitoral estabeleceu regras sobre o uso de IA em propaganda eleitoral, incluindo a proibição de deepfakes para enganar eleitores.
+## 3. Deepfakes e manipulação
 
-**O que você pode fazer:** nunca crie conteúdo que imite pessoas reais sem autorização, denuncie deepfakes e desconfie de vídeos "bombásticos" sem fonte confiável.
+Áudios e vídeos falsos realistas são usados em golpes, difamação, pornografia não consentida e manipulação política. No Brasil, algumas regras já tratam disso diretamente:
 
-### 4. Privacidade
-Colar dados pessoais de terceiros em ferramentas de IA pode violar a privacidade e, em contextos profissionais, a **LGPD**.
+- **Eleições 2026:** a [Resolução TSE 23.755/2026](https://www.tse.jus.br/legislacao/compilada/res/2026/resolucao-no-23-755-de-2-de-marco-de-2026) alterou as regras de propaganda eleitoral. Conteúdo sintético precisa de rótulo "explícito, destacado e acessível"; é proibido publicar, republicar ou impulsionar novo conteúdo sintético com imagem ou voz de candidatos **nas 72 horas antes e nas 24 horas depois** da eleição; perfis que violem as regras podem ser suspensos; e provedores que não removem imediatamente conteúdo irregular podem responder solidariamente. As sanções citadas pelo TSE incluem multa de R$ 5 mil a R$ 30 mil e, em casos graves, podem levar à cassação.
+- **O que conta como deepfake:** em 1º de setembro de 2026, o [TSE fixou tese](https://www.tse.jus.br/comunicacao/noticias/2026/Setembro/tse-fixa-tese-sobre-deepfake-e-delimita-regra-para-as-eleicoes-2026) definindo deepfake como conteúdo sintético realista, produzido ou manipulado por IA ou tecnologia equivalente, que altera imagem, voz ou semelhança de alguém; a vedação eleitoral exige que o conteúdo seja propaganda eleitoral.
+- **Violência contra a mulher:** a Lei 15.123/2025 aumenta de metade a pena do crime de violência psicológica contra a mulher quando cometido com IA ou recurso que altere imagem ou som da vítima.
+- **Imagens sexualizadas:** em janeiro de 2026, a ANPD publicou nota técnica sobre a geração de imagens sexualizadas pelo Grok, apontando possíveis violações à LGPD e recomendando medidas para impedir imagens de menores e de adultos sem autorização.
 
-**O que você pode fazer:** anonimize informações, use ferramentas aprovadas pela sua empresa e não exponha dados de clientes, pacientes ou alunos.
+**O que fazer:** não crie conteúdo que imite pessoas reais sem autorização, rotule o que é sintético, denuncie deepfakes à plataforma e, em período eleitoral, pelos canais da Justiça Eleitoral. Recebeu um áudio "vazado" de um candidato? Não repasse antes de checar.
 
-### 5. Direitos autorais e autoria
-Modelos são treinados com obras de artistas, escritores e jornalistas, muitas vezes sem autorização ou remuneração. Há processos judiciais em andamento em vários países.
+## 4. Privacidade
 
-**O que você pode fazer:** evite imitar diretamente artistas vivos, dê crédito quando usar IA e respeite os termos de uso das ferramentas.
+Colar dados pessoais de terceiros em uma ferramenta de IA pode expor essas pessoas e, em contexto profissional, violar a LGPD. Dados de saúde, biométricos e de crianças exigem cuidado redobrado.
 
-### 6. Transparência
-As pessoas têm o direito de saber quando estão interagindo com uma IA ou consumindo conteúdo gerado por ela, especialmente em atendimento, jornalismo, publicidade e educação.
+**O que fazer:** anonimize (troque nomes, CPFs e endereços por marcadores), use as ferramentas aprovadas pela empresa e revise as configurações de uso dos dados para treinamento. O passo a passo para ChatGPT, Claude e Gemini está em [IA e privacidade](/artigos/ia-privacidade-seguranca).
 
-**O que você pode fazer:** informe quando um texto, imagem ou atendimento foi feito com IA, principalmente quando isso importa para quem recebe.
+## 5. Direitos autorais e autoria
 
-### 7. Impacto no trabalho e no meio ambiente
-A automação transforma profissões, e o treinamento e uso de grandes modelos consomem muita energia e água em data centers.
+Modelos são treinados com grandes volumes de obras, e a remuneração de autores ainda está em discussão. No Brasil, o texto do PL 2338/2023 aprovado pelo Senado prevê remuneração aos titulares e direito de proibir o uso das obras no treinamento de IA comercial, mas ainda não é lei. Na autoria, a Lei 9.610/1998 considera autor a pessoa física criadora da obra.
 
-**O que você pode fazer:** use a IA para potencializar pessoas, não apenas cortar custos; invista em capacitação; e evite usos desnecessários e repetitivos só por diversão em larga escala.
+**O que fazer:** não peça cópias de obras protegidas, evite imitar diretamente artistas vivos, respeite os termos de uso de cada ferramenta e informe quando a IA gerou parte relevante do trabalho. Mais detalhes em [direitos autorais de imagens geradas por IA](/artigos/direitos-autorais-imagens-ia).
 
----
+## 6. Transparência
 
-## Tabela: uso ético x uso problemático
+As pessoas têm o direito de saber quando estão falando com uma IA ou consumindo conteúdo gerado por ela, especialmente em atendimento, jornalismo, publicidade e educação. O PL 2338/2023, no texto do Senado, prevê o direito à informação prévia de que se está interagindo com IA, e a regra do TSE já exige rótulo na propaganda eleitoral.
+
+**O que fazer:** identifique o chatbot da sua empresa como robô, avise quando um texto ou imagem foi gerado com IA e nunca use depoimentos ou "clientes" inventados.
+
+## 7. Trabalho e meio ambiente
+
+A automação muda profissões, e treinar e rodar grandes modelos consome energia e água em data centers.
+
+**O que fazer:** use a IA para ampliar o que as pessoas fazem, e não só para cortar custos; invista em capacitação da equipe; evite gerações em massa sem propósito.
+
+## Uso ético x uso problemático
 
 | Situação | Uso ético | Uso problemático |
 |---|---|---|
-| Trabalho escolar | Pedir explicações e feedback | Entregar texto gerado como se fosse seu |
-| Redes sociais | Criar arte e informar que usou IA | Publicar imagens falsas de pessoas reais |
-| Recrutamento | Apoiar a triagem com revisão humana | Rejeitar candidatos só com base na IA |
-| Atendimento | Chatbot identificado como robô | Fingir ser humano para enganar clientes |
-| Jornalismo e conteúdo | Apoio em pesquisa com checagem | Publicar informações sem verificar |
-| Marketing | Criar variações de anúncios | Depoimentos falsos gerados por IA |
+| Escola e faculdade | Pedir explicações e feedback, declarando o uso | Entregar texto gerado como se fosse seu |
+| Redes sociais | Criar arte e informar que usou IA | Publicar imagem falsa de pessoa real |
+| Eleições | Rotular conteúdo sintético | Publicar deepfake de candidato ou conteúdo sintético nas 72 h antes da votação |
+| Recrutamento | Apoiar a triagem com critérios claros e revisão humana | Rejeitar candidatos só com base na IA |
+| Atendimento | Chatbot identificado como robô, com opção de falar com humano | Fingir ser humano para enganar clientes |
+| Marketing e e-commerce | Criar variações de anúncio e descrição com dados reais do produto | Depoimentos falsos ou promessas que o produto não cumpre |
 
----
+## Checklist antes de publicar algo feito com IA
 
-## Princípios de uso responsável
+- [ ] Conferi fatos, números e citações em fontes que abri?
+- [ ] O conteúdo pode enganar alguém sobre o que é real?
+- [ ] Estou usando imagem, voz ou dados de alguém sem autorização por escrito?
+- [ ] Refiz o pedido trocando gênero, nome ou região para testar viés, quando o conteúdo fala de pessoas?
+- [ ] É conteúdo político ou eleitoral? Se sim, tem rótulo de IA e está fora da janela de 72 h antes e 24 h depois da votação?
+- [ ] Preciso avisar que usei IA neste contexto (cliente, escola, edital, veículo)?
+- [ ] Os termos da ferramenta, no meu plano, permitem este uso (inclusive comercial)?
+- [ ] Removi dados pessoais que não precisavam estar ali?
 
-Organizações internacionais, como a UNESCO e a OCDE, publicaram princípios para uma IA confiável. Adaptados para o usuário comum, eles podem ser resumidos assim:
+Se algum item acender alerta, revise antes de publicar.
+
+## Princípios internacionais, em versão prática
+
+A [Recomendação sobre Ética da IA da UNESCO](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics), adotada em 2021 pelos Estados-membros, e os Princípios de IA da OCDE, aos quais o Brasil aderiu, orientam governos e empresas. Para o usuário comum, eles cabem em seis atitudes:
 
 1. **Responsabilidade humana:** a decisão final é sua, não da máquina.
 2. **Veracidade:** não use IA para enganar.
 3. **Respeito:** não crie conteúdo que humilhe, discrimine ou exponha pessoas.
-4. **Privacidade:** proteja os dados seus e de terceiros.
-5. **Transparência:** seja honesto sobre o uso de IA quando for relevante.
+4. **Privacidade:** proteja os seus dados e os de terceiros.
+5. **Transparência:** diga quando usou IA, se isso importar para quem recebe.
 6. **Senso crítico:** verifique, questione e compare fontes.
-
----
-
-## Checklist rápido antes de publicar algo feito com IA
-
-- Conferi os fatos, números e citações?
-- O conteúdo pode enganar alguém sobre o que é real?
-- Estou usando a imagem, a voz ou os dados de alguém sem autorização?
-- O resultado reforça algum estereótipo?
-- Preciso informar que usei IA neste contexto?
-- Os termos de uso da ferramenta permitem este tipo de uso?
-
-Se alguma resposta acender um alerta, revise antes de publicar.
-
----
 
 ## E a regulação no Brasil?
 
-O Brasil ainda debate um marco legal específico para inteligência artificial, com propostas que classificam sistemas por nível de risco e estabelecem direitos para as pessoas afetadas. Enquanto isso, várias leis já se aplicam ao uso de IA:
+O Brasil ainda não tem uma lei geral de IA. O PL 2338/2023 foi aprovado no Senado em 10 de dezembro de 2024, com regulação baseada em risco e direitos para pessoas afetadas, e em setembro de 2026 seguia em comissão especial na Câmara. Se a Câmara alterar o texto, ele volta ao Senado.
 
-- **LGPD:** proteção de dados pessoais
-- **Código de Defesa do Consumidor:** transparência e proteção em relações de consumo
-- **Marco Civil da Internet:** direitos e deveres no uso da internet
-- **Lei de Direitos Autorais:** proteção de obras criativas
-- **Normas eleitorais:** regras sobre IA em campanhas políticas
+Mas não existe "terra sem lei" para conteúdo feito com IA. Já se aplicam:
 
-Ou seja: não existe "terra sem lei" só porque o conteúdo foi feito por uma IA.
+- **LGPD:** tratamento de dados pessoais, inclusive o direito de pedir revisão de decisões tomadas só por meios automatizados (art. 20);
+- **Código de Defesa do Consumidor:** informação clara e proteção contra publicidade enganosa;
+- **Lei de Direitos Autorais:** proteção de obras;
+- **Código Penal:** inclusive o agravante da Lei 15.123/2025;
+- **Normas eleitorais:** Resolução TSE 23.755/2026.
 
----
+## Para empresas: governança mínima em cinco passos
 
-## Para empresas: primeiros passos de governança
-
-Se você é gestor ou empreendedor, alguns cuidados básicos ajudam muito:
-
-- Crie uma **política interna de uso de IA** clara e simples
-- Defina quais ferramentas são autorizadas e para quais dados
-- Mantenha **revisão humana** em decisões que afetam pessoas
-- Treine a equipe sobre riscos, vieses e privacidade
-- Seja transparente com clientes sobre o uso de IA no atendimento
-
----
-
-## Conclusão
-
-Ética na IA não é um tema abstrato: está em cada prompt, em cada imagem compartilhada e em cada decisão apoiada por algoritmos. A tecnologia é poderosa, e justamente por isso exige responsabilidade de quem a usa.
-
-Usar IA com ética significa aproveitar seus benefícios sem enganar, discriminar ou expor ninguém. Com senso crítico, transparência e respeito, você faz parte da construção de uma inteligência artificial que trabalha a favor das pessoas.
+1. **Política de uso de IA em uma página:** quais ferramentas são permitidas, para quais tarefas e com quais dados.
+2. **Classificação de dados:** o que nunca pode sair da empresa (dados de clientes, contratos, dados de saúde).
+3. **Revisão humana obrigatória** em decisões que afetam pessoas (crédito, seleção, atendimento de reclamações).
+4. **Transparência com o cliente:** chatbot identificado e caminho fácil para falar com uma pessoa. Veja como fazer isso em [IA no atendimento ao cliente](/artigos/ia-atendimento-cliente-chatbot).
+5. **Treinamento da equipe** sobre vieses, privacidade, deepfakes e golpes com voz clonada.

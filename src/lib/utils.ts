@@ -52,7 +52,11 @@ export function extractHeadings(
   const headings: Array<{ id: string; text: string; level: number }> = []
   let match
 
-  while ((match = headingRegex.exec(content)) !== null) {
+  // Ignora linhas dentro de blocos de código (ex.: modelos de prompt com "## Tarefa"),
+  // que não viram headings reais na página.
+  const withoutCode = content.replace(/^```[\s\S]*?^```/gm, '')
+
+  while ((match = headingRegex.exec(withoutCode)) !== null) {
     const level = match[1]?.length ?? 2
     const text = match[2]?.trim() ?? ''
     const id = slugify(text)

@@ -1,6 +1,6 @@
 ---
 title: "Glossário de IA: os termos que você precisa conhecer"
-description: "Glossário de inteligência artificial em português: entenda LLM, prompt, alucinação, token, machine learning, agentes e outros termos de forma simples."
+description: "Glossário de inteligência artificial em português: LLM, token, prompt, alucinação, RAG, agente, pesos abertos, deepfake e outros termos com exemplos simples."
 slug: "glossario-inteligencia-artificial"
 category: "Guias"
 tags: ["glossário", "conceitos de IA", "IA para iniciantes", "termos técnicos"]
@@ -8,16 +8,37 @@ publishedAt: "2026-04-20"
 author: "Equipe Foco em IA"
 featured: false
 popular: false
-keywords: ["glossário de inteligência artificial", "termos de IA", "o que é LLM"]
+keywords: ["glossário de inteligência artificial", "termos de IA", "o que é LLM", "o que é token em IA", "o que é alucinação de IA", "o que é RAG"]
+faq:
+  - question: "Qual a diferença entre inteligência artificial, machine learning e deep learning?"
+    answer: "IA é a área ampla; machine learning é o ramo em que o sistema aprende padrões a partir de dados; deep learning é um tipo de machine learning que usa redes neurais com muitas camadas. Os chatbots atuais, como ChatGPT, Gemini e Claude, são resultado de deep learning."
+  - question: "LLM e chatbot são a mesma coisa?"
+    answer: "Não. O LLM é o modelo de linguagem, o 'motor'. O chatbot é o produto com o qual você conversa. O ChatGPT, por exemplo, é um chatbot que usa modelos da OpenAI, como os da família GPT-5.6, e pode trocar de modelo ao longo do tempo."
+  - question: "O que é alucinação de IA e como evitar?"
+    answer: "É quando a IA inventa uma informação e a apresenta com confiança. Não dá para eliminar o problema, mas dá para reduzir: peça fontes, use recursos de busca na web, forneça os documentos de referência e confira dados, nomes e citações antes de usar."
+sources:
+  - name: "OpenAI — GPT-5.6 and GPT-6 Pro in ChatGPT"
+    url: "https://help.openai.com/en/articles/20001354-gpt-56-in-chatgpt"
+  - name: "Anthropic — Models overview"
+    url: "https://platform.claude.com/docs/en/models/overview"
+  - name: "Google — Limites e upgrades do Gemini por plano"
+    url: "https://support.google.com/gemini/answer/16275805?hl=en"
+  - name: "Black Forest Labs — Modelos FLUX disponíveis"
+    url: "https://help.bfl.ai/articles/7655484417-what-flux-models-are-available"
+  - name: "TSE — Tese sobre deepfake (set/2026)"
+    url: "https://www.tse.jus.br/comunicacao/noticias/2026/Setembro/tse-fixa-tese-sobre-deepfake-e-delimita-regra-para-as-eleicoes-2026"
+  - name: "Planalto — LGPD (Lei 13.709/2018)"
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+related:
+  - "o-que-e-inteligencia-artificial"
+  - "como-comecar-com-ia-do-zero"
+  - "como-melhorar-seus-prompts"
+  - "historia-inteligencia-artificial"
 ---
 
-## Glossário de IA: os termos que você precisa conhecer
+LLM, token, alucinação, fine-tuning, RAG, agente... Se você já se sentiu perdido lendo uma notícia sobre inteligência artificial, este glossário é para você. Os termos mais usados estão explicados em linguagem simples, com exemplos do dia a dia e, quando ajuda, com os nomes de ferramentas e modelos atuais (situação em setembro de 2026).
 
-LLM, token, alucinação, fine-tuning, RAG, agente... Se você já se sentiu perdido lendo uma notícia sobre inteligência artificial, este glossário é para você. Reunimos os termos mais usados, explicados em linguagem simples e com exemplos do dia a dia.
-
-Salve esta página nos favoritos e volte sempre que encontrar uma palavra nova.
-
----
+Se você está começando agora, leia antes o guia [o que é inteligência artificial](/artigos/o-que-e-inteligencia-artificial) e use esta página como consulta rápida.
 
 ## Conceitos fundamentais
 
@@ -37,62 +58,62 @@ Tipo de machine learning que usa redes neurais com muitas camadas. É a base das
 Modelo matemático inspirado, de forma bem simplificada, no funcionamento dos neurônios do cérebro. É formado por camadas de "nós" conectados que processam informações.
 
 ### Dados de treinamento
-Conjunto de informações (textos, imagens, áudios) usado para ensinar um modelo. A qualidade desses dados influencia diretamente a qualidade da IA.
-
----
+Conjunto de informações (textos, imagens, áudios) usado para ensinar um modelo. A qualidade desses dados influencia diretamente a qualidade da IA. Algumas empresas também podem usar conversas de usuários para treinar modelos, dependendo do plano e das configurações de privacidade; entenda como controlar isso em [IA e privacidade](/artigos/ia-privacidade-seguranca).
 
 ## IA generativa e modelos de linguagem
 
 ### IA generativa
-IA capaz de criar conteúdo novo: textos, imagens, músicas, vídeos, código. ChatGPT, Gemini, Claude e Midjourney são exemplos.
+IA capaz de criar conteúdo novo: textos, imagens, músicas, vídeos, código. ChatGPT, Gemini e Claude são exemplos focados em texto (mas também multimodais); Midjourney e ChatGPT Images geram imagens; o Veo, do Google, gera vídeo. Para começar pela parte visual, veja [como criar imagens com IA](/artigos/como-criar-imagens-com-ia).
 
 ### LLM (Large Language Model)
-"Grande modelo de linguagem". É o tipo de modelo por trás dos chatbots modernos. Foi treinado com enormes quantidades de texto e aprendeu a prever qual palavra vem a seguir, o que permite conversar, resumir, traduzir e escrever.
+"Grande modelo de linguagem". É o tipo de modelo por trás dos chatbots modernos. Foi treinado com enormes quantidades de texto e aprendeu a prever o próximo pedaço de texto (token), o que permite conversar, resumir, traduzir e escrever.
 
 ### Modelo
-O "cérebro" treinado de uma IA. Uma mesma empresa pode ter vários modelos, maiores ou menores, mais rápidos ou mais inteligentes.
+O "motor" treinado de uma IA. Uma mesma empresa costuma ter vários modelos, maiores ou menores, mais rápidos ou mais capazes, e troca esses modelos com frequência. Exemplo: em setembro de 2026, o chat do ChatGPT usa a família GPT-5.6 (Luna nos planos Free e Go, Sol nos planos pagos), enquanto a Anthropic lista Opus 5.5, Sonnet 5, Fable 5.1 e Haiku 4.5 como modelos atuais do Claude.
 
 ### Chatbot
-Programa que conversa com pessoas por texto ou voz. Os chatbots modernos usam LLMs.
+Programa que conversa com pessoas por texto ou voz. Os chatbots modernos usam LLMs. O chatbot é o produto; o modelo é o que roda por baixo.
 
 ### GPT
-Sigla de Generative Pre-trained Transformer, a família de modelos da OpenAI que deu nome ao ChatGPT.
+Sigla de Generative Pre-trained Transformer ("transformer pré-treinado generativo"), a família de modelos da OpenAI que deu nome ao ChatGPT. As gerações mais recentes são a GPT-5.6 e a GPT-6.
 
 ### Transformer
-Arquitetura de rede neural apresentada em 2017 que revolucionou o processamento de linguagem. Quase todos os LLMs atuais se baseiam nela.
+Arquitetura de rede neural apresentada em 2017 no artigo "Attention Is All You Need", de pesquisadores do Google. Quase todos os LLMs atuais se baseiam nela.
 
 ### Multimodal
 Modelo que entende e/ou gera mais de um tipo de conteúdo, como texto, imagem, áudio e vídeo. Exemplo: enviar uma foto de um prato e pedir a receita.
 
----
-
 ## Termos do dia a dia de quem usa IA
 
 ### Prompt
-A instrução ou pergunta que você escreve para a IA. A qualidade do prompt influencia muito a qualidade da resposta.
+A instrução ou pergunta que você escreve para a IA. A qualidade do prompt influencia muito a qualidade da resposta. Técnicas práticas estão no guia [como melhorar seus prompts](/artigos/como-melhorar-seus-prompts).
 
 ### Prompt engineering (engenharia de prompt)
-A prática de criar e ajustar prompts para obter melhores resultados.
+A prática de criar e ajustar prompts para obter melhores resultados: dar contexto, definir formato, mostrar exemplos e pedir revisão.
 
 ### Token
 Pedaço de texto que o modelo processa, que pode ser uma palavra inteira, parte de uma palavra ou um sinal de pontuação. Os limites de uso e os preços de APIs costumam ser calculados em tokens.
 
 ### Janela de contexto
-Quantidade máxima de texto (em tokens) que o modelo consegue "ter em mente" de uma vez, somando sua mensagem, o histórico e a resposta. Janelas maiores permitem analisar documentos longos.
+Quantidade máxima de texto (em tokens) que o modelo consegue "ter em mente" de uma vez, somando sua mensagem, o histórico e a resposta. Janelas maiores permitem analisar documentos longos. Exemplo: segundo a [Central de Ajuda do Gemini](https://support.google.com/gemini/answer/16275805?hl=en), em setembro de 2026 o app oferece 32 mil tokens no plano gratuito e 1 milhão no Google AI Pro; na API da Anthropic, Opus 5.5 e Sonnet 5 chegam a 1 milhão. Esses números mudam, então confira sempre a página oficial.
 
 ### Alucinação
-Quando a IA inventa uma informação falsa e a apresenta com confiança. Exemplo: citar um livro que não existe. Por isso é essencial verificar fatos.
+Quando a IA inventa uma informação falsa e a apresenta com confiança. Exemplo: citar um livro ou uma lei que não existe. Por isso é essencial verificar fatos, principalmente nomes, números, datas e citações.
 
 ### Temperatura
-Configuração que controla o quanto as respostas são criativas ou previsíveis. Temperatura baixa gera respostas mais consistentes; alta, mais variadas.
+Configuração que controla o quanto as respostas são criativas ou previsíveis. Temperatura baixa gera respostas mais consistentes; alta, mais variadas. Em geral, ela é ajustada por desenvolvedores via API; nos apps de chat, o mais comum é você influenciar o estilo pelo próprio prompt.
 
-### Instruções personalizadas / memória
-Recursos que permitem que o chatbot lembre preferências suas (como profissão ou estilo de escrita) entre conversas.
+### Instruções personalizadas
+Texto fixo que você configura uma vez (profissão, tom, formato preferido) e que o chatbot considera em todas as conversas. No ChatGPT, elas ficam nas configurações de personalização.
+
+### Memória
+Recurso em que o chatbot guarda informações de conversas anteriores para personalizar respostas futuras. ChatGPT e Claude, por exemplo, têm esse recurso, que pode ser visto, editado ou desligado nas configurações.
 
 ### Modelo de raciocínio
-Modelo que "pensa" em etapas antes de responder, útil para matemática, lógica e programação. Costuma ser mais lento, porém mais preciso em tarefas complexas.
+Modelo que "pensa" em etapas antes de responder, útil para matemática, lógica e programação. Costuma ser mais lento, porém mais preciso em tarefas complexas. Hoje isso aparece como níveis de esforço: no ChatGPT, o seletor tem Instant, Medium, High, Extra High e Pro (conforme o plano); no Claude, há níveis de esforço; no Gemini, o modo Deep Think é exclusivo do Google AI Ultra.
 
----
+### Deep research (pesquisa aprofundada)
+Modo em que a IA faz várias buscas encadeadas, lê as fontes e entrega um relatório com citações. Existe no ChatGPT (deep research), no Gemini (Deep Research) e no Claude (Research, nos planos pagos), com limites que variam por plano.
 
 ## Termos técnicos intermediários
 
@@ -103,37 +124,39 @@ Processo de ensinar um modelo a partir de dados. Treinar um LLM grande exige mui
 Treinar um modelo já existente com dados específicos para adaptá-lo a uma tarefa, como atendimento de um banco ou linguagem jurídica.
 
 ### RAG (Retrieval-Augmented Generation)
-Técnica em que a IA busca informações em uma base de documentos antes de responder. É assim que muitas empresas criam chatbots que respondem com base nos próprios manuais e políticas.
+Técnica em que a IA busca informações em uma base de documentos antes de responder. É assim que muitas empresas criam chatbots que respondem com base nos próprios manuais e políticas. Na prática, recursos como os projetos com arquivos do ChatGPT e do Claude aplicam uma ideia parecida.
 
 ### API
-Interface que permite que um programa converse com outro. Desenvolvedores usam APIs para colocar a IA dentro de sites e aplicativos.
+Interface que permite que um programa converse com outro. Desenvolvedores usam APIs para colocar a IA dentro de sites e aplicativos, pagando normalmente por token.
 
-### Open source (código aberto)
-Modelos cujos pesos ou código são disponibilizados publicamente, permitindo que qualquer pessoa os use e adapte, dentro da licença. Exemplos incluem famílias como Llama e Mistral.
+### Código aberto e pesos abertos
+"Pesos" são os parâmetros aprendidos por um modelo. Um modelo de **pesos abertos** permite baixar esses parâmetros e rodar na sua máquina, mas isso não significa uso livre para tudo: a licença decide. Exemplos com regras diferentes, segundo as páginas oficiais: o FLUX.2 [klein] 4B, da Black Forest Labs, usa licença Apache 2.0 (bem permissiva); o Stable Diffusion 3.5 é gratuito para uso comercial só para quem fatura menos de US$ 1 milhão por ano; e os pesos do Ideogram 4.0 são para uso não comercial. **Código aberto** no sentido estrito exige licença aberta e, idealmente, código e informações de treinamento disponíveis.
 
 ### Parâmetros
-Os "ajustes internos" de um modelo, aprendidos durante o treinamento. Modelos grandes têm bilhões de parâmetros.
+Os "ajustes internos" de um modelo, aprendidos durante o treinamento. Modelos grandes têm bilhões de parâmetros. Exemplo: o Ideogram 4.0 tem 9,3 bilhões, segundo a empresa. Mais parâmetros não significam, sozinhos, um modelo melhor.
 
 ### GPU
 Placa de processamento gráfico, essencial para treinar e rodar modelos de IA por conseguir fazer muitos cálculos em paralelo.
 
-### Inferência
-O momento em que o modelo já treinado é usado para gerar uma resposta. Cada pergunta que você faz ao ChatGPT é uma inferência.
+### NPU
+Unidade de processamento neural: chip dedicado a tarefas de IA dentro de computadores e celulares. A Microsoft, por exemplo, exige NPU com mais de 40 TOPS para um PC receber o selo Copilot+.
 
----
+### Inferência
+O momento em que o modelo já treinado é usado para gerar uma resposta. Cada pergunta que você faz a um chatbot é uma inferência.
 
 ## Agentes e automação
 
 ### Agente de IA
-Sistema de IA que não apenas responde, mas **executa tarefas** em várias etapas: pesquisa na internet, preenche formulários, usa outros programas e toma pequenas decisões para atingir um objetivo.
+Sistema de IA que não apenas responde, mas **executa tarefas** em várias etapas: pesquisa na internet, usa outros programas, preenche documentos e toma pequenas decisões para atingir um objetivo. Exemplos atuais: o ChatGPT Work (lançado em julho de 2026, substituindo o antigo modo agente) e o Claude Cowork. Agentes erram e podem agir em nome da sua conta, então exigem supervisão.
+
+### Conectores e MCP
+Conectores ligam o assistente a outros serviços (Google Drive, Gmail, Slack, sistemas da empresa) para buscar dados ou executar ações. MCP (Model Context Protocol) é um padrão usado para essas conexões; no Claude, por exemplo, os conectores personalizados usam MCP remoto. No ChatGPT, o nome usado é "apps".
 
 ### Automação
 Uso de tecnologia para executar tarefas repetitivas sem intervenção humana. Com IA, a automação consegue lidar com tarefas que envolvem textos e decisões simples.
 
 ### Copiloto
-Assistente de IA integrado a um programa (como editor de texto, planilha ou ambiente de programação) que sugere e executa ações junto com o usuário.
-
----
+Assistente de IA integrado a um programa (como editor de texto, planilha ou ambiente de programação) que sugere e executa ações junto com o usuário. O Microsoft Copilot popularizou o nome.
 
 ## Imagem, áudio e vídeo
 
@@ -141,37 +164,42 @@ Assistente de IA integrado a um programa (como editor de texto, planilha ou ambi
 Técnica usada por muitos geradores de imagem: o modelo parte de um "ruído" aleatório e o transforma, passo a passo, em uma imagem que corresponde ao prompt.
 
 ### Text-to-image / text-to-video
-Geração de imagens ou vídeos a partir de uma descrição em texto.
+Geração de imagens ou vídeos a partir de uma descrição em texto. Também existe image-to-video, em que uma imagem serve de ponto de partida para o vídeo.
+
+### Conteúdo sintético
+Texto, imagem, áudio ou vídeo criado ou alterado por IA. O termo aparece nas regras eleitorais do TSE, que exigem rótulo em conteúdo sintético na propaganda, e no PL 2338/2023, ainda em tramitação.
 
 ### Deepfake
-Vídeo, áudio ou imagem manipulado por IA para parecer real, geralmente imitando uma pessoa. Muito usado em golpes e desinformação.
+Conteúdo sintético realista que altera a imagem, a voz ou a semelhança de alguém para parecer real. Em setembro de 2026, o TSE fixou uma definição nessa linha para as eleições. É muito usado em golpes, difamação e desinformação; veja como se proteger no [guia de ética na IA](/artigos/etica-ia-guia-pratico).
 
 ### Clonagem de voz
-Criação de uma voz sintética que imita a voz de uma pessoa real a partir de amostras de áudio.
+Criação de uma voz sintética que imita a voz de uma pessoa real a partir de amostras de áudio. Ferramentas sérias exigem que você tenha direito e consentimento para clonar a voz.
 
 ### Upscaling
 Aumento da resolução de uma imagem ou vídeo usando IA.
 
----
-
-## Ética e sociedade
+## Ética, direito e sociedade
 
 ### Viés (bias)
 Tendência injusta nas respostas da IA, geralmente herdada dos dados de treinamento. Exemplo: associar certas profissões sempre a um gênero.
 
 ### Explicabilidade
-Capacidade de entender e explicar por que uma IA tomou determinada decisão.
+Capacidade de entender e explicar por que uma IA tomou determinada decisão. A LGPD dá ao titular o direito de pedir informações sobre critérios de decisões automatizadas e de solicitar sua revisão (art. 20).
 
 ### Alinhamento
 Área de pesquisa que busca garantir que a IA se comporte de acordo com valores e intenções humanas.
 
 ### AGI (Inteligência Artificial Geral)
-Conceito de uma IA capaz de realizar praticamente qualquer tarefa intelectual humana. Ainda é tema de debate se e quando será alcançada.
+Conceito de uma IA capaz de realizar praticamente qualquer tarefa intelectual humana. Não há consenso sobre a definição nem sobre se e quando será alcançada; desconfie de quem anuncia a AGI como fato.
 
 ### LGPD
-Lei Geral de Proteção de Dados, legislação brasileira que regula o uso de dados pessoais, inclusive por sistemas de IA.
+Lei Geral de Proteção de Dados (Lei 13.709/2018), que regula o uso de dados pessoais no Brasil, inclusive por sistemas de IA. É fiscalizada pela ANPD, hoje Agência Nacional de Proteção de Dados.
 
----
+### PL 2338/2023
+Projeto de lei que cria o marco legal da IA no Brasil, com regras por nível de risco. Foi aprovado pelo Senado em dezembro de 2024 e, em setembro de 2026, ainda está em análise na Câmara. Ou seja, ainda não é lei.
+
+### AI Act
+Regulamento de IA da União Europeia (Regulamento 2024/1689), em vigor desde agosto de 2024, com aplicação escalonada. Afeta empresas brasileiras que oferecem sistemas de IA no mercado europeu.
 
 ## Tabela rápida de siglas
 
@@ -184,13 +212,22 @@ Lei Geral de Proteção de Dados, legislação brasileira que regula o uso de da
 | NLP / PLN | Processamento de Linguagem Natural | IA que entende texto e fala |
 | RAG | Retrieval-Augmented Generation | IA que consulta documentos antes de responder |
 | API | Application Programming Interface | Ponte entre programas |
+| MCP | Model Context Protocol | Padrão para conectar assistentes a outros apps |
 | AGI | Artificial General Intelligence | IA de capacidade geral, ainda hipotética |
 | GPU | Graphics Processing Unit | Chip usado para treinar e rodar IA |
+| NPU | Neural Processing Unit | Chip de IA dentro de PCs e celulares |
 
----
+## Como usar este glossário na prática
 
-## Conclusão
+Exemplo prático: imagine a manchete "Nova versão multimodal do modelo tem janela de contexto de 1 milhão de tokens e reduz alucinações". Com os termos acima, dá para traduzir: o modelo entende texto e imagem, consegue analisar documentos muito longos de uma vez e, segundo a empresa, erra menos ao inventar fatos. O "segundo a empresa" é importante: números de desempenho costumam vir do próprio fabricante.
 
-Conhecer esses termos é como aprender o vocabulário básico de um novo idioma: de repente, notícias, tutoriais e conversas sobre IA passam a fazer sentido. Você não precisa decorar tudo — basta voltar a este glossário sempre que surgir uma dúvida.
+Quando encontrar um termo que não está aqui, peça ao seu assistente de IA uma explicação no mesmo formato:
 
-Sentiu falta de algum termo? O mundo da IA cria palavras novas o tempo todo, e vamos atualizar esta lista com frequência aqui no Foco em IA.
+```text
+Explique o termo "[TERMO]" para um iniciante, em até 5 linhas.
+Inclua: uma definição simples, um exemplo do dia a dia e um erro comum
+de interpretação. Se o termo tiver sentidos diferentes em contextos
+diferentes, avise.
+```
+
+Depois, confira a explicação em uma fonte confiável, porque a própria IA também pode alucinar. Para dar os primeiros passos de forma organizada, siga o roteiro de [como começar com IA do zero](/artigos/como-comecar-com-ia-do-zero).
