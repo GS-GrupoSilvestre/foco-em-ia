@@ -14,6 +14,8 @@ export const siteConfig = {
   language: 'pt-BR',
   authorName: 'Equipe Foco em IA',
   authorSlug: 'equipe-foco-em-ia',
+  // Autor informado nos dados estruturados (JSON-LD) dos artigos.
+  schemaAuthor: { name: 'Igor Violandi Silvestre', path: '/sobre' },
   twitterHandle: '@focoemia',
 } as const
 

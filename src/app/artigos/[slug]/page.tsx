@@ -8,6 +8,7 @@ import { ArticleMeta } from '@/components/article/ArticleMeta'
 import { TableOfContents } from '@/components/article/TableOfContents'
 import { ShareButtons } from '@/components/article/ShareButtons'
 import { AuthorBox } from '@/components/article/AuthorBox'
+import { ArticleJsonLd } from '@/components/article/ArticleJsonLd'
 import { RelatedArticles } from '@/components/article/RelatedArticles'
 import { FAQ } from '@/components/article/FAQ'
 import { AdSlot } from '@/components/ads/AdSlot'
@@ -16,7 +17,6 @@ import {
   getAllSlugs,
   getRelatedArticles,
 } from '@/lib/articles'
-import { siteConfig } from '@/lib/site-config'
 import { extractHeadings, absoluteUrl } from '@/lib/utils'
 import Link from 'next/link'
 
@@ -102,38 +102,9 @@ export default async function ArticlePage({ params }: PageProps) {
     ? new Date(frontmatter.updatedAt).toISOString()
     : publishedTime
 
-  // JSON-LD Article structured data
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: frontmatter.title,
-    description: frontmatter.description,
-    url: articleUrl,
-    datePublished: publishedTime,
-    dateModified: modifiedTime,
-    author: {
-      '@type': 'Organization',
-      name: frontmatter.author,
-      url: siteConfig.url,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      url: siteConfig.url,
-      logo: {
-        '@type': 'ImageObject',
-        url: absoluteUrl('/icon.png'),
-      },
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': articleUrl,
-    },
-    image: absoluteUrl(`/og?title=${encodeURIComponent(frontmatter.title)}&category=${encodeURIComponent(frontmatter.category)}`),
-    keywords: (frontmatter.keywords ?? frontmatter.tags).join(', '),
-    articleSection: frontmatter.category,
-    inLanguage: 'pt-BR',
-  }
+  const coverImage = absoluteUrl(
+    `/og?title=${encodeURIComponent(frontmatter.title)}&category=${encodeURIComponent(frontmatter.category)}`
+  )
 
   const breadcrumbItems = [
     { label: 'Artigos', href: '/artigos' },
@@ -143,9 +114,15 @@ export default async function ArticlePage({ params }: PageProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      <ArticleJsonLd
+        title={frontmatter.title}
+        description={frontmatter.description}
+        url={articleUrl}
+        image={coverImage}
+        datePublished={publishedTime}
+        dateModified={modifiedTime}
+        category={frontmatter.category}
+        keywords={frontmatter.keywords ?? frontmatter.tags}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
