@@ -309,3 +309,20 @@ Antes → depois. “Desatualizado encontrado” resume o que a revisão achou n
 - **`sora-openai-guia-completo`** — Sora da OpenAI: o que aconteceu com o gerador de vídeos e o que usar agora. reposicionado como explicação do encerramento (tabela-resumo, cronologia, exportação via sora.chatgpt.com/sunset, créditos usáveis no Codex, ausência de vídeo no ChatGPT), tabela de alternativas, seção "Qual alternativa faz mais sentido", guia para adaptar…
 - **`stable-diffusion-guia-iniciantes`** — Stable Diffusion: como usar o gerador de imagens de pesos abertos. tabela de variantes, licença, formas de uso, checkpoints/LoRAs, parâmetros, comparação com outras ferramentas. _Revisão:_ FAQ "Stable Assistant e API são pagos à parte" suavizada para "têm cobrança própria; confira os preços".
 - **`veo-google-guia`** — Veo 3.1 do Google: como gerar vídeos com IA no Flow e no Gemini. reescrita completa como pilar: recursos do Veo 3.1 (DeepMind), tabela Veo x Omni x Flow, tabela de recursos por modelo no Flow (Central de Ajuda), planos em R$ da página oficial BR com créditos do Flow, passo a passo no Flow e no app Gemini (este com etapas…
+
+---
+
+## Correção de datas (02/10/2026)
+
+As datas de publicação (`publishedAt`) dos 86 artigos, que estavam em 2025, foram redistribuídas entre **01/07/2026 e 02/10/2026**, a pedido do responsável pelo site. É uma decisão editorial: as datas não registram a data real de escrita.
+
+Critérios aplicados:
+
+- Uma data por artigo, quase uma por dia (domingos espaçados ficaram de fora). Nenhuma data no futuro.
+- Artigos-base e pilares (o que é IA, como começar, glossário, história) receberam as datas mais antigas.
+- Artigos que citam um evento datado (ex.: o3 saindo do ChatGPT em 26/08, GPT-6 em 22/09, Opus 5.5 em 22/09) foram datados **depois** do último evento citado. Foram 34 artigos com essa restrição.
+- Categorias intercaladas, para a listagem de recentes não ficar com uma categoria só.
+- `updatedAt` = 27/09/2026 (data de referência da auditoria de conteúdo) nos artigos publicados antes dessa data, porque o texto atual foi conferido nela. Artigos publicados de 27/09 em diante não têm `updatedAt`.
+- Nenhuma outra linha dos arquivos foi alterada.
+
+Efeito técnico: o JSON-LD (`datePublished`/`dateModified`), o sitemap (`lastmod`), o feed RSS e o selo "Atualizado em" usam esses dois campos, então mudam juntos.
