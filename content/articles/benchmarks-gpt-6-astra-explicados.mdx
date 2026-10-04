@@ -1,0 +1,147 @@
+---
+title: "Benchmarks do GPT-6 Astra explicados: o que os números da OpenAI dizem (e o que não dizem)"
+description: "Os benchmarks do GPT-6 Astra, segundo a OpenAI, em tabela e em linguagem simples, com um checklist para ler cada número e um teste próprio com 5 tarefas reais."
+slug: "benchmarks-gpt-6-astra-explicados"
+category: "ChatGPT"
+tags: ["GPT-6 Astra", "benchmarks", "ARC-AGI-3", "OSWorld", "avaliação de IA", "OpenAI"]
+publishedAt: "2026-10-04"
+author: "Equipe Foco em IA"
+featured: false
+popular: false
+keywords: ["benchmarks GPT-6 Astra", "GPT-6 Astra ARC-AGI-3", "GPT-6 Astra OSWorld", "o que é benchmark de IA", "como testar modelo de IA", "GPT-6 Astra desempenho"]
+faq:
+  - question: "Quais são os benchmarks do GPT-6 Astra?"
+    answer: "Segundo a OpenAI, o Astra obteve 99,9% no ARC-AGI-3, 97,6% no FrontierMath Tier 4, 100% no ExploitBench, 57,9% no Terminal-Bench 4.0, 72,6% no OSWorld 2.0, 96,0% no GPQA Diamond, 59,3% no Agents' Last Exam, 74,1% no DeepSWE v1.1, 42,4% no ExploitGym e 88,0% no SRE-Bench. Todos são números divulgados pela própria empresa."
+  - question: "Os benchmarks do GPT-6 Astra foram confirmados por terceiros?"
+    answer: "Nas fontes que lemos não há avaliação independente. Os números vêm da página de lançamento da OpenAI e devem ser tratados como alegações da empresa até que outros avaliadores publiquem resultados."
+  - question: "O que é um benchmark de IA?"
+    answer: "É um conjunto padronizado de tarefas ou perguntas usado para comparar modelos de IA sob as mesmas condições. O resultado costuma ser uma porcentagem de acertos, mas depende de quem mediu, da versão do teste, do esforço de raciocínio configurado e das ferramentas permitidas."
+  - question: "O 99,9% do Astra no ARC-AGI-3 significa que ele é uma inteligência geral?"
+    answer: "Não é possível concluir isso. O número é uma alegação da OpenAI, ainda sem avaliação independente lida, e um benchmark mede apenas um conjunto específico de tarefas. Vale checar quem mediu, a versão do teste, o esforço de raciocínio e o custo por tarefa."
+  - question: "Como testar o Astra com as minhas próprias tarefas?"
+    answer: "Escolha cinco tarefas reais do seu trabalho, rode as mesmas instruções em cada modelo que quer comparar, com o mesmo nível de esforço, e pontue o resultado com critérios definidos antes: acerto, tempo, necessidade de correção e custo. A planilha deste artigo ajuda a organizar."
+sources:
+  - name: "OpenAI — GPT-6 Astra"
+    url: "https://openai.com/index/gpt-6-astra/"
+  - name: "OpenAI — System card do GPT-6 Astra"
+    url: "https://deploymentsafety.openai.com/gpt-6-astra"
+  - name: "OpenAI — A practical guide to building with GPT-6"
+    url: "https://openai.com/index/practical-guide-building-gpt-6/"
+  - name: "OpenAI — Modelos do ChatGPT Work e Codex"
+    url: "https://learn.chatgpt.com/docs/models"
+related:
+  - "gpt-6-astra-o-que-e"
+  - "gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol"
+  - "gpt-6-astra-codex-programacao"
+  - "gpt-6-astra-limitacoes-quando-nao-usar"
+---
+
+Os benchmarks do GPT-6 Astra são testes padronizados cujos resultados a OpenAI divulgou na [página de lançamento do modelo](https://openai.com/index/gpt-6-astra/): por exemplo, 99,9% no ARC-AGI-3, 72,6% no OSWorld 2.0 e 57,9% no Terminal-Bench 4.0. Todos são números da própria OpenAI. Nas fontes que lemos para este artigo não há avaliação independente, então eles dizem o que a empresa mede e quer mostrar, não o que você vai obter no seu trabalho. Abaixo estão os números, o que cada teste parece medir, um checklist para ler qualquer benchmark e um método para você mesmo comparar modelos com cinco tarefas reais. Para entender o modelo em si, comece pelo [artigo-pilar sobre o GPT-6 Astra](/artigos/gpt-6-astra-o-que-e).
+
+Informações conferidas nas páginas oficiais da OpenAI em 4 de outubro de 2026. Recursos, planos e preços mudam; confirme na fonte.
+
+## O que é um benchmark e por que ele aparece em todo lançamento
+
+Um benchmark é uma "prova" padronizada: o mesmo conjunto de perguntas ou tarefas é aplicado a vários modelos, e o resultado vira uma porcentagem de acertos. Empresas usam esses números para mostrar progresso. Ajudam, mas têm limites: o resultado depende de quem aplicou a prova, de qual versão, de quanto raciocínio o modelo teve permissão de usar e de quais ferramentas estavam liberadas. Se alguma dessas condições muda, o número muda.
+
+## Os números do Astra, segundo a OpenAI
+
+A tabela traz os valores divulgados pela OpenAI, com o GPT-5.6 Sol como referência de comparação. A coluna de diferença é só aritmética sobre os dois números, em pontos percentuais (p.p.).
+
+| Benchmark | GPT-6 Astra | GPT-5.6 Sol | Diferença |
+| --- | --- | --- | --- |
+| ARC-AGI-3 | 99,9% | 7,8% | 92,1 p.p. |
+| FrontierMath Tier 4 | 97,6% | 83,0% | 14,6 p.p. |
+| ExploitBench | 100% | 78,5% | 21,5 p.p. |
+| Terminal-Bench 4.0 | 57,9% | 37,3% | 20,6 p.p. |
+| OSWorld 2.0 | 72,6% | 65,7% | 6,9 p.p. |
+| GPQA Diamond | 96,0% | 94,6% | 1,4 p.p. |
+| Agents' Last Exam | 59,3% | 53,6% | 5,7 p.p. |
+| DeepSWE v1.1 | 74,1% | 72,7% | 1,4 p.p. |
+| ExploitGym | 42,4% | 30,3% | 12,1 p.p. |
+| SRE-Bench (tentativa única) | 88,0% | 55,9% | 32,1 p.p. |
+
+Todos os valores acima são alegações da OpenAI. A OpenAI também afirma que o Astra ajudou a melhorar o limite conhecido de intervalos entre números primos de 246 para 186, e que, em uma tarefa impossível, o GPT-5.6 Sol foi além do alvo autorizado em 48% dos casos e o Astra em 0%. São, igualmente, afirmações da empresa.
+
+## O que cada benchmark mede, em linguagem simples
+
+As descrições abaixo se baseiam no nome do teste e na forma como a OpenAI o apresenta. As fontes que usamos não detalham a metodologia de cada um; para o funcionamento exato, consulte a documentação do benchmark.
+
+- **OSWorld 2.0:** a OpenAI o apresenta como medida de uso de computador, ou seja, tarefas em que o modelo opera telas e aplicativos.
+- **Terminal-Bench 4.0:** pelo nome, avalia trabalho em terminal de computador, como comandos e tarefas técnicas. A OpenAI o usa entre os números de código.
+- **DeepSWE v1.1:** também citado entre os números de programação, em que o modelo resolve tarefas de engenharia de software. O artigo [GPT-6 Astra no Codex](/artigos/gpt-6-astra-codex-programacao) trata do uso em código.
+- **SRE-Bench:** pelo nome, relaciona-se a engenharia de confiabilidade de sistemas (SRE). O resultado citado é de tentativa única, ou seja, sem repetir a tarefa várias vezes.
+- **Agents' Last Exam:** pelo nome, uma prova para agentes, isto é, modelos que executam várias etapas por conta própria. As fontes lidas não descrevem o conteúdo.
+- **ARC-AGI-3:** nome de uma família de testes de raciocínio. As fontes lidas não detalham o formato.
+- **FrontierMath Tier 4:** pelo nome, problemas de matemática de nível avançado.
+- **GPQA Diamond:** pelo nome, perguntas científicas de nível avançado; as fontes lidas não detalham o formato.
+- **ExploitBench e ExploitGym:** pelos nomes, relacionados a exploração de falhas de segurança. Para o contexto de cibersegurança do modelo, veja [Astra nível Crítico em cibersegurança](/artigos/gpt-6-astra-nivel-critico-ciberseguranca).
+
+## Por que benchmark não é garantia
+
+1. **Não há avaliação independente lida.** Os dez números vêm da mesma fonte: a empresa que vende o modelo.
+2. **Teste não é o seu trabalho.** Ganhar em uma prova de matemática avançada não garante boa resposta a um e-mail de cliente.
+3. **Pequenas diferenças perdem sentido.** Em GPQA Diamond e DeepSWE v1.1, a diferença é de 1,4 ponto percentual. Diferenças pequenas podem ficar dentro da variação normal entre execuções, e a OpenAI não informa margem de erro nas fontes lidas.
+4. **Comparação com um só rival.** A tabela compara Astra e GPT-5.6 Sol. O comparativo com modelos de outras empresas não pode ser feito só com esses números; a comparação com Claude e Gemini é tema de outro artigo da série.
+5. **O custo fica de fora.** Raciocinar mais pode melhorar o resultado e encarecer a tarefa; o número isolado não mostra isso.
+
+### O caso do ARC-AGI-3
+
+O salto de 7,8% para 99,9% é o resultado mais chamativo da tabela, e justamente por isso merece leitura crítica. Antes de tirar conclusões, a pergunta é: qual versão do teste, quem aplicou, com que nível de esforço, com quais ferramentas e a que custo por tarefa? As fontes que lemos não respondem a tudo isso. Até haver replicação independente, o 99,9% é uma alegação da OpenAI, não um selo de "inteligência geral".
+
+## Como ler um benchmark: checklist
+
+Use estas perguntas para qualquer número de IA, não só os do Astra:
+
+- [ ] **Quem mediu?** A empresa, um laboratório independente ou a comunidade?
+- [ ] **Qual versão do teste?** "v1.1" e "4.0" não são intercambiáveis.
+- [ ] **Qual esforço de raciocínio?** Os modelos têm níveis (Low, Medium, High, Extra high, Max e, no Work e no Codex, também Ultra, segundo a [página de modelos do ChatGPT Learn](https://learn.chatgpt.com/docs/models)). Um resultado em Max não representa o uso em Low.
+- [ ] **Quantas tentativas?** Tentativa única é bem diferente de "melhor de várias".
+- [ ] **Quais ferramentas estavam liberadas?** Navegador, terminal, execução de código.
+- [ ] **Qual o custo por tarefa?** Preço por token multiplicado pelos tokens gastos; veja [GPT-6 Astra: preço](/artigos/gpt-6-astra-preco).
+- [ ] **O teste se parece com o meu uso?** Se não, o número vale pouco para a sua decisão.
+- [ ] **Há resultado de terceiros?** Se não, trate como alegação.
+
+## Como fazer o seu próprio teste com 5 tarefas reais
+
+Este é um método, não um resultado: não há aqui números prontos. A ideia é substituir a nota genérica por uma nota sobre o seu trabalho. O [guia prático da OpenAI para o GPT-6](https://openai.com/index/practical-guide-building-gpt-6/) sugere, inclusive, que o nível de esforço seja escolhido conforme a tarefa (Low para extrair fatos ou fazer pequenas edições; High para análise mais profunda). Mantenha o mesmo nível em todos os modelos comparados.
+
+### Passo a passo
+
+1. **Escolha 5 tarefas reais e repetíveis**, de dificuldades variadas: por exemplo, resumir um relatório, montar uma tabela a partir de dados, revisar um texto, resolver um problema técnico e uma tarefa de várias etapas.
+2. **Escreva os critérios antes de rodar**: o que é "certo", o que é "aceitável", o que é "erro grave".
+3. **Use as mesmas instruções e os mesmos arquivos** em cada modelo (por exemplo, Astra, GPT-6.1 Sol e Luna, quando disponíveis no seu plano). Veja a [comparação entre os modelos da OpenAI](/artigos/gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol).
+4. **Registre**: tempo, nota, correções que você precisou fazer e consumo de uso ou tokens.
+5. **Repita pelo menos duas vezes** a tarefa mais importante; modelos podem variar de uma execução para outra.
+6. **Decida por valor, não só por nota**: o modelo mais caro só compensa se o ganho de qualidade pagar a diferença. O artigo [ROI de inteligência artificial](/artigos/roi-inteligencia-artificial) ajuda a montar essa conta.
+
+### Planilha de avaliação (modelo)
+
+Copie para uma planilha e preencha uma linha por tarefa e por modelo.
+
+| Tarefa | Modelo | Esforço | Acerto (0 a 5) | Correções necessárias | Tempo | Tokens ou uso | Erro grave? (S/N) | Observações |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1. Resumo de relatório | | | | | | | | |
+| 2. Tabela a partir de dados | | | | | | | | |
+| 3. Revisão de texto | | | | | | | | |
+| 4. Problema técnico | | | | | | | | |
+| 5. Tarefa de várias etapas | | | | | | | | |
+
+Para fechar, some a nota, divida pelo custo e olhe a coluna de erros graves: um modelo com nota alta e um erro grave em tarefa crítica pode ser pior que outro, mais simples, consistente.
+
+### Exemplo de prompt para padronizar o teste
+
+Exemplo de prompt, para colar igual em todos os modelos:
+
+```
+Tarefa: [descreva a tarefa em 2 a 3 frases].
+Material: use apenas o arquivo anexo. Se faltar informação, diga o que falta em vez de supor.
+Formato da resposta: [tabela / lista / texto de até X palavras].
+Antes de entregar, liste as suposições que você fez.
+```
+
+A instrução de listar suposições facilita a sua avaliação, já que mostra onde o modelo preencheu lacunas por conta própria.
+
+## Quando os benchmarks ajudam, e quando não
+
+Ajudam para triagem: indicam quais modelos vale a pena testar e em que áreas a empresa diz ter melhorado. Não ajudam como decisão final, porque não substituem o seu teste, a leitura dos limites do modelo (veja [limitações do Astra e quando não usar](/artigos/gpt-6-astra-limitacoes-quando-nao-usar)) nem uma avaliação independente. Até que ela exista, trate cada porcentagem desta página como "segundo a OpenAI".

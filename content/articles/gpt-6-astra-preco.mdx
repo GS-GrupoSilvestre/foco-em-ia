@@ -1,0 +1,161 @@
+---
+title: "GPT-6 Astra: preço na API, planos e como calcular o custo"
+description: "Quanto custa o GPT-6 Astra: US$ 10 por milhão de tokens de entrada e US$ 50 de saída na API, cache, Fast, Bedrock e cálculos hipotéticos para estimar o gasto."
+slug: "gpt-6-astra-preco"
+category: "ChatGPT"
+tags: ["GPT-6 Astra", "preço GPT-6 Astra", "API OpenAI", "tokens", "custo de IA", "Amazon Bedrock"]
+publishedAt: "2026-10-04"
+author: "Equipe Foco em IA"
+featured: false
+popular: false
+keywords: ["GPT-6 Astra preço", "quanto custa GPT-6 Astra", "preço API GPT-6 Astra", "GPT-6 Astra custo por token", "GPT-6 Astra Bedrock preço", "GPT-6 Astra cache"]
+faq:
+  - question: "Quanto custa o GPT-6 Astra na API?"
+    answer: "O preço padrão é de US$ 10 por milhão de tokens de entrada e US$ 50 por milhão de tokens de saída. A entrada em cache custa US$ 1 por milhão e a escrita de cache, US$ 12,50 por milhão, segundo a OpenAI."
+  - question: "O GPT-6 Astra tem preço em reais?"
+    answer: "Os preços de API da OpenAI são divulgados em dólares. Preços de planos do ChatGPT em reais não foram confirmados nas fontes lidas; consulte a página oficial de planos da OpenAI para o valor atual na sua região."
+  - question: "O que é o modo Fast do GPT-6 Astra?"
+    answer: "Segundo a OpenAI, o modo Fast entrega 2 vezes a velocidade pelo dobro do preço padrão. Com o preço de US$ 10 e US$ 50 por milhão de tokens, o modo Fast equivale a US$ 20 e US$ 100."
+  - question: "Quanto custa o GPT-6 Astra no Amazon Bedrock?"
+    answer: "Em contexto curto (até 272 mil tokens), US$ 10 e US$ 50 por milhão no Global CRIS e US$ 11 e US$ 55 no In-Region ou Geo. Acima de 272 mil tokens, US$ 20 e US$ 75 no Global e US$ 22 e US$ 82,50 no In-Region ou Geo."
+  - question: "O GPT-6 Astra compensa frente ao GPT-6.1 Sol?"
+    answer: "Depende da tarefa. O GPT-6.1 Sol custa US$ 2 de entrada e US$ 10 de saída por milhão de tokens, um quinto do preço do Astra, e a OpenAI diz que ele tem desempenho próximo ao do Astra. Teste com o seu caso antes de decidir."
+sources:
+  - name: "OpenAI — GPT-6 Astra para trabalho"
+    url: "https://openai.com/index/gpt-6-astra-next-generation-work/"
+  - name: "OpenAI — GPT-6 Astra"
+    url: "https://openai.com/index/gpt-6-astra/"
+  - name: "AWS — GPT-6 Astra no Amazon Bedrock"
+    url: "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-astra.html"
+  - name: "OpenAI — Introducing GPT-6.1 Sol"
+    url: "https://openai.com/index/introducing-gpt-6-1-sol/"
+  - name: "ChatGPT — Pricing"
+    url: "https://chatgpt.com/pricing"
+  - name: "Anthropic — Claude Pricing"
+    url: "https://claude.com/pricing"
+related:
+  - "gpt-6-astra-o-que-e"
+  - "como-acessar-gpt-6-astra-chatgpt"
+  - "gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol"
+  - "gpt-6-astra-api-desenvolvedores"
+---
+
+O GPT-6 Astra custa, na API padrão da OpenAI, US$ 10 por milhão de tokens de entrada e US$ 50 por milhão de tokens de saída. Quem usa o Astra pelo ChatGPT não é cobrado por token: o acesso vem dentro de um plano pago, com limites de uso e, em alguns planos, créditos adicionais opcionais. Neste guia você vê os preços oficiais, entende o que é token, aprende a fórmula de custo e confere três cálculos hipotéticos para estimar o seu gasto.
+
+Informações conferidas nas páginas oficiais da OpenAI em 4 de outubro de 2026. Recursos, planos e preços mudam; confirme na fonte.
+
+Para saber o que é o modelo antes de olhar o custo, veja [GPT-6 Astra: o que é, o que muda e quem pode usar](/artigos/gpt-6-astra-o-que-e).
+
+## Duas formas de pagar pelo GPT-6 Astra
+
+1. **Dentro de um plano do ChatGPT.** O Astra aparece em planos pagos, no Work e no Codex (e como "GPT-6 Pro" no Chat de alguns planos). Plus e Business Standard têm uso limitado do Astra, com créditos adicionais opcionais. Free e Go não o incluem. Os valores mensais dos planos devem ser consultados na [página oficial de planos](https://chatgpt.com/pricing); neste artigo não há preço de plano e não há preço em reais. O acesso por plano está em [como acessar o GPT-6 Astra no ChatGPT](/artigos/como-acessar-gpt-6-astra-chatgpt).
+2. **Por token, via API ou nuvem.** Desenvolvedores e empresas pagam pelo volume de texto processado, na API da OpenAI ou em provedores como o Amazon Bedrock. É o preço de que trata o restante do artigo.
+
+## Preços da API da OpenAI
+
+Segundo a [página da OpenAI sobre o Astra para trabalho](https://openai.com/index/gpt-6-astra-next-generation-work/), os preços por milhão de tokens são:
+
+| Item | Preço por 1 milhão de tokens |
+| --- | --- |
+| Entrada padrão | US$ 10,00 |
+| Saída padrão | US$ 50,00 |
+| Entrada em cache (leitura) | US$ 1,00 |
+| Escrita de cache | US$ 12,50 |
+
+Pela [página de lançamento](https://openai.com/index/gpt-6-astra/), há também o modo **Fast**: 2 vezes a velocidade pelo dobro do preço padrão, ou seja, US$ 20 de entrada e US$ 100 de saída por milhão de tokens.
+
+Quatro termos para ler essa tabela:
+
+- **Token**: pedaço de texto que o modelo lê e escreve, que pode ser parte de uma palavra, uma palavra curta ou pontuação. O preço é cobrado por tokens, não por palavras.
+- **Entrada**: tudo o que você envia (instruções, documentos, histórico da conversa).
+- **Saída**: o que o modelo escreve de volta. É cinco vezes mais cara que a entrada no Astra.
+- **Cache de prompt**: o modelo guarda um trecho fixo do seu pedido (por exemplo, um manual longo) para não reprocessá-lo a cada chamada. Ler do cache custa menos; gravar no cache custa um pouco mais na primeira vez.
+
+## Preços no Amazon Bedrock
+
+O Astra também está no Amazon Bedrock desde 8 de setembro de 2026. A [página do modelo na AWS](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-astra.html) separa o preço pelo tamanho do contexto e pelo tipo de roteamento:
+
+| Contexto | Global (CRIS) | In-Region ou Geo |
+| --- | --- | --- |
+| Curto (até 272 mil tokens) | US$ 10 entrada e US$ 50 saída | US$ 11 entrada e US$ 55 saída |
+| Longo (acima de 272 mil tokens) | US$ 20 entrada e US$ 75 saída | US$ 22 entrada e US$ 82,50 saída |
+
+Valores por milhão de tokens. Dois detalhes:
+
+- "Global (CRIS)" e "In-Region ou Geo" são as duas opções de roteamento que a AWS lista. Pela tabela, a segunda custa 10% a mais (conta direta sobre os valores). Para saber qual atende às suas regras de localização de dados, consulte a documentação da AWS.
+- O nível **Ultrafast** custa 6 vezes o padrão correspondente. Os níveis de serviço Priority e Flex não são suportados no Bedrock.
+
+## Como calcular o custo de uma tarefa
+
+A conta usa os tokens enviados e recebidos e o preço de cada um:
+
+```
+custo = (tokens de entrada / 1.000.000 x preço da entrada)
+      + (tokens de saída / 1.000.000 x preço da saída)
+```
+
+Para entrada em cache, use o preço de cache sobre os tokens lidos dele. Para estimar seus tokens, rode algumas tarefas reais e anote os números de entrada e saída que a plataforma informar. Se o modelo gera texto de raciocínio interno, confira na documentação da OpenAI como ele entra na contagem de saída.
+
+## Três cálculos hipotéticos
+
+Os exemplos usam os preços oficiais desta página, mas as tarefas e os volumes são inventados para ilustrar a conta.
+
+### Cálculo hipotético 1: a mesma tarefa em quatro modelos
+
+Tarefa com 200 mil tokens de entrada e 20 mil tokens de saída (por exemplo, analisar um conjunto grande de documentos e devolver um relatório).
+
+| Modelo (preços de API por milhão de tokens) | Entrada | Saída | Total |
+| --- | --- | --- | --- |
+| GPT-6 Astra (US$ 10 e US$ 50) | US$ 2,00 | US$ 1,00 | **US$ 3,00** |
+| GPT-6.1 Sol (US$ 2 e US$ 10) | US$ 0,40 | US$ 0,20 | **US$ 0,60** |
+| Claude Opus 5.5 (US$ 4 e US$ 20) | US$ 0,80 | US$ 0,40 | **US$ 1,20** |
+| Claude Fable 5.1 (US$ 10 e US$ 50) | US$ 2,00 | US$ 1,00 | **US$ 3,00** |
+
+Os preços do GPT-6.1 Sol vêm da [página de lançamento dele](https://openai.com/index/introducing-gpt-6-1-sol/), e os dos modelos Claude, da [página de preços da Anthropic](https://claude.com/pricing). É só aritmética: o preço não diz nada sobre qualidade nem sobre quantos tokens cada modelo consome para fazer a mesma tarefa. Para a comparação entre as famílias, veja [Astra, Claude Opus 5.5 e Gemini](/artigos/gpt-6-astra-vs-claude-opus-5-5-vs-gemini).
+
+### Cálculo hipotético 2: assistente com um manual fixo e cache
+
+Um assistente interno responde 50 perguntas sobre um manual de 100 mil tokens. Cada pergunta acrescenta 1 mil tokens de entrada e gera 2 mil tokens de saída.
+
+- **Sem cache**: 50 chamadas com 101 mil tokens de entrada = 5,05 milhões de tokens x US$ 10 = US$ 50,50. Saída: 100 mil tokens x US$ 50 por milhão = US$ 5,00. Total: **US$ 55,50**.
+- **Com cache** (supondo que as 50 chamadas ocorram dentro do prazo de validade do cache): uma escrita de 100 mil tokens x US$ 12,50 por milhão = US$ 1,25; 49 leituras de 100 mil tokens = 4,9 milhões x US$ 1 = US$ 4,90; 50 mil tokens novos de entrada x US$ 10 = US$ 0,50; saída = US$ 5,00. Total: **US$ 11,65**.
+
+Nesse cenário, o cache deixa o gasto em menos de um quarto do valor, porque o trecho repetido é a maior parte da entrada. Se o trecho fixo for pequeno ou mudar a cada chamada, a economia some.
+
+### Cálculo hipotético 3: velocidade e contexto longo custam mais
+
+Com a tarefa do primeiro cálculo (200 mil tokens de entrada e 20 mil de saída):
+
+- **Modo Fast** na API da OpenAI (2x o preço): US$ 3,00 x 2 = **US$ 6,00**.
+- **Bedrock, Ultrafast, Global, contexto curto** (6x): US$ 3,00 x 6 = **US$ 18,00**.
+
+Agora uma tarefa com 300 mil tokens de entrada e 20 mil de saída no Bedrock, que passa do limite de 272 mil e entra na faixa de contexto longo:
+
+- **Global**: 0,3 x US$ 20 = US$ 6,00; 0,02 x US$ 75 = US$ 1,50. Total: **US$ 7,50**.
+- **In-Region ou Geo**: 0,3 x US$ 22 = US$ 6,60; 0,02 x US$ 82,50 = US$ 1,65. Total: **US$ 8,25**.
+
+Esse cálculo supõe que a chamada inteira seja cobrada na faixa de contexto longo. A lição prática: o preço por token da faixa longa é o dobro do da faixa curta no Global (US$ 20 contra US$ 10 de entrada), então, se der para dividir o material e ficar abaixo de 272 mil tokens, o custo por token cai. Confirme na documentação da AWS como a cobrança é aplicada antes de planejar volume.
+
+## Como reduzir o custo
+
+- **Use cache** quando uma parte grande do pedido se repete (manuais, regras, base de conhecimento).
+- **Ajuste o esforço de raciocínio.** No [guia da OpenAI para a família GPT-6](https://openai.com/index/practical-guide-building-gpt-6/), o esforço Low é indicado para extrair fatos ou fazer pequenas edições, e níveis mais altos para depuração difícil e análise profunda. Na migração do GPT-5.6, a documentação da API da OpenAI orienta manter o esforço atual como base e testar um nível abaixo.
+- **Escolha o modelo certo para cada etapa.** O GPT-6.1 Sol custa um quinto do Astra na API e, segundo a OpenAI, tem inteligência próxima à dele para código, uso de computador e trabalho profissional. O Luna é indicado pela OpenAI para tarefas focadas, em volume. Os detalhes estão em [Astra, GPT-6.1 Sol e GPT-5.6 Sol](/artigos/gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol).
+- **Limite a saída.** Peça respostas objetivas e em formato fixo. Como a saída custa cinco vezes mais que a entrada, texto desnecessário pesa.
+- **Evite modos mais caros por hábito.** Fast e Ultrafast só valem quando a velocidade tem valor real para o seu fluxo.
+- **Meça antes de escalar.** Rode uma amostra pequena, calcule o custo por tarefa e só então multiplique pelo volume.
+
+Para estruturar essa conta como retorno sobre investimento, veja [ROI de inteligência artificial](/artigos/roi-inteligencia-artificial). Para implementar, o guia de [GPT-6 Astra na API](/artigos/gpt-6-astra-api-desenvolvedores) cobre cache e configuração.
+
+## Quando o Astra compensa
+
+| Situação | O que considerar |
+| --- | --- |
+| Tarefa longa e difícil, com custo alto de erro | O preço por token pesa menos que o retrabalho; vale testar o Astra |
+| Tarefa de código, pesquisa ou uso de computador em que o GPT-6.1 Sol já resolve | O GPT-6.1 Sol custa um quinto na API; compare os resultados antes de pagar mais |
+| Tarefa simples e repetida em grande volume | Um modelo menor tende a fechar a conta melhor |
+| Contexto acima de 272 mil tokens no Bedrock | O preço sobe de faixa; avalie dividir o material |
+| Uso pontual por pessoa, sem API | O plano com Astra pode ser mais simples que montar uma integração |
+| Orçamento muito apertado | Comece pelo modelo mais barato que atenda e suba só se necessário |
+
+A decisão final deve vir de um teste com a sua tarefa: qualidade do resultado, tokens consumidos e tempo de revisão humana. Para uma visão dos riscos e dos casos em que o Astra não é a melhor escolha, veja [limitações do GPT-6 Astra e quando não usar](/artigos/gpt-6-astra-limitacoes-quando-nao-usar).

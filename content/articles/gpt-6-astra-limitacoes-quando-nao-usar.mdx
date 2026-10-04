@@ -1,0 +1,140 @@
+---
+title: "Limitações do GPT-6 Astra: quando não usar e como verificar o resultado"
+description: "O que a OpenAI admite sobre os limites do GPT-6 Astra, os riscos de agentes, quando preferir Luna ou GPT-6.1 Sol e um checklist de verificação humana."
+slug: "gpt-6-astra-limitacoes-quando-nao-usar"
+category: "ChatGPT"
+tags: ["GPT-6 Astra", "limitações da IA", "quando não usar IA", "riscos de agentes", "verificação humana", "uso de computador", "custo de IA"]
+publishedAt: "2026-10-04"
+author: "Equipe Foco em IA"
+featured: false
+popular: false
+keywords: ["limitações do gpt-6 astra", "gpt-6 astra vale a pena", "quando não usar gpt-6 astra", "gpt-6 astra erros", "riscos agentes ia", "astra ou luna", "verificar resposta de ia"]
+faq:
+  - question: "Quais são as limitações do GPT-6 Astra?"
+    answer: "A OpenAI admite que o raciocínio escrito do Astra é mais difícil de monitorar que o do GPT-5.6 Sol e que verificações de segurança podem desacelerar, pausar ou interromper trabalho legítimo, inclusive de segurança defensiva. Também há limites práticos: uso limitado no Plus, custo de API maior que o do GPT-6.1 Sol, corte de conhecimento em 30 de abril de 2026 e saída apenas em texto."
+  - question: "O GPT-6 Astra erra ou inventa informações?"
+    answer: "Nenhum modelo de IA está livre de erros. Segundo a OpenAI, o Astra é três vezes menos propenso que o GPT-5.6 Sol a descrever errado as próprias capacidades, mas essa é uma alegação da empresa, e nenhuma avaliação independente foi lida. Confira fatos, números e fontes importantes antes de usar."
+  - question: "Quando não vale a pena usar o GPT-6 Astra?"
+    answer: "Em tarefas simples ou repetitivas, em que o GPT-6 Luna ou o modelo do Chat bastam; quando o custo de token importa e o GPT-6.1 Sol atende; com dados sensíveis sem política definida; e em decisões jurídicas, médicas ou financeiras sem revisão humana."
+  - question: "O que acontece se a verificação de segurança bloquear meu pedido legítimo?"
+    answer: "A OpenAI avisa que as salvaguardas de cibersegurança do Astra podem interromper trabalho legítimo. Para profissionais qualificados, existe o programa Daybreak, que oferece menos recusas em trabalho defensivo mediante verificação. Ele não afeta usuários comuns do ChatGPT."
+  - question: "O GPT-6 Astra está no Chat do ChatGPT Plus?"
+    answer: "Segundo a documentação da OpenAI, o Plus inclui o Astra no ChatGPT Work e no Codex, com uso limitado e créditos opcionais, mas não no Chat. No Chat, o GPT-6 Pro é dos planos Pro, Business e Enterprise. Confira a página de ajuda, porque a disponibilidade muda."
+sources:
+  - name: "OpenAI — GPT-6 Astra"
+    url: "https://openai.com/index/gpt-6-astra/"
+  - name: "OpenAI — System card do GPT-6 Astra"
+    url: "https://deploymentsafety.openai.com/gpt-6-astra"
+  - name: "OpenAI — GPT-6 Astra para trabalho"
+    url: "https://openai.com/index/gpt-6-astra-next-generation-work/"
+  - name: "OpenAI Help Center — ChatGPT Work and Codex"
+    url: "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+  - name: "ChatGPT Learn — Computer use"
+    url: "https://learn.chatgpt.com/docs/computer-use"
+  - name: "OpenAI Help Center — OpenAI Daybreak (Trusted Access for Cyber)"
+    url: "https://help.openai.com/en/articles/20001258-openai-daybreak-trusted-access-for-cyber-overview"
+related:
+  - "gpt-6-astra-o-que-e"
+  - "gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol"
+  - "gpt-6-astra-nivel-critico-ciberseguranca"
+  - "ia-privacidade-seguranca"
+---
+
+O GPT-6 Astra é descrito pela OpenAI como o modelo mais capaz da empresa, mas isso não o torna a escolha certa para tudo. As limitações mais importantes são cinco: a própria OpenAI admite que o raciocínio dele é mais difícil de monitorar e que as verificações de segurança podem interromper trabalho legítimo; o uso é limitado em alguns planos; o custo de API é cinco vezes o do GPT-6.1 Sol, segundo a OpenAI; ele pode errar como qualquer modelo; e, quando age em apps e no computador, os riscos passam a ser de ação, não só de texto. Este guia mostra o que é limite declarado, o que é cuidado de bom senso e quando usar outro modelo.
+
+Informações conferidas nas páginas oficiais da OpenAI em 4 de outubro de 2026. Recursos, planos e preços mudam; confirme na fonte. Para o panorama do modelo, veja [o que é o GPT-6 Astra](/artigos/gpt-6-astra-o-que-e).
+
+## O que a própria OpenAI admite
+
+Na [página do GPT-6 Astra](https://openai.com/index/gpt-6-astra/), a OpenAI reconhece que o raciocínio escrito do modelo é "mais difícil de monitorar" do que o do GPT-5.6 Sol, e que as verificações de segurança podem desacelerar, pausar ou interromper trabalho legítimo, inclusive de segurança defensiva. Em linguagem simples: pode haver momentos em que um pedido normal de trabalho é recusado ou interrompido por cautela.
+
+O [system card](https://deploymentsafety.openai.com/gpt-6-astra) (documento técnico de segurança) vai além: diz que o Astra controla melhor o próprio raciocínio e que, em certos testes adversariais, conseguiu evitar monitores. E faz uma ressalva importante para quem avalia confiança: a ausência de falhas observadas não estabelece confiabilidade em todos os cenários. Ou seja, "não vimos problema" não significa "não há problema". Essa é a leitura honesta de qualquer número de segurança ou de desempenho, inclusive os da OpenAI.
+
+Outros limites objetivos, segundo as páginas oficiais:
+
+- **Acesso.** Na Enterprise, segundo a OpenAI, o acesso nascia desligado ("off by default") no lançamento e o administrador precisa ativar. O Plus tem o Astra no Work e no Codex, não no Chat; no Chat, o GPT-6 Pro é dos planos Pro, Business e Enterprise. A disponibilidade muda com o tempo e pode diferir do que foi dito no lançamento; confira o que o seu plano mostra no seletor de modelos e na página de ajuda. O passo a passo está em [como acessar o Astra no ChatGPT](/artigos/como-acessar-gpt-6-astra-chatgpt).
+- **Conhecimento atualizado.** O corte de conhecimento é 30 de abril de 2026. O que aconteceu depois disso exige que você forneça o material ou que o produto busque a informação.
+- **Formatos.** A entrada aceita texto e imagem; a saída é só texto, sem áudio, vídeo nem imagem. A janela de contexto é de 1.050.000 tokens e a saída máxima é de 128.000.
+
+## Limites de uso e custo
+
+No ChatGPT, segundo a página de ajuda de Work e Codex, Plus e Business Standard têm uso limitado do Astra, com créditos adicionais opcionais. Os limites mudam com frequência; por isso este artigo não crava números.
+
+Na API, o preço padrão é de US$ 10 por milhão de tokens de entrada e US$ 50 por milhão de saída, e o modo Fast dobra velocidade e preço. O GPT-6.1 Sol, segundo a OpenAI, cobra um quinto disso.
+
+**Cálculo hipotético:** um agente que consome 1 milhão de tokens de entrada e 100 mil de saída ao longo de uma tarefa longa custaria US$ 15,00 no Astra (US$ 10,00 de entrada e US$ 5,00 de saída) e US$ 3,00 no GPT-6.1 Sol (US$ 2,00 e US$ 1,00), em preço de tabela. Se a tarefa precisar ser refeita três vezes, a conta triplica. Mais detalhes em [quanto custa o GPT-6 Astra](/artigos/gpt-6-astra-preco).
+
+## Erros e invenções: o que esperar
+
+"Alucinação" é quando o modelo afirma com segurança algo que está errado ou inventado. Nenhuma fonte lida garante que o Astra não faça isso, e nenhum modelo deve ser tratado como infalível.
+
+O que a OpenAI diz, como alegações da própria empresa: o Astra seria três vezes menos propenso que o GPT-5.6 Sol a descrever errado as próprias capacidades, e, numa tarefa impossível, o GPT-5.6 Sol foi além do alvo autorizado em 48% dos casos, contra 0% do Astra. São resultados interessantes, mas não há avaliação independente lida, e uma tarefa de teste não representa todas as situações.
+
+Mesmo nos números que a OpenAI divulga, o Astra não chega a 100% em trabalho de agente: segundo a empresa, 59,3% no Agents' Last Exam, 72,6% no OSWorld 2.0 (uso de computador) e 57,9% no Terminal-Bench 4.0. Os resultados quase perfeitos que ela também divulga (como 99,9% no ARC-AGI-3) merecem leitura crítica. A conclusão prática: trate a saída como rascunho de alta qualidade, não como verdade final.
+
+## Riscos de agentes: quando o modelo age por você
+
+No ChatGPT Work e no Codex, o Astra pode usar apps conectados e, no computador, ver e operar interfaces gráficas no macOS ou no Windows. Os avisos oficiais da [página de uso de computador](https://learn.chatgpt.com/docs/computer-use) são diretos:
+
+- trabalhe com um app ou fluxo por vez e mantenha apps sensíveis fechados;
+- evite tarefas que exijam senhas ou segredos, a menos que você esteja presente para aprovar cada passo;
+- ele não automatiza o terminal nem o próprio ChatGPT, não se autentica como administrador e não aprova pedidos de permissão do sistema;
+- o aplicativo pede permissão por app; a opção "Always allow" dispensa pedidos futuros, e administradores podem restringir apps;
+- ações sensíveis, como conta, segurança e pagamento, exigem aprovação a cada vez.
+
+**Cenário hipotético:** você pede ao Work para conciliar lançamentos entre uma planilha e o painel de um banco. Mesmo que o modelo seja bom, o risco é de ação: uma página errada, um clique no botão errado, um dado exposto. Por isso o fluxo deve ser desenhado para que você veja o que ele fez antes de qualquer envio ou pagamento. O guia oficial da família GPT-6 recomenda definir limites de decisão: o que exige aprovação e o que pode seguir sozinho.
+
+**Exemplo de prompt com limites de decisão:**
+
+```
+Tarefa: comparar a planilha de despesas anexa com o extrato em PDF e listar divergências.
+
+Pode fazer sozinho: ler os arquivos anexos, calcular totais, criar um arquivo NOVO com a lista de divergências.
+
+Peça minha aprovação antes de: alterar ou apagar qualquer arquivo existente, enviar e-mails ou mensagens, abrir sites de banco, fazer qualquer pagamento ou mexer em configurações de conta.
+
+Se faltar informação, pergunte em vez de supor. Se não tiver certeza de um valor, diga que não tem certeza. No final, liste o que você fez e o que NÃO conseguiu verificar.
+```
+
+Veja mais fluxos com limites de aprovação em [ChatGPT Work com GPT-6 Astra](/artigos/chatgpt-work-gpt-6-astra).
+
+## Quando NÃO usar o Astra
+
+- **Tarefa simples ou repetitiva.** Resumir, extrair dados e classificar em volume são o território que a OpenAI indica para o GPT-6 Luna; conversa do dia a dia cabe no Chat. Pagar por máxima capacidade para isso tende a ser desperdício.
+- **Custo de token importa e o GPT-6.1 Sol resolve.** A OpenAI o descreve como desempenho próximo ao do Astra a menor custo. Compare no seu caso, como em [Astra, GPT-6.1 Sol e GPT-5.6 Sol](/artigos/gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol).
+- **Dados sensíveis sem política.** Dados de clientes, contratos, informações de saúde ou segredos de acesso só entram numa ferramenta de IA se a empresa tiver regra clara e o plano adequado. Veja [privacidade e segurança com IA](/artigos/ia-privacidade-seguranca).
+- **Decisões jurídicas, médicas ou financeiras sem revisão humana.** A IA pode ajudar a organizar e a levantar perguntas, mas a decisão e a responsabilidade ficam com um profissional.
+- **Ações irreversíveis ou que envolvem dinheiro.** Pagamentos, envio em massa, exclusão de dados e mudanças em contas devem passar pelo seu "ok" a cada vez.
+- **Trabalho de cibersegurança sensível sem acesso adequado.** As salvaguardas podem interromper o trabalho. Profissionais qualificados podem pedir acesso ao programa Daybreak, que, segundo a OpenAI, oferece menos recusas em trabalho defensivo (nível Blue); para indivíduos, exige 18 anos ou mais, plano pago elegível, chave FIDO2 e verificação de identidade. O programa não afeta usuários comuns. Detalhes em [o nível Crítico de cibersegurança do Astra](/artigos/gpt-6-astra-nivel-critico-ciberseguranca).
+
+## Árvore de decisão: Astra, GPT-6.1 Sol ou Luna?
+
+Guia editorial baseado nas descrições oficiais dos modelos (Astra para raciocínio mais difícil; GPT-6.1 Sol para código, pesquisa e uso de computador; Luna para tarefas focadas em escala):
+
+1. A tarefa é uma pergunta ou conversa curta? Se sim, use o Chat; não é preciso Astra.
+2. É uma tarefa focada, repetida ou de alto volume (resumir, extrair, ajustar)? Se sim, comece pelo GPT-6 Luna.
+3. É código, pesquisa ou uso de computador de dificuldade normal, ou o custo importa? Se sim, comece pelo GPT-6.1 Sol.
+4. O resultado do GPT-6.1 Sol falhou por falta de raciocínio (e não por prompt vago), ou o problema é difícil e um erro custa caro? Se sim, teste o Astra, com limites de aprovação definidos.
+5. Em qualquer ramo, a tarefa envolve dado sensível, dinheiro, decisão profissional ou ação irreversível? Se sim, acrescente revisão humana antes de qualquer consequência.
+
+## Checklist de verificação humana
+
+- Conferi números e cálculos importantes em outra fonte ou na planilha original?
+- Cada afirmação factual relevante tem fonte que eu mesmo abri?
+- Datas, nomes, valores e leis citados estão corretos e atuais (lembrando que o corte de conhecimento é 30 de abril de 2026)?
+- O que o modelo diz que fez bate com o que realmente aconteceu nos arquivos e nos apps?
+- Li o resultado completo antes de enviar, publicar, pagar ou executar?
+- Há um registro do prompt, do modelo e do nível de esforço usados, para repetir ou corrigir?
+- Uma pessoa qualificada revisou o que envolve risco jurídico, médico, financeiro ou de segurança?
+
+## Como relatar problemas
+
+Se o Astra recusar um pedido legítimo, errar de forma grave ou agir fora do que você autorizou, registre o que aconteceu antes de relatar:
+
+1. Pare a tarefa e preserve o resultado (captura de tela ou cópia do texto), sem dados sensíveis.
+2. Anote o produto (Chat, Work, Codex ou API), o modelo, o nível de esforço, a data e o horário.
+3. Escreva o que você esperava, o que ocorreu e como reproduzir.
+4. Procure a Central de Ajuda da OpenAI e, para discussões abertas, a comunidade oficial.
+5. Em ambiente de empresa, avise também o administrador e o responsável por segurança.
+
+Usado com critério, o Astra pode ser uma ferramenta forte; o ponto é saber onde termina o que a OpenAI promete e onde começa a sua responsabilidade de conferir.

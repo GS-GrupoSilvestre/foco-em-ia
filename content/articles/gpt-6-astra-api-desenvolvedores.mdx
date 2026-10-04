@@ -1,0 +1,164 @@
+---
+title: "GPT-6 Astra na API: modelo, parâmetros, preços, Bedrock e migração do GPT-5.6"
+description: "Guia da API do GPT-6 Astra: ID gpt-6-astra, Responses API, níveis de esforço, contexto de 1,05 mi de tokens, cache, Bedrock, Agents API e migração do GPT-5.6."
+slug: "gpt-6-astra-api-desenvolvedores"
+category: "ChatGPT"
+tags: ["GPT-6 Astra", "API OpenAI", "Responses API", "Amazon Bedrock", "desenvolvedores", "migração"]
+publishedAt: "2026-10-04"
+author: "Equipe Foco em IA"
+featured: false
+popular: false
+keywords: ["GPT-6 Astra API", "gpt-6-astra", "Responses API", "GPT-6 Astra Bedrock", "migrar GPT-5.6 para GPT-6 Astra", "Agents API OpenAI"]
+faq:
+  - question: "Qual é o nome do GPT-6 Astra na API?"
+    answer: "O ID do modelo na API da OpenAI é gpt-6-astra. No Amazon Bedrock, o ID é openai.gpt-6-astra."
+  - question: "Devo usar a Responses API ou a Chat Completions com o Astra?"
+    answer: "Segundo a documentação da OpenAI, o modelo usa a Responses API para chamada de ferramentas; a Chat Completions serve apenas para uso sem ferramentas."
+  - question: "Quais níveis de esforço de raciocínio o Astra aceita na API?"
+    answer: "low, medium, high, xhigh e max. O Astra não aceita o esforço none."
+  - question: "Qual o tamanho da janela de contexto do GPT-6 Astra?"
+    answer: "1.050.000 tokens de contexto e até 128.000 tokens de saída, com entrada de texto e imagem e saída de texto, segundo a ficha do modelo no Amazon Bedrock."
+  - question: "Quanto custa o GPT-6 Astra na API?"
+    answer: "O preço padrão publicado pela OpenAI é US$ 10 por milhão de tokens de entrada e US$ 50 por milhão de saída, com entrada em cache a US$ 1 e escrita de cache a US$ 12,50. Preços mudam; confirme na página oficial."
+sources:
+  - name: "OpenAI Developers — Latest model guide (GPT-6 Astra)"
+    url: "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra"
+  - name: "OpenAI Developers — Agents API overview"
+    url: "https://developers.openai.com/api/docs/guides/agents-api/overview"
+  - name: "AWS — OpenAI GPT-6 Astra no Amazon Bedrock"
+    url: "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-astra.html"
+  - name: "OpenAI — GPT-6 Astra para trabalho"
+    url: "https://openai.com/index/gpt-6-astra-next-generation-work/"
+  - name: "OpenAI — GPT-6 Astra"
+    url: "https://openai.com/index/gpt-6-astra/"
+  - name: "OpenAI — A practical guide to building with GPT-6"
+    url: "https://openai.com/index/practical-guide-building-gpt-6/"
+related:
+  - "gpt-6-astra-o-que-e"
+  - "gpt-6-astra-preco"
+  - "gpt-6-astra-codex-programacao"
+  - "gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol"
+---
+
+Para usar o GPT-6 Astra na API da OpenAI, o nome do modelo é `gpt-6-astra`, a chamada deve passar pela Responses API se você quiser ferramentas, e o esforço de raciocínio vai de `low` a `max` (o valor `none` não é aceito). A janela de contexto é de 1.050.000 tokens, com até 128.000 tokens de saída. Este guia reúne o que a documentação oficial diz sobre parâmetros, preços, Amazon Bedrock, Azure, Agents API e migração do GPT-5.6, e fecha com um checklist para colocar em produção.
+
+Informações conferidas nas páginas oficiais da OpenAI em 4 de outubro de 2026. Recursos, planos e preços mudam; confirme na fonte. Para a visão geral do modelo, veja [GPT-6 Astra: o que é, o que muda e quem pode usar](/artigos/gpt-6-astra-o-que-e).
+
+Um aviso sobre acesso: no anúncio de lançamento, em 3 de setembro, a OpenAI disse que a API começaria com parceiros selecionados e seria ampliada depois. A página de lançamento cita a API entre as formas de disponibilidade, mas confirme no painel da sua conta se o modelo já aparece para você.
+
+## Ficha técnica do modelo
+
+Segundo a ficha do modelo no [Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-astra.html), com o contexto e a saída máxima confirmados também em um anúncio da OpenAI na comunidade de desenvolvedores:
+
+| Item | Valor |
+|---|---|
+| ID na API da OpenAI | gpt-6-astra |
+| ID no Bedrock | openai.gpt-6-astra |
+| Janela de contexto | 1.050.000 tokens |
+| Saída máxima | 128.000 tokens |
+| Corte de conhecimento | 30/04/2026 |
+| Entrada | Texto e imagem |
+| Saída | Apenas texto (sem áudio, vídeo ou imagem) |
+
+**Token** é o pedaço de texto que o modelo processa (aproximadamente uma sílaba ou palavra curta) e a unidade de cobrança. A **janela de contexto** é o total de tokens que cabem de uma vez, somando o que você envia e o que o modelo devolve.
+
+## Responses API ou Chat Completions
+
+A [documentação do modelo](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra) indica o Astra "para o trabalho mais exigente de raciocínio, código e profissional" (tradução nossa) e diz que a **Responses API** é o caminho para chamada de ferramentas. A Chat Completions só serve quando você não usa ferramentas. Se o seu sistema atual usa Chat Completions com funções, planeje a mudança.
+
+Ferramentas e recursos listados como suportados:
+
+- uso de computador (computer use);
+- Structured Outputs (respostas em formato estruturado definido por você);
+- streaming (resposta chegando aos poucos);
+- Programmatic Tool Calling;
+- orquestração de vários agentes (multi-agent orchestration);
+- prompt caching;
+- raciocínio persistido (persisted reasoning);
+- compaction (compactação do contexto);
+- pro mode.
+
+A documentação lida não detalha o funcionamento de cada item aqui; para a sintaxe de cada um, consulte o guia oficial.
+
+## Esforço de raciocínio
+
+O Astra não aceita `none`. Os valores aceitos são `low`, `medium`, `high`, `xhigh` e `max`. O guia oficial da família GPT-6 associa os níveis a tipos de tarefa: Low para extrair fatos ou fazer pequenas edições; Medium para planejar uma funcionalidade ou comparar opções; High para depuração difícil, análise mais profunda ou revisão cuidadosa; Extra high e Max quando o High não basta. Em geral, mais esforço de raciocínio costuma aumentar o tempo de resposta e o consumo de tokens, e portanto o custo (observação nossa, não da documentação consultada); meça isso no seu caso.
+
+## Preços e cache
+
+Preço padrão, por milhão de tokens, segundo a OpenAI:
+
+| Item | US$ por 1 milhão de tokens |
+|---|---|
+| Entrada | 10 |
+| Saída | 50 |
+| Entrada em cache | 1 |
+| Escrita de cache | 12,50 |
+
+O modo Fast entrega 2x a velocidade por 2x o preço padrão, segundo a página de lançamento. A explicação completa de custos está em [GPT-6 Astra: preço](/artigos/gpt-6-astra-preco). Para escolher o modelo pelo custo, veja a comparação com o [GPT-6.1 Sol e o GPT-5.6 Sol](/artigos/gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol).
+
+Cálculo hipotético, só aritmética com os preços oficiais: uma chamada com 200 mil tokens de entrada e 20 mil de saída custa 200.000 x 10 / 1.000.000 = US$ 2,00 de entrada, mais 20.000 x 50 / 1.000.000 = US$ 1,00 de saída, total de US$ 3,00. Se, em outra chamada, 150 mil dos 200 mil tokens de entrada forem lidos do cache, a entrada passa a ser 50.000 x 10 / 1.000.000 = US$ 0,50 mais 150.000 x 1 / 1.000.000 = US$ 0,15, totalizando US$ 0,65, e com a saída de US$ 1,00 a chamada fica em US$ 1,65. Esse segundo cálculo ignora o custo de escrita de cache da chamada anterior.
+
+## Migração do GPT-5.6 para o Astra
+
+Os passos 1 a 3 abaixo vêm da documentação oficial; o 4 é recomendação nossa:
+
+1. Troque o parâmetro `prompt_cache_retention` por `prompt_cache_options.ttl`, com o valor `"30m"`.
+2. Mantenha o nível de esforço que você já usava como ponto de partida.
+3. Teste também um nível abaixo do atual; se a qualidade se mantiver, você pode economizar.
+4. Rode a sua própria bateria de testes antes de trocar o modelo em produção.
+
+Também vale revisar os prompts. A OpenAI diz que o Astra tem mais probabilidade de pedir esclarecimentos. Se você quer que o modelo conclua a tarefa sem parar para perguntar, a documentação sugere instruções como "bias towards action and carry the user's intended task to completion" (em tradução livre: tenda a agir e leve a tarefa pretendida pelo usuário até o fim). O guia da família GPT-6 também avisa que instruções excessivamente específicas podem atrapalhar, pois os modelos entendem melhor nuances e ambiguidade.
+
+## Exemplo ilustrativo de requisição
+
+Exemplo ilustrativo; confira a documentação para nomes exatos de campos e para o parâmetro de esforço de raciocínio. As páginas oficiais lidas citam o ID do modelo e o campo `prompt_cache_options.ttl`; o campo `input` é apenas ilustrativo:
+
+```json
+{
+  "model": "gpt-6-astra",
+  "input": "Resuma o texto abaixo em 5 tópicos e liste dúvidas que ficaram em aberto: [texto]",
+  "prompt_cache_options": { "ttl": "30m" }
+}
+```
+
+O nível de esforço (`low`, `medium`, `high`, `xhigh` ou `max`) entra nessa requisição pelo campo indicado na documentação oficial. Nunca coloque chaves de API no código-fonte nem em prompts.
+
+## Amazon Bedrock
+
+O Astra está no Amazon Bedrock desde 8 de setembro de 2026, com ID `openai.gpt-6-astra`. A ficha da AWS informa fim de vida "não antes de 8 de setembro de 2027" (EOL no sooner than). Pontos de atenção:
+
+- **Contexto curto (até 272 mil tokens)**: Global CRIS a US$ 10 de entrada e US$ 50 de saída; In-Region ou Geo a US$ 11 e US$ 55.
+- **Contexto longo (acima de 272 mil tokens)**: Global a US$ 20 e US$ 75; In-Region ou Geo a US$ 22 e US$ 82,50.
+- **Ultrafast** custa 6x o preço padrão correspondente.
+- Os tiers **Priority e Flex não são suportados** no Bedrock.
+
+Na prática, encher a janela de 1,05 milhão de tokens no Bedrock pode custar mais por token do que um prompt curto. Segundo a ficha da AWS, o modelo tem inferência in-region em us-east-1 e us-west-2 (esta última apenas no tier Standard) e inferência cross-region Geo ou Global em regiões dos EUA, do Canadá, da União Europeia e da Ásia-Pacífico. A lista de regiões muda com o tempo; confirme na documentação da AWS antes de planejar residência de dados.
+
+## Azure
+
+A OpenAI cita o Microsoft Azure entre as plataformas onde o Astra está disponível. Não há, nas fontes lidas, detalhes de regiões, preços ou limites no Azure; consulte a documentação da Microsoft.
+
+## Agents API (beta)
+
+A [Agents API](https://developers.openai.com/api/docs/guides/agents-api/overview) está em beta e é descrita como "agentes de nuvem duráveis com um harness Codex gerenciado" (tradução nossa). Um **agente** é um programa de IA que executa várias etapas e usa ferramentas por conta própria. Pontos oficiais:
+
+- Uso via cabeçalho `OpenAI-Beta: agents=v1`.
+- A residência de dados é apenas nos EUA.
+- Não há retenção zero de dados (ZDR) nessa API.
+
+Por isso, se você depende de ZDR ou de residência de dados em outra região, a Agents API pode não servir. A OpenAI diz que há zero data retention para clientes elegíveis da API em geral; a exceção acima vale para a Agents API em beta. Para decisões de privacidade, leia também [IA e privacidade](/artigos/ia-privacidade-seguranca).
+
+## Checklist de produção
+
+1. **Custos**: estime o gasto por tarefa com a fórmula de tokens (veja [GPT-6 Astra: preço](/artigos/gpt-6-astra-preco)), defina limites de gasto e alertas e use cache para prefixos repetidos.
+2. **Esforço**: comece baixo e suba só onde a qualidade pedir; registre o nível usado em cada chamada.
+3. **Modelo certo por tarefa**: use um modelo menor ou o GPT-6.1 Sol quando o Astra for exagero. Veja a [comparação](/artigos/gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol).
+4. **Logs**: guarde requisição, versão do prompt, nível de esforço, tokens e resultado, sem registrar dados pessoais ou segredos.
+5. **Aprovação humana**: para ações que gastam dinheiro, alteram dados, enviam mensagens ou mexem em contas, exija confirmação de uma pessoa.
+6. **Escopo das ferramentas**: dê ao agente só as permissões necessárias, com credenciais de menor privilégio.
+7. **Testes**: monte um conjunto de casos reais e compare com o modelo atual antes de migrar. Os números de benchmark da OpenAI são alegações da empresa, e nenhuma avaliação independente foi lida para este artigo.
+8. **Segurança**: a OpenAI classifica o Astra no nível Crítico em cibersegurança e diz que as verificações podem interromper trabalho legítimo. Se o seu produto lida com segurança, trate recusas e interrupções como cenário esperado. Veja [limitações e quando não usar o Astra](/artigos/gpt-6-astra-limitacoes-quando-nao-usar).
+9. **Plano B**: tenha um modelo alternativo e trate erros de limite e indisponibilidade.
+
+Se o seu uso é programação dentro do ChatGPT, e não integração por API, o caminho é o Codex: veja [GPT-6 Astra no Codex](/artigos/gpt-6-astra-codex-programacao).

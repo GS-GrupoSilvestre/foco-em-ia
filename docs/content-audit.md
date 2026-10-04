@@ -326,3 +326,17 @@ Critérios aplicados:
 - Nenhuma outra linha dos arquivos foi alterada.
 
 Efeito técnico: o JSON-LD (`datePublished`/`dateModified`), o sitemap (`lastmod`), o feed RSS e o selo "Atualizado em" usam esses dois campos, então mudam juntos.
+
+---
+
+## Série GPT-6 Astra (04/10/2026)
+
+Foram publicados 12 artigos novos na categoria ChatGPT, todos com `publishedAt: 2026-10-04` (data real da publicação) e sem `updatedAt`. Pilar: `gpt-6-astra-o-que-e` (também em "Comece por aqui" da categoria, no lugar do artigo do o3, que trata de um produto aposentado).
+
+Artigos: o que é (pilar), como acessar no ChatGPT, preço, Astra vs GPT-6.1 Sol vs GPT-5.6 Sol, Astra vs Claude Opus 5.5 vs Gemini, Astra no Codex, ChatGPT Work com Astra, nível Crítico em cibersegurança, benchmarks explicados, e-commerce e pequenas empresas (com a demonstração do strap de musculação), API para desenvolvedores, limitações e quando não usar.
+
+Critérios: fatos só de páginas oficiais lidas em 04/10/2026 (ficha em `/audit/facts/astra.md`); números de desempenho sempre atribuídos à OpenAI; cálculos de custo rotulados como hipotéticos; nenhum preço em reais; nada de "testamos". Cada artigo passou por revisão factual independente (cerca de 30 correções).
+
+Artigos antigos atualizados por causa do GPT-6.1 Sol (lançado em 29/09/2026, depois da auditoria de 27/09): `chatgpt-o3-guia-completo`, `chatgpt-vs-gemini`, `chatgpt-vs-gemini-vs-claude`, `como-usar-chatgpt-guia-completo` e `historia-inteligencia-artificial` (com `updatedAt: 2026-10-04`). Outros cinco receberam apenas links para a série.
+
+Pendências de conferência manual: disponibilidade geral do Astra na API; linha "Business" (Standard x Premium) nos planos; página oficial de ajuda do GPT-6 Pro (conferir no navegador); dados da Anthropic e do Google nos comparativos (conferidos em 27/09); notícia de imprensa sobre um "GPT-6.1 Astra" cancelado (não confirmada pela OpenAI, por isso não citada). Reauditar a série a cada 2–4 semanas: os modelos da OpenAI mudam rápido.

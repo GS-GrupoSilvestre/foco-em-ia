@@ -27,8 +27,8 @@ export const categories: Category[] = [
     icon: '💬',
     color: '#10A37F',
     pillars: [
+      'gpt-6-astra-o-que-e',
       'como-usar-chatgpt-guia-completo',
-      'chatgpt-o3-guia-completo',
       'melhores-prompts-chatgpt',
       'chatgpt-vs-gemini',
     ],

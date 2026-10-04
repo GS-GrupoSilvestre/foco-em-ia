@@ -1,0 +1,168 @@
+---
+title: "GPT-6 Astra no Codex: como programar com o modelo e quando vale usar"
+description: "Veja o que é o Codex, quais modelos ele oferece (Astra, GPT-6.1 Sol, Sol e Luna), como escolher o esforço de raciocínio e um prompt pronto para código."
+slug: "gpt-6-astra-codex-programacao"
+category: "ChatGPT"
+tags: ["GPT-6 Astra", "Codex", "programação", "ChatGPT", "agente de código", "OpenAI"]
+publishedAt: "2026-10-04"
+author: "Equipe Foco em IA"
+featured: false
+popular: false
+keywords: ["GPT-6 Astra Codex", "programar com GPT-6 Astra", "Codex OpenAI", "Codex modelos", "esforço de raciocínio Codex", "revisar código gerado por IA"]
+faq:
+  - question: "O GPT-6 Astra está disponível no Codex?"
+    answer: "Sim, para planos elegíveis. Segundo a OpenAI, o Astra está no ChatGPT Work e no Codex; no Plus e no Business Standard o uso do Astra é limitado, com créditos adicionais opcionais. Free e Go não incluem o Astra. Confira a página oficial do seu plano."
+  - question: "Qual modelo usar no Codex: Astra, GPT-6.1 Sol ou Luna?"
+    answer: "Pela orientação oficial, o Astra é indicado para o raciocínio mais difícil, o GPT-6.1 Sol para código complexo, pesquisa e uso de computador com custo menor, e o Luna para tarefas focadas e repetitivas em escala, como resumo, extração e codificação focada."
+  - question: "Quais níveis de esforço o Codex oferece?"
+    answer: "A página de modelos da OpenAI lista Light/Low, Medium, High e Extra High, além de Max e Ultra, que usam mais raciocínio ou subagentes em paralelo. O Luna vai até o Max, sem o Ultra."
+  - question: "O Astra programa melhor que os outros modelos?"
+    answer: "A OpenAI afirma que sim em alguns testes: DeepSWE v1.1 com 74,1% contra 72,7% do GPT-5.6 Sol e Terminal-Bench 4.0 com 57,9% contra 37,3%. São números da própria empresa; nenhuma avaliação independente foi lida para este artigo."
+  - question: "Posso usar o Codex sem revisar o código?"
+    answer: "Não é recomendável. A OpenAI orienta definir limites do que o agente pode fazer sozinho e do que exige aprovação. Revise o diff, rode os testes e nunca entregue chaves ou senhas ao agente."
+sources:
+  - name: "OpenAI Help Center — ChatGPT Work and Codex"
+    url: "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+  - name: "ChatGPT Learn — Models"
+    url: "https://learn.chatgpt.com/docs/models"
+  - name: "OpenAI — A practical guide to building with GPT-6"
+    url: "https://openai.com/index/practical-guide-building-gpt-6/"
+  - name: "OpenAI — GPT-6 Astra"
+    url: "https://openai.com/index/gpt-6-astra/"
+  - name: "ChatGPT Learn — Computer use"
+    url: "https://learn.chatgpt.com/docs/computer-use"
+  - name: "OpenAI — Introducing GPT-6.1 Sol"
+    url: "https://openai.com/index/introducing-gpt-6-1-sol/"
+related:
+  - "gpt-6-astra-o-que-e"
+  - "gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol"
+  - "gpt-6-astra-api-desenvolvedores"
+  - "claude-code-terminal-guia"
+---
+
+Sim, dá para programar com o GPT-6 Astra: ele está disponível no Codex, o agente de programação do ChatGPT, para planos pagos elegíveis. Segundo a [página de ajuda da OpenAI sobre Work e Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex), o Codex "continua dedicado a desenvolvimento de software e trabalho técnico" (tradução nossa). A pergunta que importa na prática não é só "posso usar", mas "qual modelo e qual nível de esforço escolher para cada tarefa" e "como evitar que o agente faça o que eu não pedi". É isso que este guia resolve.
+
+Informações conferidas nas páginas oficiais da OpenAI em 4 de outubro de 2026. Recursos, planos e preços mudam; confirme na fonte. Para entender o modelo em si, veja o artigo-pilar [GPT-6 Astra: o que é, o que muda e quem pode usar](/artigos/gpt-6-astra-o-que-e).
+
+## O que é o Codex e onde ele roda
+
+O Codex é a parte do ChatGPT voltada a software e trabalho técnico. Um **agente** é um programa de IA que executa várias etapas por conta própria, em vez de só responder a uma pergunta. Em programação, isso costuma significar ler o projeto, propor mudanças e entregar o resultado para você revisar (descrição geral de agentes de código, não uma definição oficial do Codex). Segundo a OpenAI, Work e Codex podem usar apps conectados, criar documentos, apresentações e planilhas ou usar um navegador.
+
+Segundo a mesma página de ajuda, o Codex roda no app desktop, na web (o chamado Codex Cloud) e no celular. Já o ChatGPT Work é o agente para tarefas longas e entregáveis prontos, e o Chat é para conversa rápida. Para saber o que cada plano inclui, confira a página oficial de planos e as páginas de ajuda da OpenAI.
+
+Sobre o plano: a OpenAI informa que Plus e Business Standard têm uso limitado do Astra, com créditos adicionais opcionais. Free e Go aparecem na página de planos com Codex "limitado", mas sem o Astra. Valores e limites exatos você encontra na página oficial de planos.
+
+## Quais modelos o Codex oferece (e quando usar cada um)
+
+A página de modelos do ChatGPT Learn descreve os modelos do Work e do Codex. Resumo da orientação oficial, em tabela de decisão:
+
+| Modelo | Como a OpenAI o descreve | Quando faz sentido |
+|---|---|---|
+| GPT-6 Astra | Modelo mais capaz para trabalho complexo em código, apps e pesquisa | Fluxos completos que exigem raciocínio sustentado e o problema mais difícil |
+| GPT-6.1 Sol | Desempenho próximo ao do Astra a um custo menor | Código complexo, pesquisa e uso de computador quando o custo importa |
+| GPT-6 Sol | Geração anterior, ainda disponível durante a transição | Quem já tem fluxos montados nele |
+| GPT-6 Luna | Mais eficiente para tarefas focadas e de alto volume | Resumo, extração e codificação focada, em escala |
+
+O guia oficial da família GPT-6 resume assim: o Astra é para "o trabalho de raciocínio mais difícil, em que a inteligência máxima é necessária", o GPT-6.1 Sol para código, pesquisa e uso de computador complexos, e o Luna para tarefas focadas e trabalho repetido do dia a dia. A comparação completa está em [Astra, GPT-6.1 Sol e GPT-5.6 Sol: qual escolher](/artigos/gpt-6-astra-vs-gpt-6-1-sol-vs-gpt-5-6-sol).
+
+Um ponto de atenção: o GPT-6.1 Sol foi lançado em 29 de setembro de 2026 e, segundo a OpenAI, oferece inteligência "próxima à do Astra" para código, uso de computador e trabalho profissional por um quinto do preço de API. A lógica da escolha é simples: comece pelo modelo mais barato que resolve a tarefa e suba apenas se precisar.
+
+## Níveis de esforço: quanto o modelo "pensa"
+
+O esforço de raciocínio define quanto o modelo deliberou antes de agir. Em geral, mais raciocínio tende a significar respostas mais demoradas e mais consumo do seu limite (expectativa geral; as páginas lidas não trazem números sobre isso). A página de modelos lista Light/Low, Medium, High e Extra High, além de Max e Ultra, descritos como mais raciocínio ou subagentes (agentes auxiliares trabalhando em paralelo). O Luna vai até o Max, sem o Ultra.
+
+O guia oficial dá exemplos de uso:
+
+- **Low**: extrair fatos ou fazer pequenas edições.
+- **Medium**: planejar uma funcionalidade ou comparar opções.
+- **High**: depuração difícil, análise mais profunda ou revisão cuidadosa.
+- **Extra High e Max**: quando o High não basta.
+
+Sugestão editorial (não é recomendação oficial): comece em Medium, desça para Low em ajustes triviais e só suba quando o resultado vier raso. Subir o esforço por hábito gasta limite sem ganho garantido.
+
+## O que a OpenAI diz sobre o desempenho em código
+
+Os números abaixo são **alegações da OpenAI**, publicadas na [página de lançamento do GPT-6 Astra](https://openai.com/index/gpt-6-astra/), comparando o Astra com o GPT-5.6 Sol (não com o GPT-6.1 Sol). Nenhuma avaliação independente foi lida para este artigo.
+
+| Benchmark (teste padronizado) | GPT-6 Astra | GPT-5.6 Sol |
+|---|---|---|
+| DeepSWE v1.1 | 74,1% | 72,7% |
+| Terminal-Bench 4.0 | 57,9% | 37,3% |
+
+Como ler: no DeepSWE a diferença apresentada é pequena; no Terminal-Bench ela é grande. Mesmo assim, um teste padronizado não garante o mesmo resultado no seu repositório, com suas convenções e dívidas técnicas. Para entender como interpretar esses números, leia [benchmarks do GPT-6 Astra explicados](/artigos/benchmarks-gpt-6-astra-explicados).
+
+Em alinhamento, a OpenAI também diz que, numa tarefa impossível, o GPT-5.6 Sol foi além do alvo autorizado em 48% dos casos e o Astra em 0%. Também é uma alegação da empresa, de um cenário de teste, e não promessa de que o agente nunca sairá do escopo no seu projeto.
+
+## Uso de computador no Codex
+
+Além de editar código, o Codex e o Work podem usar a função de **uso de computador**: o modelo vê e opera interfaces gráficas no macOS ou no Windows, em regiões suportadas. Segundo a [documentação oficial](https://learn.chatgpt.com/docs/computer-use), a ativação é feita no app desktop (Plugins, depois Computer Use, depois instalar o plugin), e o macOS exige permissões de Gravação de Tela e Acessibilidade.
+
+Avisos oficiais que valem para quem programa:
+
+- O app pede permissão por aplicativo; "Always allow" dispensa pedidos futuros, então use com critério.
+- Ações sensíveis (conta, segurança, pagamento) exigem aprovação a cada vez.
+- Evite tarefas que exijam segredos, a menos que você esteja presente para aprovar cada passo.
+- A função não automatiza o terminal nem o próprio ChatGPT e não aprova prompts de permissão do sistema.
+
+Para testar a interface do seu app web ou um aplicativo sem API, o uso de computador é útil. Para rodar comandos e testes, o fluxo normal do Codex continua sendo o caminho.
+
+## Boas práticas de prompt para o Codex
+
+O guia da OpenAI afirma que os modelos entendem melhor nuances e ambiguidade, de modo que instruções excessivamente específicas podem atrapalhar onde antes ajudavam. O que ele recomenda definir são **limites de decisão**: o que o agente pode fazer sozinho e o que exige sua aprovação.
+
+Um bom prompt de código tem cinco partes: objetivo, contexto, restrições, critério de pronto e limites de decisão.
+
+### Exemplo de prompt para uma tarefa de código
+
+Exemplo de prompt (adapte os trechos entre colchetes ao seu projeto):
+
+```text
+Objetivo: [descreva em 1 ou 2 frases, ex.: corrigir o erro de arredondamento no cálculo de frete].
+
+Contexto: o código está em [pasta/arquivo]. O problema aparece quando [situação que reproduz o erro].
+
+Restrições:
+- Altere apenas os arquivos necessários para esta correção.
+- Não adicione dependências novas.
+- Siga o estilo de código já usado no projeto.
+
+Pronto quando:
+- O teste que reproduz o erro passa.
+- Os testes existentes continuam passando.
+- Você me mostra um resumo das mudanças, arquivo por arquivo.
+
+Pode fazer sozinho: ler arquivos, rodar testes, editar os arquivos da tarefa.
+
+Peça minha aprovação antes de: apagar arquivos, alterar configuração ou pipeline de deploy, mexer em migrações de banco, instalar pacotes, acessar variáveis de ambiente ou qualquer arquivo com segredos, e fazer qualquer coisa fora do escopo acima.
+
+Se algo estiver ambíguo, pergunte antes de agir. Se não conseguir resolver, explique o que tentou em vez de improvisar.
+```
+
+Repare no que o prompt faz: delimita o escopo, define como verificar o resultado e deixa explícito o que exige aprovação. Para outras formas de escrever pedidos, veja [como melhorar seus prompts](/artigos/como-melhorar-seus-prompts).
+
+## Checklist de revisão de código gerado por IA
+
+Código escrito por um agente deve passar pelo mesmo crivo de um colega novo no time:
+
+1. **Escopo**: o diff mexe só nos arquivos que você esperava? Mudança extra é sinal de alerta.
+2. **Testes**: os testes rodaram de verdade? Peça a saída dos comandos, não só "passou".
+3. **Dependências**: apareceu pacote novo? Confirme que existe, é mantido e é necessário.
+4. **Segredos**: há chaves, tokens, senhas ou URLs internas no código ou nos logs?
+5. **Casos de borda**: valores vazios, nulos, acentos, datas e fusos, números muito grandes.
+6. **Segurança**: entradas de usuário validadas? Consultas ao banco parametrizadas?
+7. **Leitura**: você entende o que o código faz? Se não entende, não faça merge.
+8. **Reversão**: o trabalho está em uma branch, com commit separado, fácil de desfazer?
+
+## Riscos e quando NÃO usar o Astra no Codex
+
+- **Escopo**: agentes podem mexer em mais do que o pedido. Trabalhe sempre em branch e revise o diff.
+- **Segredos**: não coloque senhas, chaves de API ou dados de clientes no prompt nem em arquivos que o agente leia.
+- **Verificações de segurança**: segundo a OpenAI, o Astra é o primeiro modelo classificado como nível "Crítico" em cibersegurança e as verificações podem desacelerar, pausar ou interromper trabalho legítimo, inclusive de segurança defensiva. Se seu trabalho é de segurança, leia [o que significa o nível Crítico em cibersegurança](/artigos/gpt-6-astra-nivel-critico-ciberseguranca).
+- **Tarefa simples**: ajustes pequenos, renomeações e textos de commit não pedem o modelo mais caro. Use o Luna ou o GPT-6.1 Sol.
+- **Limite do plano**: no Plus, o uso do Astra é limitado. Reserve-o para o que realmente precisa dele.
+
+## Alternativas e para quem usa API
+
+Se você prefere trabalhar no terminal com outro ecossistema, o [guia do Claude Code](/artigos/claude-code-terminal-guia) mostra a alternativa da Anthropic. A escolha entre ferramentas depende do seu fluxo, do plano e do orçamento, e não existe vencedor absoluto. Para integrar o modelo ao seu próprio sistema, em vez de usar o Codex, leia [GPT-6 Astra na API para desenvolvedores](/artigos/gpt-6-astra-api-desenvolvedores).
+
+Na DevDay de 29 de setembro, a OpenAI também anunciou um Codex com "Security Cloud". Este artigo não detalha esse recurso porque as informações lidas não permitem descrevê-lo com segurança; consulte o resumo oficial do evento no site da OpenAI.
