@@ -1,0 +1,288 @@
+---
+title: "Prompts para o GPT-6 no ChatGPT: como escrever e 12 modelos prontos"
+description: "Como escrever prompts para o GPT-6 no ChatGPT: dicas oficiais da OpenAI, esqueleto em 6 campos, o controle Thinking e 12 modelos prontos para copiar e adaptar."
+slug: "prompts-gpt-6-chatgpt"
+category: "ChatGPT"
+tags: ["prompts GPT-6", "ChatGPT", "engenharia de prompt", "modelos de prompt", "nível de raciocínio", "GPT-6"]
+publishedAt: "2026-10-17"
+author: "Equipe Foco em IA"
+featured: false
+popular: false
+keywords: ["prompts gpt-6 chatgpt", "melhores prompts para chatgpt", "como escrever prompts chatgpt", "prompt chatgpt gpt-6", "engenharia de prompt", "prompts prontos chatgpt"]
+faq:
+  - question: "O que é um bom prompt para o ChatGPT?"
+    answer: "Segundo a OpenAI, um bom prompt é claro e específico, dá contexto suficiente e evita ambiguidade. Também ajuda iterar (revisar a resposta e refinar o pedido) e descrever o tom desejado com adjetivos."
+  - question: "Qual é o melhor prompt para o ChatGPT?"
+    answer: "Não há um prompt único que sirva para tudo. O que costuma ajudar é definir objetivo, contexto, restrições, a evidência exigida, o critério de sucesso e o formato da resposta, e ajustar depois de ler o resultado. Há modelos prontos neste artigo e uma lista de 50 no guia de melhores prompts do site."
+  - question: "Preciso de um prompt especial para o GPT-6?"
+    answer: "Não há sinal nas fontes lidas de que seja preciso um prompt especial. A página de ajuda da OpenAI sobre prompts não prescreve estrutura obrigatória, e o guia do GPT-6 é voltado a desenvolvedores de API. As orientações dele aparecem aqui só como analogia editorial para o Chat."
+  - question: "Os prompts funcionam no plano gratuito do ChatGPT?"
+    answer: "Os prompts são texto e podem ser colados em qualquer conversa. Segundo o anúncio da OpenAI, Free e Go usam o GPT-6 Luna a partir de 08/10/2026, mas a nomenclatura nas páginas de ajuda pode variar; confira o que aparece na sua conta. Os níveis de raciocínio dependem do plano."
+  - question: "Posso usar os mesmos prompts no Gemini ou no Claude?"
+    answer: "Os modelos de prompt são texto e podem ser colados em outros assistentes, mas o resultado muda de produto para produto. O guia do Google, por exemplo, recomenda incluir exemplos e colocar o material antes da pergunta em contextos longos."
+sources:
+  - name: "OpenAI — Prompt engineering best practices for ChatGPT"
+    url: "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt"
+  - name: "OpenAI — Using GPT-6 (guia para desenvolvedores)"
+    url: "https://developers.openai.com/api/docs/guides/prompt-guidance"
+  - name: "OpenAI — GPT-6 in ChatGPT"
+    url: "https://help.openai.com/en/articles/11909943-gpt-6-in-chatgpt"
+  - name: "OpenAI — GPT-6 for everyone"
+    url: "https://openai.com/index/gpt-6-for-everyone/"
+  - name: "OpenAI — ChatGPT Release Notes"
+    url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+  - name: "Google — Prompting strategies (Gemini API)"
+    url: "https://ai.google.dev/gemini-api/docs/prompting-strategies"
+related:
+  - "melhores-prompts-chatgpt"
+  - "gpt-6-no-chatgpt-niveis-intelligent-ui"
+  - "como-melhorar-seus-prompts"
+  - "custom-instructions-chatgpt"
+---
+
+Para escrever bons prompts com o GPT-6 no ChatGPT, diga o objetivo, dê o contexto, imponha restrições, peça a evidência que você quer ver, defina o que é uma boa resposta e escolha o formato. Vale declarar cada instrução uma só vez (leitura editorial do guia de API da OpenAI), e o nível de raciocínio se troca no controle, não no texto. Abaixo estão esse esqueleto, três exemplos de antes e depois e 12 modelos prontos. A lista completa com 50 prompts por área está em [melhores prompts para ChatGPT](/artigos/melhores-prompts-chatgpt); este guia não a repete.
+
+Informações conferidas nas páginas oficiais em 17 de outubro de 2026. Recursos, planos e limites mudam; confirme na fonte.
+
+## O que a OpenAI recomenda para qualquer prompt
+
+Prompt é a instrução que você escreve para o ChatGPT. A [página de ajuda da OpenAI sobre boas práticas](https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt) reúne três dicas:
+
+1. **Seja claro e específico.** Dê contexto suficiente e evite ambiguidade.
+2. **Itere.** Comece com um prompt inicial, leia a resposta e refine o pedido.
+3. **Peça o tom com adjetivos descritivos.** O exemplo da página é pedir uma explicação em tom amigável e envolvente.
+
+A página não impõe modelo nem estrutura obrigatória e, até onde foi lida, não menciona o GPT-6. Ou seja: é a base, não um manual do modelo novo.
+
+## O que o guia do GPT-6 para desenvolvedores sugere (e por que é só uma analogia)
+
+A OpenAI publicou um [guia de prompts do GPT-6 para desenvolvedores](https://developers.openai.com/api/docs/guides/prompt-guidance), escrito em torno do GPT-6 Astra. Ele é voltado à API, que é a forma de programadores usarem o modelo dentro de sistemas próprios, e não ao app do ChatGPT. Por isso, o que segue é uma leitura editorial: a OpenAI não diz que o app funciona exatamente assim.
+
+- **Declare cada instrução uma vez.** Segundo o guia, remover instruções e exemplos repetidos pode melhorar o desempenho.
+- **Dê contexto de domínio, restrições rígidas, limites de aprovação e critérios de sucesso.** Limite de aprovação é o ponto em que o modelo deve parar e pedir seu aval antes de agir.
+- **Descreva o tom por escolhas concretas.** O guia sugere evitar rótulos vagos como "amigável" e dizer, por exemplo, "parágrafos claros e concisos, cada um desenvolvendo uma ideia principal".
+- **Para respostas curtas, diga o que manter e o que descartar.** O guia observa que o modelo tende a respostas detalhadas e formatadas.
+- **Ele pode fazer perguntas.** O guia diz que o modelo tende a perguntar quando uma informação adicional poderia mudar o resultado. Na prática, vale dizer quando perguntar e quando seguir com suposições declaradas.
+
+## Esqueleto de prompt em 6 campos
+
+O guia traz um esqueleto para o modo Pro: objetivo, contexto relevante, restrições, evidência exigida, critérios de sucesso e formato de saída. Como sugestão editorial (o guia é de API, não do app), ele pode servir de roteiro para pedidos de qualquer tamanho; nos mais simples, talvez baste preencher dois ou três campos.
+
+Exemplo de prompt (cenário hipotético de uma loja online que responde a um cliente):
+
+```
+Objetivo: escrever a resposta a uma avaliação de 2 estrelas em que o cliente reclama de atraso na entrega.
+Contexto: somos uma loja pequena de acessórios; o pedido atrasou por problema da transportadora; o cliente está irritado.
+Restrições: não prometer reembolso nem prazo que eu não informei; não culpar o cliente; máximo de 100 palavras.
+Evidência/fonte exigida: use apenas os fatos acima; se faltar algum dado, escreva [DADO FALTANTE] em vez de inventar.
+Critério de sucesso: o cliente percebe que foi ouvido e sabe qual é o próximo passo.
+Formato: um único parágrafo em português do Brasil, tom profissional e direto, sem emojis.
+```
+
+Note que "tom profissional e direto, sem emojis" é uma escolha concreta, mais útil do que apenas "seja educado".
+
+## Nível de raciocínio: use o controle, não o texto
+
+No Chat, o controle chamado Thinking define quanto esforço o modelo dedica à resposta. Segundo a [página de ajuda do GPT-6 no ChatGPT](https://help.openai.com/en/articles/11909943-gpt-6-in-chatgpt), os níveis são Instant, Medium, High, Extra High e Pro, e pedir "pense mais" no texto do prompt não muda o nível. O Instant também não sobe sozinho em pedidos complexos.
+
+Orientação editorial, não regra oficial:
+
+| Nível | Quando faz sentido |
+| --- | --- |
+| Instant | Perguntas rápidas, reescritas curtas, ideias soltas |
+| Medium | Trabalho comum: e-mails, resumos, planos simples |
+| High | Análises longas, comparações com vários critérios |
+| Extra High | Pedidos densos em que você aceita esperar mais |
+| Pro | Tarefas grandes e de várias partes |
+
+A disponibilidade varia por plano. Segundo a OpenAI, o Plus tem Medium e High; Pro, Business e Enterprise têm Medium, High, Extra High e Pro (o GPT-6 Pro exige certos planos Pro, Business ou Enterprise); Free e Go não trazem esses níveis, e o Go usa "Think" para perguntas mais difíceis. Os detalhes e uma árvore de decisão estão em [GPT-6 no ChatGPT: níveis de raciocínio e Intelligent UI](/artigos/gpt-6-no-chatgpt-niveis-intelligent-ui).
+
+## Antes e depois: 3 prompts reescritos
+
+Exemplos ilustrativos, sem resultado real de nenhum modelo.
+
+**1. E-mail**
+
+Antes: `Escreva um e-mail para meu chefe sobre o atraso.`
+
+```
+Objetivo: avisar meu gestor sobre o atraso do projeto [NOME].
+Contexto: o prazo era [DATA]; o novo prazo possível é [DATA]; o motivo foi [MOTIVO].
+Restrições: não pedir desculpas mais de uma vez; não prometer o que não está no contexto.
+Critério de sucesso: ele entende o impacto e o que preciso dele.
+Formato: e-mail com assunto e no máximo 120 palavras.
+```
+
+**2. Resumo**
+
+Antes: `Resuma este texto.`
+
+```
+Resuma o texto abaixo em 5 tópicos para quem não leu.
+Mantenha: decisões, números e prazos. Descarte: histórico e opiniões.
+Se um número não estiver no texto, não o escreva.
+
+[COLE O TEXTO]
+```
+
+**3. Análise**
+
+Antes: `Analise minhas vendas.`
+
+```
+Objetivo: identificar o que mais explica a queda de vendas entre [MÊS 1] e [MÊS 2].
+Contexto: [COLE A TABELA OU OS NÚMEROS].
+Restrições: use só os números colados; não estime o que não está na tabela.
+Critério de sucesso: no máximo 3 hipóteses, cada uma com o número que a sustenta.
+Formato: tabela com hipótese, evidência e próximo passo.
+```
+
+## 12 prompts-modelo prontos
+
+Troque o que está entre colchetes. Não cole dados sensíveis (senhas, documentos pessoais, informações confidenciais de clientes); veja [IA, privacidade e segurança](/artigos/ia-privacidade-seguranca).
+
+### Trabalho, e-mail e reunião
+
+**1. E-mail difícil**
+
+```
+Escreva um e-mail para [DESTINATÁRIO] sobre [ASSUNTO].
+Contexto: [SITUAÇÃO EM 2 OU 3 FRASES].
+Restrições: tom firme e cordial, sem ironia, no máximo [N] palavras.
+Termine com um pedido claro: [O QUE EU PRECISO E ATÉ QUANDO].
+Se faltar algum dado, pergunte antes de escrever.
+```
+
+**2. Ata de reunião**
+
+```
+Transforme as anotações abaixo em ata com: decisões, dúvidas em aberto e próximos passos (responsável e prazo).
+Use apenas o que está nas anotações. Se um responsável ou prazo não aparecer, escreva "a definir". Não invente nomes nem falas.
+
+[COLE AS ANOTAÇÕES]
+```
+
+**3. Prioridades da semana**
+
+```
+Organize minhas tarefas da semana por impacto e urgência.
+Tarefas: [LISTA]. Horas disponíveis: [N]. Prazos fixos: [LISTA].
+Entregue uma tabela com tarefa, prioridade e motivo. Se algo estiver ambíguo, faça até 3 perguntas antes de montar a tabela.
+```
+
+### Estudo
+
+**4. Explicação em camadas**
+
+```
+Explique [TEMA] para alguém que [NÍVEL: nunca estudou / já viu o básico].
+Faça em 3 camadas: uma frase, um parágrafo e um exemplo do dia a dia.
+Termine com 3 perguntas para eu verificar se entendi. Não responda as perguntas ainda.
+```
+
+**5. Plano de estudo**
+
+```
+Monte um plano de estudo de [TEMA] até [DATA].
+Tenho [N] horas por semana e meu ponto de partida é [NÍVEL].
+Antes de montar, pergunte o que faltar sobre meu objetivo. Depois entregue um quadro semanal com meta e forma de revisão.
+```
+
+**6. Questões a partir das minhas anotações**
+
+```
+Com base apenas nas anotações abaixo, crie [N] questões de múltipla escolha com gabarito comentado.
+Não use conteúdo que não esteja nas anotações. Indique de qual trecho veio cada questão.
+
+[COLE AS ANOTAÇÕES]
+```
+
+### Texto e revisão
+
+**7. Revisão sem reescrever**
+
+```
+Revise o texto abaixo apenas quanto a erros de português e clareza.
+Liste cada problema e a correção sugerida, sem reescrever o texto inteiro.
+Não altere números, nomes nem datas.
+
+[COLE O TEXTO]
+```
+
+**8. Mudar o público**
+
+```
+Reescreva o texto abaixo para [PÚBLICO: ex.: cliente leigo].
+Tom: frases curtas, sem jargão, um assunto por parágrafo, tratamento por "você".
+Mantenha todos os fatos. Se algo ficar impreciso ao simplificar, avise em vez de adivinhar.
+
+[COLE O TEXTO]
+```
+
+**9. Versão curta**
+
+```
+Reduza o texto abaixo a [N] palavras.
+Mantenha: [O QUE NÃO PODE SAIR]. Descarte: [EXEMPLOS, HISTÓRICO, REPETIÇÕES].
+Não acrescente informação nova.
+
+[COLE O TEXTO]
+```
+
+### Decisão e análise
+
+**10. Comparar opções**
+
+```
+Compare as opções [A], [B] e [C] para [OBJETIVO].
+Critérios, em ordem de importância: [LISTA].
+Entregue uma tabela e uma recomendação condicional: "se [CONDIÇÃO], escolha [OPÇÃO]".
+Se faltar dado para comparar, diga qual e não preencha com suposição.
+```
+
+**11. Ler números colados**
+
+```
+Analise os dados abaixo e responda: [PERGUNTA].
+Use somente os números fornecidos; não estime nem complete lacunas. Se a pergunta não puder ser respondida com esses dados, diga isso.
+Mostre as contas que fez.
+
+[COLE OS DADOS]
+```
+
+**12. O que pode dar errado**
+
+```
+Imagine que o plano abaixo falhou daqui a [PRAZO]. Liste os 5 motivos mais prováveis, o sinal de alerta de cada um e uma ação preventiva.
+Antes de responder, pergunte o que for necessário sobre prazo, orçamento ou equipe.
+
+[COLE O PLANO]
+```
+
+### Duas variações para acrescentar a qualquer prompt
+
+- **Para ele perguntar antes:** "Se faltar alguma informação que mude o resultado, faça até [N] perguntas antes de responder."
+- **Para ele não inventar:** "Use só o que eu forneci. Quando faltar informação, escreva [DADO FALTANTE] e não complete por conta própria."
+
+Para ver como o Gemini trata o mesmo tema, leia [prompts eficientes para o Gemini](/artigos/gemini-prompts-eficientes). Se você repete as mesmas preferências em toda conversa, as [instruções personalizadas do ChatGPT](/artigos/custom-instructions-chatgpt) evitam colar o mesmo pedido toda vez.
+
+## Erros comuns
+
+- **Prompt longo repetindo regras.** Segundo o guia de desenvolvedores, remover instruções repetidas pode melhorar o desempenho. Escreva cada regra uma vez.
+- **Tom vago.** "Seja profissional" é aberto demais. Prefira "frases curtas, sem gírias, sem exclamações".
+- **Pedir "pense mais" no texto.** Segundo a OpenAI, isso não troca o nível de raciocínio. Use o controle Thinking.
+- **Não dizer o que fazer quando falta dado.** Sem essa regra, o resultado pode vir com lacunas preenchidas por suposição.
+- **Colar dados sensíveis.** Retire nomes, documentos e números que não sejam necessários.
+- **Aceitar a primeira resposta como final.** A própria OpenAI recomenda iterar: leia, aponte o que falhou e peça o ajuste.
+
+## Checklist final de 7 itens
+
+1. O objetivo cabe em uma frase?
+2. Dei o contexto que o modelo não tem como adivinhar?
+3. Escrevi cada restrição uma única vez?
+4. Disse o que fazer quando faltar informação (perguntar ou marcar como faltante)?
+5. Defini o critério de sucesso e o formato da resposta?
+6. Conferi o nível de raciocínio no controle, em vez de pedir no texto?
+7. Retirei dados sensíveis e vou conferir números, nomes e datas na resposta?
+
+Se a resposta vier errada, ajuste um campo por vez. Para uma base mais ampla de técnicas, veja [como melhorar seus prompts](/artigos/como-melhorar-seus-prompts) e a lista de 50 em [melhores prompts para ChatGPT](/artigos/melhores-prompts-chatgpt).

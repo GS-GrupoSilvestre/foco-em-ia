@@ -1,0 +1,170 @@
+---
+title: "Claude Sonnet 5.5 e Haiku 5.5: o que mudam e qual modelo usar"
+description: "Claude Sonnet 5.5 ou Haiku 5.5? Veja preços de API, o que a Anthropic afirma de cada um, cálculos hipotéticos de custo e quando o Opus 5.5 ainda faz sentido."
+slug: "claude-sonnet-5-5-haiku-5-5"
+category: "Claude"
+tags: ["Claude Sonnet 5.5", "Claude Haiku 5.5", "Anthropic", "modelos Claude", "API Claude", "custo de IA"]
+publishedAt: "2026-10-17"
+author: "Equipe Foco em IA"
+featured: false
+popular: false
+keywords: ["claude sonnet 5.5", "claude haiku 5.5", "sonnet 5.5 vs haiku 5.5", "qual modelo claude usar", "claude sonnet 5.5 preço", "claude haiku 5.5 grátis", "diferença sonnet haiku claude"]
+faq:
+  - question: "Qual é a diferença entre o Claude Sonnet 5.5 e o Haiku 5.5?"
+    answer: "Segundo a Anthropic, o Sonnet 5.5 é indicado para tarefas bem delimitadas do dia a dia, correção de bugs e criação de documentos, apresentações e planilhas, e custa US$ 2 por milhão de tokens de entrada e US$ 10 de saída na API. O Haiku 5.5 é voltado a tarefas de alto volume, experiências em tempo real e subagentes, com preço bem menor: US$ 0,10 de entrada e US$ 0,50 de saída por milhão de tokens em prompts de até 100 mil tokens."
+  - question: "O Claude Haiku 5.5 é grátis no app?"
+    answer: "A página do produto da Anthropic informa que o Haiku 5.5 está disponível nos apps Claude para os planos Free, Pro, Max, Team e Enterprise (web, iOS e Android), o que inclui o plano gratuito. Limites de uso não foram confirmados nas fontes lidas; confira o seletor de modelos da sua conta."
+  - question: "Quanto custa usar o Sonnet 5.5 e o Haiku 5.5 na API?"
+    answer: "O Sonnet 5.5 custa US$ 2 por milhão de tokens de entrada e US$ 10 de saída. O Haiku 5.5 custa US$ 0,10 e US$ 0,50 em prompts de até 100 mil tokens, e US$ 0,50 e US$ 2,50 acima disso. Os valores são da Anthropic e podem mudar; consulte a página oficial."
+  - question: "Qual é melhor para programar: Sonnet 5.5 ou Haiku 5.5?"
+    answer: "A Anthropic indica o Sonnet 5.5 para correção de bugs e o Haiku 5.5 para programação simples e focada. Para tarefas mais complexas e abertas, a empresa diz que o Opus 5.5 continua claramente mais forte. Os números de benchmark são alegações da Anthropic, e nenhuma avaliação independente foi lida para este artigo."
+  - question: "O Opus 5.5 ainda vale a pena depois do Sonnet 5.5?"
+    answer: "Segundo a Anthropic, o Opus 5.5 continua claramente mais forte em trabalho complexo e aberto que exige julgamento sustentado, mas custa o dobro do Sonnet 5.5 na API (US$ 4 de entrada e US$ 20 de saída por milhão de tokens). Para tarefas simples e bem definidas, o Sonnet 5.5 é apresentado como alternativa mais rápida e barata."
+sources:
+  - name: "Anthropic — Claude Sonnet 5.5"
+    url: "https://www.anthropic.com/claude-sonnet-5-5"
+  - name: "Anthropic — Claude Haiku"
+    url: "https://www.anthropic.com/claude/haiku"
+  - name: "Anthropic — Notas de versão do Claude"
+    url: "https://support.claude.com/en/articles/12138966-release-notes"
+related:
+  - "claude-planos-precos-comparacao"
+  - "claude-para-programacao"
+  - "chatgpt-vs-gemini-vs-claude"
+  - "claude-code-terminal-guia"
+---
+
+Em resumo: o Claude Sonnet 5.5 é o modelo que a Anthropic indica para tarefas bem delimitadas do dia a dia, como corrigir bugs e criar documentos, apresentações e planilhas, e o Claude Haiku 5.5 é a opção bem mais barata, pensada para volume alto e respostas em tempo real. Se você ainda está conhecendo a empresa e os produtos, comece pelo guia [o que é o Claude da Anthropic](/artigos/o-que-e-claude-anthropic). Aqui o foco é decidir qual dos dois usar, com preços oficiais, cálculos de exemplo e o que ainda não dá para afirmar.
+
+Informações conferidas nas páginas oficiais em 17 de outubro de 2026. Recursos, planos e limites mudam; confirme na fonte.
+
+## Onde cada modelo se encaixa na família Claude
+
+Segundo as [notas de versão do Claude](https://support.claude.com/en/articles/12138966-release-notes), a linha mais recente chegou em sequência curta. Estas são as datas que a Anthropic informa:
+
+- 01/09/2026: Claude Fable 5.1 e Claude Mythos 5.1.
+- 22/09/2026: Claude Opus 5.5, que a empresa descreve como no nível do Fable 5.1 na maioria dos trabalhos e 40% mais barato que o Opus 5.
+- 28/09/2026: Claude Sonnet 5.5.
+- 07/10/2026: Claude Haiku 5.5.
+
+Neste artigo, o Opus 5.5 é a referência para trabalho difícil, o Sonnet 5.5 fica no meio, com preço de US$ 2 e US$ 10, e o Haiku 5.5 é a opção de menor preço. A própria Anthropic chama o Sonnet 5.5 de um complemento mais rápido e mais barato do Opus 5.5, ou seja, ele não substitui o modelo maior.
+
+## Claude Sonnet 5.5: o que a Anthropic diz
+
+Na [página do Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5), a empresa indica o modelo para tarefas bem delimitadas do dia a dia, correção de bugs e criação de documentos, apresentações e planilhas. Segundo a Anthropic, ele gera saídas mais de 30% mais rápido que o Sonnet 5 e escreve com mais clareza.
+
+Dados práticos da página:
+
+- **Preço de API:** US$ 2 por milhão de tokens de entrada e US$ 10 por milhão de saída, o mesmo do Sonnet 5. Um token é um pedaço de texto, como uma sílaba ou palavra curta, e é a unidade de cobrança da API. API é a interface que permite a um programa ou site conversar com o modelo.
+- **Menos tokens por tarefa:** a Anthropic diz que o modelo usa menos tokens para concluir uma tarefa, o que a empresa traduz em até 30% mais barato por tarefa. É uma alegação da empresa, não uma medição independente.
+- **Cache:** leitura de cache a US$ 0,10 e escrita a US$ 2,50 por milhão de tokens. Cache é a reutilização de um trecho que você já enviou antes, cobrada a um preço diferente.
+- **ID de API:** `claude-sonnet-5-5`.
+- **Onde roda:** AWS, Google Cloud e Microsoft Azure, com opção de retenção zero de dados.
+- **Janela de contexto:** a página não informa. Janela de contexto é a quantidade de texto que o modelo consegue considerar de uma vez.
+
+### Sonnet 5.5 nos apps: o que a página não diz
+
+A página do Sonnet 5.5 menciona o Claude Code e "nossos apps", mas não lista quais planos do app têm acesso ao modelo, nem diz se ele virou o modelo padrão. Por isso, não dá para afirmar daqui que o seu plano inclui o Sonnet 5.5. Abra o seletor de modelos na sua conta do Claude e veja o que aparece. Para comparar planos e limites, consulte [o comparativo de planos e preços do Claude](/artigos/claude-planos-precos-comparacao) e a página oficial de preços.
+
+## Claude Haiku 5.5: o que a Anthropic diz
+
+A [página do Haiku](https://www.anthropic.com/claude/haiku) descreve o Haiku 5.5 como o Haiku mais capaz até agora, com salto sobre o Haiku 4.5 em programação, uso de ferramentas, uso de computador e agentes. Um detalhe de transparência: no momento da conferência, o título no topo dessa página ainda mostrava "Claude Haiku 4.5", enquanto o corpo trazia as informações do 5.5. Os dados abaixo seguem o corpo da página.
+
+- **Preço de API:** em prompts de até 100 mil tokens, US$ 0,10 por milhão de entrada e US$ 0,50 por milhão de saída. Acima de 100 mil tokens, US$ 0,50 e US$ 2,50. A Anthropic diz que o cache de prompt pode economizar até 90% e o processamento em lote, até 50%.
+- **Apps:** disponível nos apps Claude para os planos Free, Pro, Max, Team e Enterprise, na web, no iOS e no Android. Isso inclui o plano gratuito, segundo a página do produto.
+- **ID de API:** `claude-haiku-5-5`.
+- **Onde roda:** AWS, Google Cloud, Microsoft Foundry e Claude Code.
+- **Usos indicados:** tarefas de texto em alto volume (classificação, resumo, roteamento), experiências em tempo real como chat e voz, subagentes, automação de navegador e de desktop, e programação simples e focada.
+
+Subagente é um agente menor que recebe uma parte do trabalho de um agente principal. Os gráficos de benchmark da página do Haiku são imagens, sem números em texto, e os relatos de clientes citados lá (HubSpot e Ask in Document) são depoimentos, não resultados medidos pela Anthropic. Por isso este artigo não reproduz nenhum deles.
+
+## O que os números da Anthropic mostram (e o que não mostram)
+
+Benchmark é um teste padronizado usado para comparar modelos. Os números abaixo vêm da página do Sonnet 5.5 e são alegações da Anthropic; não há avaliação independente lida para este artigo.
+
+| Benchmark (segundo a Anthropic) | Sonnet 5.5 | Sonnet 5 | Opus 5.5 |
+| --- | --- | --- | --- |
+| CursorBench 4.0 | 55,5% | 34,1% | 57,8% |
+| OSWorld 2.1 | 80,1% | 57,0% | 81,8% |
+| Humanity's Last Exam, com ferramentas | 64,5% | 54,9% | 67,7% |
+
+Como ler a tabela com cuidado:
+
+- Nos três testes o Sonnet 5.5 aparece bem à frente do Sonnet 5 e um pouco atrás do Opus 5.5. Isso não autoriza concluir que um é melhor em geral: cada teste mede uma coisa específica, e a tabela da Anthropic nem sempre informa o nível de esforço usado em cada medição.
+- A Anthropic afirma que o Opus 5.5 continua claramente mais forte em trabalho complexo e aberto que exige julgamento sustentado. É uma afirmação qualitativa da empresa, sem número associado nessa frase.
+
+## Qual escolher: tabela de decisão
+
+Esta tabela é orientação editorial, montada a partir do que as páginas oficiais indicam. Não é regra da Anthropic.
+
+| Situação | Ponto de partida sugerido | Por quê |
+| --- | --- | --- |
+| Conversa de todo dia, dúvidas rápidas | Haiku 5.5 (disponível no plano gratuito, segundo a Anthropic) ou o modelo que sua conta já oferece | Menor preço de API dos dois e chat é um uso indicado; confira o seletor de modelos |
+| Documentos, apresentações e planilhas | Sonnet 5.5 | É um dos usos que a Anthropic cita para ele |
+| Correção de bugs e programação do dia a dia | Sonnet 5.5 | Indicado pela Anthropic para correção de bugs |
+| Programação simples e focada, em volume | Haiku 5.5 | Indicado para programação simples e focada |
+| Classificar, resumir ou rotear milhares de textos | Haiku 5.5 | Alto volume e custo por token menor |
+| Chat ou voz em tempo real dentro de um produto | Haiku 5.5 | Experiências em tempo real são um uso indicado |
+| Tarefa longa, aberta, com muito julgamento | Opus 5.5 | A Anthropic o aponta como mais forte nesse tipo de trabalho |
+| Pouca certeza sobre a dificuldade | Comece no Haiku ou no Sonnet e suba se a resposta falhar | Evita pagar o modelo maior sem necessidade |
+
+Para quem programa, veja [Claude para programação](/artigos/claude-para-programacao) e o guia do [Claude Code no terminal](/artigos/claude-code-terminal-guia), ferramenta que a Anthropic cita nas páginas dos dois modelos. Para análise de PDFs e contratos, veja [Claude para análise de documentos](/artigos/claude-para-analise-documentos).
+
+## Cálculo hipotético de custo na API
+
+Os cálculos abaixo são exemplos hipotéticos, feitos só com os preços oficiais citados acima. Eles ignoram cache, processamento em lote e qualquer desconto, e os preços podem mudar. Para valores atuais, consulte as páginas oficiais.
+
+### Cenário 1: um milhão de tokens de entrada e 200 mil de saída
+
+Considere que cada prompt tem até 100 mil tokens, a faixa de preço básica do Haiku 5.5.
+
+- **Sonnet 5.5:** entrada, 1 milhão × US$ 2 por milhão = US$ 2,00. Saída, 0,2 milhão × US$ 10 por milhão = US$ 2,00. Total: US$ 4,00.
+- **Haiku 5.5:** entrada, 1 milhão × US$ 0,10 por milhão = US$ 0,10. Saída, 0,2 milhão × US$ 0,50 por milhão = US$ 0,10. Total: US$ 0,20.
+- **Opus 5.5 (para referência):** entrada, 1 milhão × US$ 4 = US$ 4,00. Saída, 0,2 milhão × US$ 20 = US$ 4,00. Total: US$ 8,00.
+
+Nesse cenário, o Haiku 5.5 sai 20 vezes mais barato que o Sonnet 5.5 (US$ 4,00 dividido por US$ 0,20), e o Sonnet 5.5 sai pela metade do preço do Opus 5.5. Se os prompts passassem de 100 mil tokens, o Haiku 5.5 entraria na faixa de US$ 0,50 e US$ 2,50: entrada de US$ 0,50 mais saída de US$ 0,50, total de US$ 1,00.
+
+### Cenário 2: uma loja que classifica mensagens de clientes
+
+Imagine uma loja virtual fictícia que classifica 50.000 mensagens por mês (reclamação, dúvida de entrega, troca). Cada mensagem, somada à instrução de classificação, tem 2.000 tokens de entrada, e a resposta tem 400 tokens de saída.
+
+- Entrada total: 50.000 × 2.000 = 100 milhões de tokens.
+- Saída total: 50.000 × 400 = 20 milhões de tokens.
+- **Sonnet 5.5:** 100 × US$ 2 = US$ 200 de entrada, mais 20 × US$ 10 = US$ 200 de saída. Total: US$ 400.
+- **Haiku 5.5:** 100 × US$ 0,10 = US$ 10 de entrada, mais 20 × US$ 0,50 = US$ 10 de saída. Total: US$ 20.
+
+A diferença hipotética é de US$ 380 por mês. Só que preço baixo não vale nada se a classificação sair errada: antes de escolher, rode uma amostra de mensagens reais nos dois modelos e compare os erros. Se o Haiku 5.5 acertar o suficiente para o seu caso, a economia é grande.
+
+## Como conferir o que a sua conta oferece
+
+1. Abra o Claude no navegador ou no aplicativo e entre na sua conta.
+2. Abra o seletor de modelos e veja quais opções aparecem para o seu plano.
+3. Se o Sonnet 5.5 ou o Haiku 5.5 não aparecer, verifique a página oficial de planos e as notas de versão. A página do Sonnet 5.5 não lista planos do app, então a ausência no seletor não significa erro seu.
+4. Se você usa a API, confirme o ID do modelo (`claude-sonnet-5-5` ou `claude-haiku-5-5`) e a nuvem em que quer rodar (AWS, Google Cloud, Microsoft Azure ou Foundry).
+
+## Erros comuns na hora de escolher
+
+- **Escolher só pelo preço.** Um modelo barato que erra mais pode custar mais em retrabalho.
+- **Assumir que o plano do app inclui tudo.** A disponibilidade do Sonnet 5.5 no app não foi confirmada nas fontes lidas.
+- **Esquecer a faixa de preço por tamanho de prompt no Haiku.** Acima de 100 mil tokens, o preço sobe.
+
+## Quando não usar cada modelo
+
+- **Haiku 5.5:** evite como primeira escolha para análises longas e abertas, em que o julgamento pesa mais que a velocidade. A Anthropic indica o Opus 5.5 para esse perfil.
+- **Sonnet 5.5:** pode ser mais do que você precisa se a tarefa é classificar ou rotear texto em volume.
+- **Opus 5.5:** custa o dobro do Sonnet 5.5 na API e pode ser mais do que você precisa em tarefas simples e bem delimitadas.
+- **Qualquer um deles:** não dispensa conferência humana em contratos, números financeiros ou textos publicados.
+
+## O que ainda não dá para afirmar
+
+- Nenhuma avaliação independente do Sonnet 5.5 ou do Haiku 5.5 foi lida para este artigo.
+- Não há fonte lida que confirme em quais planos do app o Sonnet 5.5 está disponível.
+- Não dá para dizer que o Haiku 5.5 supera modelos de outras empresas. Para um panorama entre fabricantes, veja [Claude, ChatGPT e Gemini lado a lado](/artigos/chatgpt-vs-gemini-vs-claude) e o comparativo [GPT-6 Astra, Claude Opus 5.5 e Gemini](/artigos/gpt-6-astra-vs-claude-opus-5-5-vs-gemini), sem declarar vencedor absoluto.
+- Preços em reais e limites de uso por plano não foram confirmados.
+
+## Checklist final antes de decidir
+
+- A tarefa é simples, de volume ou de julgamento difícil?
+- Conferi o seletor de modelos da minha conta?
+- Calculei o custo com o tamanho real dos meus prompts?
+- Rodei uma amostra com dados reais antes de migrar tudo?

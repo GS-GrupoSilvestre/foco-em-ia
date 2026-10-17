@@ -1,0 +1,199 @@
+---
+title: "Como transcrever e resumir áudio no ChatGPT: passo a passo e limites"
+description: "Como transcrever e resumir áudio no ChatGPT: quem tem o recurso, formatos aceitos, limite de 512 MB, passo a passo, 5 prompts prontos e cuidados de privacidade."
+slug: "chatgpt-transcrever-audio-resumir"
+category: "ChatGPT"
+tags: ["ChatGPT", "transcrição de áudio", "resumo de reunião", "envio de áudio", "ata de reunião", "LGPD", "prompts"]
+publishedAt: "2026-10-17"
+author: "Equipe Foco em IA"
+featured: false
+popular: false
+keywords: ["transcrever áudio no ChatGPT", "resumir áudio ChatGPT", "ChatGPT transcrição de reunião", "enviar áudio para o ChatGPT", "formatos de áudio ChatGPT", "ata de reunião com ChatGPT"]
+faq:
+  - question: "Dá para transcrever áudio no ChatGPT grátis?"
+    answer: "Segundo a página de ajuda da OpenAI, o envio de áudio não está disponível no plano Free neste momento. O recurso é descrito para assinaturas pagas e espaços de trabalho, e pode depender também de região, versão do aplicativo e modelo selecionado. Confira na sua conta."
+  - question: "Quais formatos de áudio o ChatGPT aceita?"
+    answer: "A OpenAI lista WAV, MP3/MPEG, OGG/OGA, WebM somente com áudio, PCM, FLAC, AAC, M4A e MP4 somente com áudio. O arquivo precisa ter um fluxo de áudio válido e decodificável. WebM ou MP4 identificados como vídeo não são aceitos."
+  - question: "Qual é o tamanho máximo do arquivo de áudio no ChatGPT?"
+    answer: "O limite informado pela OpenAI é de 512 MB por arquivo. A página de ajuda não informa uma duração máxima, e gravações muito longas podem expirar durante o processamento."
+  - question: "O ChatGPT identifica quem está falando na gravação?"
+    answer: "A OpenAI avisa que as transcrições podem conter erros e que a identificação de falantes pode ser pouco confiável. Por isso, confira nomes, falas e atribuições no áudio original antes de usar o resultado."
+  - question: "Posso enviar um vídeo para o ChatGPT transcrever?"
+    answer: "Segundo a OpenAI, arquivos WebM ou MP4 identificados como vídeo não são aceitos no envio de áudio. São aceitos apenas arquivos que contenham somente o fluxo de áudio, em um dos formatos listados na página de ajuda."
+sources:
+  - name: "OpenAI — Uploading files and audio to ChatGPT"
+    url: "https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt"
+  - name: "OpenAI — ChatGPT Release Notes"
+    url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+  - name: "OpenAI — Prompt engineering best practices for ChatGPT"
+    url: "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt"
+related:
+  - "otter-ai-transcricao-reunioes"
+  - "ia-privacidade-seguranca"
+  - "legendas-automaticas-ia"
+  - "como-melhorar-seus-prompts"
+---
+
+Para transcrever e resumir áudio no ChatGPT, você anexa o arquivo de áudio à conversa, descreve o que quer (transcrição fiel, ata, resumo, tarefas) e revisa o resultado. O recurso de envio de áudio foi lançado em 6 de outubro de 2026 e, segundo a [página de ajuda da OpenAI](https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt), não está disponível no plano Free neste momento. Este guia mostra o passo a passo, cinco prompts prontos, os limites oficiais e os cuidados de privacidade que você precisa ter antes de enviar uma gravação.
+
+Informações conferidas nas páginas oficiais em 17 de outubro de 2026. Recursos, planos e limites mudam; confirme na fonte.
+
+## O que o envio de áudio faz (e o que não faz)
+
+Nas [notas de versão do ChatGPT](https://help.openai.com/en/articles/6825453-chatgpt-release-notes), o recurso aparece como "Audio uploads": você envia um áudio e recebe transcrições, resumos e anotações. A página de ajuda lista o que dá para pedir:
+
+- a transcrição, com perguntas de acompanhamento sobre o conteúdo;
+- um resumo de reunião com decisões, dúvidas em aberto e próximos passos;
+- notas estruturadas ou uma ata;
+- um rascunho de e-mail de acompanhamento;
+- respostas a perguntas sobre a gravação.
+
+Esse recurso é diferente de conversar com o ChatGPT por voz. Para esse caso, veja o guia do [modo de voz avançado](/artigos/chatgpt-voice-mode-avancado). Aqui o ponto de partida é um arquivo já gravado. Se você ainda está conhecendo o ChatGPT, o [guia completo para iniciantes](/artigos/como-usar-chatgpt-guia-completo) explica o básico da interface e dos planos.
+
+## Quem pode usar e como conferir
+
+A OpenAI descreve o envio de áudio para assinaturas pagas e espaços de trabalho, incluindo Enterprise. A mesma página afirma que o recurso não está no plano Free. Ela também diz que a disponibilidade depende de:
+
+- configuração do espaço de trabalho;
+- região;
+- versão do aplicativo ou do site;
+- modelo selecionado na conversa.
+
+Não encontramos nas fontes lidas confirmação específica para o Brasil, então não dá para garantir que o recurso aparecerá igual na sua conta. Uma forma prática de conferir (orientação editorial) é tentar anexar um arquivo de áudio curto na conversa. Se o formato for aceito e o recurso estiver ativo, ele processa o arquivo. Se não aparecer, confira o plano, atualize o aplicativo e, em conta de empresa, fale com o administrador.
+
+## Formatos aceitos e limite de tamanho
+
+Segundo a OpenAI, são aceitos:
+
+| Formato | Observação |
+| --- | --- |
+| WAV | Aceito |
+| MP3 / MPEG | Aceito |
+| OGG / OGA | Aceito |
+| WebM | Somente se tiver apenas áudio |
+| PCM | Aceito |
+| FLAC | Aceito |
+| AAC | Aceito |
+| M4A | Aceito |
+| MP4 | Somente se tiver apenas áudio |
+
+O tamanho máximo é de 512 MB por arquivo. Arquivos WebM ou MP4 identificados como vídeo não são aceitos, e o arquivo precisa ter um fluxo de áudio válido e decodificável. A página de ajuda não informa uma duração máxima, então não existe um número de minutos ou horas garantido: 512 MB é o limite de tamanho por arquivo que a página informa.
+
+Se a sua gravação é um vídeo (por exemplo, uma reunião gravada em MP4 com imagem), um caminho possível (orientação editorial, não da OpenAI) é exportar só a faixa de áudio em um dos formatos da lista usando o editor de sua preferência e enviar esse arquivo. Se o seu objetivo é legendar um vídeo, o guia de [legendas automáticas com IA](/artigos/legendas-automaticas-ia) cobre ferramentas feitas para isso.
+
+## Passo a passo para transcrever e resumir
+
+A página de ajuda descreve o fluxo em linhas gerais (anexar, descrever a tarefa, revisar e refinar) e não detalha os passos separados para web, iOS e Android. Por isso, os passos abaixo são genéricos: os nomes de botões e menus mudam entre versões e dispositivos.
+
+1. **Prepare o arquivo.** Confirme que o formato está na lista e que o tamanho é de até 512 MB. 
+2. **Abra uma conversa nova.** Uma conversa por gravação evita misturar reuniões diferentes.
+3. **Anexe o arquivo à conversa.** Use a opção de anexar arquivos do aplicativo ou do site e aguarde o envio terminar.
+4. **Descreva a tarefa com precisão.** Diga o que quer (transcrição, ata, tarefas), em que formato e o que o modelo não deve fazer. Os prompts da próxima seção servem de base. As [dicas oficiais da OpenAI](https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt) para prompts vão no mesmo sentido: ser claro e específico, dar contexto suficiente e refinar a resposta em rodadas.
+5. **Revise o resultado com o áudio ao lado.** Confira nomes, números e datas (veja o checklist mais abaixo).
+6. **Refine.** Peça ajustes pontuais: "reescreva só a seção de decisões", "separe as tarefas por pessoa", "encurte para meia página".
+7. **Salve o que for útil fora do ChatGPT.** Copie a ata ou as tarefas para o seu documento ou sistema de trabalho.
+
+## 5 prompts prontos para copiar
+
+Todos os prompts abaixo são exemplos de prompt para adaptar. Os campos entre colchetes são seus. Repare que todos pedem para marcar trechos inaudíveis e proíbem inventar nomes ou falas, um erro grave em transcrição.
+
+### 1. Transcrição fiel
+
+```
+Transcreva o áudio anexado de forma fiel, na ordem em que foi dito.
+Idioma do áudio: [português do Brasil].
+Regras:
+- Não resuma, não corrija a gramática de quem fala e não invente nada.
+- Quando um trecho estiver inaudível ou duvidoso, escreva [inaudível] ou [incerto: palavra provável].
+- Se não tiver certeza de quem está falando, use "Falante 1", "Falante 2" e assim por diante. Não atribua nomes que não foram ditos no áudio.
+- Divida o texto em parágrafos a cada mudança de assunto.
+```
+
+### 2. Ata de reunião
+
+```
+Com base no áudio anexado, escreva a ata da reunião [nome ou tema da reunião].
+Estrutura:
+1. Decisões tomadas
+2. Dúvidas em aberto
+3. Próximos passos
+Regras:
+- Use somente o que foi dito no áudio. Não invente nomes, cargos, prazos ou falas.
+- Se um dado importante (nome, número ou data) estiver inaudível ou ambíguo, marque como [a confirmar] em vez de adivinhar.
+- Seja objetivo: no máximo uma frase por item.
+```
+
+### 3. Resumo de aula para estudo
+
+```
+O áudio anexado é uma aula sobre [disciplina e tema].
+Faça um resumo para estudo com:
+- os 5 a 8 conceitos principais, cada um explicado em 2 a 3 linhas;
+- termos técnicos citados pelo professor, com a definição dada na aula;
+- 5 perguntas de revisão com resposta curta.
+Regras: não acrescente conteúdo que não esteja no áudio. Se algo foi dito de forma confusa ou ficou inaudível, liste em "Pontos para conferir com o professor" em vez de completar por conta própria.
+```
+
+Para transformar esse resumo em rotina de estudo, veja também [ChatGPT para estudar](/artigos/chatgpt-para-estudar).
+
+### 4. E-mail de acompanhamento
+
+```
+Com base no áudio anexado, escreva um e-mail de acompanhamento da reunião para [destinatários ou grupo].
+Tom: profissional e direto, em português do Brasil.
+Inclua: agradecimento em uma frase, resumo das decisões em até 5 itens, lista de próximos passos com responsável e prazo quando houver, e um fechamento convidando a corrigir qualquer ponto.
+Regras: use apenas informações do áudio, não invente nomes, prazos ou compromissos e marque [a confirmar] quando algo estiver incerto.
+```
+
+### 5. Tarefas com responsável e prazo
+
+```
+Extraia do áudio anexado todas as tarefas combinadas e apresente em uma tabela com as colunas: Tarefa, Responsável, Prazo, Trecho do áudio que sustenta (aproximado).
+Regras:
+- Se o responsável ou o prazo não foi dito claramente, escreva "não informado". Não deduza.
+- Não crie tarefas que ninguém assumiu; liste-as à parte, em "Sugestões sem responsável".
+- Marque trechos inaudíveis como [inaudível].
+```
+
+## Checklist de conferência antes de usar o resultado
+
+A própria OpenAI avisa que as transcrições podem conter erros, que a identificação de falantes pode ser pouco confiável e que o desempenho varia entre idiomas. Por isso, trate a saída como rascunho:
+
+- Escute os trechos que sustentam cada decisão importante.
+- Confira todos os números, valores, nomes próprios e datas no áudio original.
+- Verifique quem disse o quê. Não confie na atribuição de falas sem checar.
+- Procure marcações como inaudível e a confirmar e resolva cada uma.
+- Confirme que nenhuma tarefa ou compromisso foi criado sem que alguém tenha realmente assumido.
+- Leia o texto final como se fosse assiná-lo, porque quem envia o e-mail ou a ata é você.
+
+## Privacidade e LGPD em linguagem simples
+
+Uma gravação de reunião pode conter dados pessoais de várias pessoas. Alguns pontos práticos:
+
+- **Biblioteca.** Segundo a OpenAI, arquivos salvos na Biblioteca (Library) podem ficar separados da conversa. Apagar o chat não apaga a cópia da Biblioteca: apague lá também, se quiser removê-la. Em Enterprise, Edu e Healthcare, a Biblioteca segue a retenção definida pelo espaço de trabalho.
+- **Uso dos dados.** Em ofertas empresariais (API e Enterprise), a OpenAI diz que os dados não são usados para melhorar modelos. Em contas pessoais, depende das suas configurações de dados: revise-as antes de enviar qualquer gravação.
+- **Consentimento.** Avise os participantes de que a reunião será gravada e que o áudio poderá ser processado por uma ferramenta de IA. Isso evita problemas de confiança e é uma boa prática ligada à LGPD, a lei brasileira de proteção de dados pessoais (orientação editorial, não aconselhamento jurídico).
+- **Política da empresa.** Se o seu trabalho tem regras sobre ferramentas de IA, siga-as. Não envie áudio com dados sensíveis (saúde, finanças de clientes, segredos comerciais, conversas jurídicas) sem autorização e sem uma conta com os controles adequados.
+
+Para um panorama mais amplo, leia [privacidade e segurança ao usar IA](/artigos/ia-privacidade-seguranca).
+
+## Quando não usar e alternativas
+
+Evite o envio de áudio no ChatGPT, ou ao menos redobre a conferência, quando:
+
+- **O resultado tem valor formal.** Depoimentos, atas com efeito jurídico, entrevistas citadas literalmente: use a transcrição só como apoio e confira tudo no original.
+- **O conteúdo é sensível e você não tem autorização** ou não sabe como os dados serão retidos.
+- **Você só tem vídeo** e não quer extrair o áudio. Nesse caso, uma ferramenta de legendas pode servir melhor.
+- **Você precisa de reuniões transcritas automaticamente, toda semana,** direto das chamadas. Uma ferramenta dedicada pode encaixar melhor; o guia sobre o [Otter.ai para transcrição de reuniões](/artigos/otter-ai-transcricao-reunioes) mostra esse tipo de solução.
+
+Uma observação: segundo as notas de versão de 29 de setembro de 2026, o plugin Meetings, em beta, faz anotações de reunião no aplicativo de desktop do ChatGPT para macOS, para os planos Pro e Business (Enterprise aparece como "em breve"). É um recurso diferente do envio de áudio e só existe para macOS.
+
+## Solução de problemas
+
+- **O arquivo não é aceito.** Confira se o formato está na lista e se o tamanho não passa de 512 MB. Arquivos WebM ou MP4 com vídeo são recusados.
+- **O envio falha por causa do áudio.** A OpenAI orienta conferir o formato e se o áudio é válido. Verifique se o arquivo abre normalmente em um player, já que ele precisa ter um fluxo de áudio decodificável. Reexportar em outro formato aceito pode ajudar.
+- **O processamento demora ou expira.** A OpenAI informa que o processamento é de melhor esforço e que gravações muito longas podem exceder o tempo limite. Sem prometer uma duração, uma saída prática (orientação editorial, não da OpenAI) é dividir a gravação em partes menores e enviar uma por vez. A página também menciona que gravações longas podem ser divididas em trechos quando a Análise de dados está disponível.
+- **Falhas repetidas.** Segundo a OpenAI, uploads que falham podem contar para o limite de envios. Em vez de tentar várias vezes seguidas, corrija o formato antes de reenviar.
+- **A opção não aparece.** Reveja a seção sobre quem pode usar: plano, região, versão do aplicativo, modelo e configuração do espaço de trabalho influenciam.
+
+Se o resultado vier raso, revise o pedido. O guia [como melhorar seus prompts](/artigos/como-melhorar-seus-prompts) ajuda a refinar o pedido.

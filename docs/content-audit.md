@@ -340,3 +340,21 @@ Critérios: fatos só de páginas oficiais lidas em 04/10/2026 (ficha em `/audit
 Artigos antigos atualizados por causa do GPT-6.1 Sol (lançado em 29/09/2026, depois da auditoria de 27/09): `chatgpt-o3-guia-completo`, `chatgpt-vs-gemini`, `chatgpt-vs-gemini-vs-claude`, `como-usar-chatgpt-guia-completo` e `historia-inteligencia-artificial` (com `updatedAt: 2026-10-04`). Outros cinco receberam apenas links para a série.
 
 Pendências de conferência manual: disponibilidade geral do Astra na API; linha "Business" (Standard x Premium) nos planos; página oficial de ajuda do GPT-6 Pro (conferir no navegador); dados da Anthropic e do Google nos comparativos (conferidos em 27/09); notícia de imprensa sobre um "GPT-6.1 Astra" cancelado (não confirmada pela OpenAI, por isso não citada). Reauditar a série a cada 2–4 semanas: os modelos da OpenAI mudam rápido.
+
+---
+
+## Lote de 17/10/2026: prompts, Gemini 4 Argon, Claude 5.5, áudio e Word
+
+Foram publicados 6 artigos novos, todos com `publishedAt: 2026-10-17` (data real) e sem `updatedAt`. O ponto de partida foi a consulta "melhores prompts para chatgpt", apontada pelo Search Console como a de maior busca do site.
+
+Artigos novos:
+
+- `prompts-gpt-6-chatgpt` (ChatGPT): como escrever prompts para o GPT-6 e 12 modelos. Foi desenhado para NÃO competir com `melhores-prompts-chatgpt`, que continua sendo a página da consulta (lista de 50 prompts) e passou a linkar para o novo.
+- `gemini-4-argon-o-que-e` (Gemini), `claude-sonnet-5-5-haiku-5-5` (Claude), `chatgpt-transcrever-audio-resumir`, `gpt-6-no-chatgpt-niveis-intelligent-ui` e `chatgpt-for-word-como-usar` (ChatGPT).
+- Tema descartado: Meta Muse, porque o app só estava disponível nos EUA, sem previsão confirmada para o Brasil.
+
+Critérios: fatos só de páginas oficiais lidas em 17/10/2026 (ficha em `/audit/facts/outubro-2026.md`); números de desempenho atribuídos à empresa; cálculos de custo rotulados como hipotéticos; sem preço de plano em reais; pontos que as páginas oficiais não informam (Brasil, plano gratuito do Gemini 4 Argon, planos do Sonnet 5.5 no app, versões do Word, duração máxima de áudio) aparecem como "não informado". Cada artigo passou por revisão de fatos independente.
+
+Atualização dos artigos antigos: em 07/10/2026 a OpenAI passou o Chat do ChatGPT para o GPT-6 (Sol nos planos Plus, Pro, Business e Enterprise; Luna no Free e no Go, segundo o anúncio; as páginas de ajuda ainda variam na nomenclatura). Os trechos que diziam que o Chat usava o GPT-5.6 foram corrigidos em: `melhores-prompts-chatgpt`, `como-usar-chatgpt-guia-completo`, `chatgpt-o3-guia-completo`, `chatgpt-para-estudar`, `chatgpt-para-empreendedores`, `como-comecar-com-ia-do-zero`, `glossario-inteligencia-artificial`, `ia-para-pequenas-empresas`, `melhores-apps-ia-celular`, `chatgpt-vs-gemini`, `chatgpt-vs-gemini-vs-claude`, `ferramentas-ia-gratuitas-2026`, `melhores-ferramentas-ia-2026`, `historia-inteligencia-artificial` e seis artigos da série Astra. Todos receberam `updatedAt: 2026-10-17`. Comparações de benchmark do Astra com o GPT-5.6 Sol não foram alteradas, porque é a referência da própria OpenAI.
+
+Pendências de conferência manual: preços em reais do Google AI Plus/Pro/Ultra (vêm da página brasileira consultada em setembro); modelo padrão do Claude Code após o Sonnet 5.5 e o Haiku 5.5; liberação do Gemini 4 Argon no plano gratuito e no Brasil; tabela de planos por nível de raciocínio (a página de ajuda da OpenAI diz que o Plus tem Medium e High).
