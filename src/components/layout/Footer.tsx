@@ -39,7 +39,7 @@ export function Footer() {
               Categorias
             </h3>
             <ul className="space-y-2">
-              {footerLinks.categorias.slice(0, 6).map((link) => (
+              {footerLinks.categorias.slice(0, 7).map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

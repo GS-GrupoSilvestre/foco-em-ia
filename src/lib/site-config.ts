@@ -21,6 +21,14 @@ export const siteConfig = {
 
 export const categories: Category[] = [
   {
+    name: 'Notícias de IA',
+    slug: 'noticias-de-ia',
+    description:
+      'Lançamentos e novidades de tecnologia explicados pelo ângulo da inteligência artificial: o que foi anunciado, o que é só promessa e o que muda para você.',
+    icon: '📰',
+    color: '#E11D48',
+  },
+  {
     name: 'ChatGPT',
     slug: 'chatgpt',
     description: 'Guias, tutoriais e dicas para aproveitar o ChatGPT no trabalho e no cotidiano.',
@@ -122,6 +130,7 @@ export const categories: Category[] = [
 
 export const navLinks = [
   { label: 'Início', href: '/' },
+  { label: 'Notícias', href: '/categoria/noticias-de-ia' },
   { label: 'ChatGPT', href: '/categoria/chatgpt' },
   { label: 'Gemini', href: '/categoria/gemini' },
   { label: 'Claude', href: '/categoria/claude' },

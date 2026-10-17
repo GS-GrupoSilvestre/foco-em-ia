@@ -177,7 +177,8 @@ export default async function ArticlePage({ params }: PageProps) {
                  frontmatter.category === 'Imagens' ? '🎨' :
                  frontmatter.category === 'Vídeos' ? '🎬' :
                  frontmatter.category === 'Ferramentas' ? '🛠️' :
-                 frontmatter.category === 'IA para Negócios' ? '💼' : '📖'}
+                 frontmatter.category === 'IA para Negócios' ? '💼' :
+                 frontmatter.category === 'Notícias de IA' ? '📰' : '📖'}
               </span>
             </div>
 

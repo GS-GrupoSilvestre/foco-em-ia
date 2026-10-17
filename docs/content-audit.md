@@ -358,3 +358,18 @@ Critérios: fatos só de páginas oficiais lidas em 17/10/2026 (ficha em `/audit
 Atualização dos artigos antigos: em 07/10/2026 a OpenAI passou o Chat do ChatGPT para o GPT-6 (Sol nos planos Plus, Pro, Business e Enterprise; Luna no Free e no Go, segundo o anúncio; as páginas de ajuda ainda variam na nomenclatura). Os trechos que diziam que o Chat usava o GPT-5.6 foram corrigidos em: `melhores-prompts-chatgpt`, `como-usar-chatgpt-guia-completo`, `chatgpt-o3-guia-completo`, `chatgpt-para-estudar`, `chatgpt-para-empreendedores`, `como-comecar-com-ia-do-zero`, `glossario-inteligencia-artificial`, `ia-para-pequenas-empresas`, `melhores-apps-ia-celular`, `chatgpt-vs-gemini`, `chatgpt-vs-gemini-vs-claude`, `ferramentas-ia-gratuitas-2026`, `melhores-ferramentas-ia-2026`, `historia-inteligencia-artificial` e seis artigos da série Astra. Todos receberam `updatedAt: 2026-10-17`. Comparações de benchmark do Astra com o GPT-5.6 Sol não foram alteradas, porque é a referência da própria OpenAI.
 
 Pendências de conferência manual: preços em reais do Google AI Plus/Pro/Ultra (vêm da página brasileira consultada em setembro); modelo padrão do Claude Code após o Sonnet 5.5 e o Haiku 5.5; liberação do Gemini 4 Argon no plano gratuito e no Brasil; tabela de planos por nível de raciocínio (a página de ajuda da OpenAI diz que o Plus tem Medium e High).
+
+---
+
+## Seção "Notícias de IA" e primeiro artigo (17/10/2026)
+
+Nova categoria `Notícias de IA` (slug `noticias-de-ia`, ícone 📰), pensada para lançamentos e novidades de tecnologia explicados pelo ângulo da inteligência artificial. Mudanças no código:
+
+- `src/lib/site-config.ts`: nova categoria (primeira da lista, aparece em "Explore por categoria" e no rodapé) e link "Notícias" no menu, logo depois de "Início".
+- `src/components/layout/Header.tsx`: o menu do desktop passou de 7 para 8 links visíveis (cabe em telas de 1024 px sem rolagem horizontal; testado em 1024, 1280, 1440 e 390 px). "Ferramentas" já ficava só no menu mobile e continua assim.
+- `src/components/layout/Footer.tsx`: lista de categorias do rodapé passou de 6 para 7, para a nova categoria não empurrar "Vídeos" para fora.
+- O sitemap, a página de categoria e o feed já leem as categorias e os artigos automaticamente; não foi preciso mexer neles.
+
+Primeiro artigo: `tesla-roadster-carro-voador-ia` (publishedAt 2026-10-17). Fatos só de cinco reportagens lidas (CBS News, Fox Business, Euronews, ABC7 e Electrek; ficha em `/audit/facts/tesla-roadster-2026-10-17.md`). Nenhuma página da Tesla foi lida. O artigo diz com clareza que nenhuma reportagem lida afirma que o Roadster use IA; a relação com IA é tratada como contexto (controle do carro não explicado, posicionamento "último carro dirigido por humanos", frase de Musk sobre "provar que não é IA" com interpretação rotulada como editorial). Divergências entre veículos (cidade do evento, valores de depósito) foram mantidas como divergências.
+
+Regras para as próximas notícias: só fatos de fontes lidas e citadas; separar "o que foi visto", "o que é alegação da empresa" e "o que não foi informado"; atribuir toda opinião; sem conselho de investimento; sempre responder o que a notícia tem a ver com IA, inclusive quando a resposta for "nada confirmado".

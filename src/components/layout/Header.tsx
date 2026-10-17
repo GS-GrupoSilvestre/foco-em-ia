@@ -48,7 +48,7 @@ export function Header() {
 
             {/* Navegação desktop */}
             <nav className="hidden lg:flex items-center gap-0.5" aria-label="Navegação principal">
-              {navLinks.slice(0, 7).map((link) => {
+              {navLinks.slice(0, 8).map((link) => {
                 const isActive =
                   link.href === '/'
                     ? pathname === '/'
