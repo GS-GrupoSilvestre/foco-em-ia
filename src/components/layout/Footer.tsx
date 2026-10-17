@@ -84,6 +84,9 @@ export function Footer() {
         >
           <p className="text-xs" style={{ color: 'var(--clr-text-3)' }}>
             &copy; {currentYear} {siteConfig.name}. Todos os direitos reservados.
+            <span className="block mt-1 text-xs">
+              Logos de ChatGPT, Gemini, Claude e Perplexity pertencem aos seus respectivos proprietários. O {siteConfig.name} não é afiliado a essas empresas.
+            </span>
           </p>
           <p className="text-xs" style={{ color: 'var(--clr-text-3)' }}>
             Conteúdo sobre inteligência artificial de forma simples e prática.

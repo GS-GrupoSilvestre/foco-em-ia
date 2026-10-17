@@ -1,3 +1,5 @@
+import type { BrandKey } from '@/lib/brands'
+
 export interface FAQ {
   question: string
   answer: string
@@ -24,6 +26,8 @@ export interface ArticleFrontmatter {
   sources?: Source[]
   /** Slugs escolhidos manualmente para "Artigos relacionados" (têm prioridade sobre o cálculo automático). */
   related?: string[]
+  /** Logo(s) exibido(s) no lugar do ícone: uma marca, várias (comparativos) ou [] para nenhum. Sem o campo, vale a marca da categoria. */
+  marca?: BrandKey | BrandKey[]
 }
 
 export interface ArticleMeta {

@@ -19,6 +19,8 @@ import {
 } from '@/lib/articles'
 import { extractHeadings, absoluteUrl } from '@/lib/utils'
 import Link from 'next/link'
+import { BrandMark } from '@/components/ui/BrandMark'
+import { getBrandsForArticle, getBrandsForCategory } from '@/lib/brands'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -171,14 +173,20 @@ export default async function ArticlePage({ params }: PageProps) {
               aria-hidden="true"
             >
               <span className="text-6xl">
-                {frontmatter.category === 'ChatGPT' ? '🤖' :
+                <BrandMark
+                  brands={getBrandsForArticle(frontmatter)}
+                  size={88}
+                  fallback={
+                frontmatter.category === 'ChatGPT' ? '🤖' :
                  frontmatter.category === 'Gemini' ? '✨' :
                  frontmatter.category === 'Claude' ? '🧠' :
                  frontmatter.category === 'Imagens' ? '🎨' :
                  frontmatter.category === 'Vídeos' ? '🎬' :
                  frontmatter.category === 'Ferramentas' ? '🛠️' :
                  frontmatter.category === 'IA para Negócios' ? '💼' :
-                 frontmatter.category === 'Notícias de IA' ? '📰' : '📖'}
+                 frontmatter.category === 'Notícias de IA' ? '📰' : '📖'
+                  }
+                />
               </span>
             </div>
 

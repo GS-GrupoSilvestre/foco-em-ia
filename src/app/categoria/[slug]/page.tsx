@@ -7,6 +7,8 @@ import {
   getArticlesBySlugs,
 } from '@/lib/articles'
 import { getCategoryBySlug, siteConfig } from '@/lib/site-config'
+import { BrandMark } from '@/components/ui/BrandMark'
+import { getBrandsForCategory } from '@/lib/brands'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -85,7 +87,11 @@ export default async function CategoryPage({ params }: PageProps) {
               style={{ backgroundColor: 'var(--clr-surface-2)' }}
               aria-hidden="true"
             >
-              {category.icon}
+              <BrandMark
+                brands={getBrandsForCategory(category.slug)}
+                size={36}
+                fallback={category.icon}
+              />
             </div>
             <div>
               <h1
@@ -141,7 +147,13 @@ export default async function CategoryPage({ params }: PageProps) {
               borderColor: 'var(--clr-border)',
             }}
           >
-            <p className="text-5xl mb-4">{category.icon}</p>
+            <p className="text-5xl mb-4">
+              <BrandMark
+                brands={getBrandsForCategory(category.slug)}
+                size={56}
+                fallback={category.icon}
+              />
+            </p>
             <p className="text-lg font-medium mb-2" style={{ color: 'var(--clr-text)' }}>
               Nenhum artigo nesta categoria ainda
             </p>

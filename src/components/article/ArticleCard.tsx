@@ -3,6 +3,8 @@ import { Clock, Calendar } from 'lucide-react'
 import type { ArticleMeta } from '@/types/article'
 import { formatDateShort, cn } from '@/lib/utils'
 import { getCategoryByName } from '@/lib/site-config'
+import { BrandMark } from '@/components/ui/BrandMark'
+import { getBrandsForArticle, getBrandsForCategory } from '@/lib/brands'
 
 interface ArticleCardProps {
   article: ArticleMeta
@@ -17,6 +19,8 @@ export function ArticleCard({
 }: ArticleCardProps) {
   const { frontmatter, slug, readingTime } = article
   const category = getCategoryByName(frontmatter.category)
+  const marcas = getBrandsForArticle(frontmatter)
+  const icone = category?.icon ?? '📄'
 
   if (variant === 'compact') {
     return (
@@ -35,7 +39,7 @@ export function ArticleCard({
           style={{ backgroundColor: 'var(--clr-surface-2)' }}
           aria-hidden="true"
         >
-          {category?.icon ?? '📄'}
+          <BrandMark brands={marcas} size={22} maxBrands={1} fallback={icone} />
         </div>
         <div className="min-w-0">
           <p
@@ -72,7 +76,7 @@ export function ArticleCard({
           style={{ backgroundColor: 'var(--clr-surface-2)' }}
           aria-hidden="true"
         >
-          {category?.icon ?? '📄'}
+          <BrandMark brands={marcas} size={34} maxBrands={2} fallback={icone} />
         </div>
 
         <div className="min-w-0 flex flex-col justify-center">
@@ -119,7 +123,9 @@ export function ArticleCard({
         style={{ background: 'var(--gradient-subtle)' }}
         aria-hidden="true"
       >
-        <span className="text-5xl">{category?.icon ?? '📄'}</span>
+        <span className="text-5xl">
+          <BrandMark brands={marcas} size={64} fallback={icone} />
+        </span>
         <div
           className="absolute inset-0 opacity-5"
           style={{

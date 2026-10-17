@@ -373,3 +373,10 @@ Nova categoria `Notícias de IA` (slug `noticias-de-ia`, ícone 📰), pensada p
 Primeiro artigo: `tesla-roadster-carro-voador-ia` (publishedAt 2026-10-17). Fatos só de cinco reportagens lidas (CBS News, Fox Business, Euronews, ABC7 e Electrek; ficha em `/audit/facts/tesla-roadster-2026-10-17.md`). Nenhuma página da Tesla foi lida. O artigo diz com clareza que nenhuma reportagem lida afirma que o Roadster use IA; a relação com IA é tratada como contexto (controle do carro não explicado, posicionamento "último carro dirigido por humanos", frase de Musk sobre "provar que não é IA" com interpretação rotulada como editorial). Divergências entre veículos (cidade do evento, valores de depósito) foram mantidas como divergências.
 
 Regras para as próximas notícias: só fatos de fontes lidas e citadas; separar "o que foi visto", "o que é alegação da empresa" e "o que não foi informado"; atribuir toda opinião; sem conselho de investimento; sempre responder o que a notícia tem a ver com IA, inclusive quando a resposta for "nada confirmado".
+
+## Logos das marcas (17/10/2026)
+- Logos oficiais de ChatGPT, Gemini, Claude e Perplexity (enviados pelo responsável do site) em `public/marcas/`.
+- `src/lib/brands.ts` define as marcas; `BrandMark` mostra o logo no lugar do emoji. Categorias ChatGPT/Gemini/Claude e seus artigos usam o logo automaticamente.
+- Campo opcional `marca` no frontmatter: `marca: perplexity`, `marca: [chatgpt, gemini]` ou `marca: []` (sem logo). Usado nos 3 comparativos e no guia do Perplexity.
+- Logos pretos (ChatGPT, Perplexity) são invertidos no modo escuro. Aviso de marcas no rodapé.
+- Outras ferramentas (Midjourney, Runway, Copilot etc.) seguem com o emoji até haver logos oficiais.

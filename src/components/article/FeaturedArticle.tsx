@@ -3,6 +3,8 @@ import { Clock, ArrowRight } from 'lucide-react'
 import type { ArticleMeta } from '@/types/article'
 import { formatDate, cn } from '@/lib/utils'
 import { getCategoryByName } from '@/lib/site-config'
+import { BrandMark } from '@/components/ui/BrandMark'
+import { getBrandsForArticle, getBrandsForCategory } from '@/lib/brands'
 
 interface FeaturedArticleProps {
   article: ArticleMeta
@@ -17,6 +19,7 @@ export function FeaturedArticle({
 }: FeaturedArticleProps) {
   const { frontmatter, slug, readingTime } = article
   const category = getCategoryByName(frontmatter.category)
+  const marcas = getBrandsForArticle(frontmatter)
 
   if (priority === 'primary') {
     return (
@@ -41,7 +44,13 @@ export function FeaturedArticle({
         <div className="relative z-10 h-full flex flex-col justify-end p-7">
           {/* Ícone da categoria */}
           <div className="mb-4" aria-hidden="true">
-            <span className="text-4xl">{category?.icon ?? '🤖'}</span>
+            {marcas.length > 0 && marcas.length <= 3 ? (
+              <span className="inline-flex rounded-2xl bg-white p-2.5 shadow-sm">
+                <BrandMark brands={marcas} size={40} keepColors fallback={null} />
+              </span>
+            ) : (
+              <span className="text-4xl">{category?.icon ?? '🤖'}</span>
+            )}
           </div>
 
           <Link
@@ -111,7 +120,9 @@ export function FeaturedArticle({
         style={{ background: 'var(--gradient-subtle)' }}
         aria-hidden="true"
       >
-        <span className="text-4xl">{category?.icon ?? '📄'}</span>
+        <span className="text-4xl">
+          <BrandMark brands={marcas} size={52} fallback={category?.icon ?? '📄'} />
+        </span>
       </div>
 
       <div className="flex flex-col flex-1 p-5">

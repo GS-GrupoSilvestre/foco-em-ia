@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import type { Category } from '@/types/article'
 import { cn } from '@/lib/utils'
+import { BrandMark } from '@/components/ui/BrandMark'
+import { getBrandsForCategory } from '@/lib/brands'
 
 interface CategoryCardProps {
   category: Category
@@ -29,7 +31,11 @@ export function CategoryCard({ category, articleCount, className }: CategoryCard
         style={{ backgroundColor: 'var(--clr-surface-2)' }}
         aria-hidden="true"
       >
-        {category.icon}
+        <BrandMark
+          brands={getBrandsForCategory(category.slug)}
+          size={28}
+          fallback={category.icon}
+        />
       </div>
 
       {/* Nome da categoria */}
