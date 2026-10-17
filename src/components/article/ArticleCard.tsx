@@ -123,9 +123,19 @@ export function ArticleCard({
         style={{ background: 'var(--gradient-subtle)' }}
         aria-hidden="true"
       >
-        <span className="text-5xl">
-          <BrandMark brands={marcas} size={64} fallback={icone} />
-        </span>
+        {frontmatter.capa ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={frontmatter.capa.src}
+            alt=""
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        ) : (
+          <span className="text-5xl">
+            <BrandMark brands={marcas} size={64} fallback={icone} />
+          </span>
+        )}
         <div
           className="absolute inset-0 opacity-5"
           style={{

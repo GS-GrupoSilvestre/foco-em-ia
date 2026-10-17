@@ -28,6 +28,8 @@ export interface ArticleFrontmatter {
   related?: string[]
   /** Logo(s) exibido(s) no lugar do ícone: uma marca, várias (comparativos) ou [] para nenhum. Sem o campo, vale a marca da categoria. */
   marca?: BrandKey | BrandKey[]
+  /** Foto de capa (arquivo em /public). Aparece no topo do artigo, no card e no compartilhamento. Exige crédito/licença. */
+  capa?: { src: string; alt: string; credito?: string }
 }
 
 export interface ArticleMeta {

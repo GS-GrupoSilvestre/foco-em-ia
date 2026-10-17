@@ -1,5 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import { Figura } from '@/components/mdx/Figura'
+import { VideoYoutube } from '@/components/mdx/VideoYoutube'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
@@ -64,7 +66,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       tags: frontmatter.tags,
       images: [
         {
-          url: absoluteUrl(`/og?title=${encodeURIComponent(frontmatter.title)}&category=${encodeURIComponent(frontmatter.category)}`),
+          url: frontmatter.capa ? absoluteUrl(frontmatter.capa.src) : absoluteUrl(`/og?title=${encodeURIComponent(frontmatter.title)}&category=${encodeURIComponent(frontmatter.category)}`),
           width: 1200,
           height: 630,
           alt: frontmatter.title,
@@ -75,7 +77,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: 'summary_large_image',
       title: frontmatter.title,
       description: frontmatter.description,
-      images: [absoluteUrl(`/og?title=${encodeURIComponent(frontmatter.title)}&category=${encodeURIComponent(frontmatter.category)}`)],
+      images: [frontmatter.capa ? absoluteUrl(frontmatter.capa.src) : absoluteUrl(`/og?title=${encodeURIComponent(frontmatter.title)}&category=${encodeURIComponent(frontmatter.category)}`)],
     },
     alternates: {
       canonical: url,
@@ -164,31 +166,48 @@ export default async function ArticlePage({ params }: PageProps) {
             </header>
 
             {/* Hero visual */}
-            <div
-              className="w-full h-48 sm:h-64 rounded-2xl mb-8 flex items-center justify-center"
-              style={{
-                background: 'var(--gradient-subtle)',
-                border: '1px solid var(--clr-border)',
-              }}
-              aria-hidden="true"
-            >
-              <span className="text-6xl">
-                <BrandMark
-                  brands={getBrandsForArticle(frontmatter)}
-                  size={88}
-                  fallback={
-                frontmatter.category === 'ChatGPT' ? '🤖' :
-                 frontmatter.category === 'Gemini' ? '✨' :
-                 frontmatter.category === 'Claude' ? '🧠' :
-                 frontmatter.category === 'Imagens' ? '🎨' :
-                 frontmatter.category === 'Vídeos' ? '🎬' :
-                 frontmatter.category === 'Ferramentas' ? '🛠️' :
-                 frontmatter.category === 'IA para Negócios' ? '💼' :
-                 frontmatter.category === 'Notícias de IA' ? '📰' : '📖'
-                  }
+            {frontmatter.capa ? (
+              <figure className="mb-8">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={frontmatter.capa.src}
+                  alt={frontmatter.capa.alt}
+                  className="w-full h-48 sm:h-72 rounded-2xl object-cover border"
+                  style={{ borderColor: 'var(--clr-border)' }}
                 />
-              </span>
-            </div>
+                {frontmatter.capa.credito && (
+                  <figcaption className="mt-2 text-xs" style={{ color: 'var(--clr-text-3)' }}>
+                    {frontmatter.capa.credito}
+                  </figcaption>
+                )}
+              </figure>
+            ) : (
+              <div
+                className="w-full h-48 sm:h-64 rounded-2xl mb-8 flex items-center justify-center"
+                style={{
+                  background: 'var(--gradient-subtle)',
+                  border: '1px solid var(--clr-border)',
+                }}
+                aria-hidden="true"
+              >
+                <span className="text-6xl">
+                  <BrandMark
+                    brands={getBrandsForArticle(frontmatter)}
+                    size={88}
+                    fallback={
+                  frontmatter.category === 'ChatGPT' ? '🤖' :
+                   frontmatter.category === 'Gemini' ? '✨' :
+                   frontmatter.category === 'Claude' ? '🧠' :
+                   frontmatter.category === 'Imagens' ? '🎨' :
+                   frontmatter.category === 'Vídeos' ? '🎬' :
+                   frontmatter.category === 'Ferramentas' ? '🛠️' :
+                   frontmatter.category === 'IA para Negócios' ? '💼' :
+                   frontmatter.category === 'Notícias de IA' ? '📰' : '📖'
+                    }
+                  />
+                </span>
+              </div>
+            )}
 
             {/* AdSense – topo do artigo */}
             <AdSlot
@@ -208,6 +227,7 @@ export default async function ArticlePage({ params }: PageProps) {
             <div className="article-prose">
               <MDXRemote
                 source={content}
+                components={{ Figura, VideoYoutube }}
                 options={{
                   mdxOptions: {
                     remarkPlugins: [remarkGfm],

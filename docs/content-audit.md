@@ -380,3 +380,9 @@ Regras para as próximas notícias: só fatos de fontes lidas e citadas; separar
 - Campo opcional `marca` no frontmatter: `marca: perplexity`, `marca: [chatgpt, gemini]` ou `marca: []` (sem logo). Usado nos 3 comparativos e no guia do Perplexity.
 - Logos pretos (ChatGPT, Perplexity) são invertidos no modo escuro. Aviso de marcas no rodapé.
 - Outras ferramentas (Midjourney, Runway, Copilot etc.) seguem com o emoji até haver logos oficiais.
+
+## Imagens nos artigos (17/10/2026)
+- MDX: `<Figura src alt legenda credito width height />` e `<VideoYoutube id titulo />` (player só carrega ao clicar). Arquivos em `public/imagens/<slug>/`.
+- Frontmatter opcional `capa: {src, alt, credito}`: aparece no topo do artigo, no card e no compartilhamento (og:image).
+- Regra: só imagens próprias, com licença livre (crédito obrigatório) ou enviadas por quem tem direito de uso. Não usar fotos de reportagens.
+- Tesla Roadster: infográfico próprio sobre a demonstração. Ainda sem foto do carro nem vídeo oficial.

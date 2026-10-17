@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="Inter, Arial, Helvetica, sans-serif">
+  <rect width="960" height="400" rx="20" fill="#F8FAFC"/>
+  <text x="40" y="52" font-size="26" font-weight="700" fill="#0F172A">O que o público viu em 15/10, passo a passo</text>
+  <text x="40" y="80" font-size="15" fill="#475569">Resumo das demonstrações descritas por CBS, Fox Business, Euronews, ABC7 e Electrek</text>
+  <g>
+    <rect x="40" y="110" width="270" height="210" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <circle cx="72" cy="144" r="16" fill="#4F46E5"/><text x="72" y="150" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+    <text x="100" y="150" font-size="18" font-weight="700" fill="#0F172A">Rampa e giro</text>
+    <path d="M62 262 Q150 262 200 215 Q235 180 260 200" fill="none" stroke="#4F46E5" stroke-width="4" stroke-linecap="round"/>
+    <path d="M250 188 l14 12 l-18 6" fill="none" stroke="#4F46E5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="290" font-size="13.5" fill="#334155">Sobe a rampa curva, fica de cabeça</text>
+    <text x="58" y="308" font-size="13.5" fill="#334155">para baixo, gira 180° e pousa.</text>
+  </g>
+  <g>
+    <rect x="345" y="110" width="270" height="210" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <circle cx="377" cy="144" r="16" fill="#4F46E5"/><text x="377" y="150" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+    <text x="405" y="150" font-size="18" font-weight="700" fill="#0F172A">Salto e cambalhota</text>
+    <rect x="375" y="244" width="34" height="16" rx="4" fill="#94A3B8"/><rect x="418" y="244" width="34" height="16" rx="4" fill="#94A3B8"/><rect x="461" y="244" width="34" height="16" rx="4" fill="#94A3B8"/><rect x="504" y="244" width="34" height="16" rx="4" fill="#94A3B8"/>
+    <path d="M365 244 Q455 150 560 244" fill="none" stroke="#4F46E5" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 9"/>
+    <text x="363" y="290" font-size="13.5" fill="#334155">Pula uma fileira de carros e faz</text>
+    <text x="363" y="308" font-size="13.5" fill="#334155">uma cambalhota no ar.</text>
+  </g>
+  <g>
+    <rect x="650" y="110" width="270" height="210" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <circle cx="682" cy="144" r="16" fill="#4F46E5"/><text x="682" y="150" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+    <text x="710" y="150" font-size="18" font-weight="700" fill="#0F172A">Arrancada</text>
+    <text x="785" y="236" font-size="40" font-weight="800" fill="#4F46E5" text-anchor="middle">0–96 km/h</text>
+    <text x="785" y="262" font-size="16" fill="#334155" text-anchor="middle">em menos de 1 segundo</text>
+    <text x="668" y="290" font-size="13.5" fill="#334155">Tempo declarado pela Tesla; não</text>
+    <text x="668" y="308" font-size="13.5" fill="#334155">medido de forma independente.</text>
+  </g>
+  <rect x="40" y="338" width="880" height="42" rx="10" fill="#FEF3C7"/>
+  <text x="480" y="364" font-size="15" font-weight="600" fill="#78350F" text-anchor="middle">Sem ninguém dentro do carro. Nenhum voo de longa distância foi mostrado.</text>
+</svg>
